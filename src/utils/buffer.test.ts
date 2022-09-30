@@ -11,7 +11,7 @@ import {
   toBuffer,
   toHex,
   toNumber,
-  toUtf8
+  toUtf8,
 } from './buffer';
 
 describe('stripHexPrefix', () => {
@@ -55,11 +55,15 @@ describe('toHex', () => {
 describe('fromHex', () => {
   it('returns a buffer from a hex string', () => {
     expect(fromHex('666f6f206261722062617a')).toBeInstanceOf(Uint8Array);
-    expect(toHex(fromHex('666f6f206261722062617a'))).toBe('666f6f206261722062617a');
+    expect(toHex(fromHex('666f6f206261722062617a'))).toBe(
+      '666f6f206261722062617a',
+    );
   });
 
   it('works with a 0x prefix', () => {
-    expect(toHex(fromHex('0x666f6f206261722062617a'))).toBe('666f6f206261722062617a');
+    expect(toHex(fromHex('0x666f6f206261722062617a'))).toBe(
+      '666f6f206261722062617a',
+    );
   });
 
   it('throws for invalid input', () => {
@@ -72,8 +76,13 @@ describe('toBuffer', () => {
   it('returns a buffer from different types', () => {
     expect(toHex(toBuffer('0x1234'))).toBe('1234');
     expect(toHex(toBuffer('1234'))).toBe('1234');
-    expect(toHex(toBuffer(1234))).toBe('00000000000000000000000000000000000000000000000000000000000004d2');
-    expect(toHex(toBuffer(1234n))).toBe('00000000000000000000000000000000000000000000000000000000000004d2');
+    expect(toHex(toBuffer(1234))).toBe(
+      '00000000000000000000000000000000000000000000000000000000000004d2',
+    );
+
+    expect(toHex(toBuffer(1234n))).toBe(
+      '00000000000000000000000000000000000000000000000000000000000004d2',
+    );
     expect(toHex(toBuffer([0x04, 0xd2]))).toBe('04d2');
   });
 });
@@ -82,20 +91,29 @@ describe('concat', () => {
   it('concatenates multiple buffers', () => {
     expect(toHex(concat([fromHex('1234')]))).toBe('1234');
     expect(toHex(concat([fromHex('1234'), fromHex('5678')]))).toBe('12345678');
-    expect(toHex(concat([fromHex('1234'), fromHex('5678'), fromHex('9101')]))).toBe('123456789101');
+    expect(
+      toHex(concat([fromHex('1234'), fromHex('5678'), fromHex('9101')])),
+    ).toBe('123456789101');
   });
 });
 
 describe('set', () => {
   it('sets a buffer in another buffer at a specific position', () => {
-    expect(toHex(set(fromHex('1234567890'), fromHex('00'), 2))).toBe('1234007890');
+    expect(toHex(set(fromHex('1234567890'), fromHex('00'), 2))).toBe(
+      '1234007890',
+    );
   });
 });
 
 describe('addPadding', () => {
   it('adds padding to a buffer up to the specified length', () => {
-    expect(toHex(addPadding(fromHex('1234')))).toBe('1234000000000000000000000000000000000000000000000000000000000000');
-    expect(toHex(addPadding(fromHex('1234'), 16))).toBe('12340000000000000000000000000000');
+    expect(toHex(addPadding(fromHex('1234')))).toBe(
+      '1234000000000000000000000000000000000000000000000000000000000000',
+    );
+
+    expect(toHex(addPadding(fromHex('1234'), 16))).toBe(
+      '12340000000000000000000000000000',
+    );
     expect(toHex(addPadding(fromHex('1234'), 0))).toBe('1234');
   });
 });

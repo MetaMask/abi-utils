@@ -3,7 +3,9 @@
  * https://github.com/millsp/ts-toolbelt/blob/master/sources/Function/Narrow.ts
  */
 
-export type Try<A1 extends any, A2 extends any, Catch = never> = A1 extends A2 ? A1 : Catch;
+export type Try<A1 extends any, A2 extends any, Catch = never> = A1 extends A2
+  ? A1
+  : Catch;
 
 export type Narrowable = string | number | bigint | boolean;
 

@@ -8,7 +8,11 @@ export const bytes: Parser<BytesLike, Uint8Array> = {
     const bufferValue = toBuffer(value);
     const paddedSize = Math.ceil(bufferValue.byteLength / 32) * 32;
 
-    return concat([buffer, toBuffer(bufferValue.byteLength), addPadding(bufferValue, paddedSize)]);
+    return concat([
+      buffer,
+      toBuffer(bufferValue.byteLength),
+      addPadding(bufferValue, paddedSize),
+    ]);
   },
 
   decode({ value }: DecodeArgs): Uint8Array {
@@ -16,5 +20,5 @@ export const bytes: Parser<BytesLike, Uint8Array> = {
     const length = Number(toNumber(buffer));
 
     return value.subarray(32, 32 + length);
-  }
+  },
 };

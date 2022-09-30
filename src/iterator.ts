@@ -1,7 +1,7 @@
-interface IteratorValue {
+type IteratorValue = {
   skip(length: number): void;
   value: Uint8Array;
-}
+};
 
 /**
  * Iterate over a buffer with the specified size. This will yield a part of the buffer starting at an increment of the
@@ -9,12 +9,12 @@ interface IteratorValue {
  *
  * Calling the `skip` function will make it skip the specified number of bytes.
  *
- * @param buffer The buffer to iterate over.
- * @param [size] The number of bytes to iterate with.
+ * @param buffer - The buffer to iterate over.
+ * @param [size] - The number of bytes to iterate with.
  */
 export const iterate = function* (
   buffer: Uint8Array,
-  size = 32
+  size = 32,
 ): Generator<IteratorValue, IteratorValue, IteratorValue> {
   for (let pointer = 0; pointer < buffer.length; pointer += size) {
     const skip = (length: number) => {
@@ -32,6 +32,6 @@ export const iterate = function* (
 
   return {
     skip: () => undefined,
-    value: new Uint8Array()
+    value: new Uint8Array(),
   };
 };

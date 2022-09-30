@@ -1,20 +1,16 @@
 {
   "compilerOptions": {
-    "noEmit": true,
-    "outDir": "lib",
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "strict": true,
-    "noEmitOnError": true,
     "esModuleInterop": true,
-    "declaration": true,
-    "sourceMap": true,
+    "exactOptionalPropertyTypes": true,
     "forceConsistentCasingInFileNames": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "skipLibCheck": true,
-    "resolveJsonModule": true
+    "lib": ["ES2020"],
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noErrorTruncation": true,
+    "noUncheckedIndexedAccess": true,
+    "strict": true,
+    "target": "es2017"
   },
-  "include": ["src", "jest"]
+  "exclude": ["./dist/**/*"]
 }

@@ -11,5 +11,5 @@ export const string: Parser<string> = {
 
   decode(args: DecodeArgs): string {
     return toUtf8(bytes.decode(args));
-  }
+  },
 };

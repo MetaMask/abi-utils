@@ -73,10 +73,9 @@ export type MapToOutput<T extends Record<string, [unknown, unknown]>> = {
 /**
  * Helper type that adds an array type for each of the specified keys and types.
  */
-type WithArrayTypes<T> = T &
-  {
-    [K in keyof T as `${string & K}[]`]: Array<T[K]>;
-  };
+type WithArrayTypes<T> = T & {
+  [K in keyof T as `${string & K}[]`]: T[K][];
+};
 
 /**
  * Helper type that extracts the input or output from a Parser;.

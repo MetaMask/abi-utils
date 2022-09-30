@@ -6,8 +6,8 @@ const TUPLE_REGEX = /^\((.*)\)$/;
 /**
  * Get elements from a tuple type.
  *
- * @param type The tuple type to get the types for.
- * @return The elements of the tuple as string array.
+ * @param type - The tuple type to get the types for.
+ * @returns The elements of the tuple as string array.
  */
 export const getTupleElements = (type: string): string[] => {
   return type
@@ -20,8 +20,8 @@ export const tuple: Parser<unknown[]> = {
   /**
    * Check if the tuple is dynamic. Tuples are dynamic if one or more elements of the tuple are dynamic.
    *
-   * @param type The type to check.
-   * @return Whether the tuple is dynamic.
+   * @param type - The type to check.
+   * @returns Whether the tuple is dynamic.
    */
   isDynamic(type: string): boolean {
     const elements = getTupleElements(type);
@@ -34,8 +34,8 @@ export const tuple: Parser<unknown[]> = {
   /**
    * Check if a type is an tuple type.
    *
-   * @param type The type to check.
-   * @return Whether the type is a tuple type.
+   * @param type - The type to check.
+   * @returns Whether the type is a tuple type.
    */
   isType(type: string): boolean {
     return TUPLE_REGEX.test(type);
@@ -55,5 +55,5 @@ export const tuple: Parser<unknown[]> = {
     }
 
     return unpack(elements, value);
-  }
+  },
 };

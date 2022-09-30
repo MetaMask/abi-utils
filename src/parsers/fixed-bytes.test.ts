@@ -34,25 +34,36 @@ describe('fixed-bytes', () => {
         toHex(
           fixedBytes.encode({
             type: 'bytes32',
-            value: 'abcdef1234567890000000000000000000000000000000000000000000000000',
-            buffer: new Uint8Array()
-          })
-        )
-      ).toBe('abcdef1234567890000000000000000000000000000000000000000000000000');
+            value:
+              'abcdef1234567890000000000000000000000000000000000000000000000000',
+            buffer: new Uint8Array(),
+          }),
+        ),
+      ).toBe(
+        'abcdef1234567890000000000000000000000000000000000000000000000000',
+      );
     });
 
     it('throws if the length is invalid', () => {
       expect(() =>
-        fixedBytes.encode({ type: 'bytes32', value: 'abcdef123456789', buffer: new Uint8Array() })
+        fixedBytes.encode({
+          type: 'bytes32',
+          value: 'abcdef123456789',
+          buffer: new Uint8Array(),
+        }),
       ).toThrow();
     });
   });
 
   describe('decode', () => {
     it('decodes encoded fixed bytes', () => {
-      const value = fromHex('abcdef1234567890000000000000000000000000000000000000000000000000');
-      expect(toHex(fixedBytes.decode({ type: 'bytes32', value, skip: jest.fn() }))).toBe(
-        'abcdef1234567890000000000000000000000000000000000000000000000000'
+      const value = fromHex(
+        'abcdef1234567890000000000000000000000000000000000000000000000000',
+      );
+      expect(
+        toHex(fixedBytes.decode({ type: 'bytes32', value, skip: jest.fn() })),
+      ).toBe(
+        'abcdef1234567890000000000000000000000000000000000000000000000000',
       );
     });
   });

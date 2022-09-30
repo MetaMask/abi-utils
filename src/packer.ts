@@ -1,13 +1,23 @@
 import { iterate } from './iterator';
-import { address, array, bool, bytes, fixedBytes, fn, number, string, tuple } from './parsers';
+import {
+  address,
+  array,
+  bool,
+  bytes,
+  fixedBytes,
+  fn,
+  number,
+  string,
+  tuple,
+} from './parsers';
 import { PackState, Parser } from './types';
 import { concat, set, toBuffer, toNumber } from './utils';
 
 /**
  * Get the parser for the specified type. This will throw if there is no parser for the specified type.
  *
- * @param type The type to get a parser for.
- * @return The parser.
+ * @param type - The type to get a parser for.
+ * @returns The parser.
  */
 export const getParser = (type: string): Parser => {
   const parsers: { [key: string]: Parser } = {
@@ -19,7 +29,7 @@ export const getParser = (type: string): Parser => {
     function: fn,
     number,
     string,
-    tuple
+    tuple,
   };
 
   if (parsers[type]) {
@@ -38,12 +48,12 @@ export const getParser = (type: string): Parser => {
  * Check if the specified parser is dynamic, for the provided types. This is primarily used for parsing tuples, where
  * a tuple can be dynamic based on the types. For other parsers, it will simply use the set `isDynamic` value.
  *
- * @param parser The parser to check.
- * @param type The type to check the parser with.
- * @return Whether the parser is dynamic.
+ * @param parser - The parser to check.
+ * @param type - The type to check the parser with.
+ * @returns Whether the parser is dynamic.
  */
 export const isDynamicParser = (parser: Parser, type: string): boolean => {
-  const isDynamic = parser.isDynamic;
+  const { isDynamic } = parser;
   if (typeof isDynamic === 'function') {
     return isDynamic(type);
   }
@@ -55,12 +65,16 @@ export const isDynamicParser = (parser: Parser, type: string): boolean => {
  * Pack the provided values in a buffer, encoded with the specified types. If a buffer is specified, the resulting value
  * will be concatenated with the buffer.
  *
- * @param types The types to use for encoding.
- * @param values The values to encode.
- * @param [buffer] The buffer to concatenate with.
- * @return The resulting encoded buffer.
+ * @param types - The types to use for encoding.
+ * @param values - The values to encode.
+ * @param [buffer] - The buffer to concatenate with.
+ * @returns The resulting encoded buffer.
  */
-export const pack = (types: string[], values: unknown[], buffer: Uint8Array = new Uint8Array()): Uint8Array => {
+export const pack = (
+  types: string[],
+  values: unknown[],
+  buffer: Uint8Array = new Uint8Array(),
+): Uint8Array => {
   if (types.length !== values.length) {
     throw new Error('The length of the types and values must be equal');
   }
@@ -74,20 +88,31 @@ export const pack = (types: string[], values: unknown[], buffer: Uint8Array = ne
         return {
           staticBuffer: parser.encode({ buffer: staticBuffer, value, type }),
           dynamicBuffer,
-          pointers
+          pointers,
         };
       }
 
       const newStaticBuffer = concat([staticBuffer, new Uint8Array(32)]);
-      const newDynamicBuffer = parser.encode({ buffer: dynamicBuffer, value, type });
+      const newDynamicBuffer = parser.encode({
+        buffer: dynamicBuffer,
+        value,
+        type,
+      });
 
       return {
         staticBuffer: newStaticBuffer,
         dynamicBuffer: newDynamicBuffer,
-        pointers: [...pointers, { position: staticBuffer.length, pointer: dynamicBuffer.length }]
+        pointers: [
+          ...pointers,
+          { position: staticBuffer.length, pointer: dynamicBuffer.length },
+        ],
       };
     },
-    { staticBuffer: new Uint8Array(), dynamicBuffer: new Uint8Array(), pointers: [] }
+    {
+      staticBuffer: new Uint8Array(),
+      dynamicBuffer: new Uint8Array(),
+      pointers: [],
+    },
   );
 
   const dynamicStart = staticBuffer.length;
@@ -105,7 +130,7 @@ export const unpack = (types: string[], buffer: Uint8Array): unknown[] => {
   return types.map((type) => {
     const {
       value: { value, skip },
-      done
+      done,
     } = iterator.next();
     if (done) {
       throw new Error('Element is out of range');

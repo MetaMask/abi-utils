@@ -8,8 +8,8 @@ const ARRAY_REGEX = /^(.*)\[]$/;
 /**
  * Get the type of the array.
  *
- * @param type The type to get the array type for.
- * @return The array type.
+ * @param type - The type to get the array type for.
+ * @returns The array type.
  */
 export const getArrayType = (type: string): string => {
   const match = type.match(ARRAY_REGEX);
@@ -26,8 +26,8 @@ export const array: Parser<unknown[]> = {
   /**
    * Check if a type is an array type.
    *
-   * @param type The type to check.
-   * @return Whether the type is a array type.
+   * @param type - The type to check.
+   * @returns Whether the type is a array type.
    */
   isType(type: string): boolean {
     return ARRAY_REGEX.test(type);
@@ -37,7 +37,11 @@ export const array: Parser<unknown[]> = {
     const arrayType = getArrayType(type);
     const arrayLength = toBuffer(value.length);
 
-    return pack(new Array(value.length).fill(arrayType), value, concat([buffer, arrayLength]));
+    return pack(
+      new Array(value.length).fill(arrayType),
+      value,
+      concat([buffer, arrayLength]),
+    );
   },
 
   decode({ type, value }: DecodeArgs): unknown[] {
@@ -45,5 +49,5 @@ export const array: Parser<unknown[]> = {
     const arrayLength = Number(toNumber(value.subarray(0, 32)));
 
     return unpack(new Array(arrayLength).fill(arrayType), value.subarray(32));
-  }
+  },
 };

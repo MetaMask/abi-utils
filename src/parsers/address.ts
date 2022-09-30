@@ -12,5 +12,5 @@ export const address: Parser<string> = {
 
   decode({ value }: DecodeArgs): string {
     return `0x${toHex(value.slice(12, 32))}`;
-  }
+  },
 };
