@@ -1,0 +1,87 @@
+{
+  "name": "@metamask/abi-utils",
+  "version": "0.0.0",
+  "description": "Lightweight utilities for working with Solidity ABI.",
+  "author": "Maarten Zuidhoorn <maarten@zuidhoorn.com>",
+  "homepage": "https://github.com/MetaMask/abi-utils",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MetaMask/abi-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MetaMask/abi-utils/issues"
+  },
+  "keywords": [
+    "ethereum",
+    "abi",
+    "solidity",
+    "input-data",
+    "parser",
+    "encoder",
+    "decoder"
+  ],
+  "license": "MIT",
+  "main": "lib/cjs/index.js",
+  "module": "lib/es/index.js",
+  "typings": "typings/index.d.ts",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=10"
+  },
+  "files": [
+    "lib",
+    "src",
+    "typings"
+  ],
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "yarn run clean && yarn run build:source && yarn run build:declarations",
+    "build:source": "yarn run build:source:cjs && yarn run build:source:es",
+    "build:source:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel src --extensions '.ts' --source-maps --out-dir lib/cjs",
+    "build:source:es": "cross-env NODE_ENV=production BABEL_ENV=es babel src --extensions '.ts' --source-maps --out-dir lib/es",
+    "build:declarations": "tsc -p tsconfig.build.json",
+    "build:docs": "typedoc src",
+    "test": "jest",
+    "lint": "yarn run lint:types && yarn run lint:source && yarn run lint:format && yarn run lint:lockfile",
+    "lint:types": "tsc --noEmit",
+    "lint:source": "eslint . --ignore-path .gitignore --ext .ts,.tsx,.js,.jsx",
+    "lint:format": "prettier --check --ignore-path .gitignore '**/*.{ts,tsx,js,json,yml}'",
+    "lint:lockfile": "lockfile-lint --type yarn --path yarn.lock --allowed-hosts yarn --validate-https --validate-checksum --validate-integrity",
+    "format": "prettier --write --ignore-path .gitignore '**/*.{ts,tsx,js,json,yml}'",
+    "prepare": "husky install",
+    "prepack": "yarn run build"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.22",
+    "@typescript-eslint/eslint-plugin": "^4.14.0",
+    "@typescript-eslint/parser": "^4.14.0",
+    "babel-jest": "^26.0.1",
+    "codecov": "^3.7.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jest": "^24.1.0",
+    "husky": "^6.0.0",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.9",
+    "lockfile-lint": "^4.3.6",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.0.0",
+    "typedoc": "^0.20.17",
+    "typescript": "^4.2.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{json,yml}": [
+      "prettier --write"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
