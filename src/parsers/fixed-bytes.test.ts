@@ -1,4 +1,4 @@
-import { fromHex, toHex } from '../utils';
+import { bytesToHex, hexToBytes } from '@metamask/utils';
 import { fixedBytes, getByteLength } from './fixed-bytes';
 
 describe('getByteLength', () => {
@@ -9,9 +9,15 @@ describe('getByteLength', () => {
   });
 
   it('throws an error if the length is invalid', () => {
-    expect(() => getByteLength('bytes64')).toThrow();
-    expect(() => getByteLength('bytes0')).toThrow();
-    expect(() => getByteLength('bytes')).toThrow();
+    expect(() => getByteLength('bytes64')).toThrow(
+      'Invalid type: length is out of range.',
+    );
+
+    expect(() => getByteLength('bytes0')).toThrow(
+      'Invalid type: length is out of range.',
+    );
+
+    expect(() => getByteLength('bytes')).toThrow('Invalid type: no length.');
   });
 });
 
@@ -31,16 +37,16 @@ describe('fixed-bytes', () => {
   describe('encode', () => {
     it('encodes fixed bytes', () => {
       expect(
-        toHex(
+        bytesToHex(
           fixedBytes.encode({
             type: 'bytes32',
             value:
-              'abcdef1234567890000000000000000000000000000000000000000000000000',
+              '0xabcdef1234567890000000000000000000000000000000000000000000000000',
             buffer: new Uint8Array(),
           }),
         ),
       ).toBe(
-        'abcdef1234567890000000000000000000000000000000000000000000000000',
+        '0xabcdef1234567890000000000000000000000000000000000000000000000000',
       );
     });
 
@@ -51,19 +57,22 @@ describe('fixed-bytes', () => {
           value: 'abcdef123456789',
           buffer: new Uint8Array(),
         }),
-      ).toThrow();
+      ).toThrow('Buffer has invalid length, expected 32, got 15.');
     });
   });
 
   describe('decode', () => {
     it('decodes encoded fixed bytes', () => {
-      const value = fromHex(
+      const value = hexToBytes(
         'abcdef1234567890000000000000000000000000000000000000000000000000',
       );
+
       expect(
-        toHex(fixedBytes.decode({ type: 'bytes32', value, skip: jest.fn() })),
+        bytesToHex(
+          fixedBytes.decode({ type: 'bytes32', value, skip: jest.fn() }),
+        ),
       ).toBe(
-        'abcdef1234567890000000000000000000000000000000000000000000000000',
+        '0xabcdef1234567890000000000000000000000000000000000000000000000000',
       );
     });
   });

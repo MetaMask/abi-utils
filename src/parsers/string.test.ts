@@ -1,11 +1,11 @@
-import { fromHex, toHex } from '../utils';
+import { bytesToHex, hexToBytes } from '@metamask/utils';
 import { string } from './string';
 
 describe('string', () => {
   describe('encode', () => {
     it('encodes a string', () => {
       expect(
-        toHex(
+        bytesToHex(
           string.encode({
             type: 'string',
             value: 'foo bar baz qux',
@@ -13,16 +13,17 @@ describe('string', () => {
           }),
         ),
       ).toBe(
-        '000000000000000000000000000000000000000000000000000000000000000f666f6f206261722062617a207175780000000000000000000000000000000000',
+        '0x000000000000000000000000000000000000000000000000000000000000000f666f6f206261722062617a207175780000000000000000000000000000000000',
       );
     });
   });
 
   describe('decode', () => {
     it('decodes an encoded string', () => {
-      const value = fromHex(
+      const value = hexToBytes(
         '000000000000000000000000000000000000000000000000000000000000000f666f6f206261722062617a207175780000000000000000000000000000000000',
       );
+
       expect(string.decode({ type: 'string', value, skip: jest.fn() })).toBe(
         'foo bar baz qux',
       );

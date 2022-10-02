@@ -5,5 +5,6 @@ export * from './bytes';
 export * from './fixed-bytes';
 export * from './function';
 export * from './number';
+export * from './parser';
 export * from './string';
 export * from './tuple';

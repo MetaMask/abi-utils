@@ -1,15 +1,15 @@
-import { DecodeArgs, Parser } from '../types';
-import { fromUtf8, toUtf8 } from '../utils';
+import { bytesToString, stringToBytes } from '@metamask/utils';
+import { Parser } from './parser';
 import { bytes } from './bytes';
 
 export const string: Parser<string> = {
   isDynamic: true,
 
   encode({ buffer, value }): Uint8Array {
-    return bytes.encode({ type: 'bytes', buffer, value: fromUtf8(value) });
+    return bytes.encode({ type: 'bytes', buffer, value: stringToBytes(value) });
   },
 
-  decode(args: DecodeArgs): string {
-    return toUtf8(bytes.decode(args));
+  decode(args): string {
+    return bytesToString(bytes.decode(args));
   },
 };

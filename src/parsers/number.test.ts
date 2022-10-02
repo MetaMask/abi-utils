@@ -1,5 +1,5 @@
-import { fromHex, toHex } from '../utils';
-import { asNumber, isSigned, number } from './number';
+import { bytesToHex, hexToBytes } from '@metamask/utils';
+import { asBigInt, isSigned, number } from './number';
 
 describe('isSigned', () => {
   it('checks if a number type is signed', () => {
@@ -15,9 +15,9 @@ describe('isSigned', () => {
 
 describe('asNumber', () => {
   it('returns a bigint for a number-like input', () => {
-    expect(asNumber(123)).toBe(123n);
-    expect(asNumber('123')).toBe(123n);
-    expect(asNumber('0x123')).toBe(291n);
+    expect(asBigInt(123)).toBe(BigInt(123));
+    expect(asBigInt('123')).toBe(BigInt(123));
+    expect(asBigInt('0x123')).toBe(BigInt(291));
   });
 });
 
@@ -40,19 +40,19 @@ describe('number', () => {
   describe('encode', () => {
     it('encodes a unsigned number', () => {
       expect(
-        toHex(
+        bytesToHex(
           number.encode({
             type: 'uint256',
-            value: 314159n,
+            value: BigInt(314159),
             buffer: new Uint8Array(),
           }),
         ),
       ).toBe(
-        '000000000000000000000000000000000000000000000000000000000004cb2f',
+        '0x000000000000000000000000000000000000000000000000000000000004cb2f',
       );
 
       expect(
-        toHex(
+        bytesToHex(
           number.encode({
             type: 'uint256',
             value: 314159,
@@ -60,11 +60,11 @@ describe('number', () => {
           }),
         ),
       ).toBe(
-        '000000000000000000000000000000000000000000000000000000000004cb2f',
+        '0x000000000000000000000000000000000000000000000000000000000004cb2f',
       );
 
       expect(
-        toHex(
+        bytesToHex(
           number.encode({
             type: 'uint256',
             value: '314159',
@@ -72,11 +72,11 @@ describe('number', () => {
           }),
         ),
       ).toBe(
-        '000000000000000000000000000000000000000000000000000000000004cb2f',
+        '0x000000000000000000000000000000000000000000000000000000000004cb2f',
       );
 
       expect(
-        toHex(
+        bytesToHex(
           number.encode({
             type: 'uint256',
             value: '0x314159',
@@ -84,25 +84,25 @@ describe('number', () => {
           }),
         ),
       ).toBe(
-        '0000000000000000000000000000000000000000000000000000000000314159',
+        '0x0000000000000000000000000000000000000000000000000000000000314159',
       );
     });
 
     it('encodes a signed number', () => {
       expect(
-        toHex(
+        bytesToHex(
           number.encode({
             type: 'int256',
-            value: -314159n,
+            value: BigInt(-314159),
             buffer: new Uint8Array(),
           }),
         ),
       ).toBe(
-        'fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb34d1',
+        '0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb34d1',
       );
 
       expect(
-        toHex(
+        bytesToHex(
           number.encode({
             type: 'int256',
             value: -314159,
@@ -110,11 +110,11 @@ describe('number', () => {
           }),
         ),
       ).toBe(
-        'fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb34d1',
+        '0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb34d1',
       );
 
       expect(
-        toHex(
+        bytesToHex(
           number.encode({
             type: 'int256',
             value: '-314159',
@@ -122,39 +122,41 @@ describe('number', () => {
           }),
         ),
       ).toBe(
-        'fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb34d1',
+        '0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb34d1',
       );
     });
   });
 
   describe('decode', () => {
     it('decodes an encoded unsigned number', () => {
-      const value = fromHex(
+      const value = hexToBytes(
         '000000000000000000000000000000000000000000000000000000000004cb2f',
       );
+
       expect(number.decode({ type: 'uint256', value, skip: jest.fn() })).toBe(
-        314159n,
+        BigInt(314159),
       );
     });
 
     it('decodes an encoded signed number', () => {
-      const value = fromHex(
+      const value = hexToBytes(
         '000000000000000000000000000000000000000000000000000000000004cb2f',
       );
       expect(number.decode({ type: 'int256', value, skip: jest.fn() })).toBe(
-        314159n,
+        BigInt(314159),
       );
 
-      const negativeValue = fromHex(
+      const negativeValue = hexToBytes(
         'fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb34d1',
       );
+
       expect(
         number.decode({
           type: 'int256',
           value: negativeValue,
           skip: jest.fn(),
         }),
-      ).toBe(-314159n);
+      ).toBe(BigInt(-314159));
     });
   });
 });

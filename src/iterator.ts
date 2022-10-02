@@ -10,7 +10,9 @@ type IteratorValue = {
  * Calling the `skip` function will make it skip the specified number of bytes.
  *
  * @param buffer - The buffer to iterate over.
- * @param [size] - The number of bytes to iterate with.
+ * @param size - The number of bytes to iterate with.
+ * @returns An iterator that yields the parts of the byte array.
+ * @yields The parts of the byte array.
  */
 export const iterate = function* (
   buffer: Uint8Array,
@@ -19,7 +21,7 @@ export const iterate = function* (
   for (let pointer = 0; pointer < buffer.length; pointer += size) {
     const skip = (length: number) => {
       if (length % size !== 0) {
-        throw new Error('Length must be divisible by size');
+        throw new Error('Length must be divisible by size.');
       }
 
       pointer += length;

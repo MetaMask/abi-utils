@@ -1,7 +1,8 @@
-import { BytesLike, DecodeArgs, Parser } from '../types';
-import { addPadding, concat, toBuffer } from '../utils';
+import { Bytes, concatBytes, valueToBytes } from '@metamask/utils';
+import { padEnd } from '../utils';
+import { Parser } from './parser';
 
-const BYTES_REGEX = /^bytes([0-9]{1,2})$/;
+const BYTES_REGEX = /^bytes([0-9]{1,2})$/u;
 
 /**
  * Get the length of the specified type. If a length is not specified, or if the length is out of range (0 < n <= 32),
@@ -16,16 +17,16 @@ export const getByteLength = (type: string): number => {
   if (bytes) {
     const length = Number(bytes);
     if (length <= 0 || length > 32) {
-      throw new Error('Invalid type: length is out of range');
+      throw new Error('Invalid type: length is out of range.');
     }
 
     return length;
   }
 
-  throw new Error('Invalid type: no length');
+  throw new Error('Invalid type: no length.');
 };
 
-export const fixedBytes: Parser<BytesLike, Uint8Array> = {
+export const fixedBytes: Parser<Bytes, Uint8Array> = {
   isDynamic: false,
 
   /**
@@ -40,18 +41,18 @@ export const fixedBytes: Parser<BytesLike, Uint8Array> = {
 
   encode({ type, buffer, value }): Uint8Array {
     const length = getByteLength(type);
-    const bufferValue = toBuffer(value);
+    const bufferValue = valueToBytes(value);
 
     if (bufferValue.length !== length) {
       throw new Error(
-        `Buffer has invalid length, expected ${length}, got ${bufferValue.length}`,
+        `Buffer has invalid length, expected ${length}, got ${bufferValue.length}.`,
       );
     }
 
-    return concat([buffer, addPadding(bufferValue)]);
+    return concatBytes([buffer, padEnd(bufferValue)]);
   },
 
-  decode({ type, value }: DecodeArgs): Uint8Array {
+  decode({ type, value }): Uint8Array {
     const length = getByteLength(type);
     return value.slice(0, length);
   },

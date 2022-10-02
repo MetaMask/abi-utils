@@ -1,9 +1,10 @@
+import { bytesToNumber, concatBytes, numberToBytes } from '@metamask/utils';
 import { pack, unpack } from '../packer';
-import { DecodeArgs, Parser } from '../types';
-import { concat, toBuffer, toNumber } from '../utils';
+import { padStart } from '../utils';
+import { Parser } from './parser';
 
 // TODO: Add support for fixed length arrays
-const ARRAY_REGEX = /^(.*)\[]$/;
+const ARRAY_REGEX = /^(.*)\[\]$/u;
 
 /**
  * Get the type of the array.
@@ -13,11 +14,11 @@ const ARRAY_REGEX = /^(.*)\[]$/;
  */
 export const getArrayType = (type: string): string => {
   const match = type.match(ARRAY_REGEX);
-  if (match) {
+  if (match?.[1]) {
     return match[1];
   }
 
-  throw new Error('Type is not an array type');
+  throw new Error('Type is not an array type.');
 };
 
 export const array: Parser<unknown[]> = {
@@ -27,7 +28,7 @@ export const array: Parser<unknown[]> = {
    * Check if a type is an array type.
    *
    * @param type - The type to check.
-   * @returns Whether the type is a array type.
+   * @returns Whether the type is an array type.
    */
   isType(type: string): boolean {
     return ARRAY_REGEX.test(type);
@@ -35,18 +36,18 @@ export const array: Parser<unknown[]> = {
 
   encode({ type, buffer, value }): Uint8Array {
     const arrayType = getArrayType(type);
-    const arrayLength = toBuffer(value.length);
+    const arrayLength = padStart(numberToBytes(value.length));
 
     return pack(
       new Array(value.length).fill(arrayType),
       value,
-      concat([buffer, arrayLength]),
+      concatBytes([buffer, arrayLength]),
     );
   },
 
-  decode({ type, value }: DecodeArgs): unknown[] {
+  decode({ type, value }): unknown[] {
     const arrayType = getArrayType(type);
-    const arrayLength = Number(toNumber(value.subarray(0, 32)));
+    const arrayLength = bytesToNumber(value.subarray(0, 32));
 
     return unpack(new Array(arrayLength).fill(arrayType), value.subarray(32));
   },

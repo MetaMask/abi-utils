@@ -1,14 +1,11 @@
-import { DynamicFunction } from '../types';
-import { fromHex, toHex } from '../utils';
+import { bytesToHex, hexToBytes } from '@metamask/utils';
+import { DynamicFunction } from './parser';
 import { getTupleElements, tuple } from './tuple';
 
 describe('getTupleElements', () => {
   it('returns the elements of a tuple', () => {
     expect(getTupleElements('(foo,bar)')).toStrictEqual(['foo', 'bar']);
     expect(getTupleElements('(foo,bar[])')).toStrictEqual(['foo', 'bar[]']);
-
-    // TODO: Add support for nested tuples
-    // expect(getTupleElements('(foo,(bar,baz))')).toStrictEqual(['foo', '(bar,baz))']);
   });
 });
 
@@ -36,62 +33,64 @@ describe('tuple', () => {
   describe('encode', () => {
     it('encodes a static tuple', () => {
       expect(
-        toHex(
+        bytesToHex(
           tuple.encode({
             type: '(uint256, uint256)',
-            value: [12n, 34n],
+            value: [BigInt(12), BigInt(34)],
             buffer: new Uint8Array(),
           }),
         ),
       ).toBe(
-        '000000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000022',
+        '0x000000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000022',
       );
     });
 
     it('encodes a dynamic tuple', () => {
       expect(
-        toHex(
+        bytesToHex(
           tuple.encode({
             type: '(uint256, bytes)',
-            value: [12n, 'ab'],
+            value: [BigInt(12), '0xab'],
             buffer: new Uint8Array(),
           }),
         ),
       ).toBe(
-        '000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000001ab00000000000000000000000000000000000000000000000000000000000000',
+        '0x000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000001ab00000000000000000000000000000000000000000000000000000000000000',
       );
     });
   });
 
   describe('decode', () => {
     it('decodes an encoded static tuple', () => {
-      const value = fromHex(
+      const value = hexToBytes(
         '000000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000022',
       );
+
       expect(
         tuple.decode({ type: '(uint256, uint256)', value, skip: jest.fn() }),
-      ).toStrictEqual([12n, 34n]);
+      ).toStrictEqual([BigInt(12), BigInt(34)]);
     });
 
     it('decodes an encoded dynamic tuple', () => {
-      const value = fromHex(
+      const value = hexToBytes(
         '000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000001ab00000000000000000000000000000000000000000000000000000000000000',
       );
+
       const result = tuple.decode({
         type: '(uint256, bytes)',
         value,
         skip: jest.fn(),
       });
 
-      expect(result[0]).toBe(12n);
-      expect(toHex(result[1] as Uint8Array)).toBe('ab');
+      expect(result[0]).toBe(BigInt(12));
+      expect(bytesToHex(result[1] as Uint8Array)).toBe('0xab');
     });
 
     it('calls skip with the tuple length', () => {
-      const value = fromHex(
+      const skip = jest.fn();
+      const value = hexToBytes(
         '000000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000000022',
       );
-      const skip = jest.fn();
 
       tuple.decode({ type: '(uint256,uint256)', value, skip });
       expect(skip).toHaveBeenCalledWith(32);

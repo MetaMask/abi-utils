@@ -2,7 +2,7 @@ export type DynamicFunction = (type: string) => boolean;
 
 export type EncodeArgs<Value> = {
   /**
-   * The buffer to encode the value in.
+   * The bytes to encode the value in.
    */
   buffer: Uint8Array;
 

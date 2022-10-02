@@ -1,7 +1,7 @@
 import { getParser, isDynamicParser, pack, unpack } from '../packer';
-import { DecodeArgs, Parser } from '../types';
+import { Parser } from './parser';
 
-const TUPLE_REGEX = /^\((.*)\)$/;
+const TUPLE_REGEX = /^\((.*)\)$/u;
 
 /**
  * Get elements from a tuple type.
@@ -13,7 +13,7 @@ export const getTupleElements = (type: string): string[] => {
   return type
     .slice(1, -1)
     .split(',')
-    .map((type) => type.trim());
+    .map((value) => value.trim());
 };
 
 export const tuple: Parser<unknown[]> = {
@@ -46,7 +46,7 @@ export const tuple: Parser<unknown[]> = {
     return pack(elements, value, buffer);
   },
 
-  decode({ type, value, skip }: DecodeArgs): unknown[] {
+  decode({ type, value, skip }): unknown[] {
     const elements = getTupleElements(type);
     const length = elements.length * 32 - 32;
 

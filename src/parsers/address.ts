@@ -1,16 +1,23 @@
-import { DecodeArgs, Parser } from '../types';
-import { concat, fromHex, stripPrefix, toHex } from '../utils';
+import {
+  add0x,
+  bytesToHex,
+  concatBytes,
+  hexToBytes,
+  remove0x,
+} from '@metamask/utils';
+import { padStart } from '../utils';
+import { Parser } from './parser';
 
 export const address: Parser<string> = {
   isDynamic: false,
 
   encode({ buffer, value }): Uint8Array {
-    const addressBuffer = fromHex(stripPrefix(value).padStart(64, '0'));
+    const addressBuffer = padStart(hexToBytes(remove0x(value)));
 
-    return concat([buffer, addressBuffer]);
+    return concatBytes([buffer, addressBuffer]);
   },
 
-  decode({ value }: DecodeArgs): string {
-    return `0x${toHex(value.slice(12, 32))}`;
+  decode({ value }): string {
+    return add0x(bytesToHex(value.slice(12, 32)));
   },
 };

@@ -1,11 +1,6 @@
-import {
-  DecodeArgs,
-  EncodeArgs,
-  FunctionLike,
-  Parser,
-  SolidityFunction,
-} from '../types';
-import { concat, fromHex, toHex } from '../utils';
+import { bytesToHex, concatBytes, hexToBytes } from '@metamask/utils';
+import { FunctionLike, SolidityFunction } from '../types';
+import { Parser } from './parser';
 import { fixedBytes } from './fixed-bytes';
 
 /**
@@ -16,24 +11,24 @@ import { fixedBytes } from './fixed-bytes';
  */
 export const getFunction = (input: FunctionLike): Uint8Array => {
   if (typeof input === 'string') {
-    return fromHex(input);
+    return hexToBytes(input);
   }
 
-  return concat([fromHex(input.address), fromHex(input.selector)]);
+  return concatBytes([hexToBytes(input.address), hexToBytes(input.selector)]);
 };
 
 export const fn: Parser<FunctionLike, SolidityFunction> = {
   isDynamic: false,
 
-  encode({ buffer, value }: EncodeArgs<FunctionLike>): Uint8Array {
-    const fn = getFunction(value);
-    return fixedBytes.encode({ type: 'bytes24', buffer, value: fn });
+  encode({ buffer, value }): Uint8Array {
+    const fnValue = getFunction(value);
+    return fixedBytes.encode({ type: 'bytes24', buffer, value: fnValue });
   },
 
-  decode({ value }: DecodeArgs): SolidityFunction {
+  decode({ value }): SolidityFunction {
     return {
-      address: `0x${toHex(value.slice(0, 20))}`,
-      selector: toHex(value.slice(20, 24)),
+      address: bytesToHex(value.slice(0, 20)),
+      selector: bytesToHex(value.slice(20, 24)),
     };
   },
 };
