@@ -1,4 +1,6 @@
 {
-  "out": "docs",
-  "exclude": ["**/__mocks__/**", "**/*.test.ts"]
+  "entryPoints": ["./src/index.ts"],
+  "excludePrivate": true,
+  "hideGenerator": true,
+  "out": "docs"
 }
