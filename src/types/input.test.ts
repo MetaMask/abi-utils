@@ -1,5 +1,5 @@
 import { create } from 'superstruct';
-import { hexToBytes } from '../../../utils';
+import { hexToBytes } from '@metamask/utils';
 import { bigint, boolean, bytes, hex, solidityFunction } from './input';
 
 describe('hex', () => {
