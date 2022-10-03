@@ -19,7 +19,7 @@
     "type": "git",
     "url": "https://github.com/MetaMask/abi-utils.git"
   },
-  "license": "MIT",
+  "license": "(Apache-2.0 AND MIT)",
   "author": "Maarten Zuidhoorn <maarten@zuidhoorn.com>",
   "sideEffects": false,
   "main": "lib/cjs/index.js",
