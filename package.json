@@ -22,9 +22,8 @@
   "license": "(Apache-2.0 AND MIT)",
   "author": "Maarten Zuidhoorn <maarten@zuidhoorn.com>",
   "sideEffects": false,
-  "main": "lib/cjs/index.js",
-  "module": "lib/es/index.js",
-  "typings": "typings/index.d.ts",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "files": [
     "dist/"
   ],
@@ -50,11 +49,8 @@
       "prettier --write"
     ]
   },
-  "resolutions": {
-    "@metamask/utils": "portal:/Users/morten/Development/MetaMask/utils"
-  },
   "dependencies": {
-    "@metamask/utils": "^3.0.3",
+    "@metamask/utils": "^3.1.0",
     "superstruct": "^0.16.5"
   },
   "devDependencies": {
