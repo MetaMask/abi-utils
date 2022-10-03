@@ -20,7 +20,6 @@ import { pack, unpack } from './packer';
  *
  * console.log(decoded); // [42n, 'Hello, world!']
  * ```
- *
  * @see https://docs.soliditylang.org/en/v0.8.17/abi-spec.html
  * @param types - The types to encode.
  * @param values - The values to encode. This array must have the same length as
@@ -51,7 +50,6 @@ export const encode = (types: string[], values: unknown[]): Uint8Array => {
  *
  * console.log(decoded); // [42n, 'Hello, world!']
  * ```
- *
  * @see https://docs.soliditylang.org/en/v0.8.17/abi-spec.html
  * @param types - The types to decode the bytes with.
  * @param bytes - The bytes to decode.

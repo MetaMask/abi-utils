@@ -5,7 +5,8 @@ import {
   concatBytes,
   signedBigIntToBytes,
 } from '@metamask/utils';
-import { NumberLike } from '../types';
+import { create } from 'superstruct';
+import { bigint, NumberLike } from '../types';
 import { padStart } from '../utils';
 import { DecodeArgs, Parser } from './parser';
 
@@ -28,11 +29,7 @@ export const isSigned = (type: string): boolean => {
  * @returns The value parsed as bigint.
  */
 export const asBigInt = (value: NumberLike): bigint => {
-  if (typeof value === 'bigint') {
-    return value;
-  }
-
-  return BigInt(value);
+  return create(value, bigint());
 };
 
 export const number: Parser<NumberLike, bigint> = {

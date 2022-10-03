@@ -1,4 +1,5 @@
-import { BooleanLike } from '../types';
+import { create } from 'superstruct';
+import { boolean, BooleanLike } from '../types';
 import { Parser } from './parser';
 import { number } from './number';
 
@@ -6,10 +7,12 @@ import { number } from './number';
  * Get a number for a boolean-like value (e.g., strings).
  *
  * @param value - The value to get a boolean for.
- * @returns The parsed boolean value. This is BigInt(1) for truthy values, or BigInt(0) for falsy values.
+ * @returns The parsed boolean value. This is `BigInt(1)` for truthy values, or
+ * `BigInt(0)` for falsy values.
  */
 export const getBooleanValue = (value: BooleanLike): bigint => {
-  if (value === true || (typeof value === 'string' && value === 'true')) {
+  const booleanValue = create(value, boolean());
+  if (booleanValue) {
     return BigInt(1);
   }
 

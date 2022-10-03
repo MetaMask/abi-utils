@@ -4,8 +4,9 @@ type IteratorValue = {
 };
 
 /**
- * Iterate over a buffer with the specified size. This will yield a part of the buffer starting at an increment of the
- * specified size, until the end of the buffer is reached.
+ * Iterate over a buffer with the specified size. This will yield a part of the
+ * buffer starting at an increment of the specified size, until the end of the
+ * buffer is reached.
  *
  * Calling the `skip` function will make it skip the specified number of bytes.
  *

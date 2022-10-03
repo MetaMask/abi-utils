@@ -5,8 +5,8 @@ import { Parser } from './parser';
 const BYTES_REGEX = /^bytes([0-9]{1,2})$/u;
 
 /**
- * Get the length of the specified type. If a length is not specified, or if the length is out of range (0 < n <= 32),
- * this will throw an error.
+ * Get the length of the specified type. If a length is not specified, or if the
+ * length is out of range (0 < n <= 32), this will throw an error.
  *
  * @param type - The type to get the length for.
  * @returns The byte length of the type.

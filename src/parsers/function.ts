@@ -1,20 +1,19 @@
 import { bytesToHex, concatBytes, hexToBytes } from '@metamask/utils';
-import { FunctionLike, SolidityFunction } from '../types';
+import { create } from 'superstruct';
+import { FunctionLike, solidityFunction, SolidityFunction } from '../types';
 import { Parser } from './parser';
 import { fixedBytes } from './fixed-bytes';
 
 /**
- * Get the encoded function as buffer. It consists of the address (20 bytes) and function selector (4 bytes).
+ * Get the encoded function as buffer. It consists of the address (20 bytes) and
+ * function selector (4 bytes).
  *
  * @param input - The function-like input.
  * @returns The function as buffer.
  */
 export const getFunction = (input: FunctionLike): Uint8Array => {
-  if (typeof input === 'string') {
-    return hexToBytes(input);
-  }
-
-  return concatBytes([hexToBytes(input.address), hexToBytes(input.selector)]);
+  const value = create(input, solidityFunction());
+  return concatBytes([hexToBytes(value.address), hexToBytes(value.selector)]);
 };
 
 export const fn: Parser<FunctionLike, SolidityFunction> = {

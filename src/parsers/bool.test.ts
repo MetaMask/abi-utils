@@ -8,9 +8,6 @@ describe('getBooleanValue', () => {
 
     expect(getBooleanValue(false)).toBe(BigInt(0));
     expect(getBooleanValue('false')).toBe(BigInt(0));
-
-    // @ts-expect-error Invalid input
-    expect(getBooleanValue('foo bar')).toBe(BigInt(0));
   });
 });
 

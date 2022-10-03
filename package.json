@@ -54,7 +54,8 @@
     "@metamask/utils": "portal:/Users/morten/Development/MetaMask/utils"
   },
   "dependencies": {
-    "@metamask/utils": "^3.0.3"
+    "@metamask/utils": "^3.0.3",
+    "superstruct": "^0.16.5"
   },
   "devDependencies": {
     "@lavamoat/allow-scripts": "^2.0.3",

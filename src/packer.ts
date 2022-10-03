@@ -53,8 +53,9 @@ export const getParser = (type: string): Parser => {
 };
 
 /**
- * Check if the specified parser is dynamic, for the provided types. This is primarily used for parsing tuples, where
- * a tuple can be dynamic based on the types. For other parsers, it will simply use the set `isDynamic` value.
+ * Check if the specified parser is dynamic, for the provided types. This is
+ * primarily used for parsing tuples, where a tuple can be dynamic based on the
+ * types. For other parsers, it will simply use the set `isDynamic` value.
  *
  * @param parser - The parser to check.
  * @param type - The type to check the parser with.
@@ -81,12 +82,13 @@ type PackState = {
 };
 
 /**
- * Pack the provided values in a buffer, encoded with the specified types. If a buffer is specified, the resulting value
- * will be concatenated with the buffer.
+ * Pack the provided values in a buffer, encoded with the specified types. If a
+ * buffer is specified, the resulting value will be concatenated with the
+ * buffer.
  *
  * @param types - The types to use for encoding.
  * @param values - The values to encode.
- * @param [buffer] - The buffer to concatenate with.
+ * @param buffer - The buffer to concatenate with.
  * @returns The resulting encoded buffer.
  */
 export const pack = (
