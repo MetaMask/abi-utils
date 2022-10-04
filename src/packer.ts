@@ -18,6 +18,7 @@ import {
   tuple,
 } from './parsers';
 import { padStart, set } from './utils';
+import { TypeMap } from './types';
 
 /**
  * Get the parser for the specified type.
@@ -91,9 +92,9 @@ type PackState = {
  * @param buffer - The buffer to concatenate with.
  * @returns The resulting encoded buffer.
  */
-export const pack = (
-  types: readonly string[],
-  values: unknown[],
+export const pack = <Type extends readonly string[]>(
+  types: Type,
+  values: TypeMap<Type, 'input'>,
   buffer: Uint8Array = new Uint8Array(),
 ): Uint8Array => {
   assert(
@@ -147,10 +148,13 @@ export const pack = (
   return concatBytes([buffer, updatedBuffer, dynamicBuffer]);
 };
 
-export const unpack = (
-  types: readonly string[],
+export const unpack = <
+  Type extends readonly string[],
+  Output = TypeMap<Type, 'output'>,
+>(
+  types: Type,
   buffer: Uint8Array,
-): unknown[] => {
+): Output => {
   const iterator = iterate(buffer);
 
   return types.map((type) => {
@@ -173,5 +177,5 @@ export const unpack = (
     }
 
     return parser.decode({ type, value, skip });
-  });
+  }) as unknown as Output;
 };
