@@ -31,6 +31,17 @@ export const getArrayType = (
   ];
 };
 
+/**
+ * Get the type of the array as a tuple type.
+ *
+ * @param innerType - The type of the array.
+ * @param length - The length of the array.
+ * @returns The tuple type.
+ */
+export const getTupleType = (innerType: string, length: number): string => {
+  return `(${new Array(length).fill(innerType).join(',')})`;
+};
+
 export const array: Parser<unknown[]> = {
   /**
    * Check if the array is dynamic. Arrays are dynamic if the array does not
@@ -71,9 +82,7 @@ export const array: Parser<unknown[]> = {
 
     const [innerType, length] = getArrayType(type);
     if (!isDynamicParser(this, type) && length !== undefined) {
-      return tuple.getByteLength(
-        `(${new Array(length).fill(innerType).join(',')})`,
-      );
+      return tuple.getByteLength(getTupleType(innerType, length));
     }
 
     return 32;
@@ -99,7 +108,7 @@ export const array: Parser<unknown[]> = {
 
       // `T[k]` for any `T` and `k` is encoded as `(T[0], ..., T[k - 1])`.
       return tuple.encode({
-        type: `(${new Array(value.length).fill(arrayType).join(',')})`,
+        type: getTupleType(arrayType, fixedLength),
         buffer,
         value,
       });
@@ -127,7 +136,7 @@ export const array: Parser<unknown[]> = {
 
     if (fixedLength) {
       const result = tuple.decode({
-        type: `(${new Array(fixedLength).fill(arrayType).join(',')})`,
+        type: getTupleType(arrayType, fixedLength),
         value,
         ...rest,
       });

@@ -16,6 +16,11 @@ import { TypeMap } from './types';
  * pass in a hex string, you must pass it in as a `Uint8Array`, or use the
  * "0x"-prefix.
  *
+ * It will also attempt to infer the types of the values. For example, if you
+ * pass in a string for a `uint256`, it will result in a TypeScript compile-time
+ * error. This does not work for all types, however. For example, if you use
+ * nested arrays or tuples, the type will be inferred as `unknown`.
+ *
  * The following types are supported:
  *
  * - `address`: A 20-byte Ethereum address.
@@ -101,11 +106,10 @@ export const encodeSingle = <Type extends string>(
  * Decode an ABI encoded buffer with the specified types. The types must be
  * valid Solidity ABI types.
  *
- * For ease of use, you can use the generic `Type` parameter to specify the
- * expected return type. This will allow you to use the returned values
- * directly without casting them. If you do not specify the type, the return
- * type will be `unknown[]`. Note that this will not check that the decoded
- * values match the specified types.
+ * This will attempt to infer the output types from the input types. For
+ * example, if you use `uint256` as an input type, the output type will be
+ * `bigint`. This does not work for all types, however. For example, if you use
+ * nested array types or tuple types, the output type will be `unknown`.
  *
  * The resulting types of the values will be as follows:
  *
