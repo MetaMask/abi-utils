@@ -6,6 +6,12 @@ describe('getTupleElements', () => {
   it('returns the elements of a tuple', () => {
     expect(getTupleElements('(foo,bar)')).toStrictEqual(['foo', 'bar']);
     expect(getTupleElements('(foo,bar[])')).toStrictEqual(['foo', 'bar[]']);
+    expect(getTupleElements('((foo,bar[]))')).toStrictEqual(['(foo,bar[])']);
+    expect(getTupleElements('((foo,bar[]),baz,(qux))')).toStrictEqual([
+      '(foo,bar[])',
+      'baz',
+      '(qux)',
+    ]);
   });
 });
 

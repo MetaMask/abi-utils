@@ -12,7 +12,9 @@ export const bytes: Parser<Bytes, Uint8Array> = {
   isDynamic: true,
 
   encode({ buffer, value }): Uint8Array {
-    const bufferValue = valueToBytes(value);
+    // TODO: See if we want to accept "0x" as a valid value, and move it to
+    // `@metamask/utils`.
+    const bufferValue = value === '0x' ? new Uint8Array() : valueToBytes(value);
     const paddedSize = Math.ceil(bufferValue.byteLength / 32) * 32;
 
     return concatBytes([

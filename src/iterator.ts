@@ -1,3 +1,5 @@
+import { assert } from '@metamask/utils';
+
 type IteratorValue = {
   skip(length: number): void;
   value: Uint8Array;
@@ -21,9 +23,8 @@ export const iterate = function* (
 ): Generator<IteratorValue, IteratorValue, IteratorValue> {
   for (let pointer = 0; pointer < buffer.length; pointer += size) {
     const skip = (length: number) => {
-      if (length % size !== 0) {
-        throw new Error('Length must be divisible by size.');
-      }
+      assert(length >= 0, 'Cannot skip a negative number of bytes.');
+      assert(length % size === 0, 'Length must be a multiple of the size.');
 
       pointer += length;
     };

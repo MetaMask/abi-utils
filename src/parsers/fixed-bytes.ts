@@ -54,6 +54,9 @@ export const fixedBytes: Parser<Bytes, Uint8Array> = {
 
   decode({ type, value }): Uint8Array {
     const length = getByteLength(type);
+
+    // Since we're returning a `Uint8Array`, we use `slice` to copy the bytes
+    // into a new array.
     return value.slice(0, length);
   },
 };
