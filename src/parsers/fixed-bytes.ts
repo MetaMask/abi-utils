@@ -39,6 +39,10 @@ export const fixedBytes: Parser<Bytes, Uint8Array> = {
     return BYTES_REGEX.test(type);
   },
 
+  getByteLength(): number {
+    return 32;
+  },
+
   encode({ type, buffer, value }): Uint8Array {
     const length = getByteLength(type);
     const bufferValue = valueToBytes(value);

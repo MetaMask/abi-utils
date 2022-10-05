@@ -11,6 +11,10 @@ import { Parser } from './parser';
 export const bytes: Parser<Bytes, Uint8Array> = {
   isDynamic: true,
 
+  getByteLength(): number {
+    return 32;
+  },
+
   encode({ buffer, value }): Uint8Array {
     // TODO: See if we want to accept "0x" as a valid value, and move it to
     // `@metamask/utils`.
@@ -28,6 +32,8 @@ export const bytes: Parser<Bytes, Uint8Array> = {
     const bytesValue = value.subarray(0, 32);
     const length = bytesToNumber(bytesValue);
 
-    return value.subarray(32, 32 + length);
+    // Since we're returning a `Uint8Array`, we use `slice` to copy the bytes
+    // into a new array.
+    return value.slice(32, 32 + length);
   },
 };

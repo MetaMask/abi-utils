@@ -45,6 +45,10 @@ export const number: Parser<NumberLike, bigint> = {
     return NUMBER_REGEX.test(type);
   },
 
+  getByteLength(): number {
+    return 32;
+  },
+
   encode({ type, buffer, value }): Uint8Array {
     const bigIntValue = asBigInt(value);
     if (isSigned(type)) {

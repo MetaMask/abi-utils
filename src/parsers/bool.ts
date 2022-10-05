@@ -22,6 +22,10 @@ export const getBooleanValue = (value: BooleanLike): bigint => {
 export const bool: Parser<BooleanLike, boolean> = {
   isDynamic: false,
 
+  getByteLength(): number {
+    return 32;
+  },
+
   encode({ buffer, value }): Uint8Array {
     const booleanValue = getBooleanValue(value);
     return number.encode({ type: 'uint256', buffer, value: booleanValue });

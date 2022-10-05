@@ -11,6 +11,8 @@ import { tuple } from './tuple';
 
 const ARRAY_REGEX = /^(?<type>.*)\[(?<length>\d*?)\]$/u;
 
+export const isArrayType = (type: string): boolean => ARRAY_REGEX.test(type);
+
 /**
  * Get the type of the array.
  *
@@ -21,14 +23,12 @@ export const getArrayType = (
   type: string,
 ): [type: string, length: number | undefined] => {
   const match = type.match(ARRAY_REGEX);
-  if (match?.groups?.type) {
-    return [
-      match.groups.type,
-      match.groups.length ? parseInt(match.groups.length, 10) : undefined,
-    ];
-  }
+  assert(match?.groups?.type, new TypeError('Type is not an array type.'));
 
-  throw new Error('Type is not an array type.');
+  return [
+    match.groups.type,
+    match.groups.length ? parseInt(match.groups.length, 10) : undefined,
+  ];
 };
 
 export const array: Parser<unknown[]> = {
@@ -53,7 +53,18 @@ export const array: Parser<unknown[]> = {
    * @returns Whether the type is an array type.
    */
   isType(type: string): boolean {
-    return ARRAY_REGEX.test(type);
+    return isArrayType(type);
+  },
+
+  getByteLength(type: string): number {
+    const [innerType, length] = getArrayType(type);
+    if (!isDynamicParser(this, type) && length !== undefined) {
+      return tuple.getByteLength(
+        `(${new Array(length).fill(innerType).join(',')})`,
+      );
+    }
+
+    return 32;
   },
 
   encode({ type, buffer, value }): Uint8Array {
@@ -83,7 +94,7 @@ export const array: Parser<unknown[]> = {
   decode({ type, value, ...rest }): unknown[] {
     const [arrayType, fixedLength] = getArrayType(type);
 
-    if (fixedLength) {
+    if (fixedLength && !isDynamicParser(getParser(arrayType), arrayType)) {
       const result = tuple.decode({
         type: `(${new Array(fixedLength).fill(arrayType).join(',')})`,
         value,

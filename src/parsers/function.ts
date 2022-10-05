@@ -19,6 +19,10 @@ export const getFunction = (input: FunctionLike): Uint8Array => {
 export const fn: Parser<FunctionLike, SolidityFunction> = {
   isDynamic: false,
 
+  getByteLength(): number {
+    return 32;
+  },
+
   encode({ buffer, value }): Uint8Array {
     const fnValue = getFunction(value);
     return fixedBytes.encode({ type: 'bytes24', buffer, value: fnValue });

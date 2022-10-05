@@ -11,6 +11,10 @@ import { Parser } from './parser';
 export const address: Parser<string> = {
   isDynamic: false,
 
+  getByteLength(): number {
+    return 32;
+  },
+
   encode({ buffer, value }): Uint8Array {
     const addressBuffer = padStart(hexToBytes(remove0x(value)));
 

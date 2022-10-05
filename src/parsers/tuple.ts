@@ -46,18 +46,6 @@ export const getTupleElements = (type: string): string[] => {
   return elements;
 };
 
-export const getTupleByteLength = (type: string): number => {
-  const elements = getTupleElements(type);
-
-  return elements.reduce((total, element) => {
-    if (isTupleType(element)) {
-      return total + getTupleByteLength(element);
-    }
-
-    return total + 32;
-  }, 0);
-};
-
 export const tuple: Parser<unknown[]> = {
   /**
    * Check if the tuple is dynamic. Tuples are dynamic if one or more elements
@@ -81,7 +69,20 @@ export const tuple: Parser<unknown[]> = {
    * @returns Whether the type is a tuple type.
    */
   isType(type: string): boolean {
-    return TUPLE_REGEX.test(type);
+    return isTupleType(type);
+  },
+
+  getByteLength(type: string): number {
+    if (isDynamicParser(this, type)) {
+      return 32;
+    }
+
+    const elements = getTupleElements(type);
+
+    return elements.reduce((total, element) => {
+      console.log(element, getParser(element).getByteLength(element));
+      return total + getParser(element).getByteLength(element);
+    }, 0);
   },
 
   encode({ type, buffer, value }): Uint8Array {
@@ -92,10 +93,8 @@ export const tuple: Parser<unknown[]> = {
   decode({ type, value, skip }): unknown[] {
     const elements = getTupleElements(type);
 
-    if (!isDynamicParser(this, type)) {
-      const length = getTupleByteLength(type) - 32;
-      skip(length);
-    }
+    const length = this.getByteLength(type) - 32;
+    skip(length);
 
     return unpack(elements, value);
   },

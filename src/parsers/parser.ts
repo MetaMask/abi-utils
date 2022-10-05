@@ -40,6 +40,7 @@ export type Parser<EncodeValue = unknown, DecodeValue = EncodeValue> = {
   isDynamic: boolean | DynamicFunction;
 
   isType?(type: string): boolean;
+  getByteLength(type: string): number;
   encode(value: EncodeArgs<EncodeValue>): Uint8Array;
   decode(args: DecodeArgs): DecodeValue;
 };

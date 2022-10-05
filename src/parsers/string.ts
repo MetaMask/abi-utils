@@ -5,6 +5,10 @@ import { bytes } from './bytes';
 export const string: Parser<string> = {
   isDynamic: true,
 
+  getByteLength(): number {
+    return 32;
+  },
+
   encode({ buffer, value }): Uint8Array {
     return bytes.encode({ type: 'bytes', buffer, value: stringToBytes(value) });
   },
