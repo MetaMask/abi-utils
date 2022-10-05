@@ -11,7 +11,7 @@ import { Parser } from './parser';
 export const bytes: Parser<Bytes, Uint8Array> = {
   isDynamic: true,
 
-  isType: (type) => type.startsWith('bytes'),
+  isType: (type) => type === 'bytes',
 
   getByteLength(): number {
     return 32;
