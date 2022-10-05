@@ -3,10 +3,13 @@ import { array, getArrayType } from './array';
 
 describe('getArrayType', () => {
   it('returns the type of the array', () => {
-    expect(getArrayType('uint256[]')).toBe('uint256');
-    expect(getArrayType('uint256[][]')).toBe('uint256[]');
-    expect(getArrayType('(uint256)[]')).toBe('(uint256)');
-    expect(getArrayType('(uint256[])[]')).toBe('(uint256[])');
+    expect(getArrayType('uint256[]')).toStrictEqual(['uint256', undefined]);
+    expect(getArrayType('uint256[][]')).toStrictEqual(['uint256[]', undefined]);
+    expect(getArrayType('(uint256)[]')).toStrictEqual(['(uint256)', undefined]);
+    expect(getArrayType('(uint256[])[]')).toStrictEqual([
+      '(uint256[])',
+      undefined,
+    ]);
   });
 
   it('throws if a type is not an array type', () => {

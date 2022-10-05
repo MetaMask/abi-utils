@@ -34,6 +34,6 @@ describe('iterate', () => {
     const iterator = iterate(buffer, 3);
 
     const { skip } = iterator.next().value;
-    expect(() => skip(1)).toThrow('Length must be divisible by size.');
+    expect(() => skip(1)).toThrow('Length must be a multiple of the size.');
   });
 });
