@@ -24,13 +24,13 @@ describe('getByteLength', () => {
 describe('fixed-bytes', () => {
   describe('isType', () => {
     it('checks if a type is a fixed bytes type', () => {
-      expect(fixedBytes.isType?.('bytes32')).toBe(true);
-      expect(fixedBytes.isType?.('bytes16')).toBe(true);
-      expect(fixedBytes.isType?.('bytes1')).toBe(true);
+      expect(fixedBytes.isType('bytes32')).toBe(true);
+      expect(fixedBytes.isType('bytes16')).toBe(true);
+      expect(fixedBytes.isType('bytes1')).toBe(true);
 
-      expect(fixedBytes.isType?.('bytes')).toBe(false);
-      expect(fixedBytes.isType?.('bytes32[]')).toBe(false);
-      expect(fixedBytes.isType?.('(bytes32)')).toBe(false);
+      expect(fixedBytes.isType('bytes')).toBe(false);
+      expect(fixedBytes.isType('bytes32[]')).toBe(false);
+      expect(fixedBytes.isType('(bytes32)')).toBe(false);
     });
   });
 

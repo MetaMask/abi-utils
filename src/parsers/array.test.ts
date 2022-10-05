@@ -23,11 +23,11 @@ describe('getArrayType', () => {
 describe('array', () => {
   describe('isType', () => {
     it('checks if a type is a tuple type', () => {
-      expect(array.isType?.('uint256[]')).toBe(true);
-      expect(array.isType?.('uint256[][]')).toBe(true);
+      expect(array.isType('uint256[]')).toBe(true);
+      expect(array.isType('uint256[][]')).toBe(true);
 
-      expect(array.isType?.('uint256')).toBe(false);
-      expect(array.isType?.('(uint256)')).toBe(false);
+      expect(array.isType('uint256')).toBe(false);
+      expect(array.isType('(uint256)')).toBe(false);
     });
   });
 

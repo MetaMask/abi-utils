@@ -45,7 +45,7 @@ export const getParser = (type: string): Parser => {
     return staticParser;
   }
 
-  const parser = Object.values(parsers).find((value) => value.isType?.(type));
+  const parser = Object.values(parsers).find((value) => value.isType(type));
   if (parser) {
     return parser;
   }

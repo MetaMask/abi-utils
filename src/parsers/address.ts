@@ -11,6 +11,8 @@ import { Parser } from './parser';
 export const address: Parser<string> = {
   isDynamic: false,
 
+  isType: (type) => type === 'address',
+
   getByteLength(): number {
     return 32;
   },

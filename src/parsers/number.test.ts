@@ -24,16 +24,16 @@ describe('asNumber', () => {
 describe('number', () => {
   describe('isType', () => {
     it('checks if a type is a number type', () => {
-      expect(number.isType?.('uint256')).toBe(true);
-      expect(number.isType?.('uint128')).toBe(true);
-      expect(number.isType?.('uint')).toBe(true);
-      expect(number.isType?.('int256')).toBe(true);
-      expect(number.isType?.('int128')).toBe(true);
-      expect(number.isType?.('int')).toBe(true);
+      expect(number.isType('uint256')).toBe(true);
+      expect(number.isType('uint128')).toBe(true);
+      expect(number.isType('uint')).toBe(true);
+      expect(number.isType('int256')).toBe(true);
+      expect(number.isType('int128')).toBe(true);
+      expect(number.isType('int')).toBe(true);
 
-      expect(number.isType?.('string')).toBe(false);
-      expect(number.isType?.('(uint256)')).toBe(false);
-      expect(number.isType?.('uint256[]')).toBe(false);
+      expect(number.isType('string')).toBe(false);
+      expect(number.isType('(uint256)')).toBe(false);
+      expect(number.isType('uint256[]')).toBe(false);
     });
   });
 

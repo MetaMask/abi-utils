@@ -28,11 +28,11 @@ describe('tuple', () => {
 
   describe('isType', () => {
     it('checks if a type is a tuple type', () => {
-      expect(tuple.isType?.('(uint256)')).toBe(true);
-      expect(tuple.isType?.('(uint256, uint256)')).toBe(true);
+      expect(tuple.isType('(uint256)')).toBe(true);
+      expect(tuple.isType('(uint256, uint256)')).toBe(true);
 
-      expect(tuple.isType?.('uint256')).toBe(false);
-      expect(tuple.isType?.('(uint256)[]')).toBe(false);
+      expect(tuple.isType('uint256')).toBe(false);
+      expect(tuple.isType('(uint256)[]')).toBe(false);
     });
   });
 

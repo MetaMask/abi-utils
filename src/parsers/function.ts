@@ -19,6 +19,8 @@ export const getFunction = (input: FunctionLike): Uint8Array => {
 export const fn: Parser<FunctionLike, SolidityFunction> = {
   isDynamic: false,
 
+  isType: (type) => type === 'function',
+
   getByteLength(): number {
     return 32;
   },

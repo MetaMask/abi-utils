@@ -5,6 +5,8 @@ import { bytes } from './bytes';
 export const string: Parser<string> = {
   isDynamic: true,
 
+  isType: (type) => type === 'string',
+
   getByteLength(): number {
     return 32;
   },
