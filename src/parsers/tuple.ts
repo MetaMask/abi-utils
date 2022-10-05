@@ -72,6 +72,14 @@ export const tuple: Parser<unknown[]> = {
     return isTupleType(type);
   },
 
+  /**
+   * Get the byte length of a tuple type. If the tuple is dynamic, this will
+   * always return 32. If the tuple is static, this will return the sum of the
+   * byte lengths of the tuple elements.
+   *
+   * @param type - The type to get the byte length for.
+   * @returns The byte length of the tuple type.
+   */
   getByteLength(type: string): number {
     if (isDynamicParser(this, type)) {
       return 32;
@@ -84,11 +92,29 @@ export const tuple: Parser<unknown[]> = {
     }, 0);
   },
 
+  /**
+   * Encode a tuple value.
+   *
+   * @param args - The encoding arguments.
+   * @param args.type - The type of the value.
+   * @param args.buffer - The byte array to add to.
+   * @param args.value - The value to encode.
+   * @returns The bytes with the encoded value added to it.
+   */
   encode({ type, buffer, value }): Uint8Array {
     const elements = getTupleElements(type);
     return pack(elements, value, buffer);
   },
 
+  /**
+   * Decode a tuple value.
+   *
+   * @param args - The decoding arguments.
+   * @param args.type - The type of the value.
+   * @param args.value - The value to decode.
+   * @param args.skip - A function to skip a number of bytes.
+   * @returns The decoded value.
+   */
   decode({ type, value, skip }): unknown[] {
     const elements = getTupleElements(type);
 

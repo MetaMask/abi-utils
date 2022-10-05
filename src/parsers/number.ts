@@ -45,10 +45,25 @@ export const number: Parser<NumberLike, bigint> = {
     return NUMBER_REGEX.test(type);
   },
 
+  /**
+   * Get the byte length of an encoded number type. Since `int` and `uint` are
+   * simple types, this will always return 32.
+   *
+   * @returns The byte length of the type.
+   */
   getByteLength(): number {
     return 32;
   },
 
+  /**
+   * Encode a number value.
+   *
+   * @param args - The arguments to encode.
+   * @param args.type - The type of the value.
+   * @param args.buffer - The byte array to add to.
+   * @param args.value - The value to encode.
+   * @returns The bytes with the encoded value added to it.
+   */
   encode({ type, buffer, value }): Uint8Array {
     const bigIntValue = asBigInt(value);
     if (isSigned(type)) {
@@ -61,6 +76,14 @@ export const number: Parser<NumberLike, bigint> = {
     return concatBytes([buffer, padStart(bigIntToBytes(bigIntValue))]);
   },
 
+  /**
+   * Decode a number value.
+   *
+   * @param args - The decoding arguments.
+   * @param args.type - The type of the value.
+   * @param args.value - The value to decode.
+   * @returns The decoded value.
+   */
   decode({ type, value }: DecodeArgs): bigint {
     const buffer = value.slice(0, 32);
     if (isSigned(type)) {

@@ -39,10 +39,24 @@ export const fixedBytes: Parser<Bytes, Uint8Array> = {
     return BYTES_REGEX.test(type);
   },
 
+  /**
+   * Get the byte length of an encoded fixed bytes type.
+   *
+   * @returns The byte length of the type.
+   */
   getByteLength(): number {
     return 32;
   },
 
+  /**
+   * Encode a fixed bytes value.
+   *
+   * @param args - The arguments to encode.
+   * @param args.type - The type of the value.
+   * @param args.buffer - The byte array to add to.
+   * @param args.value - The value to encode.
+   * @returns The bytes with the encoded value added to it.
+   */
   encode({ type, buffer, value }): Uint8Array {
     const length = getByteLength(type);
     const bufferValue = valueToBytes(value);
@@ -56,6 +70,14 @@ export const fixedBytes: Parser<Bytes, Uint8Array> = {
     return concatBytes([buffer, padEnd(bufferValue)]);
   },
 
+  /**
+   * Decode a fixed bytes value.
+   *
+   * @param args - The arguments to decode.
+   * @param args.type - The type of the value.
+   * @param args.value - The value to decode.
+   * @returns The decoded value as a `Uint8Array`.
+   */
   decode({ type, value }): Uint8Array {
     const length = getByteLength(type);
 
