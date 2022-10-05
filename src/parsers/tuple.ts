@@ -80,7 +80,6 @@ export const tuple: Parser<unknown[]> = {
     const elements = getTupleElements(type);
 
     return elements.reduce((total, element) => {
-      console.log(element, getParser(element).getByteLength(element));
       return total + getParser(element).getByteLength(element);
     }, 0);
   },

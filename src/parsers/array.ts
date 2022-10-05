@@ -58,7 +58,7 @@ export const array: Parser<unknown[]> = {
 
   getByteLength(type: string): number {
     const [innerType, length] = getArrayType(type);
-    if (!isDynamicParser(this, type) && length !== undefined) {
+    if (length !== undefined) {
       return tuple.getByteLength(
         `(${new Array(length).fill(innerType).join(',')})`,
       );
