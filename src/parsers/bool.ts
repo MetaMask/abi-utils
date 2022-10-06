@@ -1,22 +1,42 @@
-import { create } from 'superstruct';
-import { boolean, BooleanLike } from '../types';
+import { coerce, create, literal, union, boolean } from 'superstruct';
+import { ParserError } from '../errors';
 import { Parser } from './parser';
 import { number } from './number';
 
 /**
- * Get a number for a boolean-like value (e.g., strings).
+ * A boolean-like value. This can be a boolean literal, or "true" or "false".
+ */
+export type BooleanLike = 'true' | 'false' | boolean;
+
+const BooleanCoercer = coerce(
+  boolean(),
+  union([literal('true'), literal('false')]),
+  (value) => value === 'true',
+);
+
+/**
+ * Normalize a boolean value. This accepts the boolean as:
+ *
+ * - A boolean literal.
+ * - The string "true" or "false".
  *
  * @param value - The value to get a boolean for.
  * @returns The parsed boolean value. This is `BigInt(1)` for truthy values, or
  * `BigInt(0)` for falsy values.
  */
 export const getBooleanValue = (value: BooleanLike): bigint => {
-  const booleanValue = create(value, boolean());
-  if (booleanValue) {
-    return BigInt(1);
-  }
+  try {
+    const booleanValue = create(value, BooleanCoercer);
+    if (booleanValue) {
+      return BigInt(1);
+    }
 
-  return BigInt(0);
+    return BigInt(0);
+  } catch {
+    throw new ParserError(
+      `Invalid boolean value. Expected a boolean literal, or the string "true" or "false", but received "${value}".`,
+    );
+  }
 };
 
 export const bool: Parser<BooleanLike, boolean> = {

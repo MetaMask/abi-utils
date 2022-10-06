@@ -1,14 +1,14 @@
 import {
-  Bytes,
+  BytesLike,
   bytesToNumber,
   concatBytes,
+  createBytes,
   numberToBytes,
-  valueToBytes,
 } from '@metamask/utils';
 import { padEnd, padStart } from '../utils';
 import { Parser } from './parser';
 
-export const bytes: Parser<Bytes, Uint8Array> = {
+export const bytes: Parser<BytesLike, Uint8Array> = {
   isDynamic: true,
 
   /**
@@ -42,8 +42,7 @@ export const bytes: Parser<Bytes, Uint8Array> = {
    * @returns The bytes with the encoded bytes value added to it.
    */
   encode({ buffer, value }): Uint8Array {
-    // TODO: Support "0x" in `@metamask/utils`.
-    const bufferValue = value === '0x' ? new Uint8Array() : valueToBytes(value);
+    const bufferValue = createBytes(value);
     const paddedSize = Math.ceil(bufferValue.byteLength / 32) * 32;
 
     // Bytes of length `k` are encoded as `k pad_right(bytes)`.

@@ -1,14 +1,39 @@
 import {
   add0x,
+  assert,
+  BytesLike,
   bytesToHex,
   concatBytes,
-  hexToBytes,
-  remove0x,
+  createBytes,
 } from '@metamask/utils';
 import { padStart } from '../utils';
+import { ParserError } from '../errors';
 import { Parser } from './parser';
 
-export const address: Parser<string> = {
+/**
+ * Normalize an address value. This accepts the address as:
+ *
+ * - A hex string starting with the `0x` prefix.
+ * - A byte array (`Uint8Array` or `Buffer`).
+ *
+ * It checks that the address is 20 bytes long.
+ *
+ * @param value - The value to normalize.
+ * @returns The normalized address as `Uint8Array`.
+ */
+export const getAddress = (value: BytesLike): Uint8Array => {
+  const bytesValue = createBytes(value);
+  assert(
+    bytesValue.length === 20,
+    new ParserError(
+      `Invalid address value. Expected address to be 20 bytes long, but received ${bytesValue.length} bytes.`,
+    ),
+  );
+
+  return bytesValue;
+};
+
+export const address: Parser<BytesLike, string> = {
   isDynamic: false,
 
   /**
@@ -42,7 +67,7 @@ export const address: Parser<string> = {
    * @returns The bytes with the encoded address added to it.
    */
   encode({ buffer, value }): Uint8Array {
-    const addressBuffer = padStart(hexToBytes(remove0x(value)));
+    const addressBuffer = padStart(getAddress(value));
 
     return concatBytes([buffer, addressBuffer]);
   },

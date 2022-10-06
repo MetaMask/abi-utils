@@ -6,6 +6,7 @@ import {
 } from '@metamask/utils';
 import { getParser, isDynamicParser, pack, unpack } from '../packer';
 import { padStart } from '../utils';
+import { ParserError } from '../errors';
 import { Parser } from './parser';
 import { tuple } from './tuple';
 
@@ -23,7 +24,12 @@ export const getArrayType = (
   type: string,
 ): [type: string, length: number | undefined] => {
   const match = type.match(ARRAY_REGEX);
-  assert(match?.groups?.type, new TypeError('Type is not an array type.'));
+  assert(
+    match?.groups?.type,
+    new ParserError(
+      `Invalid array type. Expected an array type, but received "${type}".`,
+    ),
+  );
 
   return [
     match.groups.type,
@@ -78,7 +84,10 @@ export const array: Parser<unknown[]> = {
    * @returns The byte length of an encoded array.
    */
   getByteLength(type: string): number {
-    assert(isArrayType(type), new TypeError('Type is not an array type.'));
+    assert(
+      isArrayType(type),
+      new ParserError(`Expected an array type, but received "${type}".`),
+    );
 
     const [innerType, length] = getArrayType(type);
     if (!isDynamicParser(this, type) && length !== undefined) {
@@ -103,7 +112,9 @@ export const array: Parser<unknown[]> = {
     if (fixedLength) {
       assert(
         fixedLength === value.length,
-        `Array length does not match type length. Expected ${fixedLength}, got ${value.length}.`,
+        new ParserError(
+          `Array length does not match type length. Expected a length of ${fixedLength}, but received ${value.length}.`,
+        ),
       );
 
       // `T[k]` for any `T` and `k` is encoded as `(T[0], ..., T[k - 1])`.
@@ -143,7 +154,9 @@ export const array: Parser<unknown[]> = {
 
       assert(
         result.length === fixedLength,
-        'Array length does not match type length.',
+        new ParserError(
+          `Array length does not match type length. Expected a length of ${fixedLength}, but received ${result.length}.`,
+        ),
       );
 
       return result;

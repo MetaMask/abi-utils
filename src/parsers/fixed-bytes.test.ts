@@ -10,18 +10,20 @@ describe('getByteLength', () => {
 
   it('throws an error if the length is invalid', () => {
     expect(() => getByteLength('bytes64')).toThrow(
-      'Invalid type: length is out of range.',
+      'Invalid byte length. Expected a number between 1 and 32, but received "bytes64".',
     );
 
     expect(() => getByteLength('bytes0')).toThrow(
-      'Invalid type: length is out of range.',
+      'Invalid byte length. Expected a number between 1 and 32, but received "bytes0".',
     );
 
-    expect(() => getByteLength('bytes')).toThrow('Invalid type: no length.');
+    expect(() => getByteLength('bytes')).toThrow(
+      'Invalid byte length. Expected a number between 1 and 32, but received "bytes".',
+    );
   });
 });
 
-describe('fixed-bytes', () => {
+describe('fixedBytes', () => {
   describe('isType', () => {
     it('checks if a type is a fixed bytes type', () => {
       expect(fixedBytes.isType('bytes32')).toBe(true);
@@ -54,10 +56,12 @@ describe('fixed-bytes', () => {
       expect(() =>
         fixedBytes.encode({
           type: 'bytes32',
-          value: 'abcdef123456789',
+          value: '0xabcdef123456789',
           buffer: new Uint8Array(),
         }),
-      ).toThrow('Buffer has invalid length, expected 32, got 15.');
+      ).toThrow(
+        'Expected a value of length 32, but received a value of length 8.',
+      );
     });
   });
 

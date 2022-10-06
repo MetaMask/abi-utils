@@ -1,5 +1,5 @@
 import { bytesToHex, hexToBytes } from '@metamask/utils';
-import { asBigInt, isSigned, number } from './number';
+import { getBigInt, isSigned, number } from './number';
 
 describe('isSigned', () => {
   it('checks if a number type is signed', () => {
@@ -15,9 +15,9 @@ describe('isSigned', () => {
 
 describe('asNumber', () => {
   it('returns a bigint for a number-like input', () => {
-    expect(asBigInt(123)).toBe(BigInt(123));
-    expect(asBigInt('123')).toBe(BigInt(123));
-    expect(asBigInt('0x123')).toBe(BigInt(291));
+    expect(getBigInt(123)).toBe(BigInt(123));
+    expect(getBigInt('123')).toBe(BigInt(123));
+    expect(getBigInt('0x123')).toBe(BigInt(291));
   });
 });
 

@@ -1,5 +1,6 @@
-import { Bytes, concatBytes, valueToBytes } from '@metamask/utils';
+import { assert, BytesLike, concatBytes, createBytes } from '@metamask/utils';
 import { padEnd } from '../utils';
+import { ParserError } from '../errors';
 import { Parser } from './parser';
 
 const BYTES_REGEX = /^bytes([0-9]{1,2})$/u;
@@ -13,20 +14,23 @@ const BYTES_REGEX = /^bytes([0-9]{1,2})$/u;
  */
 export const getByteLength = (type: string): number => {
   const bytes = type.match(BYTES_REGEX)?.[1];
+  assert(
+    bytes,
+    `Invalid byte length. Expected a number between 1 and 32, but received "${type}".`,
+  );
 
-  if (bytes) {
-    const length = Number(bytes);
-    if (length <= 0 || length > 32) {
-      throw new Error('Invalid type: length is out of range.');
-    }
+  const length = Number(bytes);
+  assert(
+    length > 0 && length <= 32,
+    new ParserError(
+      `Invalid byte length. Expected a number between 1 and 32, but received "${type}".`,
+    ),
+  );
 
-    return length;
-  }
-
-  throw new Error('Invalid type: no length.');
+  return length;
 };
 
-export const fixedBytes: Parser<Bytes, Uint8Array> = {
+export const fixedBytes: Parser<BytesLike, Uint8Array> = {
   isDynamic: false,
 
   /**
@@ -59,13 +63,14 @@ export const fixedBytes: Parser<Bytes, Uint8Array> = {
    */
   encode({ type, buffer, value }): Uint8Array {
     const length = getByteLength(type);
-    const bufferValue = valueToBytes(value);
+    const bufferValue = createBytes(value);
 
-    if (bufferValue.length !== length) {
-      throw new Error(
-        `Buffer has invalid length, expected ${length}, got ${bufferValue.length}.`,
-      );
-    }
+    assert(
+      bufferValue.length === length,
+      new ParserError(
+        `Expected a value of length ${length}, but received a value of length ${bufferValue.length}.`,
+      ),
+    );
 
     return concatBytes([buffer, padEnd(bufferValue)]);
   },

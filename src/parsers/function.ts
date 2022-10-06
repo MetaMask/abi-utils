@@ -1,18 +1,79 @@
-import { bytesToHex, concatBytes, hexToBytes } from '@metamask/utils';
-import { create } from 'superstruct';
-import { FunctionLike, solidityFunction, SolidityFunction } from '../types';
+import {
+  assert,
+  bytesToHex,
+  concatBytes,
+  createBytes,
+  hexToBytes,
+  StrictHexStruct,
+} from '@metamask/utils';
+import { coerce, create, instance, object, union } from 'superstruct';
+import { ParserError } from '../errors';
 import { Parser } from './parser';
 import { fixedBytes } from './fixed-bytes';
 
 /**
- * Get the encoded function as buffer. It consists of the address (20 bytes) and
- * function selector (4 bytes).
+ * A Solidity function-like value. This can be a hex string, a byte array, or a
+ * {@link SolidityFunction} object.
+ */
+export type FunctionLike = string | Uint8Array | SolidityFunction;
+
+/**
+ * A Solidity function, i.e., the address of a contract and the selector of a
+ * function within that contract.
+ */
+export type SolidityFunction = {
+  /**
+   * The address of the contract. Must be a 40-character long hex string
+   * (excluding the "0x"-prefix).
+   */
+  address: string;
+
+  /**
+   * The selector of the function. Must be an 8-character long hex string
+   * (excluding the "0x"-prefix).
+   */
+  selector: string;
+};
+
+/**
+ * A struct that represents a Solidity function. The value must be a hex string
+ * or a byte array. The created value will always be an object with an `address`
+ * and `selector` property.
+ */
+const FunctionStruct = coerce(
+  object({
+    address: StrictHexStruct,
+    selector: StrictHexStruct,
+  }),
+  union([StrictHexStruct, instance(Uint8Array)]),
+  (value) => {
+    const bytes = createBytes(value);
+    assert(
+      bytes.length === 24,
+      new ParserError(
+        `Invalid Solidity function. Expected function to be 24 bytes long, but received ${bytes.length} bytes.`,
+      ),
+    );
+
+    return {
+      address: bytesToHex(bytes.subarray(0, 20)),
+      selector: bytesToHex(bytes.subarray(20, 24)),
+    };
+  },
+);
+
+/**
+ * Normalize a function. This accepts the function as:
+ *
+ * - A {@link SolidityFunction} object.
+ * - A hexadecimal string.
+ * - A byte array.
  *
  * @param input - The function-like input.
  * @returns The function as buffer.
  */
 export const getFunction = (input: FunctionLike): Uint8Array => {
-  const value = create(input, solidityFunction());
+  const value = create(input, FunctionStruct);
   return concatBytes([hexToBytes(value.address), hexToBytes(value.selector)]);
 };
 

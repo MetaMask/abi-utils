@@ -13,9 +13,12 @@ describe('getArrayType', () => {
   });
 
   it('throws if a type is not an array type', () => {
-    expect(() => getArrayType('uint256')).toThrow('Type is not an array type.');
+    expect(() => getArrayType('uint256')).toThrow(
+      'Invalid array type. Expected an array type, but received "uint256".',
+    );
+
     expect(() => getArrayType('(uint256)')).toThrow(
-      'Type is not an array type.',
+      'Invalid array type. Expected an array type, but received "(uint256)".',
     );
   });
 });

@@ -40,14 +40,8 @@
     "test": "jest && jest-it-up",
     "test:watch": "jest --watch"
   },
-  "lint-staged": {
-    "*.{ts,tsx,js}": [
-      "prettier --write",
-      "eslint --fix"
-    ],
-    "*.{json,yml}": [
-      "prettier --write"
-    ]
+  "resolutions": {
+    "@metamask/utils": "portal:/Users/morten/Development/MetaMask/utils"
   },
   "dependencies": {
     "@metamask/utils": "^3.1.0",

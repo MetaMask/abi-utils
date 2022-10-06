@@ -3,10 +3,10 @@ import {
   bytesToBigInt,
   bytesToSignedBigInt,
   concatBytes,
+  createBigInt,
+  NumberLike,
   signedBigIntToBytes,
 } from '@metamask/utils';
-import { create } from 'superstruct';
-import { bigint, NumberLike } from '../types';
 import { padStart } from '../utils';
 import { DecodeArgs, Parser } from './parser';
 
@@ -23,13 +23,24 @@ export const isSigned = (type: string): boolean => {
 };
 
 /**
- * Get a number-like value as bigint.
+ * Normalize a `bigint` value. This accepts the value as:
+ *
+ * - A `bigint`.
+ * - A `number`.
+ * - A decimal string, i.e., a string that does not start with "0x".
+ * - A hexadecimal string, i.e., a string that starts with "0x".
  *
  * @param value - The number-like value to parse.
  * @returns The value parsed as bigint.
  */
-export const asBigInt = (value: NumberLike): bigint => {
-  return create(value, bigint());
+export const getBigInt = (value: NumberLike): bigint => {
+  try {
+    return createBigInt(value);
+  } catch {
+    throw new Error(
+      `Invalid number. Expected a valid number value, but received "${value}".`,
+    );
+  }
 };
 
 export const number: Parser<NumberLike, bigint> = {
@@ -65,7 +76,7 @@ export const number: Parser<NumberLike, bigint> = {
    * @returns The bytes with the encoded value added to it.
    */
   encode({ type, buffer, value }): Uint8Array {
-    const bigIntValue = asBigInt(value);
+    const bigIntValue = getBigInt(value);
     if (isSigned(type)) {
       return concatBytes([
         buffer,
