@@ -1,3 +1,161 @@
 # `@metamask/abi-utils`
 
-Lightweight utilities for working with Solidity ABI.
+Lightweight utilities for encoding and decoding Solidity ABI.
+
+## Installation
+
+`yarn add @metamask/abi-utils`
+
+or
+
+`npm install @metamask/abi-utils`
+
+## Usage
+
+### Encoding values
+
+You can encode multiple values using `encode`.
+
+```typescript
+import { encode } from '@metamask/abi-utils';
+import { bytesToHex } from '@metamask/utils';
+
+const encoded = encode(['uint256', 'string'], [42, 'Hello, world!']);
+
+// `abi-utils` returns a `Uint8Array`, so you can convert it to a hex string
+// using `bytesToHex`.
+console.log(bytesToHex(encoded));
+
+// 0x000000000000000000000000000000000000000000000000000000000000002a
+//   0000000000000000000000000000000000000000000000000000000000000040
+//   000000000000000000000000000000000000000000000000000000000000000d
+//   48656c6c6f2c20776f726c642100000000000000000000000000000000000000
+```
+
+Alternatively, you can encode a single value using `encodeSingle`.
+
+```typescript
+import { encodeSingle } from '@metamask/abi-utils';
+
+const encoded = encodeSingle('uint256', 42);
+
+// `abi-utils` returns a `Uint8Array`, so you can convert it to a hex string
+// using `bytesToHex`.
+console.log(bytesToHex(encoded));
+
+// 0x000000000000000000000000000000000000000000000000000000000000002a
+```
+
+### Decoding values
+
+You can decode multiple values using `decode`.
+
+```typescript
+import { decode } from '@metamask/abi-utils';
+
+const decoded = decode(
+  ['uint256', 'string'],
+  '0x000000000000000000000000000000000000000000000000000000000000002a'
+  + '0000000000000000000000000000000000000000000000000000000000000040'
+  + '000000000000000000000000000000000000000000000000000000000000000d'
+  + '48656c6c6f2c20776f726c642100000000000000000000000000000000000000',
+);
+
+console.log(decoded); // [ 42n, 'Hello, world!' ]
+```
+
+Alternatively, you can decode a single value using `decodeSingle`.
+
+```typescript
+import { decodeSingle } from '@metamask/abi-utils';
+
+const decoded = decodeSingle(
+  'uint256',
+  '0x000000000000000000000000000000000000000000000000000000000000002a',
+);
+
+console.log(decoded); // 42n
+```
+
+### Strict type checking
+
+By default, `encode` and `decode` will not perform strict type checking. This
+is because TypeScript does not narrow the type of the `types` array being
+passed to the functions.
+
+If you want to perform strict type checking, you can assert the type of the
+array as `const` using the `as const` assertion.
+
+```typescript
+import { encode } from '@metamask/abi-utils';
+
+// This can be inlined in the function call too.
+const types = ['uint256', 'string'] as const;
+
+// Works!
+encode(types, [42, 'Hello, world!']);
+
+// Type 'number' is not assignable to type 'string'.
+encode(types, [42, 1337]);
+```
+
+This does not support all ABI types, like tuples and nested arrays, because
+support for recursive types in TypeScript is limited. In those cases, the input
+or output type will be `unknown`.
+
+## API
+
+The full API documentation for the latest published version of this library is [available here](https://metamask.github.io/abi-utils/index.html).
+
+## Contributing
+
+### Setup
+
+- Install [Node.js](https://nodejs.org) version 16
+  - If you are using [nvm](https://github.com/creationix/nvm#installation) (recommended) running `nvm use` will automatically choose the right node version for you.
+- Install [Yarn v3](https://yarnpkg.com/getting-started/install)
+- Run `yarn install` to install dependencies and run any required post-install scripts
+
+### Testing and Linting
+
+Run `yarn test` to run the tests once. To run tests on file changes, run `yarn test:watch`.
+
+Run `yarn lint` to run the linter, or run `yarn lint:fix` to run the linter and fix any automatically fixable issues.
+
+### Release & Publishing
+
+The project follows the same release process as the other libraries in the MetaMask organization. The GitHub Actions [`action-create-release-pr`](https://github.com/MetaMask/action-create-release-pr) and [`action-publish-release`](https://github.com/MetaMask/action-publish-release) are used to automate the release process; see those repositories for more information about how they work.
+
+1. Choose a release version.
+
+  - The release version should be chosen according to SemVer. Analyze the changes to see whether they include any breaking changes, new features, or deprecations, then choose the appropriate SemVer version. See [the SemVer specification](https://semver.org/) for more information.
+
+2. If this release is backporting changes onto a previous release, then ensure there is a major version branch for that version (e.g. `1.x` for a `v1` backport release).
+
+  - The major version branch should be set to the most recent release with that major version. For example, when backporting a `v1.0.2` release, you'd want to ensure there was a `1.x` branch that was set to the `v1.0.1` tag.
+
+3. Trigger the [`workflow_dispatch`](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#workflow_dispatch) event [manually](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow) for the `Create Release Pull Request` action to create the release PR.
+
+  - For a backport release, the base branch should be the major version branch that you ensured existed in step 2. For a normal release, the base branch should be the main branch for that repository (which should be the default value).
+  - This should trigger the [`action-create-release-pr`](https://github.com/MetaMask/action-create-release-pr) workflow to create the release PR.
+
+4. Update the changelog to move each change entry into the appropriate change category ([See here](https://keepachangelog.com/en/1.0.0/#types) for the full list of change categories, and the correct ordering), and edit them to be more easily understood by users of the package.
+
+  - Generally any changes that don't affect consumers of the package (e.g. lockfile changes or development environment changes) are omitted. Exceptions may be made for changes that might be of interest despite not having an effect upon the published package (e.g. major test improvements, security improvements, improved documentation, etc.).
+  - Try to explain each change in terms that users of the package would understand (e.g. avoid referencing internal variables/concepts).
+  - Consolidate related changes into one change entry if it makes it easier to explain.
+  - Run `yarn auto-changelog validate --rc` to check that the changelog is correctly formatted.
+
+5. Review and QA the release.
+
+  - If changes are made to the base branch, the release branch will need to be updated with these changes and review/QA will need to restart again. As such, it's probably best to avoid merging other PRs into the base branch while review is underway.
+
+6. Squash & Merge the release.
+
+  - This should trigger the [`action-publish-release`](https://github.com/MetaMask/action-publish-release) workflow to tag the final release commit and publish the release on GitHub.
+
+7. Publish the release on npm.
+
+  - Wait for the `publish-release` GitHub Action workflow to finish. This should trigger a second job (`publish-npm`), which will wait for a run approval by the [`npm publishers`](https://github.com/orgs/MetaMask/teams/npm-publishers) team.
+  - Approve the `publish-npm` job (or ask somebody on the npm publishers team to approve it for you).
+  - Once the `publish-npm` job has finished, check npm to verify that it has been published.
