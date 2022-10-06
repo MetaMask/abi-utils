@@ -2,7 +2,7 @@
 // the rule for this file.
 /* eslint-disable jsdoc/check-indentation, jsdoc/match-description */
 
-import { assert } from '@metamask/utils';
+import { assert, BytesLike, createBytes } from '@metamask/utils';
 import { pack, unpack } from './packer';
 import { TypeMap } from './types';
 import { getErrorMessage, ParserError } from './errors';
@@ -149,7 +149,7 @@ export const encodeSingle = <Type extends string>(
  * ```
  * @see https://docs.soliditylang.org/en/v0.8.17/abi-spec.html#types
  * @param types - The types to decode the bytes with.
- * @param bytes - The bytes to decode.
+ * @param value - The bytes-like value to decode.
  * @returns The decoded values as array.
  */
 export const decode = <
@@ -157,8 +157,10 @@ export const decode = <
   Output = TypeMap<Type, 'output'>,
 >(
   types: Type,
-  bytes: Uint8Array,
+  value: BytesLike,
 ): Output => {
+  const bytes = createBytes(value);
+
   try {
     return unpack(types, bytes);
   } catch (error) {
@@ -190,15 +192,18 @@ export const decode = <
  * ```
  * @see https://docs.soliditylang.org/en/v0.8.17/abi-spec.html#types
  * @param type - The type to decode.
- * @param bytes - The bytes to decode.
+ * @param value - The bytes-like value to decode.
  * @returns The decoded value.
  */
 export const decodeSingle = <Type extends string>(
   type: Type,
-  bytes: Uint8Array,
+  value: BytesLike,
 ): TypeMap<[Type], 'output'>[0] => {
-  const result = decode([type] as const, bytes);
-  assert(result.length === 1, 'Decoded value array has unexpected length.');
+  const result = decode([type] as const, value);
+  assert(
+    result.length === 1,
+    new ParserError('Decoded value array has unexpected length.'),
+  );
 
   return result[0];
 };

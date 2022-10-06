@@ -36,6 +36,15 @@ describe('decode', () => {
     expect(decode(types, hexToBytes(add0x(result)))).toStrictEqual(values);
   });
 
+  it('decodes hexadecimal strings', () => {
+    expect(
+      decode(
+        ['uint256'],
+        '0x000000000000000000000000000000000000000000000000000000000000002a',
+      ),
+    ).toStrictEqual([BigInt(42)]);
+  });
+
   it('throws a parser error if the value cannot be decoded', () => {
     expect(() => decode(['uint256'], new Uint8Array())).toThrow(
       new ParserError(
