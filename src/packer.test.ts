@@ -12,7 +12,7 @@ describe('getParser', () => {
   });
 
   it('throws for invalid types', () => {
-    expect(() => getParser('foo')).toThrow('Type "foo" is not supported.');
+    expect(() => getParser('foo')).toThrow('The type "foo" is not supported.');
   });
 });
 
@@ -64,7 +64,7 @@ describe('unpack', () => {
     );
 
     expect(() => unpack(['uint256', 'uint256'], buffer)).toThrow(
-      'Element is out of range.',
+      'The encoded value is invalid for the provided types. Reached end of buffer while attempting to parse "uint256".',
     );
   });
 });

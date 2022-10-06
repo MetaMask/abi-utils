@@ -19,6 +19,7 @@ import {
 } from './parsers';
 import { padStart, set } from './utils';
 import { TypeMap } from './types';
+import { ParserError } from './errors';
 
 /**
  * Get the parser for the specified type.
@@ -50,7 +51,7 @@ export const getParser = (type: string): Parser => {
     return parser;
   }
 
-  throw new Error(`Type "${type}" is not supported.`);
+  throw new ParserError(`The type "${type}" is not supported.`);
 };
 
 /**
@@ -99,7 +100,9 @@ export const pack = <Type extends readonly string[]>(
 ): Uint8Array => {
   assert(
     types.length === values.length,
-    'The length of the types and values must be equal.',
+    new ParserError(
+      `The number of types (${types.length}) does not match the number of values (${values.length}).`,
+    ),
   );
 
   const { staticBuffer, dynamicBuffer, pointers } = types.reduce<PackState>(
@@ -162,9 +165,12 @@ export const unpack = <
       value: { value, skip },
       done,
     } = iterator.next();
-    if (done) {
-      throw new Error('Element is out of range.');
-    }
+    assert(
+      !done,
+      new ParserError(
+        `The encoded value is invalid for the provided types. Reached end of buffer while attempting to parse "${type}".`,
+      ),
+    );
 
     const parser = getParser(type);
     const isDynamic = isDynamicParser(parser, type);

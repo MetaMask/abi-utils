@@ -8,6 +8,7 @@ import {
   signedBigIntToBytes,
 } from '@metamask/utils';
 import { padStart } from '../utils';
+import { ParserError } from '../errors';
 import { DecodeArgs, Parser } from './parser';
 
 const NUMBER_REGEX = /^u?int([0-9]*)?$/u;
@@ -37,7 +38,7 @@ export const getBigInt = (value: NumberLike): bigint => {
   try {
     return createBigInt(value);
   } catch {
-    throw new Error(
+    throw new ParserError(
       `Invalid number. Expected a valid number value, but received "${value}".`,
     );
   }

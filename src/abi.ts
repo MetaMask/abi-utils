@@ -5,6 +5,7 @@
 import { assert } from '@metamask/utils';
 import { pack, unpack } from './packer';
 import { TypeMap } from './types';
+import { getErrorMessage, ParserError } from './errors';
 
 /**
  * Encode the data with the provided types. The types must be valid Solidity
@@ -72,7 +73,18 @@ export const encode = <Type extends readonly string[]>(
   types: Type,
   values: TypeMap<Type, 'input'>,
 ): Uint8Array => {
-  return pack(types, values, new Uint8Array());
+  try {
+    return pack(types, values, new Uint8Array());
+  } catch (error) {
+    if (error instanceof ParserError) {
+      throw new ParserError(`Unable to encode value: ${error.message}`, error);
+    }
+
+    throw new ParserError(
+      `An unexpected error occurred: ${getErrorMessage(error)}`,
+      error,
+    );
+  }
 };
 
 /**
@@ -147,7 +159,18 @@ export const decode = <
   types: Type,
   bytes: Uint8Array,
 ): Output => {
-  return unpack(types, bytes);
+  try {
+    return unpack(types, bytes);
+  } catch (error) {
+    if (error instanceof ParserError) {
+      throw new ParserError(`Unable to decode value: ${error.message}`, error);
+    }
+
+    throw new ParserError(
+      `An unexpected error occurred: ${getErrorMessage(error)}`,
+      error,
+    );
+  }
 };
 
 /**
