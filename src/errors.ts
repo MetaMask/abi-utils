@@ -11,6 +11,7 @@ import { hasProperty, isObject } from '@metamask/utils';
  *
  * @param error - The value to get an error message from.
  * @returns The error message.
+ * @internal
  */
 export const getErrorMessage = (error?: unknown): string => {
   if (typeof error === 'string') {
@@ -38,6 +39,7 @@ export const getErrorMessage = (error?: unknown): string => {
  *
  * @param error - The value to get an error stack from.
  * @returns The error stack, or `undefined` if the value is not an error.
+ * @internal
  */
 export const getErrorStack = (error?: unknown): string | undefined => {
   if (error instanceof Error) {
@@ -47,6 +49,10 @@ export const getErrorStack = (error?: unknown): string | undefined => {
   return undefined;
 };
 
+/**
+ * An error that is thrown when the ABI encoder or decoder encounters an
+ * issue.
+ */
 export class ParserError extends Error {
   readonly name = 'ParserError';
 
