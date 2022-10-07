@@ -59,7 +59,7 @@ export const address: Parser<BytesLike, string> = {
   },
 
   /**
-   * Encode the given address to a byte array.
+   * Encode the given address to a 32-byte-long byte array.
    *
    * @param args - The encoding arguments.
    * @param args.buffer - The byte array to add to.

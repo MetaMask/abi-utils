@@ -38,7 +38,8 @@ export const getArrayType = (
 };
 
 /**
- * Get the type of the array as a tuple type.
+ * Get the type of the array as a tuple type. This is used for encoding fixed
+ * length arrays, which are encoded as tuples.
  *
  * @param innerType - The type of the array.
  * @param length - The length of the array.
@@ -77,8 +78,8 @@ export const array: Parser<unknown[]> = {
 
   /**
    * Get the byte length of an encoded array. If the array is dynamic, this
-   * returns 32. If the array is static, this returns the byte length of the
-   * resulting tuple type.
+   * returns 32, i.e., the length of the pointer to the array. If the array is
+   * static, this returns the byte length of the resulting tuple type.
    *
    * @param type - The type to get the byte length for.
    * @returns The byte length of an encoded array.
@@ -98,7 +99,8 @@ export const array: Parser<unknown[]> = {
   },
 
   /**
-   * Encode the given array to a byte array.
+   * Encode the given array to a byte array. If the array is static, this uses
+   * the tuple encoder.
    *
    * @param args - The encoding arguments.
    * @param args.type - The type of the array.
@@ -125,7 +127,9 @@ export const array: Parser<unknown[]> = {
       });
     }
 
-    // `T[]` with `k` elements is encoded as `k (T[0], ..., T[k - 1])`.
+    // `T[]` with `k` elements is encoded as `k (T[0], ..., T[k - 1])`. That
+    // means that we just need to encode the length of the array, and then the
+    // array itself. The pointer is encoded by the {@link pack} function.
     const arrayLength = padStart(numberToBytes(value.length));
     return pack(
       new Array(value.length).fill(arrayType),

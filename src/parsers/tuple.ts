@@ -42,7 +42,7 @@ export const getTupleElements = (type: string): string[] => {
     }
   }
 
-  if (current) {
+  if (current.trim()) {
     elements.push(current.trim());
   }
 

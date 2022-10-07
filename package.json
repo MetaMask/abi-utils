@@ -1,7 +1,7 @@
 {
   "name": "@metamask/abi-utils",
   "version": "0.0.0",
-  "description": "Lightweight utilities for working with Solidity ABI.",
+  "description": "Lightweight utilities for encoding and decoding Solidity ABI.",
   "keywords": [
     "ethereum",
     "abi",

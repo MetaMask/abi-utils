@@ -74,7 +74,7 @@ export const encode = <Type extends readonly string[]>(
   values: TypeMap<Type, 'input'>,
 ): Uint8Array => {
   try {
-    return pack(types, values, new Uint8Array());
+    return pack(types, values);
   } catch (error) {
     if (error instanceof ParserError) {
       throw new ParserError(`Unable to encode value: ${error.message}`, error);

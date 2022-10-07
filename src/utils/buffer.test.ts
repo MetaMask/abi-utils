@@ -1,5 +1,5 @@
 import { bytesToHex, hexToBytes } from '@metamask/utils';
-import { padEnd, set } from './buffer';
+import { padEnd, padStart, set } from './buffer';
 
 describe('set', () => {
   it('sets a buffer in another buffer at a specific position', () => {
@@ -9,8 +9,21 @@ describe('set', () => {
   });
 });
 
-describe('addPadding', () => {
-  it('adds padding to a buffer up to the specified length', () => {
+describe('padStart', () => {
+  it('adds padding to the start of a byte array up to the specified length', () => {
+    expect(bytesToHex(padStart(hexToBytes('1234')))).toBe(
+      '0x0000000000000000000000000000000000000000000000000000000000001234',
+    );
+
+    expect(bytesToHex(padStart(hexToBytes('1234'), 16))).toBe(
+      '0x00000000000000000000000000001234',
+    );
+    expect(bytesToHex(padStart(hexToBytes('1234'), 0))).toBe('0x1234');
+  });
+});
+
+describe('padEnd', () => {
+  it('adds padding to a byte array up to the specified length', () => {
     expect(bytesToHex(padEnd(hexToBytes('1234')))).toBe(
       '0x1234000000000000000000000000000000000000000000000000000000000000',
     );
