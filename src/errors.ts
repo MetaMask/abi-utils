@@ -61,9 +61,7 @@ export class ParserError extends Error {
 
     const originalStack = getErrorStack(originalError);
     if (originalStack) {
-      this.stack = `${this.stack?.split('\n').slice(0, 2).join('\n')}
-
-${originalStack}`;
+      this.stack = originalStack;
     }
   }
 }

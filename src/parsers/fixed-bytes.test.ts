@@ -36,6 +36,12 @@ describe('fixedBytes', () => {
     });
   });
 
+  describe('getByteLength', () => {
+    it('returns 32', () => {
+      expect(fixedBytes.getByteLength('bytes16')).toBe(32);
+    });
+  });
+
   describe('encode', () => {
     it('encodes fixed bytes', () => {
       expect(

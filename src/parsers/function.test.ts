@@ -21,6 +21,12 @@ describe('getFunction', () => {
 });
 
 describe('function', () => {
+  describe('getByteLength', () => {
+    it('returns 32', () => {
+      expect(fn.getByteLength('function')).toBe(32);
+    });
+  });
+
   describe('encode', () => {
     it('encodes a function', () => {
       expect(

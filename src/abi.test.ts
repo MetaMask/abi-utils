@@ -1,5 +1,5 @@
 import { add0x, bytesToHex, hexToBytes } from '@metamask/utils';
-import { decode, encode } from './abi';
+import { decode, decodeSingle, encode, encodeSingle } from './abi';
 import { ABI_TEST_VECTORS } from './__fixtures__';
 import { ParserError } from './errors';
 import * as packer from './packer';
@@ -27,6 +27,14 @@ describe('encode', () => {
 
     expect(() => encode(['uint256'], [1])).toThrow(
       new ParserError('An unexpected error occurred: foo'),
+    );
+  });
+});
+
+describe('encodeSingle', () => {
+  it('encodes a single value', () => {
+    expect(bytesToHex(encodeSingle('uint256', 42))).toBe(
+      '0x000000000000000000000000000000000000000000000000000000000000002a',
     );
   });
 });
@@ -61,5 +69,16 @@ describe('decode', () => {
     expect(() => decode([], new Uint8Array())).toThrow(
       new ParserError('An unexpected error occurred: foo'),
     );
+  });
+});
+
+describe('decodeSingle', () => {
+  it('decodes a single value', () => {
+    expect(
+      decodeSingle(
+        'uint256',
+        '0x000000000000000000000000000000000000000000000000000000000000002a',
+      ),
+    ).toStrictEqual(BigInt(42));
   });
 });

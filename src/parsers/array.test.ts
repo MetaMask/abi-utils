@@ -34,6 +34,22 @@ describe('array', () => {
     });
   });
 
+  describe('getByteLength', () => {
+    it('returns the byte length of an array', () => {
+      expect(array.getByteLength('uint256[]')).toBe(32);
+      expect(array.getByteLength('uint256[][]')).toBe(32);
+      expect(array.getByteLength('(uint256)[]')).toBe(32);
+      expect(array.getByteLength('(uint256[])[]')).toBe(32);
+    });
+
+    it('returns the byte length of a static array', () => {
+      expect(array.getByteLength('uint256[2]')).toBe(64);
+      expect(array.getByteLength('uint256[2][]')).toBe(32);
+      expect(array.getByteLength('(uint256)[2]')).toBe(64);
+      expect(array.getByteLength('(uint256[2])[]')).toBe(32);
+    });
+  });
+
   describe('encode', () => {
     it('encodes an array', () => {
       expect(

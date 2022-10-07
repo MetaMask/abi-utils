@@ -2,6 +2,12 @@ import { bytesToHex, hexToBytes } from '@metamask/utils';
 import { string } from './string';
 
 describe('string', () => {
+  describe('getByteLength', () => {
+    it('returns 32', () => {
+      expect(string.getByteLength('string')).toBe(32);
+    });
+  });
+
   describe('encode', () => {
     it('encodes a string', () => {
       expect(

@@ -2,6 +2,22 @@ import { bytesToHex, hexToBytes } from '@metamask/utils';
 import { bytes } from './bytes';
 
 describe('bytes', () => {
+  describe('isType', () => {
+    it('checks if a type is a bytes type', () => {
+      expect(bytes.isType('bytes')).toBe(true);
+      expect(bytes.isType('bytes[]')).toBe(false);
+      expect(bytes.isType('bytes[2]')).toBe(false);
+      expect(bytes.isType('uint256')).toBe(false);
+      expect(bytes.isType('bytes32')).toBe(false);
+    });
+  });
+
+  describe('getByteLength', () => {
+    it('returns 32', () => {
+      expect(bytes.getByteLength('bytes')).toBe(32);
+    });
+  });
+
   describe('encode', () => {
     it('encodes bytes', () => {
       expect(

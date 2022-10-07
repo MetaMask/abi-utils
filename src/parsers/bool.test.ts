@@ -9,9 +9,25 @@ describe('getBooleanValue', () => {
     expect(getBooleanValue(false)).toBe(BigInt(0));
     expect(getBooleanValue('false')).toBe(BigInt(0));
   });
+
+  it.each([null, undefined, 0, 1, '0', '1', 'foo', [], {}, NaN, Infinity])(
+    'throws if the value is invalid',
+    (value) => {
+      // @ts-expect-error Invalid type.
+      expect(() => getBooleanValue(value)).toThrow(
+        `Invalid boolean value. Expected a boolean literal, or the string "true" or "false", but received "${value}".`,
+      );
+    },
+  );
 });
 
 describe('boolean', () => {
+  describe('getByteLength', () => {
+    it('returns 32', () => {
+      expect(bool.getByteLength('bool')).toBe(32);
+    });
+  });
+
   describe('encode', () => {
     it('encodes a boolean', () => {
       expect(

@@ -13,12 +13,20 @@ describe('isSigned', () => {
   });
 });
 
-describe('asNumber', () => {
+describe('getBigInt', () => {
   it('returns a bigint for a number-like input', () => {
     expect(getBigInt(123)).toBe(BigInt(123));
     expect(getBigInt('123')).toBe(BigInt(123));
     expect(getBigInt('0x123')).toBe(BigInt(291));
   });
+
+  it.each([true, false, null, undefined, '0xabcg', 1.1, -1.1, NaN, Infinity])(
+    'throws for invalid number-like input',
+    (value) => {
+      // @ts-expect-error Invalid type.
+      expect(() => getBigInt(value)).toThrow('Invalid number');
+    },
+  );
 });
 
 describe('number', () => {
@@ -34,6 +42,12 @@ describe('number', () => {
       expect(number.isType('string')).toBe(false);
       expect(number.isType('(uint256)')).toBe(false);
       expect(number.isType('uint256[]')).toBe(false);
+    });
+  });
+
+  describe('getByteLength', () => {
+    it('returns 32', () => {
+      expect(number.getByteLength('uint256')).toBe(32);
     });
   });
 

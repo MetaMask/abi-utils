@@ -2,6 +2,12 @@ import { bytesToHex, hexToBytes } from '@metamask/utils';
 import { address } from './address';
 
 describe('address', () => {
+  describe('getByteLength', () => {
+    it('returns 32', () => {
+      expect(address.getByteLength('address')).toBe(32);
+    });
+  });
+
   describe('encode', () => {
     it('encodes an address', () => {
       expect(

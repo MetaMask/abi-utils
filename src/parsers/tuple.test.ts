@@ -36,6 +36,21 @@ describe('tuple', () => {
     });
   });
 
+  describe('getByteLength', () => {
+    it('returns the byte length of a tuple', () => {
+      expect(tuple.getByteLength('(uint256,uint256)')).toBe(64);
+      expect(tuple.getByteLength('(uint256,(uint256,uint256))')).toBe(96);
+      expect(tuple.getByteLength('(uint256,(uint256,uint256),uint256)')).toBe(
+        128,
+      );
+    });
+
+    it('returns the byte length of a tuple with dynamic elements', () => {
+      expect(tuple.getByteLength('(uint256,uint256[])')).toBe(32);
+      expect(tuple.getByteLength('(uint256,uint256[],uint256)')).toBe(32);
+    });
+  });
+
   describe('encode', () => {
     it('encodes a static tuple', () => {
       expect(
