@@ -7,16 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [1.0.0]
-### Uncategorized
-- Add prepack script to fix releases ([#8](https://github.com/MetaMask/abi-utils/pull/8))
-- Revert "1.0.0 (#6)" ([#6](https://github.com/MetaMask/abi-utils/pull/6))
-- 1.0.0 ([#6](https://github.com/MetaMask/abi-utils/pull/6))
-- Revert "1.0.0 (#3)" ([#3](https://github.com/MetaMask/abi-utils/pull/3))
-- Add SKIP_PREPACK environment variable to publish actions ([#4](https://github.com/MetaMask/abi-utils/pull/4))
-- 1.0.0 ([#3](https://github.com/MetaMask/abi-utils/pull/3))
-- Add versioned docs generation ([#2](https://github.com/MetaMask/abi-utils/pull/2))
-- Initial setup of package ([#1](https://github.com/MetaMask/abi-utils/pull/1))
-- Initial commit
+### Added
+- Initial release
 
 [Unreleased]: https://github.com/MetaMask/abi-utils/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/MetaMask/abi-utils/releases/tag/v1.0.0
