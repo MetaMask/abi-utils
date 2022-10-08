@@ -67,14 +67,17 @@ import { getErrorMessage, ParserError } from './errors';
  * @param types - The types to encode.
  * @param values - The values to encode. This array must have the same length as
  * the types array.
+ * @param packed - Whether to use the non-standard packed mode. Defaults to
+ * `false`.
  * @returns The ABI encoded bytes.
  */
 export const encode = <Type extends readonly string[]>(
   types: Type,
   values: TypeMap<Type, 'input'>,
+  packed?: boolean,
 ): Uint8Array => {
   try {
-    return pack(types, values);
+    return pack({ types, values, packed });
   } catch (error) {
     if (error instanceof ParserError) {
       throw new ParserError(`Unable to encode value: ${error.message}`, error);
@@ -112,6 +115,37 @@ export const encodeSingle = <Type extends string>(
   value: TypeMap<[Type], 'input'>[0],
 ): Uint8Array => {
   return encode([type], [value]);
+};
+
+/**
+ * Encode the data with the provided types. The types must be valid Solidity
+ * ABI types. This is the same as {@link encode}, except that the values are
+ * encoded in the non-standard packed mode.
+ *
+ * Note that these values cannot be decoded with {@link decode} or Solidity's
+ * `abi.decode` function.
+ *
+ * See {@link encode} for more information on how values are parsed.
+ *
+ * @example
+ * ```typescript
+ * import { encodePacked } from '@metamask/abi-utils';
+ *
+ * const encoded = encodePacked(['uint256'], [42]);
+ *
+ * console.log(encoded); // `Uint8Array [ 42 ]`
+ * ```
+ * @see https://docs.soliditylang.org/en/v0.8.17/abi-spec.html#types
+ * @see https://docs.soliditylang.org/en/v0.8.17/abi-spec.html#non-standard-packed-mode
+ * @param types - The types to encode.
+ * @param values - The values to encode.
+ * @returns The ABI encoded bytes.
+ */
+export const encodePacked = <Type extends readonly string[]>(
+  types: Type,
+  values: TypeMap<Type, 'input'>,
+): Uint8Array => {
+  return encode(types, values, true);
 };
 
 /**

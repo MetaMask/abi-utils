@@ -16,6 +16,7 @@ describe('address', () => {
             type: 'address',
             buffer: new Uint8Array(),
             value: '0x4bbeeb066ed09b7aed07bf39eee0460dfa261520',
+            packed: false,
           }),
         ),
       ).toBe(
@@ -30,6 +31,7 @@ describe('address', () => {
             type: 'address',
             buffer: new Uint8Array(),
             value: '0x4bbeeb',
+            packed: false,
           }),
         ),
       ).toBe(

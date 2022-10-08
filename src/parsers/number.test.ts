@@ -67,6 +67,7 @@ describe('assertNumberLength', () => {
           type,
           value,
           buffer: new Uint8Array(),
+          packed: false,
         }),
       ).toThrow(/Number ".*" is out of range for type ".*"\./u);
     },
@@ -116,7 +117,14 @@ describe('number', () => {
       'encodes a $type number',
       ({ type, value, hex }) => {
         expect(
-          bytesToHex(number.encode({ type, value, buffer: new Uint8Array() })),
+          bytesToHex(
+            number.encode({
+              type,
+              value,
+              buffer: new Uint8Array(),
+              packed: false,
+            }),
+          ),
         ).toBe(hex);
       },
     );
@@ -129,6 +137,7 @@ describe('number', () => {
             type,
             value,
             buffer: new Uint8Array(),
+            packed: false,
           }),
         ).toThrow(/Number ".*" is out of range for type ".*"\./u);
       },

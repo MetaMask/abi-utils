@@ -15,6 +15,11 @@ export type EncodeArgs<Value> = {
    * The value to encode.
    */
   value: Value;
+
+  /**
+   * Whether to use the non-standard packed mode.
+   */
+  packed: boolean;
 };
 
 export type DecodeArgs = {

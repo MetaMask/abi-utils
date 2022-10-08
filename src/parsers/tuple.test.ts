@@ -59,6 +59,7 @@ describe('tuple', () => {
             type: '(uint256, uint256)',
             value: [BigInt(12), BigInt(34)],
             buffer: new Uint8Array(),
+            packed: false,
           }),
         ),
       ).toBe(
@@ -73,6 +74,7 @@ describe('tuple', () => {
             type: '(uint256, bytes)',
             value: [BigInt(12), '0xab'],
             buffer: new Uint8Array(),
+            packed: false,
           }),
         ),
       ).toBe(

@@ -58,6 +58,7 @@ describe('array', () => {
             type: 'uint256[]',
             value: [BigInt(12), BigInt(34), BigInt(56), BigInt(78)],
             buffer: new Uint8Array(),
+            packed: false,
           }),
         ),
       ).toBe(
@@ -75,6 +76,7 @@ describe('array', () => {
               [BigInt(56), BigInt(78)],
             ],
             buffer: new Uint8Array(),
+            packed: false,
           }),
         ),
       ).toBe(

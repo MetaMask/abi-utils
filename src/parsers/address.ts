@@ -64,11 +64,16 @@ export const address: Parser<BytesLike, string> = {
    * @param args - The encoding arguments.
    * @param args.buffer - The byte array to add to.
    * @param args.value - The address to encode.
+   * @param args.packed - Whether to use packed encoding.
    * @returns The bytes with the encoded address added to it.
    */
-  encode({ buffer, value }): Uint8Array {
-    const addressBuffer = padStart(getAddress(value));
+  encode({ buffer, value, packed }): Uint8Array {
+    const addressValue = getAddress(value);
+    if (packed) {
+      return concatBytes([buffer, addressValue]);
+    }
 
+    const addressBuffer = padStart(addressValue);
     return concatBytes([buffer, addressBuffer]);
   },
 

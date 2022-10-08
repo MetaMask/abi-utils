@@ -24645,3 +24645,13545 @@ export const ABI_TEST_VECTORS = [
       '0x000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000ca07f722e5aead62dcccf1357800000000000000000000000000000000000000000000000000000000000003c000000000000000000000000000000000000000000000000000000000000005200000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000001914c6f72656d20697073756d20646f6c6f722073697420616d65742c20636f6e73656374657475722061646970697363696e6720656c69742c2073656420646f20656975736d6f642074656d706f7220696e6369646964756e74207574206c61626f726520657420646f6c6f7265206d61676e6120616c697175612e20557420656e696d206164206d696e696d2076656e69616d2c2071756973206e6f737472756420657865726369746174696f6e20756c6c616d636f206c61626f726973206e69736920757420616c697175697020657820656120636f6d6d6f646f20636f6e7365717561742e2044756973206175746520697275726520646f6c6f7220696e20726570726568656e646572697420696e20766f6c7570746174652076656c697420657373652063696c6c756d20646f6c6f726520657520667567696174206e756c6c612070617269617475722e204578636570746575722073696e74206f6363616563617420637570696461746174206e6f6e2070726f6964656e742c2073756e7420696e2063756c70612071756920000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010c4c6f72656d20697073756d20646f6c6f722073697420616d65742c20636f6e73656374657475722061646970697363696e6720656c69742c2073656420646f20656975736d6f642074656d706f7220696e6369646964756e74207574206c61626f726520657420646f6c6f7265206d61676e6120616c697175612e20557420656e696d206164206d696e696d2076656e69616d2c2071756973206e6f737472756420657865726369746174696f6e20756c6c616d636f206c61626f726973206e69736920757420616c697175697020657820656120636f6d6d6f646f20636f6e7365717561742e2044756973206175746520697275726520646f6c6f7220696e20726570726568656e6465720000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000ac66a151d9b0763859a670000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000306e1a7e1a868b83dbbb0b9761f85b991f2ab73b5fef04476333b3fadd663d54b94e42a0354d479d0e5a9b44f7cd78bbcd000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000033f99eddc0917e7c94687bf18c77656aa414cfd8e9b5d0fb34e41b83ca0e1e91eecfe0fc28fe7ccc0244ebfcfd376ff63120c3c700000000000000000000000000000000000000000000000000000000000000000000000000000000000000001447666ad90c94e7cb655d9a68acc2d45451e5b94b000000000000000000000000',
   },
 ];
+
+export const PACKED_ABI_TEST_VECTORS = [
+  {
+    types: ['address'],
+    values: ['0x0123456789012345678901234567890123456789'],
+    result:
+      '0x0e61e9d7b7f8a76da4339d2962273cc6bee0df97274cb94e5b05588afe2b3a50',
+  },
+  {
+    types: ['address'],
+    values: ['0x0123456789012345678901234567890123456789'],
+    result:
+      '0x0e61e9d7b7f8a76da4339d2962273cc6bee0df97274cb94e5b05588afe2b3a50',
+  },
+  {
+    types: ['address'],
+    values: ['0x0123456789012345678901234567890123456789'],
+    result:
+      '0x0e61e9d7b7f8a76da4339d2962273cc6bee0df97274cb94e5b05588afe2b3a50',
+  },
+  {
+    types: ['address'],
+    values: ['0x0123456789012345678901234567890123456789'],
+    result:
+      '0x0e61e9d7b7f8a76da4339d2962273cc6bee0df97274cb94e5b05588afe2b3a50',
+  },
+  {
+    types: ['uint256', 'uint256', 'uint256', 'uint256'],
+    values: [
+      BigInt('0x0123'),
+      BigInt('0x5678'),
+      BigInt('0x9012'),
+      BigInt('0x3456'),
+    ],
+    result:
+      '0x087412c9da57c543e363b6e6dc0a5e3b7f6c050653ea91deabfe87e7ab05714f',
+  },
+  {
+    types: ['string'],
+    values: ['Hello World'],
+    result:
+      '0x592fa743889fc7f92ac2a37bb1f5ba1daf2a5c84741ca0e0061d243a2e6707ba',
+  },
+  {
+    types: ['string'],
+    values: ['Hello World'],
+    result:
+      '0x592fa743889fc7f92ac2a37bb1f5ba1daf2a5c84741ca0e0061d243a2e6707ba',
+  },
+  {
+    types: ['bytes'],
+    values: [hexToBytes('0x314159')],
+    result:
+      '0xe4bcb5983c3ee7d73bfe7de42193f2c31801d4c6a92c5afb6d2f3fad360c94f3',
+  },
+  {
+    types: ['bytes'],
+    values: [hexToBytes('0x314159')],
+    result:
+      '0xe4bcb5983c3ee7d73bfe7de42193f2c31801d4c6a92c5afb6d2f3fad360c94f3',
+  },
+  {
+    types: ['uint256[3]'],
+    values: [[BigInt('0x31'), BigInt('0x41'), BigInt('0x59')]],
+    result:
+      '0x7bbf05ea7037b610b84c73f24e8f4540a7e6334431ddcf51a027cff418b197fe',
+  },
+  {
+    types: ['uint256[3]'],
+    values: [[BigInt('0x31'), BigInt('0x41'), BigInt('0x59')]],
+    result:
+      '0x7bbf05ea7037b610b84c73f24e8f4540a7e6334431ddcf51a027cff418b197fe',
+  },
+  {
+    types: ['bytes5[2]'],
+    values: [[hexToBytes('0x1122334455'), hexToBytes('0x6677889900')]],
+    result:
+      '0xf4bd863df12134e7eacce1eae168bcb9616343148e6e552f2c61b4a480e0bcc0',
+  },
+  {
+    types: ['uint248', 'bool'],
+    values: [BigInt('0x4fae34'), true],
+    result:
+      '0xea1dd3964f34d09aca588fef8795c54e3066bf3c3167ac71a4f121333fe72dac',
+  },
+  {
+    types: ['bytes15', 'address'],
+    values: [
+      hexToBytes('0x19d0f81f89727ec5938a188aa2de3e'),
+      '0x0a321e210c35a165465c789a793ef6808cfc6b62',
+    ],
+    result:
+      '0x46f361972b7391627127fde8397ebf8aea4f779d8cf089c13b6a841f4c6a77d4',
+  },
+  {
+    types: ['bytes4', 'address', 'string', 'bytes', 'address', 'bool'],
+    values: [
+      hexToBytes('0x8c175806'),
+      '0x3fe8515cecac23bb5fbb584d6ff5159e53a90375',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null',
+      hexToBytes(
+        '0xca1444f7266e8d727e6c8a9d4cfaf30ef27d6648a93ae00d52f970d206bde9183b5dea63ace52e491476d5c2f6e8153cf678e740a5',
+      ),
+      '0x7e2fffb888d637662a0b8b0505d61fdd6f2ac167',
+      true,
+    ],
+    result:
+      '0x0837e54621ad76f7c5e793f8881acf78f108f9aff3140ca36d96f01d1129d560',
+  },
+  {
+    types: ['int256'],
+    values: [BigInt('0xc2354118')],
+    result:
+      '0xc52e11bfaa06fdce3c555ac4c89a7155b2236d32a1c13291d1c58324dc8c5e05',
+  },
+  {
+    types: ['bytes', 'bytes16', 'bytes29', 'int136', 'address'],
+    values: [
+      hexToBytes(
+        '0x40c7334c93941882873f0a00e3cd926327d0d5757acbfb9c30394a39f85d55',
+      ),
+      hexToBytes('0x846a92b3c59c942c9d7c9218847c2c96'),
+      hexToBytes(
+        '0x606137ddc3362c4b57b20757aa05bc14d1ed442bcdb19ca60e1642f773',
+      ),
+      BigInt('0x9f18b9636d2e72d4fa83c7b1'),
+      '0xd0572491ac20175f870a672b5885ebc62ab47c7f',
+    ],
+    result:
+      '0x6fe58c34540e9f2e3e92fba7157eb2f67fcad1d0408d5025e8c69df8e8ae64b2',
+  },
+  {
+    types: ['bytes', 'string', 'string'],
+    values: [
+      hexToBytes(
+        '0x238d504aac36dcfaf0e2e6e263d058fc69edb781db8428aafaa82db40c9534dc53e9a1',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ',
+    ],
+    result:
+      '0xf0758d14cd04d4334d9f4947c01d95b2de69b7c44454f141832efd7ee6b9d8e0',
+  },
+  {
+    types: ['bool', 'bytes20', 'bool'],
+    values: [
+      true,
+      hexToBytes('0x2e9e3b8bd2fe4c5d292076dda52ddbefe118d4ad'),
+      true,
+    ],
+    result:
+      '0x226d1602d00e6cbe9c2ecca055284eb1620d4309cf47a919f65faecd8b839f41',
+  },
+  {
+    types: ['bytes14', 'bytes23'],
+    values: [
+      hexToBytes('0xdc05b822b379d0a8a730868f3089'),
+      hexToBytes('0xfb8de941bca75cabdd7c73ace05f5774efcb3e6cdb4d8d'),
+    ],
+    result:
+      '0x7d560448486d27811b10dcb5d80d9fda8d0a9f45f06ae088ad056688e6cfb517',
+  },
+  {
+    types: ['bytes', 'bytes29', 'string', 'address'],
+    values: [
+      hexToBytes('0x0da68892a56d9d5fe6b160628d2f98f478e7419533885c'),
+      hexToBytes(
+        '0x2804beb4fc1b45e870e131d9143e869c24e4e19e0c382ff00fe50ecb94',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ',
+      '0xfec5b3dd52524acaf838bf536365f8c52f6fc897',
+    ],
+    result:
+      '0x37dfa1bca36089ebc036557343ef2a5072aa88f85c82f2bfb166edd5dc0afa6d',
+  },
+  {
+    types: ['bytes'],
+    values: [
+      hexToBytes(
+        '0x79addfa1b942a94c48cfd1ac1aaa238f45798a7a45b4808c186d900a33bb97759843518cf93cf2a9b61cfe3bf4af218fa0abbbcf41b1af37ae31953a6b54cb27',
+      ),
+    ],
+    result:
+      '0x51d993a04ef509285faec7abbd77ce79950dde0949c2aef9e559ced61061f0c8',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['bytes', 'address', 'bytes', 'address', 'bytes'],
+    values: [
+      hexToBytes(
+        '0x746715010b938b755906080d7b00a0b34d201cab157d6d071deb06c4ef3fb03ca7521c36fd0596a11639c0df9d501d7a8349aaa6f4991086d394de',
+      ),
+      '0xc0387636093f60abcea6fa3de1c08e3ffbe80c4f',
+      hexToBytes(
+        '0xc724184ce8df463620f5ef487ca52a3aec7f7e0cbc4c3e17e964cbbe75529e03a5b0e3fcf08c280921b6f4cee7c6f3a137a80b8f74',
+      ),
+      '0xf960ab1c0396b3620dbfa63247d9b51e7d5fba03',
+      hexToBytes('0xc6ae40308188de734470'),
+    ],
+    result:
+      '0x440e07ee7fd6ff0e12bc42c3235615c3485dd357f98343d7eae27f975a6d3d66',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven',
+    ],
+    result:
+      '0xbdd85334f9775d63659ffbdee697b5e56aeabc2a820f2ce456787726d30fdb50',
+  },
+  {
+    types: ['string', 'int240', 'bool', 'address', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita',
+      BigInt('0x3065'),
+      false,
+      '0x895080d27946aa60a1de82cadea9c27c23527298',
+      '0x00a5e88332a81e69a945f06576a4e8960bd9bb98',
+    ],
+    result:
+      '0x46efaf264e650252df24ed9ee98a51c26526dc56a145d44658fa043872bc489c',
+  },
+  {
+    types: ['address', 'bytes', 'bytes', 'string', 'string', 'bytes'],
+    values: [
+      '0x7f78a89590ac4979b9344855d60dc323688c1cf6',
+      hexToBytes(
+        '0xb7878d18b589da47bfaed2c5032258cb7c950d8cb2b567d5997c17f4ab37f28ba1d1c5faa112008a3386fe0e100ba18d',
+      ),
+      hexToBytes('0xbc6a6e'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius',
+      'Lorem ips',
+      hexToBytes(
+        '0x4ea1e5dfcca654a0b8a3d6693bb5c62b0a91b6cb9b4d270d8c145d22439660537abe',
+      ),
+    ],
+    result:
+      '0x9708235b9b44492f8b3e682fc4a8ed456d7fe5d6c4003e8773650ae830417f3c',
+  },
+  {
+    types: ['address', 'bool'],
+    values: ['0x650411cdfc1d54de0290dc862784e3aecee264d6', false],
+    result:
+      '0x936be286db7dec72d53290afc2983bb2afda52b2848852488f73d135d3d18a81',
+  },
+  {
+    types: ['int112', 'string', 'uint160', 'uint160', 'bytes', 'address'],
+    values: [
+      BigInt('0x427b30314ebb8db7f2db'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i',
+      BigInt('0x45df6234c50dd89b284aaf97f82a524a657f'),
+      BigInt('0x96cfa161f0d5'),
+      hexToBytes(
+        '0x8a44771dc9571e31821d8cc60dfe62f485549a130c192b2486280359b641749af7b0faa3462f5f5228738a73986290469abf616f415f064b',
+      ),
+      '0x270812598a6b1f4e72e1db4296adf68b00dd9260',
+    ],
+    result:
+      '0xdc4a0f66437c64d469d34474c4a16b4e747302223b1a24f53e225bf05364b0b9',
+  },
+  {
+    types: ['bool', 'bytes', 'string', 'address[]', 'string'],
+    values: [
+      true,
+      hexToBytes(
+        '0xb82f06176b2fdf7c653306ab435bb3820427ce2816433baaae0dc92128f9355ae9f85fc40c69bd5090f27a',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in repr',
+      ['0xeb7f9a94ee91867aa9c3dca78d2bd67c7a82f14a'],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et d',
+    ],
+    result:
+      '0x19d6c39acac1f52da3760f2ec990acf36eeda2a6870093d1795b79b2bf3aabb6',
+  },
+  {
+    types: ['int152[]', 'bytes'],
+    values: [
+      [
+        BigInt('0x48'),
+        BigInt('0x8286d3321db18e4dfc7442a44f'),
+        BigInt('0x791c4ecebf9a'),
+      ],
+      hexToBytes('0xf297ee1509b4573aec87c59810d02a8e36'),
+    ],
+    result:
+      '0x2bb4a02d34d75b244e62b1868d88f5ccfc4b5e9e8fc0cf7e25ca926b8ff38792',
+  },
+  {
+    types: ['address', 'bytes'],
+    values: [
+      '0x56844c911270566dfb1ee54a90e7449432d69bdc',
+      hexToBytes('0x698d0c9420a79fa5eed4'),
+    ],
+    result:
+      '0x58e0008332dfd338294a3e6d6ec5800e0071744ab059b91bdc905e42c1dc384f',
+  },
+  {
+    types: ['int80', 'bytes', 'address[]'],
+    values: [
+      BigInt('0x2555cc0436cb9446f2'),
+      hexToBytes('0xf271'),
+      [
+        '0x4f89276fae2749ac37c0347a9ab085360dd1d05e',
+        '0xc321c7e3f1f3309a3e0fa86cddff777edf6f606c',
+      ],
+    ],
+    result:
+      '0xc9f8f9a6f4249a9a63b35dbbf5aaca64835080a29fdcd360476af83283be021b',
+  },
+  {
+    types: ['bytes27', 'address', 'string', 'bool', 'bytes3'],
+    values: [
+      hexToBytes('0x72922ff7ebba71d7e7395ae0a7d1e7d1277e839b6a7f1226d0870b'),
+      '0xcf007616550c9cbb2c40254629db72b77f0ce47b',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ',
+      true,
+      hexToBytes('0xcab3fe'),
+    ],
+    result:
+      '0x7a532e845734570e31f367f5fa5e9690950d9a812b71a21bbc1dfc06579a502b',
+  },
+  {
+    types: ['bool', 'bytes', 'bytes'],
+    values: [
+      false,
+      hexToBytes('0xd722d89f3ad17a7668228f62b9cddfbd8fd928b9e0dcab65132c0a'),
+      hexToBytes('0x9aef379f8e2ee5a876bad684f85d404fa4898b'),
+    ],
+    result:
+      '0xc892c2d9fd7c8faba3d385c1d8157f650e5cb33d241ff9020ca756c384ff3370',
+  },
+  {
+    types: ['bytes12', 'bool'],
+    values: [hexToBytes('0x7386ff7b3a434f9c28398065'), false],
+    result:
+      '0xdaef46fc9e2802dbf91cfbdcaf2f2334c975686afcc5ccc616622bb525a15674',
+  },
+  {
+    types: ['bytes12'],
+    values: [hexToBytes('0xc1c0bf8200b2f6eb107d3e1d')],
+    result:
+      '0xf74842f7461a1563158aa347bb6d4e71f78a85f88fccfac30528c2357731512e',
+  },
+  {
+    types: ['string', 'int40', 'string', 'bytes1', 'bool', 'int232'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
+      BigInt('0x5e33282f'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla',
+      hexToBytes('0xca'),
+      false,
+      BigInt('0xdc597b368ebda485671341'),
+    ],
+    result:
+      '0xeae4d8541463ebb4dad97f6e54843ec927c00d845533b943186f5769573bb815',
+  },
+  {
+    types: ['int184', 'address', 'address'],
+    values: [
+      BigInt('0x4414c8eeefa076cbd992ca7833dfda6dedfd60'),
+      '0x84acdca68319713da6a497cd4005c869c5bfc4cb',
+      '0xb6cfe3af490e1164efe4f5a6c95db1f09a957d58',
+    ],
+    result:
+      '0xa1def601a72947d6557b71eb04fe2f8da0ca2283d43220cca13fca45a62e90f8',
+  },
+  {
+    types: ['bytes10'],
+    values: [hexToBytes('0x2459743af63bbf51ac7c')],
+    result:
+      '0x6825c28ed9b73b7ba235492c0f54c8a5cebcf9c135c5faf655dfaf8d80986af9',
+  },
+  {
+    types: ['bytes15', 'bytes', 'string'],
+    values: [
+      hexToBytes('0x651415da5d53ecd7a20c6fb8772169'),
+      hexToBytes(
+        '0x9e63fddcbd836fa58de6f123e1b1fcf2122f873799a375ac2ec22fa78227cf6640f5d2524fd4bc9c9b11f3982251984e12165d925b3f6f1dec993f8816',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est lab',
+    ],
+    result:
+      '0xe85cb7f00d7ca800cf80f3b8bf072766c4c5ac5015fd3462f535173b28661069',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['bytes19', 'bool'],
+    values: [hexToBytes('0xfc549007c0d89a9b664a75cf65597b5dfeb82f'), false],
+    result:
+      '0x17f8989d98b4ac4bf2aa6b064e38443345c6aed0f95bf2c25a6251b03af7f311',
+  },
+  {
+    types: ['int64', 'address', 'address', 'int208', 'bytes3', 'bool'],
+    values: [
+      BigInt('0x6023fe535c6f'),
+      '0xd91fa54ea84138f7884a9bbc955a762d659f7c3f',
+      '0x438df582217a027de71bdb3ecaeb6aa6c8547ac8',
+      BigInt('0x56b27e4dc4dbe0ae06444c61b7'),
+      hexToBytes('0xb984ff'),
+      true,
+    ],
+    result:
+      '0x01eea8b90c97cdcaba5cd9ecbef0618a3fb724404718c940fb2bd6c9c8005b3a',
+  },
+  {
+    types: ['int184', 'address'],
+    values: [
+      BigInt('0x50575571b3af'),
+      '0x079c27f567e79f1cce8f37b8f34d55049c714c50',
+    ],
+    result:
+      '0x42cc0ad92fef86b873da290380963c0cec7029525266d3f404e241eb0f2cfd2f',
+  },
+  {
+    types: ['int112', 'bool', 'bool', 'uint32'],
+    values: [BigInt('0x12dc609f7d784c8'), true, true, BigInt('0x6d')],
+    result:
+      '0xb960273fdf33da96331c998cc1e0870a9df6f88bc2fd0620e2d3578e4f6eb50e',
+  },
+  {
+    types: ['bytes29', 'bytes'],
+    values: [
+      hexToBytes(
+        '0xe8cd797b64f43a16d1a653e5c088f8290de3ba1b43281753284f9ad24f',
+      ),
+      hexToBytes(
+        '0x964bc7e41520b8a85d3126d0ea786893b8a036977efbfb0d57da500e434ca8744085fc88cc4b567b0a6d641799c8eb77ef4c8cd70e',
+      ),
+    ],
+    result:
+      '0x2c7a097c289553e507c624c56fb61bf8ab58b542423bea5c9a093c31476bc94f',
+  },
+  {
+    types: ['bytes'],
+    values: [
+      hexToBytes(
+        '0x558a3a223ac8235ddd6538ba8224636c5846f591ac0aebeaf3ef2b5ce9d855be01ef68a9d6ec241f063092420e',
+      ),
+    ],
+    result:
+      '0x4f4f54fe537151d965fb0cbb9442002160122bd75c76c9fb95c3611817fd1336',
+  },
+  {
+    types: ['int64[]', 'bytes28', 'address', 'bytes'],
+    values: [
+      [BigInt('0xc46f'), BigInt('0xb7de0f42c1b1')],
+      hexToBytes('0x553d7050f8ed39b85522d738d0f40c88f8488a99174d04e8a4abcdbb'),
+      '0x1fad6c270e4e457752917b1325cc411ee7ff60c0',
+      hexToBytes(
+        '0xa3089097ead30708f034b9a9e770d4a16b26026ea39ecc25153cf553db79ada1edbff787228bc89c72a62d0f641a2673df86969857aada8b8d8db4f73ca365ef01',
+      ),
+    ],
+    result:
+      '0x9a28ea1f49ab167a52a69761090e2d447095e9acff4b63bf1f4fc086a61e5f10',
+  },
+  {
+    types: ['string', 'address', 'int152'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia',
+      '0xe33daaaa6c032fb3429e477389a98e14d379ac16',
+      BigInt('0x33b71ba52b41d358a0e'),
+    ],
+    result:
+      '0x0d8226c1422603322f692894b3d65a4407b9e584c00899534c33c1eba4e0aac0',
+  },
+  {
+    types: ['uint120', 'bool'],
+    values: [BigInt('0xc7e1'), false],
+    result:
+      '0x2697dae5499488e6f11c00a9c8f03dcc5477a74b64c8c489c2bd2d4b4da4f5c2',
+  },
+  {
+    types: ['bytes', 'address', 'bytes22', 'address', 'bytes', 'int8'],
+    values: [
+      hexToBytes('0xd60158d705976ea261c159ee0b1e44a3b205a2cbb85bd6'),
+      '0x9a38053127827386cf47d4d05952607c16d45090',
+      hexToBytes('0x968a7d2f651cdb823e5618d8de4a9cf501bc047e8225'),
+      '0x00d88514e61395a2b2ef34c0d71ea9d2b4117c00',
+      hexToBytes(
+        '0x02b5b41ff3a2095256552dd8b7b183a337e21f60f71becd23a5bee991d949fb2f80e0d79fe1898fd0692cee6dfb16976118b7e0419824d35d02d2916d2',
+      ),
+      BigInt('0x53'),
+    ],
+    result:
+      '0x17c2ed33f73bcd5aaa266acb5491d28a1ecaabce316d024b3f706368be530f5c',
+  },
+  {
+    types: ['bool', 'uint176', 'bytes10', 'bool', 'bytes'],
+    values: [
+      false,
+      BigInt('0x803462c2a3c7c6e50e8d39'),
+      hexToBytes('0x5951f0a8b7afb1a8296e'),
+      true,
+      hexToBytes('0xca3a96'),
+    ],
+    result:
+      '0x85dc46c6ec77d01bda16a2fc0b5e32baa9d947770b41fa1eca8b7f753de65214',
+  },
+  {
+    types: ['bytes'],
+    values: [
+      hexToBytes(
+        '0x2f3d219b4eee0193708aad75db2e8e9e4898b964adecf451176b56511e6a62ccd835a69d4fdd',
+      ),
+    ],
+    result:
+      '0x3a1e5a6186da2e5fc9dde322d39a3848e6b4dab118e07e07fb1f7fc336f8153e',
+  },
+  {
+    types: ['string', 'bool', 'address', 'address', 'bytes18', 'bytes7'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing eli',
+      true,
+      '0xda9a4f982b1f40b181991517af7c940378adc20f',
+      '0x147709ad9944ae2e07c8aa94fdebb09b0afc2e10',
+      hexToBytes('0x0f085fc6c7086afac23531acb8b54b2df632'),
+      hexToBytes('0x723a0c3fc80bbb'),
+    ],
+    result:
+      '0x6c759585b15bf776306942a40ed3ea655a8dd7b6f7248e5dccc669a22824673f',
+  },
+  {
+    types: ['uint168', 'bytes14'],
+    values: [
+      BigInt('0x530a309917981d'),
+      hexToBytes('0xdcb099cb8bb2bc02eaa0efa6abac'),
+    ],
+    result:
+      '0x006ae04ef7fa80ed19670e69290d54ed0154c3c777aefbeeaf1c6f831404e86e',
+  },
+  {
+    types: ['int80'],
+    values: [BigInt('0xd76d3fe67933dcdd')],
+    result:
+      '0x3e35f389fca1a1d3b8f5d5742d16c5d1518b472e1f0033180e40ed6bc3b28aae',
+  },
+  {
+    types: ['bytes'],
+    values: [
+      hexToBytes(
+        '0xa299497252603651a907e7e989f5496469aeae3e6e215cd6239e9f8300f4b5c3e95ad47c2cc9d4a45375968a14246b28',
+      ),
+    ],
+    result:
+      '0x9313e520117d90fb3065d609335351b9a0b00aac887d596ecb3821440c06fd49',
+  },
+  {
+    types: ['address', 'bool[]', 'bytes', 'bool'],
+    values: [
+      '0x4a0fa383994dd438f9e8bf7f44a10593e6d83e31',
+      [true],
+      hexToBytes('0x0b89c2533dccab86a7c18a9cd4'),
+      true,
+    ],
+    result:
+      '0xbc729bbfc27eb7e1b9d5fbd4dfb8bca0ef65d9d98f825b1e42e8c0f2fa2ad565',
+  },
+  {
+    types: ['bytes1', 'string', 'address', 'uint144'],
+    values: [
+      hexToBytes('0x74'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et do',
+      '0x6fb5d729d445cb01218b12e03c960879422c7497',
+      BigInt('0x82f1cf'),
+    ],
+    result:
+      '0x4a236af5927a50f2919a0a9e1649489ef285e4a035af73bd3eeb6428c3fd35a9',
+  },
+  {
+    types: ['string', 'bytes15', 'bytes4'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qu',
+      hexToBytes('0x9eccfd95ef4a73417425b13de335ef'),
+      hexToBytes('0x3630e655'),
+    ],
+    result:
+      '0x29db1d6a1a0871987b81b44dc0cc7f1e64754f4534b26d777ecdb9772b4c97d8',
+  },
+  {
+    types: ['bool', 'address', 'string', 'address', 'bytes', 'bool'],
+    values: [
+      true,
+      '0x1170f06bdb7298b7113a240af8df819a81eaab1c',
+      'Lorem ipsum dolor s',
+      '0x7d1f1dd305fe2df43450b63cf04eaac5cbbc6a70',
+      hexToBytes(
+        '0xdacce5f7167fd30cf09f63859a5d3361eebffa76ce0bd15d1c769e0b0650a2f31993267b55cf66b127a28aaae119099a9ad50f4a96a10e5344747347d22e55e20a46',
+      ),
+      false,
+    ],
+    result:
+      '0xe6106abf96ec8d2b3bd3d7cab83af227f5b33c6e8bf5330c0a19fb64a24a8a09',
+  },
+  {
+    types: ['uint64', 'bytes25'],
+    values: [
+      BigInt('0xadf1ad6f'),
+      hexToBytes('0x78bc52c890736f88da5190cb56e0c301a0cd67d63f31aecfa8'),
+    ],
+    result:
+      '0xda4f419e97864293605b7af9955c4a39309ea0c6ac6bc12f782ca63538dfd0ee',
+  },
+  {
+    types: ['string', 'bool', 'bytes'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ',
+      false,
+      hexToBytes(
+        '0x01973adc044f566af585d159d1bee4d0118eebf6670a7094c32a27fce8a6e761f8f23685684a',
+      ),
+    ],
+    result:
+      '0xbbdde81e68bf11fca95bf864d089be6aede0115783bfd8e6e4166775c3d4e9a8',
+  },
+  {
+    types: ['bytes10', 'bool'],
+    values: [hexToBytes('0xc4452a96c836703825ef'), false],
+    result:
+      '0x63175d002e7aca5f00402e9c47adf84a376d038aedd30993e3646551cbcc1f41',
+  },
+  {
+    types: ['bool', 'uint88', 'bytes', 'string', 'bytes32'],
+    values: [
+      true,
+      BigInt('0xb09556cbe04d2732c7'),
+      hexToBytes('0x856ef8e0fc0a338749d1de450f141116d10ffd'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est lab',
+      hexToBytes(
+        '0x6c0a526df4073e3bebe328d8fff3ec217a20f235271ee31df8a467ca9b3d47e2',
+      ),
+    ],
+    result:
+      '0xdfbc32fe3ec1f0fe24b5b15204d242fbe1c24db44c5a2feb09f2f1f873be4ec7',
+  },
+  {
+    types: ['int120', 'bool', 'address', 'address', 'string', 'uint144'],
+    values: [
+      BigInt('0x2896ccaa9b1fb5f3bd'),
+      false,
+      '0xee5a4d1331e6d388b83921a79e4de916e309756b',
+      '0x9e2be680b33333c1a88b1592334021cf111f0ed3',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat n',
+      BigInt('0x53'),
+    ],
+    result:
+      '0x8813b4b298dec7f2d971dafe91bd40344fcba27822eeb120c3eb9de63283685a',
+  },
+  {
+    types: ['int248', 'string', 'string', 'uint248'],
+    values: [
+      BigInt('0x72e1792a0e3bddc6262083'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit,',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud e',
+      BigInt('0xf0c548148909113ef403a2'),
+    ],
+    result:
+      '0x1587f16e2817ba44f4d32fa33a89af295f2f32d3a8a662af9777cb31d7fbcb33',
+  },
+  {
+    types: ['address', 'address[]'],
+    values: [
+      '0x3b0a74a0be1882c9cb70033f37432effcfd0823f',
+      [
+        '0x7572c538e081ca1807ce14f166d6883ad90ebf03',
+        '0x4b46e7b57fb4c02d7dfcf6b89200a3c1ca5199e0',
+        '0x9eff296271c7c4ce61887823d1fefd77b88bc0e3',
+      ],
+    ],
+    result:
+      '0xb1a6247710de0cf6d9953c6cfc226b6bf52667bdb26c37d314f108da86b35e8a',
+  },
+  {
+    types: ['address', 'int112', 'bytes'],
+    values: [
+      '0x04bd30f5ca222b234e9b5a54694d78875af0d0ef',
+      BigInt('0x677036e1'),
+      hexToBytes('0xd0c68d996805864873603f28ce5f3d4b20'),
+    ],
+    result:
+      '0x21d3604a4eb6ce72bbae0838b12cb9fe45a4614d27a63d481b06315a2c53896f',
+  },
+  {
+    types: ['int', 'bytes'],
+    values: [
+      BigInt('0xece0d2301aa8'),
+      hexToBytes('0xe1034a856276bd6fa931cb0bf7d191617b049fa7b7837507'),
+    ],
+    result:
+      '0x662ff078dad2871489ec0bb4eeb0ef89e4f59a3e30565904cd915e1ac582aca5',
+  },
+  {
+    types: ['uint248', 'bytes14', 'string', 'string'],
+    values: [
+      BigInt('0x79f661b0fb4f8e5805f23a0ef5611e10c9368dd9'),
+      hexToBytes('0xee41c0392e3d1cec4e5922ee271d'),
+      'Lorem ipsum dolor sit amet, consectetu',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius',
+    ],
+    result:
+      '0x2a16b33676d44cc66c92017c77bd0ba4f58ce194e6b40b823bc16b0e8ac3eb7c',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['address[]', 'address', 'bytes28', 'string', 'uint'],
+    values: [
+      ['0xfb7abdedcbcbc7fcc718e5ad0c3f278d41226a94'],
+      '0x8ceb977d1df1b1b9c3a9de53cc9a9809c36a2c11',
+      hexToBytes('0x2e35c00383680ec0413eca541b2116af944a353875f0f4c1ae4242fa'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in re',
+      BigInt('0x1584a79bf3a929e7d7f6e570e73ab8dbaf16568b63e67c642694f107'),
+    ],
+    result:
+      '0x415a97dcfd496500978ff51ef7a3cfac18420b3270840020374c54e7099fa269',
+  },
+  {
+    types: ['address', 'bytes', 'bytes27'],
+    values: [
+      '0xb699d16d2d9ff054800f2e978cc0ea42de3b6ce0',
+      hexToBytes(
+        '0xe06873122af090cfb6d635a43fcc8cebd581a99b902cfe2569d2de4b0a17c34601f913c05d1f4e8655a0534ea3173a',
+      ),
+      hexToBytes('0x67c2c487170f19b15c2f6cab96e7a96c5ca6bbeb736daed3997f8e'),
+    ],
+    result:
+      '0xabf9b297c66b665ccf6805a0efd6bbc835720a1bfe48d898662fc6cf8126412b',
+  },
+  {
+    types: ['bytes9', 'int176'],
+    values: [hexToBytes('0x86d7851c36e5ec3f89'), BigInt('0xd757985f9b')],
+    result:
+      '0x628200b2897a042fd1ffee7320d1d78ce1609e64c404088ce1cc397c6bb2f8c7',
+  },
+  {
+    types: ['string', 'bytes', 'uint144'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia des',
+      hexToBytes(
+        '0xe1a7571c8e9c820e89a0b9f5d587f4eaf6d3eecc1a98797a69aefcd67d',
+      ),
+      BigInt('0xdc29e119b2cc3954d81bf2'),
+    ],
+    result:
+      '0x6ad2109ede1922d37c7112454a677f0f4be35ec8c39a2ce75a0b229b2b296d0a',
+  },
+  {
+    types: ['bool', 'address', 'int64'],
+    values: [
+      true,
+      '0x51c796520180a73b025f122bee5a5ea8f5c7c62a',
+      BigInt('0x2e164743d52c'),
+    ],
+    result:
+      '0x27f29341b4ed7a4245e309c33760eec619d060f58ea4e80a2868171431705a8e',
+  },
+  {
+    types: ['bytes19[3]', 'string', 'uint80'],
+    values: [
+      [
+        hexToBytes('0x9562b322d11684bfb2668478cb0d8da13b3a5b'),
+        hexToBytes('0xd40d1155e0e63bcb127eff69cb9e2788b03a10'),
+        hexToBytes('0x52c729cf465cd2cd468c05ff432491e180bd62'),
+      ],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea',
+      BigInt('0x510226'),
+    ],
+    result:
+      '0xf57fcc3bc5004f52ccc9f98e786c9a1468e8881dc8d034ddcfee97fd89765eae',
+  },
+  {
+    types: ['int200'],
+    values: [BigInt('0x9396a5af150df428')],
+    result:
+      '0xae25506fa61a3902d5a8caf9a8dcce3f9aedae264ca8ea15edecfe9c1bc47a7f',
+  },
+  {
+    types: ['int208', 'string'],
+    values: [
+      BigInt('0x6d6606'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehe',
+    ],
+    result:
+      '0x8fb01e46eb6146ce5630c85ff9813e41a591401133bd5e8f2a53787c89a8778c',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate ve',
+    ],
+    result:
+      '0x1c657857a630eb93662482363ad73a61982cfd8a39db4967649fb11a2c1f9a24',
+  },
+  {
+    types: ['bool', 'bytes26'],
+    values: [
+      true,
+      hexToBytes('0x565e610a18fe58cf70595b59b960ee2a369b4ae230e225e21c5c'),
+    ],
+    result:
+      '0x2f2ef30f4092784f5517757507a43ab1eb1b085a47453d1e43ca303ec0bfe334',
+  },
+  {
+    types: ['bytes21', 'bytes', 'int144', 'bool', 'address', 'bytes21'],
+    values: [
+      hexToBytes('0xb6893304593f42c470d2d465bac4f5fbba3a97a38b'),
+      hexToBytes(
+        '0xde211d4214e3a150e9b5a6dc39568ee1f79eb916a82b894ad493090d9e2dfed8a6ee5b',
+      ),
+      BigInt('0xf9e635760b32e4'),
+      true,
+      '0x246de4f8bd333c6cf6e1c4ace76e8b3255da3a8e',
+      hexToBytes('0x6875209839af094d63ceb56346cb4d15d5144b1876'),
+    ],
+    result:
+      '0x9ad95c766c35df5a9a047d76de7625ba8c7175fbb33c4028ca710661da1ba67e',
+  },
+  {
+    types: ['bool'],
+    values: [false],
+    result:
+      '0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a',
+  },
+  {
+    types: ['bytes', 'bool', 'string', 'bytes11'],
+    values: [
+      hexToBytes(
+        '0x2e86a6be09f46b51cc2dc59863b315acf9bb442d87aa10a01125bf50eaa0dfbe99',
+      ),
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt u',
+      hexToBytes('0x3ccc58a4b22292327181df'),
+    ],
+    result:
+      '0x020a5ccda18aae081a63aa6c167ff31b53c388826f8e85da116b85347653092c',
+  },
+  {
+    types: ['address', 'string', 'bytes19', 'bool'],
+    values: [
+      '0x6ca51bf7794920d1f3173ec5da77a5608d1d5f6a',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ',
+      hexToBytes('0x460d16f3835bc44934d26da74862348f218184'),
+      true,
+    ],
+    result:
+      '0xdd65ef77cae5be0696c9a7e15ca5ee4edcb23cbb1f50a5ae4dafd031cc2a63a8',
+  },
+  {
+    types: ['bytes', 'string', 'string', 'bytes28', 'string'],
+    values: [
+      hexToBytes(
+        '0x60f59889806593895cd108fa095d851abeef7c87ce6a8e36b155b380bb5003e275238da0235c5331e8d12446132bd36e77d2bd6c1d2ed44e97aaeb8f6a28952a4b',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit',
+      hexToBytes('0xf0abeb1aa7c516432411b6e3f778e049cb873f96180e74e9e8702039'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ',
+    ],
+    result:
+      '0xe5e3f26cf4603140ec2cac77d6c2c2e6ff006e12c58bc1685a292592abcdc8cb',
+  },
+  {
+    types: ['bytes'],
+    values: [hexToBytes('0x6f790dd8ddb3146d4f98baccde')],
+    result:
+      '0xe8b65c6d74b74a6ff11dab4109cb4c01b837d0ccc5d8864e2dccf8b1b78e5368',
+  },
+  {
+    types: ['bool', 'bytes', 'string', 'address'],
+    values: [
+      false,
+      hexToBytes(
+        '0x38b03cb70f215c4015759fa161b03af8e67d34469ffe7c68d79799c48b',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit',
+      '0xed5588c2843afeac88ebbae139ade65de26c06b4',
+    ],
+    result:
+      '0x7c26b016019bd4c10615533dadac5d47651807da574f59d61c181d3785b6293f',
+  },
+  {
+    types: ['uint120[]'],
+    values: [
+      [
+        BigInt('0x2253006a'),
+        BigInt('0x6fbd8568059e2d78655fe21b2f1e'),
+        BigInt('0x78b9496db30e23421268c67f6d7c'),
+      ],
+    ],
+    result:
+      '0x3da9a29d540d40869f63c2901ba8fd45a90f5aef00bb6ceb0788c54caa731154',
+  },
+  {
+    types: ['int64', 'int40', 'bytes', 'string', 'string', 'bool'],
+    values: [
+      BigInt('0x5d35'),
+      BigInt('0x3219'),
+      hexToBytes(
+        '0x30f4ded55743e7a7bea8e13249c219978bf40eb2722ecc85857a48ee8cbb88e040be',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in re',
+      'Lorem ipsum',
+      false,
+    ],
+    result:
+      '0x3feb4da34c0ce17ed65ffb292d69de73c5522dc01b235cd5038ca3f72292eb93',
+  },
+  {
+    types: ['address[]', 'bytes'],
+    values: [
+      [
+        '0xe95989936d8659127e4bf84d01610d7a5d3ecab7',
+        '0xb450af567f225d8df35252210810860b744322c2',
+      ],
+      hexToBytes(
+        '0xe3d4a4f3d7ba0fefdba048fda2a2370fd91f6d2ee33cc429a130d57c1c71b267d065e23451add5cac32298008d470980ad4896',
+      ),
+    ],
+    result:
+      '0x09bcf885af6504487ab18a0f778669e02c2961cdaa5f916eb5a5038975ac9302',
+  },
+  {
+    types: ['bytes9', 'string', 'bytes', 'bytes31[1]', 'string', 'address'],
+    values: [
+      hexToBytes('0xbcd6fdf4eca4b4e324'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. D',
+      hexToBytes(
+        '0x0c2edde5efb6664b08c63966f9a2f4198852361f7e51cbace7c2854a2526e49553ddf16b4872336b8b8390dfc2688c6471f496fd39eb5a691f20325687fc9edf',
+      ),
+      [
+        hexToBytes(
+          '0x473b367218dc2ad91801e2ecbab464b4e4e48458e52eaafd38eabb825640e1',
+        ),
+      ],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehen',
+      '0x1ce35f675fa60ec2366719a1a1910292836ab0fc',
+    ],
+    result:
+      '0x108819360f48f92620382d005f815660941b157962c833146e4e985021f4219a',
+  },
+  {
+    types: ['string', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non p',
+    ],
+    result:
+      '0xcd14f0c0ba50bc436e6a2c7eb9401e5c1263afc953e0ceed303ec178530e3685',
+  },
+  {
+    types: ['bytes'],
+    values: [
+      hexToBytes(
+        '0xfe6e41efe48ae755673dc569905075c64950c44f2dd7a7746a1899c101fbb591a9fd6a3415f0bcd3ac726b8e3d99e179a87108f04e60a2743b46f2574d9b1aaad4',
+      ),
+    ],
+    result:
+      '0x891f3390f2aba66addead3fdf4c50ee06e7b3e288fc204393a6f61b2e8e1fc65',
+  },
+  {
+    types: ['string', 'string', 'string', 'int200', 'bytes', 'bool'],
+    values: [
+      'Lorem ipsum dolor si',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est labo',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderi',
+      BigInt('0x97362903c3a21041ca12f47582'),
+      hexToBytes(
+        '0xb2bad02ae035bcc933464f50a9f9c997e969dc03edf3fd379e02a60164077b15f6ca88bc1f034bc36b7faa384d',
+      ),
+      true,
+    ],
+    result:
+      '0xe47c8782a64a1a5cd93a2bef16fcebdf4f9967724a7595e9d7bc39f7fea4c7d9',
+  },
+  {
+    types: ['bool', 'string'],
+    values: [
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab',
+    ],
+    result:
+      '0xb8f0833c45cdf47432d3520b789dc67655b30c0dc1029643f41091beb3c97df7',
+  },
+  {
+    types: ['bytes', 'address'],
+    values: [
+      hexToBytes(
+        '0x18d7d86c2149ce72a5a8f2bd505c45cd13a3ef064f254c4c09fb3fb7b47f53f7b24987b6e65e1c6cfd1e5f54ac3a52761c7baba1c2f9c61b8d',
+      ),
+      '0x453aa6e6cd2ddb5f91c6e1617feead63052b51cb',
+    ],
+    result:
+      '0x14c8b8a1542a580a6470b86375ceaa40795358c4b1b631970f435dc8a0ed15f5',
+  },
+  {
+    types: ['address', 'string', 'bytes5'],
+    values: [
+      '0xdb8c11e2354d584581bf459cee1ef908fcc46303',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla par',
+      hexToBytes('0x7e7b3207a3'),
+    ],
+    result:
+      '0xfab5773e37e812ebf4362f0ea7344143811d37fac350977b58761485cd0ed8fc',
+  },
+  {
+    types: ['bytes', 'bool', 'bytes6', 'string'],
+    values: [
+      hexToBytes(
+        '0x2fc94c2931ced8ff0ae39ab8f130b9da4fe852d8db2330e50280457a371b9d8741175c66084b2af8',
+      ),
+      true,
+      hexToBytes('0x7cc9446d859e'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cons',
+    ],
+    result:
+      '0x9226f46345374768914d86eacec5dc3dda92c3a189afdb1fb048b427d4b7945c',
+  },
+  {
+    types: ['bytes2', 'string', 'bytes4', 'string', 'int128'],
+    values: [
+      hexToBytes('0x10e8'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut',
+      hexToBytes('0x204e994b'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irur',
+      BigInt('0xd372fe62040a6804e75a9ea4fc728'),
+    ],
+    result:
+      '0xb6af709c80ba48288b3278b9814eb0f0f571585ab6b391d8464837fdc7de6644',
+  },
+  {
+    types: ['int120', 'int168', 'address'],
+    values: [
+      BigInt('0xc3a3ba820c7613eae6b9'),
+      BigInt('0x6021ef4eead6891f146dec089450097790bc187c'),
+      '0xff0d9e67054109a2e9fefdbda000032e62de67f9',
+    ],
+    result:
+      '0x0043b63d4a1636786b4594b21d992043f9a95271ce9b6eb56d513a1900a75cf2',
+  },
+  {
+    types: ['string', 'bytes18', 'bytes15'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui offici',
+      hexToBytes('0x86ece43a8d94474dd1491006eb9866741bb4'),
+      hexToBytes('0xd0b976523aacfccfe96aaaa389cca7'),
+    ],
+    result:
+      '0x99f5ae6444ae7fe880fdf89328d1a768217952c6832d267bd24cbe94fdc5bd47',
+  },
+  {
+    types: ['int200', 'bytes8'],
+    values: [
+      BigInt('0x6573597b2504097ad80296d73b946008'),
+      hexToBytes('0x17a44e4111f8be83'),
+    ],
+    result:
+      '0xbcdacfff57765c584e1e97251ae05450af2fe23e35d2a2f074f778729b862d9f',
+  },
+  {
+    types: ['int160', 'string', 'bytes'],
+    values: [
+      BigInt('0x17e65486b9968e5f'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nul',
+      hexToBytes(
+        '0x6de456f3ec94ea9dfb6f3427f8f45992665c608fcbb97fed5431c7b7859d748f6486ee30bbd765c3c2022903e8a4e54471b07478439363fe0dac4a7e007ee2',
+      ),
+    ],
+    result:
+      '0x5883cf88230cf7c3d32f450e7abb4bbc9f0f2ab2ac60e1defb2d7b428cd85ea5',
+  },
+  {
+    types: ['bool', 'uint40', 'bytes', 'uint248'],
+    values: [
+      true,
+      BigInt('0x28ea'),
+      hexToBytes('0x2c1abdc8793c'),
+      BigInt('0x562645ca788e6f'),
+    ],
+    result:
+      '0x2a2d345acbe2a1a5f0038e6a89a73c5b3e69af11b78ae485f3e6fc43cd5a5bcf',
+  },
+  {
+    types: ['string', 'address', 'bytes', 'bytes17', 'bool', 'bytes'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in vo',
+      '0xc69a22f2a9786ad529771a262ed1589f4cf4e68c',
+      hexToBytes(
+        '0x8f964fb95698f2d0fab5ccaef37707ec1afa634242cded216a43a9d1d18bfac2bcf26ae10ca314b37dc13418301b09e251',
+      ),
+      hexToBytes('0x2094ba592acd7c44ef6c55dab94787f298'),
+      true,
+      hexToBytes(
+        '0xb4285db236ba35862ae7f5b9f6b5cbbfc56f5523e5223255898dccfbc7366129f9a786849b7cc2f0ad3915f7039e2d162e518c7c546d6ea216c533',
+      ),
+    ],
+    result:
+      '0x0101cf995f96983578e483dae91691ce3b24373b74f68b8a33d0389bc37ac6b0',
+  },
+  {
+    types: ['bool', 'bytes16'],
+    values: [true, hexToBytes('0x1656b76ae1ed433d4e1869a27afb2139')],
+    result:
+      '0x3d1cbee5405e057d3df723c6d14cc3c0ff5c73fa04289380183f4ed3b453e4a0',
+  },
+  {
+    types: ['bytes', 'uint104[]', 'bytes9', 'int144'],
+    values: [
+      hexToBytes(
+        '0x7834167b534f27efb77741c46cf800ebb4fdadcc59a08aae043180c992a6d14667cbce06c8c5393d986ea6b84bdd0cb14d6a0018',
+      ),
+      [BigInt('0x61e7c88f'), BigInt('0x7e'), BigInt('0x46e5b11d3689')],
+      hexToBytes('0x16c4892d4c2d66ea21'),
+      BigInt('0x7898c8832924b1b3'),
+    ],
+    result:
+      '0x99832e7cfa7b2c5745ca05504e354351f83cd80684160ceff6739dfd5290766e',
+  },
+  {
+    types: ['bytes16', 'bool', 'address[3]', 'bytes', 'bytes'],
+    values: [
+      hexToBytes('0xa74cc42d784507993d532d12eee023a6'),
+      false,
+      [
+        '0x82de58712fd3f86683b5c87659f990851759fb52',
+        '0xef90b0a80fa4bfc59be19a70c3075cc6bb361253',
+        '0x5e70062e03fe0145c83c0026df205c10a19270cc',
+      ],
+      hexToBytes(
+        '0xf094bebea96e006b4cc291594888a4b2555c8a980147a24a19efdf01bc478c98391f5313e129556a',
+      ),
+      hexToBytes(
+        '0x5425658c0a77bb724ab1ab15807ecb72be2eda3b1fb78958bc02e99303afd611bdfcd28bfba4014d6731d173ef88ccccbe3cd624e1742606455b595b62b8',
+      ),
+    ],
+    result:
+      '0xbdd687b307073face977ea205fe0aa90aa5d15013b91210d297c17d802ff8952',
+  },
+  {
+    types: ['address'],
+    values: ['0xd16cbc6ee880bd8a346e8385546f55d16b9adc43'],
+    result:
+      '0xc3de6bcb499f7eade204420988fdf543b62c137e943f973452886449de0d1d38',
+  },
+  {
+    types: ['bytes25', 'bytes', 'bool', 'bytes'],
+    values: [
+      hexToBytes('0xfa1f9b86ea2e03d8f8ed8b5e544dbedfaf3438b52ca7b45e1f'),
+      hexToBytes(
+        '0x428c7872ae88c93f653ea32473344d27544713ce88794c31da22a79ada442d5a6167c2770da497dc65d3d9dac3fa6e3b',
+      ),
+      true,
+      hexToBytes(
+        '0x883d91501033bfdc35e09bdd328d88f81894f92821d5bb66e1c010a50d10706df829c4888d97990762588801b111584504b9ab41c59e67e201e51fdfdcd410ac',
+      ),
+    ],
+    result:
+      '0xefb038aacabcea27a75bc2bd34831540732a6d2d69d31ed71ef0d41a16e2f710',
+  },
+  {
+    types: ['bytes'],
+    values: [
+      hexToBytes(
+        '0xa2ddf5d4192db650bcc0cfa1c75d8d5c52b5f7651563020711612896d355c6ece300817d29d2910d9f0ac436f5ecc725',
+      ),
+    ],
+    result:
+      '0x567e4162f55de1184ce6e2ad2becfbf6288895e5677f649124322895825f3026',
+  },
+  {
+    types: ['address', 'string', 'string', 'string', 'bool', 'uint240'],
+    values: [
+      '0x0c5d7837af22ec4c0d6ab54ebfc96516ca6bfad9',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia d',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proi',
+      false,
+      BigInt('0xf90632ab220d40af'),
+    ],
+    result:
+      '0x700ce9ffacd70d70da73a705c4b3b038b06e88883ce40463541b18ce329b77a2',
+  },
+  {
+    types: ['bytes', 'bytes', 'bytes'],
+    values: [
+      hexToBytes('0xe67cbcaf7beec1a3b3b0ff'),
+      hexToBytes(
+        '0x2b2ce325d3a0a083d4f14f4e4726fca14f30412616faeae2d2dde44e15963827f82a0f83cf46767a72b49deeb25648a794fcfab4bd',
+      ),
+      hexToBytes(
+        '0xff4e98ebf3ce33a24c8f61ca2aef5cde9f447ca933f63517368e8ed02b5e56b8',
+      ),
+    ],
+    result:
+      '0xc147674e690d49efb20ee4f9e1018f95748a572158dbe383d5969b04e2390d3b',
+  },
+  {
+    types: ['string', 'string', 'bytes17', 'address', 'bytes1'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut',
+      hexToBytes('0x1c59a47de4884d2a7d39260937a3ed327e'),
+      '0x62b33460c2a69d505c4ca2cd1a2192c8f932395c',
+      hexToBytes('0x2d'),
+    ],
+    result:
+      '0x093aa797ac1d4d62377baced143fda10e0c748a4d13458e6de26cbe9ce2f4e17',
+  },
+  {
+    types: ['bool', 'int', 'int200'],
+    values: [
+      false,
+      BigInt('0x9bbee6a7e0afb0f6dd76c3b78371e7bd579a69a41d663d339e793755a3'),
+      BigInt('0xc9b47fdfb71468f283'),
+    ],
+    result:
+      '0x2f8284e541d4ace26adf462ae948e0922f1434ab721d62f72bdfd94cad00568e',
+  },
+  {
+    types: ['address'],
+    values: ['0x87b779f46cbccd8239c0969b5a050417f3a122a4'],
+    result:
+      '0x1cbbe125b9e4242b5eae99fd4420ae5e438735f9b71eae9cf73d38f0a2e418b7',
+  },
+  {
+    types: ['bool', 'bytes', 'bytes', 'bool'],
+    values: [
+      false,
+      hexToBytes(
+        '0xec7373baee1ef2c4039ee5aa32c8564627842df8ba482ea43bc62cb51de4bda2d7f1f5210395',
+      ),
+      hexToBytes('0x4d62d533c14260134a9e25'),
+      true,
+    ],
+    result:
+      '0x146d3226146dd07d3d6a5db97f2cfec82164567e7c9d99812d5abacaabf43174',
+  },
+  {
+    types: ['address', 'string', 'string'],
+    values: [
+      '0xbcab1d7f2486ff1ead8b0c9eca59949b0ec259ea',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    ],
+    result:
+      '0x3611d5f1603e1fd04560eccfaec3a0c5b6cf6c479ecf83708ad9bf7d2b4c6e15',
+  },
+  {
+    types: ['int256', 'int240'],
+    values: [BigInt('0x24f9a8cb'), BigInt('0x77ae47ea4a7f2985d9d3cf756e')],
+    result:
+      '0x346120d28b8da9cb2c78dbd17b9fe3dd16e512c6108fa019c418789e045d9925',
+  },
+  {
+    types: ['address', 'bytes', 'string', 'address'],
+    values: [
+      '0xb4eee78469838d0f830d0a549e9989ada0e4a948',
+      hexToBytes(
+        '0x9ed0b23ce42e2e875ce50eb842f2f4cbc89c23e002b8a7a50efb5945e148d3e42bd88c7e5d5c139f',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia',
+      '0xad563fdb848a805cdb1dbff2b125970c273623e1',
+    ],
+    result:
+      '0xae53107972d52c0f2e7b74ae72513b183341bbee20352def0cc39d2e17276ae5',
+  },
+  {
+    types: ['uint16'],
+    values: [BigInt('0x9e')],
+    result:
+      '0x08dd855ba9ac3587ee22851a9430252e08fc13e2e2e0450c3b0b1d92f04908c3',
+  },
+  {
+    types: ['string', 'bool', 'bytes7[2]', 'bool', 'bytes', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ',
+      false,
+      [hexToBytes('0x652a7bdd5fc267'), hexToBytes('0x04d9f08c77a835')],
+      false,
+      hexToBytes(
+        '0x961543f7dc6f9bfa241defb2a1b95719ab1254e85245a4b7ab72a750a5',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iru',
+    ],
+    result:
+      '0x583e39d61d2ecb4bb219a18ee2798f5f3bfca95bf32c909f93bc598c2c39fc72',
+  },
+  {
+    types: ['address', 'address'],
+    values: [
+      '0xd86e9d805963baaeb71ece5014cdc29e4c01195e',
+      '0x6ae4037fe7a3a1368564a32534eb982f908b07e1',
+    ],
+    result:
+      '0xaf644c198f120ecc11393e7a77cc91cdf3d83e073abd982e37a0569966da575f',
+  },
+  {
+    types: ['int72', 'bytes9', 'bool'],
+    values: [BigInt('0xf8'), hexToBytes('0xd79cd85646c93641c4'), true],
+    result:
+      '0x09224ad7ee73001af4b8bf3b8789213b45d0a1f6926a93f64477294797327f48',
+  },
+  {
+    types: ['bytes5', 'bool', 'bytes6[1]', 'address', 'bytes28'],
+    values: [
+      hexToBytes('0xb70b2c5db3'),
+      true,
+      [hexToBytes('0x4aff25cbf703')],
+      '0x5490cef3b2563f21268de3a8876e7f720cd92779',
+      hexToBytes('0xbbea6b8135a1cc33c27d958873e0033fd75d29578fe1bc34d13a76be'),
+    ],
+    result:
+      '0xec68696aa89d2ede90c1c204f0d5de8255c26d77f4b79a1aa3f42effd844a4e8',
+  },
+  {
+    types: ['bool'],
+    values: [false],
+    result:
+      '0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a',
+  },
+  {
+    types: ['string', 'bytes10', 'int8', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
+      hexToBytes('0xd60f691a3382e38704ee'),
+      BigInt('0x2a'),
+      false,
+    ],
+    result:
+      '0x60bb6333869f2751786428ea06b72a496c92a566b107b8439d99b1c47a933310',
+  },
+  {
+    types: ['string', 'bool', 'bytes1', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Du',
+      false,
+      hexToBytes('0xbd'),
+      true,
+    ],
+    result:
+      '0x334ac2bd4549c05ca254480e2d29931faaca985bdd4e017b5faca53d1e72f01a',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
+    ],
+    result:
+      '0xf2a00a562432deb9be9774e3c2daeb3328f7cd39117968543f21a5173facb46f',
+  },
+  {
+    types: ['bytes', 'bool', 'string', 'bytes', 'bytes6', 'int112[2]'],
+    values: [
+      hexToBytes('0xe9bed9406988d705f8addb'),
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u',
+      hexToBytes('0x82b71f8dd28dbf66c20af4a6ef927471789330e2d4'),
+      hexToBytes('0x34fffaf0a229'),
+      [
+        BigInt('0x9fcbb3466637e132c4e9f0a9'),
+        BigInt('0x9c13eb607cd296476a9c7ad0'),
+      ],
+    ],
+    result:
+      '0x9142dc5efe1d0913950e3ebfd3549198a3bb2fd9331000e54f2625cbe04b67d5',
+  },
+  {
+    types: ['string', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt i',
+      false,
+    ],
+    result:
+      '0x870704c894644f9377ceb13f7c2f7f0b8a45ade5f48d553dd64d6bef7df04e12',
+  },
+  {
+    types: ['bytes24', 'bytes25', 'string'],
+    values: [
+      hexToBytes('0x04498bec90a921ab047ed841b1f1c50f278486b443aea827'),
+      hexToBytes('0x34e9dab61d566fe0e6b42d47ef81f2e2c18a599e908b839e43'),
+      'Lorem ipsum dolor sit ',
+    ],
+    result:
+      '0xed3283b8aa3fd7d4bd6415eb9843443e3045fde44fb08af6a16ea754e5d65e62',
+  },
+  {
+    types: ['address', 'string', 'bytes26'],
+    values: [
+      '0xa10b4392c5865bb143bd00706c17a50c170d2402',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea c',
+      hexToBytes('0xe3d2003efbc4e4100fe7279be58e17d77b1cd5ae0d1647ceb428'),
+    ],
+    result:
+      '0xea273cab8ba5936f337dbbe118911239d8a4c68a3b08b5b96aaadc0df8d64ec6',
+  },
+  {
+    types: ['bytes23', 'bytes', 'bytes6', 'int16', 'string'],
+    values: [
+      hexToBytes('0x78e0869b1a8f0a0dfc89843c9a9f19b5d4b15973b5dc86'),
+      hexToBytes('0xaa66b8c5f47ee21aa71161e92b0ef7b5d7866490b54f379fe7022441'),
+      hexToBytes('0x88cffde909f2'),
+      BigInt('0x95'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in',
+    ],
+    result:
+      '0x550035edd72d2e20dffc47367a94ddbe3f13549fb5f65300826d9f7bc56e0302',
+  },
+  {
+    types: ['bytes', 'bytes'],
+    values: [
+      hexToBytes(
+        '0x8d103547f1d6c8c3b545b13ccadbde7c560c298b43309f6a6672e8fb4fe1933eaaa886c459e71a370abe0a74eefc2b71c6266a61e1f2bada3f6ed3',
+      ),
+      hexToBytes('0xaf2bbb1d212b3b554b3e2df9c30d41d536c16536069bab75770971'),
+    ],
+    result:
+      '0xbc05541546d2b1ae6a6c64c43b9adc11f482a21a65bce5f56d1405529835a12b',
+  },
+  {
+    types: ['bytes24', 'address[2]', 'bytes'],
+    values: [
+      hexToBytes('0x709b273269b8483fa93a251ea5434977173d9d4d5215957d'),
+      [
+        '0xeeeee87b80b01ff36956be12cf1d360a8bfd6228',
+        '0xd4e5ac16311a118c9192f0e6ee376ab95c6378da',
+      ],
+      hexToBytes(
+        '0xf94e8f88d5e0db095ff7175ea061cf02990d9bf7f5367886d9f72b6d8fb2722bc7727af010e5',
+      ),
+    ],
+    result:
+      '0x32f42e1f76de9a899e30f310a414718c15b90575e18a04e658fd4ff14b40fe31',
+  },
+  {
+    types: ['address'],
+    values: ['0x7932b5fc2d79456e33b1712731ffa233c0ef07ea'],
+    result:
+      '0x0f519c125328519b8067b38c491bb09c67550391124212a41072d1fb53f91f15',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ex',
+    ],
+    result:
+      '0xdb3eafa6060f5e2f067739c5cadb843ab397cf8489f13d67f0e7de986df91647',
+  },
+  {
+    types: ['int104', 'uint208[2]', 'address', 'bytes12[]', 'address'],
+    values: [
+      BigInt('0x3744'),
+      [
+        BigInt('0x5963887a7341e5781762d6d452a0c6064283e5396e196014de'),
+        BigInt('0x68adbf382f8e2eed60dfe664463da74617d4b7fed678'),
+      ],
+      '0x5caf5e69d451dad324d56fe9fc4e339479375fde',
+      [hexToBytes('0xedcddf89210d16f429639d8b')],
+      '0x9e1b80c055c2883478c6a56ec3f9eec11ab6ed6b',
+    ],
+    result:
+      '0xd26cc8c756330bd4e9bdefe3e0af57989c2d9b072047ca6db30de17822726db5',
+  },
+  {
+    types: ['bytes12', 'bytes', 'bytes', 'string', 'address'],
+    values: [
+      hexToBytes('0x62e5f2f974a0323f44f513d3'),
+      hexToBytes('0x75ceb796a9bdb36e2cc8eb63643737bd'),
+      hexToBytes(
+        '0xc284f98997b409b05d425a9bdebf2735098c1f6f53566d198ad25aa0d628c56576aa651b3087',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ',
+      '0x603e476b1c43c5e626ec0e7bd9be88a97089bb6c',
+    ],
+    result:
+      '0x037ff06c250bf580d382d5645ae1bd62b582d482010bf6bc8cb9f807ef024dca',
+  },
+  {
+    types: ['uint208', 'address'],
+    values: [
+      BigInt('0xef3a4e27d89767e6b25d91493c0b1d97'),
+      '0x3d071fb04c104ed56b87802e5ae85ac80ceaacd1',
+    ],
+    result:
+      '0xc6905baf64df3e83f29d31c47148a822cf5ce5d2da65f7ef31cfcf5a70652405',
+  },
+  {
+    types: ['address', 'int160', 'bytes'],
+    values: [
+      '0x23cb687b4b0fe697372cba827bd18c62e43cd41c',
+      BigInt('0x69'),
+      hexToBytes(
+        '0x0ef7264edbedd14ad1203f16f057d9a5de3d359b03c33d89596fac13a234be8a928bad277225ee7a7301a04ae0ad3d39d328f1e87b9ac3df2bf51562',
+      ),
+    ],
+    result:
+      '0x5de3f35a9b5bdf0f2ea6872d3b589736030b5e5099532e22376542b38b980624',
+  },
+  {
+    types: ['string', 'uint184', 'bytes', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt molli',
+      BigInt('0xdada5a584833592'),
+      hexToBytes(
+        '0x37a07259fda9710205e1e797406726970c227d44d72fad5ed3c18accdfd8d29fc85b29ac4a40',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fug',
+    ],
+    result:
+      '0xfcf9bd2fcfc2addfe14d6a28b2aafb33c41525be3530c38e343063a2f1ba5eea',
+  },
+  {
+    types: ['string', 'bytes17', 'bytes', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in',
+      hexToBytes('0x3ef61ccfd54ebe71e94598e686e1762a1f'),
+      hexToBytes('0xb4f2cf682b6de88fe83d71'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate v',
+    ],
+    result:
+      '0x8b9556dbfcbf3d271e27f25b02ffce9e4abd32e7c86342f1280fe7c5a171233b',
+  },
+  {
+    types: ['bytes13', 'address', 'uint208', 'bool'],
+    values: [
+      hexToBytes('0xccd049a0de8d70532deb8e46b4'),
+      '0x2f1b02aeedd4a1447a707ae5d5cd6272bcb34de6',
+      BigInt('0xce071b7bd1ae0c65f995'),
+      true,
+    ],
+    result:
+      '0xbb5bff904b2df75c3d81d4e0b231c5f9a7d70514d6ec67a6a7a2c92f7ece43a1',
+  },
+  {
+    types: ['int56'],
+    values: [BigInt('0x2c9bd2bf1a')],
+    result:
+      '0xaddabd530c3b13447196853341662127a79d96ae1aa39c97fe90b77e248245a7',
+  },
+  {
+    types: ['bytes9', 'bool'],
+    values: [hexToBytes('0x5cb90318b518d34aa8'), false],
+    result:
+      '0x3fae235c62200b9b235e439b928a6dc0beea80b78c4b4dad435c9f369f3db669',
+  },
+  {
+    types: ['bool', 'address', 'string', 'address'],
+    values: [
+      true,
+      '0x7fe2b4db51694c49f826c581f9ac84751cb7fce9',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i',
+      '0xabd0c1ff2d979176adcdcff0cd2f7ce39013ea40',
+    ],
+    result:
+      '0xd9027ed39608494cc32aeaf7837c50d763179cf5ea59fdc5426536f0ec1634dd',
+  },
+  {
+    types: ['string', 'string', 'bool[1]', 'bool', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia ',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com',
+      [true],
+      false,
+      '0xcc71da25c727a22c3d54f331eff92362600ededb',
+    ],
+    result:
+      '0xd61002f93d455eca8254644cf3903a4e771d3055758171f5838bf9757d55b3f8',
+  },
+  {
+    types: ['address', 'int200', 'int104[3]'],
+    values: [
+      '0xadce70b3dae06afcb9e7fab7df1edf515fadffcf',
+      BigInt('0x9bd148308fbb015d20b62e8aa0b694'),
+      [
+        BigInt('0xf24005bf'),
+        BigInt('0xb2a984804fcdadd7015e'),
+        BigInt('0x7bb1e10'),
+      ],
+    ],
+    result:
+      '0x15256a34034d878d3a783d6d9752f94bf29baf87e7ebbc4f85f230ca97f53f76',
+  },
+  {
+    types: ['address', 'int72', 'bytes', 'bytes'],
+    values: [
+      '0x78cd6e4b4fe6c3fd8bc93e8c0a3f458160ebd2f6',
+      BigInt('0xb1df2fe69d8dd7'),
+      hexToBytes(
+        '0xfd56de5a13d26baefa8002d09886fbc39a80db4660edd2603cc1f21982004141baa82aa19729',
+      ),
+      hexToBytes('0x44b8aa5f0f1e7a5565b1b9e9a21b6006282853a09dce'),
+    ],
+    result:
+      '0xf446c707d14e7e01a02e8f2a6be9324b3dcc59486144dd119260e9ee823472d2',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['bool', 'address'],
+    values: [true, '0x83458a0d0c87e1117dee4cc2f613595a0f510a98'],
+    result:
+      '0x4441f38c7714a66ff46472c58a6dc9f8eb7a0c8e8eb708a1acbac1ba66b871ad',
+  },
+  {
+    types: ['bool', 'bytes1', 'address', 'int192', 'address'],
+    values: [
+      false,
+      hexToBytes('0xcd'),
+      '0x1d37c8f32e98f019bb2de0c070f09ab80f3fd6ce',
+      BigInt('0xfddeaa02c7'),
+      '0xa0c0a4c0310d583014f3f149b073e4896d67f06c',
+    ],
+    result:
+      '0xa51ee649016e23977336c481210ec1a957c71141746a1a0c2ee8319665ae83b0',
+  },
+  {
+    types: ['bool', 'bytes', 'bytes3', 'bytes26', 'address'],
+    values: [
+      true,
+      hexToBytes('0xe8051a49b8f0ac032ffdf85c7f3392'),
+      hexToBytes('0xdffb7b'),
+      hexToBytes('0x4157514a3af7d522cf151e57a71fcb227ddd027527bb08d36b08'),
+      '0x68821b90f6644ca0084cec2cb0a37e7e8cd24e9e',
+    ],
+    result:
+      '0x05f51bf85ec594c1d102ca1b390941aad2568ab2a12247fa67545073b8780e36',
+  },
+  {
+    types: ['bytes10'],
+    values: [hexToBytes('0xdd8b6da2984c3961fcd8')],
+    result:
+      '0x9b512dff551870d4bc2e540a2cd4f8095a19de9197e70855e0d039a2b3b4c6bd',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['bytes'],
+    values: [
+      hexToBytes(
+        '0x24715b72d4562e25c3a295f0e0b3766a2590cef83534131c60d31a29e5624dcc5a7ef34c2c03741d0fbcb0d613cabdfc2995379a295435',
+      ),
+    ],
+    result:
+      '0xee8818af1b6c7da3ebf24e1534599f2c2e9ba7c243b17c723d2ecea15ef302e0',
+  },
+  {
+    types: ['uint128', 'bytes9', 'uint24', 'bytes14', 'bool'],
+    values: [
+      BigInt('0xbeb0e49c580a55d220af7ddb'),
+      hexToBytes('0x0e1da7ca0552d713a0'),
+      BigInt('0xbd26'),
+      hexToBytes('0x671eae8db8abb7c2a8046595f2e8'),
+      true,
+    ],
+    result:
+      '0x73c0b7d374420a0e3cfc429c26b769fdb6fc692d316f2dcdbef8a2f47a52bb60',
+  },
+  {
+    types: ['int200', 'address', 'address', 'uint48'],
+    values: [
+      BigInt('0xca127ee8'),
+      '0xa33138b01fcd0167a8dc20e1c95a423e23c02c7b',
+      '0x559129911aeea16015adee396b956dac4a0de28f',
+      BigInt('0xebc87c6d'),
+    ],
+    result:
+      '0xc2d22d0551ae155465ab19456242f45b0a5e25edd14a88c8d61cae8cf90e45e8',
+  },
+  {
+    types: ['address'],
+    values: ['0x702ac3d1f182a0fb5e0065d4d7f5d33a9264a035'],
+    result:
+      '0x7ef3b37d287e9150414a3a41d9ad37c09fb7e2c1ece3f3463669e08069a566c1',
+  },
+  {
+    types: ['string', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Du',
+      '0x9f560517a8122d8daa036edfdead72c6012ba10c',
+    ],
+    result:
+      '0x14712975c51264ab9fdef7a2a70892388f05896b804e0441dac59bf5de1f5f31',
+  },
+  {
+    types: ['bytes', 'string', 'bytes2', 'bool', 'bool'],
+    values: [
+      hexToBytes('0x51d363db07e11ec6ecbb'),
+      'Lo',
+      hexToBytes('0x7379'),
+      true,
+      true,
+    ],
+    result:
+      '0xe9778d58484d41d3571b5b90cf66cb95766a4918c4c669fbd8f9e47560756d39',
+  },
+  {
+    types: ['address'],
+    values: ['0xe8fafcf9368d5ac5d2e9400cea5994c82e7c9952'],
+    result:
+      '0x8f338edd9887660d2c99f14053d8c0a531d141c94900fca2bb44402be07ec20f',
+  },
+  {
+    types: ['bool', 'bytes', 'bytes19[3]', 'bool', 'string', 'string'],
+    values: [
+      true,
+      hexToBytes(
+        '0x7ebb049c5bbf827e85121d12c2539c683ca500385d7d2eb662f390a5326faf8bc3e18a2bc99f50af7b8309b6d9687a977aeb2c5788e1',
+      ),
+      [
+        hexToBytes('0xc469f45d5f18c4e5c446234aeca483926858b1'),
+        hexToBytes('0xd0b452e6952b4bc11670fbef3e4028a7ec5ad9'),
+        hexToBytes('0xc157bb1dbb518b02d5e05bd1644382f5881de4'),
+      ],
+      false,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor ',
+    ],
+    result:
+      '0x59ac74f92e68c4a69c4f954a1ec6c0a1ae5bfbc2775c8c956a915db0676965cd',
+  },
+  {
+    types: ['address', 'bool'],
+    values: ['0x67be20875dd5e2a1aaccb7b75e8cfa7808b6014d', true],
+    result:
+      '0xeabff33bc99855fb28ba715ddf102c84cfc4b8981d501f5da5403f312ddd31b9',
+  },
+  {
+    types: ['address'],
+    values: ['0xc253febb1e1478e75126f23d5f8a1306c20b08c6'],
+    result:
+      '0x84eccd15f429abf7dc8a87b75bb56c489563f846a2996b5e3a2d9d56f45b80d1',
+  },
+  {
+    types: ['string', 'address', 'uint104'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost',
+      '0x69a9e5d9688b6d2b99128f2ee9a1c3fd3e2cfb4e',
+      BigInt('0x400999716a93bc'),
+    ],
+    result:
+      '0x6b36d14ed54c9c1711dc729794fd345d522eba49f129ca65237b361b6624278b',
+  },
+  {
+    types: ['string', 'bool', 'bytes13'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+      true,
+      hexToBytes('0xb7c96b9aae3951d9fb4c9323c9'),
+    ],
+    result:
+      '0xa5e3c99acf60665c70c16d5682c5d3ae81bdcaa09fe436b0cdb6f511287c0386',
+  },
+  {
+    types: ['address', 'string', 'address', 'bytes19'],
+    values: [
+      '0x22cacb6f0167bd7218e6594218bdae97b8e1064d',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ex',
+      '0xea716368d95023e891ef59c78293806f10de5583',
+      hexToBytes('0xd5928d6def1edbe92b56e486f068732b1ca4fa'),
+    ],
+    result:
+      '0xf976b335f7abde6b6af9f4be82805b1ac1cd85f08c351f995f31cee9eed76fd5',
+  },
+  {
+    types: ['address', 'string'],
+    values: [
+      '0xa4b0374599c8080203432e418c7afa526f415997',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate vel',
+    ],
+    result:
+      '0x4600f5179be1f544c6b0d99a47e19e01f6191189a62cb2d06ae6d3cb9d923ff1',
+  },
+  {
+    types: ['bool', 'bytes'],
+    values: [
+      false,
+      hexToBytes(
+        '0xec75bee284cde30012a4dffdaf6590ee4d1b560c2ba4a5672cdf8c67ea22576d61c52cbbfdc8edc7132a60fef2f581ed2fe02e6113095d8deec608a496',
+      ),
+    ],
+    result:
+      '0x9f5180a27b7efe706ce9f48afc9a6ececc91d1393eed40f8723e09b4007f73bb',
+  },
+  {
+    types: ['bool', 'uint232', 'address', 'string', 'bytes'],
+    values: [
+      true,
+      BigInt('0x27d2ccd43e7344f42e5967ee3696de8c030858d5fa'),
+      '0xa18ca94bf6da6fddf3c64818028a14263ce30c06',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in rep',
+      hexToBytes(
+        '0xd60b495286bc3e675815814466e2db5d9acaa062663767f1e9cfb48d1d1cb885ad32269409521e819090',
+      ),
+    ],
+    result:
+      '0xfd72465d6423005dbbbf8f3fba5132958eac9d1f304943320f23723acb8f6b62',
+  },
+  {
+    types: ['int96', 'uint240', 'address', 'string', 'bytes'],
+    values: [
+      BigInt('0xea84'),
+      BigInt('0x175657d2eedbb9ebcb6b'),
+      '0x1dfb18f9f6275e08aca6c43df3f54b40e5dfb76f',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ul',
+      hexToBytes(
+        '0xb6a6d77cc73011325f3b9c1161ef8705cd345e21f1efabce20b2fda3e8e19268c7ca3bedde97ddbb5c35e102958dfbef805c10',
+      ),
+    ],
+    result:
+      '0x10be561e18244cf5b0a8e31ba1c3120713a2dcbfaf21f5bbdecf6de65c629947',
+  },
+  {
+    types: ['bytes'],
+    values: [
+      hexToBytes(
+        '0x63e43e32e4515458b4715d0e5057cf4693bb39fc3012897cce42a12350e355cd88770d0a87079f9ca041d625184a61ba4c6c4b57cd8acf995c07dbd9',
+      ),
+    ],
+    result:
+      '0x354733df22f66d6e847d12eb49d61d21c7a46a9cb8b21b48a3da67bcd2c4c252',
+  },
+  {
+    types: ['bool[]', 'uint64', 'address', 'bytes', 'string'],
+    values: [
+      [true, true, true],
+      BigInt('0x4ecdda'),
+      '0xa1289c649659c2dda7030cc2ed40f326e23a9bea',
+      hexToBytes('0x260213057ed764e76e32c238'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem',
+    ],
+    result:
+      '0x6805815fdb0d7467b83a2a5171ae14a49ab959871f6daf240e30005060953cfe',
+  },
+  {
+    types: ['uint208'],
+    values: [BigInt('0xe6bccacba994')],
+    result:
+      '0xe42c5743e5a379463700dbc06cf50592b9d6e5879005304119ccaf97c5de3ab6',
+  },
+  {
+    types: ['string', 'bytes10'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non p',
+      hexToBytes('0x204c12427374191c8278'),
+    ],
+    result:
+      '0x0e8f82d9138351dc781bf081358f2009715a5693bd6f4bd6388e68c21f41ac98',
+  },
+  {
+    types: ['int72', 'bool'],
+    values: [BigInt('0xd810960e16cb'), false],
+    result:
+      '0x46689ab154d1b17aff71dcfcfd28f322bb94c0a4e588796906bad1372b647c34',
+  },
+  {
+    types: ['address', 'string', 'bytes'],
+    values: [
+      '0xcad2ff14a1223345dbfaa64f7677a07f26be93dc',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut l',
+      hexToBytes(
+        '0x01ab33186519b8b73349013d2aec472a2bef8f543ff4f8f873beaae3e77337c45500ba3dc9',
+      ),
+    ],
+    result:
+      '0xa98b3d90fe7fdd15970556ff97027b73e09015aeef80b596bb758e9f108a9f3b',
+  },
+  {
+    types: ['address', 'int136[3]', 'address', 'uint8', 'address', 'int80[]'],
+    values: [
+      '0x3b23afd3cb46c426e5e74954137381ef1c86a0c2',
+      [
+        BigInt('0x5862c9'),
+        BigInt('0x7782d4d0827162f342d4'),
+        BigInt('0x8b6793'),
+      ],
+      '0x923525c59e732abb766dbdb8491c039432bd8ba1',
+      BigInt('0xa2'),
+      '0x998ef336afaabe79f2b0119e78027a56bde77db4',
+      [BigInt('0x9c6d95faf7ec'), BigInt('0x72'), BigInt('0x5f8082bcef8606')],
+    ],
+    result:
+      '0x2f90afe680bf9288a33e4586d729144e8e42859eef4e53f7aead09e4f7eab046',
+  },
+  {
+    types: ['bytes10', 'bytes', 'bytes23', 'bytes', 'string', 'string'],
+    values: [
+      hexToBytes('0x406407b444495c3e9d7e'),
+      hexToBytes(
+        '0x7e64bcc48e1db55487f63db128717ab1224fcefb2fc7800044cec9f95c7457ee9ee580bece7e573aa35f3347ccd9644239af71fe8db5',
+      ),
+      hexToBytes('0x15366a67fb71161d4ab98adf46702f742032db938a5f8e'),
+      hexToBytes(
+        '0x662ff1bbcaf1afe326d90322e5da6dd315f86462b9a83e544ab2f2ff8d0948a2a4a9624187b7cfd31f86d5f7ed113fef3d5b1dd9c89d19e7',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaeca',
+    ],
+    result:
+      '0x52c205b877c60bc00b306c9cf2781e5065bee74f5d2e589416180eb8c7c3d502',
+  },
+  {
+    types: ['int240'],
+    values: [BigInt('0x7ad870')],
+    result:
+      '0xeda7a25eeaa72d65f8194c9ba46c456b2961abe4eb8a52663f65d0274e32875c',
+  },
+  {
+    types: ['bytes30', 'bool[]', 'int48', 'bytes', 'address', 'uint184'],
+    values: [
+      hexToBytes(
+        '0xb5a17f88fcf686aa88d4a188d852cab6bd86cfec6c0718f7dc4a388eb95a',
+      ),
+      [false, true, false],
+      BigInt('0x5fbc4e1a97'),
+      hexToBytes(
+        '0xeef3d4c57a3435a7538e5934d61c9bc6fd0d1ec3c4aa4e307d4129ef40',
+      ),
+      '0xe3054845e29231a5946c333697b20ba42369da7e',
+      BigInt('0x44ac25d7cf0bcd12d2f92502d416c0311e764d'),
+    ],
+    result:
+      '0xefe48083d1f8ae299527f29539a2c87e513878ad3067774ae51bd8af8b5dd4a8',
+  },
+  {
+    types: ['bytes10'],
+    values: [hexToBytes('0xeb5e08e3b031e538d70d')],
+    result:
+      '0xbcc8330e78b580a30872f4acfc101c64af69c8fb0ae7c5a77feafb2e1c8a2e94',
+  },
+  {
+    types: ['int224'],
+    values: [BigInt('0x81a66c')],
+    result:
+      '0xbf1ee295798cd8edd7a69b9505571ca19a505c16eae6c8edd1675a4a53bb60fc',
+  },
+  {
+    types: ['bytes', 'string', 'bytes17', 'string'],
+    values: [
+      hexToBytes(
+        '0xd0dd1819deee82f7f78ffbf673bc316deffa7331f9d9882aa42b8d93f2349b6f49ae3a927123a821326e515ea461abbb6f35616d8b6c39c6d2f7a51814b2e4',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null',
+      hexToBytes('0x58f7e1d4fdf9ec3a7070b852814b33a8be'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+    ],
+    result:
+      '0x7407974425459e986b469f6d4d3fd45929ea1a6b1dbc233a5cdcbdd34fe5bb14',
+  },
+  {
+    types: ['address', 'uint16', 'bool'],
+    values: [
+      '0x9ef16a0e1927c94cfb3a3c9a629df431fdb38a5c',
+      BigInt('0xcc'),
+      false,
+    ],
+    result:
+      '0xd05e0965f527d95e6a04a32f25eca5991c250002d6f5fa373750d0199543bc6a',
+  },
+  {
+    types: ['address', 'address', 'uint192', 'bytes'],
+    values: [
+      '0x239ab7876429b8bf8f6e3513fc4b01bbd1a86571',
+      '0xed4953e13ae0a4e1297a8120e7093404cf8fe4de',
+      BigInt('0xafa881e56d90e5a617913533cdd5'),
+      hexToBytes('0x44abe07e7be9ceedd158dcbffaffda'),
+    ],
+    result:
+      '0xfa0fbcb5ce98d5cabb011f9772ececd3c3a51d7ab7ea91233d951d35d97f4f67',
+  },
+  {
+    types: ['bool'],
+    values: [false],
+    result:
+      '0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a',
+  },
+  {
+    types: ['bytes', 'address'],
+    values: [
+      hexToBytes(
+        '0xa65d9f4d280eefd558afd7f9b41f52af65a0228fb734790cde9dee796d00198b4b6e819a',
+      ),
+      '0x0275fe78256f4cfc26ee14d99f6d3c51eedff6f8',
+    ],
+    result:
+      '0x9d6b03e88818e765be1fe1ea87a6acaebd9a7f331cde7af2f1f874d6278cca22',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur si',
+    ],
+    result:
+      '0xd9a60e00cb12fe5b77e42e210373182a1d38c5fc312ab33fd8baf91e9f3f5774',
+  },
+  {
+    types: ['bytes16', 'bytes', 'address'],
+    values: [
+      hexToBytes('0x5ef88db03bc932668e55e8dd102fe5f1'),
+      hexToBytes(
+        '0x5f5114aefc8a6b360a702dac6543ae2fbaddde3f6a09b707a81f9e4aaf6e13c40eacaf5c35f28dfafa57f2e015898cd5e3cd7e2cff8b0fddd959',
+      ),
+      '0x9ceea1a03f9e3a97cc4d297a144ab747a58d69cd',
+    ],
+    result:
+      '0xc20f249c3347fc5f0481b5093b12ebcb9a9eefbe594fff8eb3b23967002508ec',
+  },
+  {
+    types: ['address', 'string', 'uint152'],
+    values: [
+      '0xa9cd8d4b713ac1bb02bdd57fd94036780de1db29',
+      'Lorem i',
+      BigInt('0x3fe53d6891486bfb75cbbea4'),
+    ],
+    result:
+      '0x98b5e345f06aee08209023b52c6eb162b6001a9593e83bef54cb87aa1ca2112b',
+  },
+  {
+    types: ['string', 'address', 'string', 'string', 'address', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id e',
+      '0x916e7a9efeb5c3c4ec831d4288e8d7c6cc4bda34',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inci',
+      '0x2322cdd77490ff1d0a5595e5d1f599dfbcd44267',
+      false,
+    ],
+    result:
+      '0xedd14b9391a78827eec6e3a1ef5636a20d068e7fc9d6b667b274a03164e85e40',
+  },
+  {
+    types: ['address', 'string'],
+    values: [
+      '0xb596002621fb4064539af5d6504022791689a9bf',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co',
+    ],
+    result:
+      '0x1d4739f4b75bacef846443187195e2e94847316088a68440c5893992d21d0cb6',
+  },
+  {
+    types: ['bool', 'uint136', 'bytes'],
+    values: [
+      true,
+      BigInt('0xb9'),
+      hexToBytes('0x8f078f279a9d4fe83fdfb15cde5756cbbb61b43b095f43e2'),
+    ],
+    result:
+      '0x1c29b91cc86caadbe45a1ddfdb32b5d112004063bd9348829f2e245f7441ffa4',
+  },
+  {
+    types: ['bool', 'address'],
+    values: [true, '0xc6ca9fb296efa485f4bf9affe9c29c639944f091'],
+    result:
+      '0x148c12e8045b4b6d05d62d14087ec18955768ae2620767468d654ce36184bbc6',
+  },
+  {
+    types: ['string', 'address', 'address', 'string', 'address', 'bytes'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sin',
+      '0xfdbe341bd358a53617e410f455daf6b85cd72768',
+      '0x29af5030b65351f60673ac2ed0fe6e1eb1d8cbe4',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+      '0x99c4665d25206c5030403babfe0bb8f06f7a8e71',
+      hexToBytes(
+        '0x8a40b16789b74bee68b4d801087c1e8311125d7d29bfd4cf30c447ac89a1765ef7c00ed404588f49a1fda46f40fbeb18078069',
+      ),
+    ],
+    result:
+      '0xf8b73a194c46b61071c5ff2b568867546e559de6c50aaea733aae9dc5e1f4886',
+  },
+  {
+    types: ['address', 'bool', 'address', 'bytes', 'address', 'string'],
+    values: [
+      '0x5192a265f2b659d72c513d83bb8bacbb2166ae97',
+      true,
+      '0x6a710d9cf29cdce788dd5cf632c99df38fa40a5d',
+      hexToBytes('0xbb839c031aa14b'),
+      '0x060d005780a766ec2d3f2344f520a5f6b36e79d9',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ',
+    ],
+    result:
+      '0x33c9620e9eac74e71712f79dca1fb36e8c1b61b058f06f516a2fb963aac11b8e',
+  },
+  {
+    types: ['address[]', 'address', 'uint128', 'bytes', 'bool'],
+    values: [
+      [
+        '0x68638be7d678e3c5a91f8caf3cc84117cd44b6d9',
+        '0xa6d9967ba0ee25ae680fc8333b787dca1b5c2d6b',
+      ],
+      '0x8eb3466a19fb88850fbebfab208a13acae8afbc8',
+      BigInt('0x5ee15713f6bb6d840b29bc3594d2'),
+      hexToBytes('0x796e5c5c225275901dc52b47786d345cd8a93f54'),
+      false,
+    ],
+    result:
+      '0xe06a115348916a29de4552664469007a1a8e63342e0ff0e9234362ed0057a6de',
+  },
+  {
+    types: ['bytes4', 'bool', 'bool', 'bytes6', 'bool'],
+    values: [
+      hexToBytes('0xfa85940d'),
+      false,
+      false,
+      hexToBytes('0x5e84518f7e4b'),
+      true,
+    ],
+    result:
+      '0x64390d60908056c22da9c487cbf106aba5f9761ed700dd478fcbebf6513e443f',
+  },
+  {
+    types: ['uint40', 'address', 'uint96', 'bytes', 'address'],
+    values: [
+      BigInt('0x2b'),
+      '0xfd02968cc19af23934400fbcb2d4ca255c55595f',
+      BigInt('0xc40429c8'),
+      hexToBytes(
+        '0x4336c01a3e31feaa8d9bc66fe507a01ee386451476612e36ecfdd5233323c370efce60147bfe2adcdd0058287ad38b6f',
+      ),
+      '0x51181589f50d8846bc80eee7ffaf8d3ecfa44209',
+    ],
+    result:
+      '0xfe9994afb9e1bd6389e61275b5eed9a4b23ab6dac23989990b0c64b13c6dc402',
+  },
+  {
+    types: ['address', 'bytes', 'bool', 'int160', 'string', 'address'],
+    values: [
+      '0x0b7423d8847759c0dbd695508f6df9b658633e05',
+      hexToBytes(
+        '0x6115abd5ebcd2bb792759052946a070cd4fa23d0eaefa6d7212a0efaf292e22691e5adc80abbbed502d0c58cf6420a27fc1621f4577371b3251d4039dc7fc4',
+      ),
+      false,
+      BigInt('0x63eed231137ab00795c0'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ex',
+      '0x15dff829a34450157d65bb0006fb44dff517d08c',
+    ],
+    result:
+      '0xa2d07be211e54629f4a293765e4a7940b83eff1911b2f58c2d3067ece639236b',
+  },
+  {
+    types: ['address', 'bytes'],
+    values: [
+      '0xa85e20f0a4903b09248ab42608259ddc0bb7f357',
+      hexToBytes(
+        '0xc16d55ee4fd8dd1eb0abfeaef3df3a8330121216c686ea4bc265c569120b2757ffcdc9f3b4ce131032d208',
+      ),
+    ],
+    result:
+      '0xba04c9a5ffcd22ad4b29bf1411ecfe5deb86c63bb6a3df9b4ebe2d4253a7b394',
+  },
+  {
+    types: ['uint40'],
+    values: [BigInt('0x5628c3')],
+    result:
+      '0xe2a94b3baa9e75cb7f3a9058dd44254ebda674d036d5bfe4e0106e9922f131e9',
+  },
+  {
+    types: ['bool', 'address[]', 'string', 'bytes4', 'address', 'string'],
+    values: [
+      false,
+      ['0x2a77b817e08380d9dfa51e8c4f3764ad7a6fb3ee'],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni',
+      hexToBytes('0x44d7ba65'),
+      '0xdb10856e46419ed7611da95a8aeffdff04bb66f8',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco',
+    ],
+    result:
+      '0xe7ec8c49e5488efa136e2d39838ad37b3843020747722c61f2af251fb605087d',
+  },
+  {
+    types: ['bytes', 'bool', 'string', 'bool'],
+    values: [
+      hexToBytes(
+        '0x1960b9b7e47a8e53a89cb3ae995b0a221b228872002041e12fa61e22a8310bd8df37d4d5017eb2cbcea6fe80e821',
+      ),
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis ',
+      true,
+    ],
+    result:
+      '0xb36a0dec82cc7d9041c5bbe3588e1b403d2e0d92e98175523fc5f6d9ec7d7fb1',
+  },
+  {
+    types: ['bytes11', 'uint40'],
+    values: [hexToBytes('0x06be4c3009cfcf92d5f11b'), BigInt('0x6420af')],
+    result:
+      '0xb5bb8dd5cfebb67d007fa6311b7fa4f10c0434218417fc210b02ed32d8d6b046',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['address', 'string', 'bytes21', 'bytes17', 'bytes20', 'bytes'],
+    values: [
+      '0x63a6a57f9e9fb7f3deff3b851e0d0244cfe482ff',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
+      hexToBytes('0xb3aee7baaf8ade7c1541ab267f92f5bdb00c00cf22'),
+      hexToBytes('0xededfbbe2d418724166dc314fb8c4a2cc5'),
+      hexToBytes('0x0ec3bec9f9563562327ac7bef3c1f824f71b0419'),
+      hexToBytes('0xb4f5320393'),
+    ],
+    result:
+      '0x2311852e7077e30ee988fc197e34a2f45dc3c2ac55f1cb43883b072cf1cbda15',
+  },
+  {
+    types: ['address', 'bytes', 'string', 'bool', 'bytes7'],
+    values: [
+      '0x680fab04abdf76f94e8e9aacab72c565e05bc10c',
+      hexToBytes(
+        '0xfc8160157687231225b6a763d0a96b733c140b44e06be58228e2e706e8ea',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt moll',
+      false,
+      hexToBytes('0xc3f6f28bebb592'),
+    ],
+    result:
+      '0x70e5392dd764c1cca284567a86e2c4bbb919ce9109716d2801c1f06811472e9c',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['int216', 'bytes', 'bytes1'],
+    values: [
+      BigInt('0xa4ccd41c72103f1630a6a0b5'),
+      hexToBytes('0x44'),
+      hexToBytes('0xd5'),
+    ],
+    result:
+      '0xf67a2fe8e868cf10b293fd1dc80ba081c70961ef8b76651966638b8d532354de',
+  },
+  {
+    types: ['address'],
+    values: ['0xc3cdd6ebdf8ea778d263f5ee31dff19a1191c2b3'],
+    result:
+      '0xb9e758d64158175803d6910558438ec1f6cf570e24fc06a5b69bf1b0098ebc77',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ',
+    ],
+    result:
+      '0x214b65bc092335e2384efb2f8963282a60a3b8aafa0d2511bfe4caa50de95837',
+  },
+  {
+    types: ['string', 'bytes14'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea ',
+      hexToBytes('0x912885cad6e1f2d6beb2885dbf47'),
+    ],
+    result:
+      '0xb2e433b4f022de109e7190ea3dd00e4aafcd20d8b15a2acb24d68a13b0f7b969',
+  },
+  {
+    types: ['bytes'],
+    values: [hexToBytes('0x97e3bbedf01233585f8b313c6c6293')],
+    result:
+      '0xe2bb199910b825c7cd1ce1a5db1168fe24fd78f41651fc19caa25607a35f11b7',
+  },
+  {
+    types: ['bytes', 'string', 'bytes29', 'address', 'string'],
+    values: [
+      hexToBytes('0x8a11'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e',
+      hexToBytes(
+        '0xef345748e2726185219d3dd3ed4114b51d799d74a3b41e92dfdab3ff96',
+      ),
+      '0xf71e61220d11c8d1f5b1ccee7ca5588f1e9b0528',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mag',
+    ],
+    result:
+      '0x455471f7afb75a807d3d9eee25ed2ccab56b35dbccca6034e70b8229a6c587bf',
+  },
+  {
+    types: ['bytes', 'bytes25', 'string'],
+    values: [
+      hexToBytes('0xc1bdfdf3341dddefe5042ffbeb4daaa0451d82'),
+      hexToBytes('0xf277aab8e1e1af60119ce3895cf341b13b4195a4753cff3009'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in c',
+    ],
+    result:
+      '0xbd963e2af11d7dbf9f14f7075dcf6439ce72b7b6524ed5a71c826ac671aa9291',
+  },
+  {
+    types: ['bool', 'string', 'int'],
+    values: [
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ',
+      BigInt('0x754e6b4e6370eff1cc52c3'),
+    ],
+    result:
+      '0x64fdf4f5a0a099eee1a4b72ed54f2956e9a272b7db5b3beabaa6b70c04c007ea',
+  },
+  {
+    types: ['bytes', 'bytes', 'bytes16'],
+    values: [
+      hexToBytes(
+        '0x7137b0c8a00aa8c7338dfd018996c044d622ff5bf3bf488db21ab9a5540b8f7bda9d851c62',
+      ),
+      hexToBytes(
+        '0x4fce5ff8f6e62e87c69a4b9ef1fc4150dd963ba24bd15ef3187d3c6017ef444d252eea',
+      ),
+      hexToBytes('0x59535003372b7a3bd276d172097296b2'),
+    ],
+    result:
+      '0x419573181bc75787f505bd3145fb4b2a799a1285a232a45db8fae7662e7146e1',
+  },
+  {
+    types: ['bytes', 'int', 'int72', 'bytes', 'string'],
+    values: [
+      hexToBytes('0xd8f0f09714576226912c40d2669842fc51ec7e81'),
+      BigInt('0x9de62470e9e94b234d93'),
+      BigInt('0x7f15'),
+      hexToBytes(
+        '0x77e42312e59c0f96ae71cf8008774e7c6a67f38b076382911b20fedabe93426c3ddc1b319557e477ed193a1fe26f2fb6a54bb8a98847b659',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est lab',
+    ],
+    result:
+      '0xe4dbafedc3a02019954e4574692ad9f42a7a29e0b56f0205bc655f2d60ccad7d',
+  },
+  {
+    types: ['bytes10', 'bytes14', 'bool', 'bytes', 'bytes', 'string'],
+    values: [
+      hexToBytes('0x1ab9c60b247c58473d4b'),
+      hexToBytes('0x43c8f4a9f2b83c83a17dcd82b9cf'),
+      true,
+      hexToBytes(
+        '0x9295f5ef1b34215fea4ce67dab8e4ea2a5d6fc7575293588ddefd27e5a139d23458805dd3c46a3a65c2b9164a58a2f647140af7fe215',
+      ),
+      hexToBytes(
+        '0x741a0b2e834f453b0eb876c91641eb517a14bbfced71689fdc61564ec36de6e080c84ee944824e0e236b',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deser',
+    ],
+    result:
+      '0x4c0e58613eb500131fb50b99e78ceb680478178c3d3ad6fbcb79ee48d1d1372a',
+  },
+  {
+    types: ['int80[3]', 'address', 'int240', 'bytes'],
+    values: [
+      [
+        BigInt('0xf6c928a9c0'),
+        BigInt('0xe31d9f6958f932'),
+        BigInt('0xcca508a299'),
+      ],
+      '0xf35b1447b04c4aeed7c987e1cb9717a16f966d37',
+      BigInt('0x484266295ae2f8055d42ae48e90629f685'),
+      hexToBytes(
+        '0x1ada04b96ba779ef0a56d81c8f4be2586d64c2924c64e581f56c5e3648',
+      ),
+    ],
+    result:
+      '0x8a23ec09c0ad8dab17244ee2d33d361a0a56bc7cf123248bc857b4673d869341',
+  },
+  {
+    types: ['bytes13'],
+    values: [hexToBytes('0x274d123034f22746604a1dc194')],
+    result:
+      '0x2b4d9c0b7f4b8ff0f2fc0ffda8b97ab559e31e6990f255af8bc6b0127da4232f',
+  },
+  {
+    types: ['bytes19', 'address', 'bool', 'bool', 'address'],
+    values: [
+      hexToBytes('0x5c82230196b626ae599d5ee7bad8c3cfe3420f'),
+      '0x83b5dbb54d8e73b1502747c193d144ca592f661d',
+      false,
+      false,
+      '0xe88b84d9378874ffb0c772cb4577c5c1d1726dee',
+    ],
+    result:
+      '0xd75e030ff0db2f41b23baf5baa1d0886468d0ae38b775687c0bfee89207cdb11',
+  },
+  {
+    types: ['uint96', 'bool', 'bytes3', 'int152[3]', 'int176', 'bool'],
+    values: [
+      BigInt('0xfda2c701'),
+      true,
+      hexToBytes('0xf261ed'),
+      [
+        BigInt('0x1ea1b1f9d2b'),
+        BigInt('0xb1925748ea2b'),
+        BigInt('0xc1ef8e4e4a52df5cc20937f7ff697eb2'),
+      ],
+      BigInt('0xb04b55ab628f1ae18f97642def14bee234faa6fed0'),
+      true,
+    ],
+    result:
+      '0xa15518f6062a98b3595ea5897a4f1e7467537702a54bf238476fbba5e5176368',
+  },
+  {
+    types: ['int160', 'bool', 'bytes8'],
+    values: [
+      BigInt('0x6b9dc83e92df23df727c55e1bde28c'),
+      false,
+      hexToBytes('0x3dd6d7a8d857f811'),
+    ],
+    result:
+      '0x452b72ae83f1cced0509e4c070a64bd141d6927e186cc71c479b67d340eff9d2',
+  },
+  {
+    types: ['bytes', 'bytes17', 'bytes', 'bytes32'],
+    values: [
+      hexToBytes('0xa6118a3bc3c6d60305b58049ab3e967411'),
+      hexToBytes('0x377925abe3de23a96a90c4640df3d73a00'),
+      hexToBytes('0xcc61068c0563336227c727996018644acffeb733'),
+      hexToBytes(
+        '0xe8ea81028fa7cc4bf7e23eddc109e350e94f481851e0968bdcb52a8a7acf958f',
+      ),
+    ],
+    result:
+      '0x7b4818bb63d3499a5da2f0206f47383540de672cf1f8f3e451b6f08d5f11fd51',
+  },
+  {
+    types: ['string', 'bool', 'bytes', 'bytes8', 'bytes10', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol',
+      true,
+      hexToBytes(
+        '0x0c67aea6b383385bcb82f232c50e0462e0e9f3b2f7d1c58bb968ab01632bb7abdeb4f4aaae2a902a026e23f5cdb038026f8b6fc93263403666381cf41c',
+      ),
+      hexToBytes('0xf49cf88627f77eda'),
+      hexToBytes('0x25655c34525c352d5d18'),
+      false,
+    ],
+    result:
+      '0xeb9087ce910c6c002e9c32b841da47db5a5cf31e507ddfd60c58db8ed77b1b08',
+  },
+  {
+    types: ['bool', 'string', 'string'],
+    values: [
+      false,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia d',
+    ],
+    result:
+      '0x2e04fbdcbc0f2807f4486fc70e6bca59aa3685b429a7fad7f370075cef64b09e',
+  },
+  {
+    types: ['bytes', 'bytes', 'int88', 'bool', 'address'],
+    values: [
+      hexToBytes('0x8df848418e3db5aa'),
+      hexToBytes(
+        '0xfef8d6ba855f7705fee8fd9bc9af89f1dcf2ab13f85c51ee1af8ce2f2eedbf877f1e4b',
+      ),
+      BigInt('0xc3aa81ada043f94d'),
+      false,
+      '0xb6c5f43313c621f4468ce009f11e0439e5a89511',
+    ],
+    result:
+      '0xa5eb7a80d6a7b4268eb5da843b897b70184b6986d8feffb3717f4a3de726fb47',
+  },
+  {
+    types: ['bool'],
+    values: [false],
+    result:
+      '0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a',
+  },
+  {
+    types: ['bytes', 'bytes24', 'bool'],
+    values: [
+      hexToBytes('0x5e859d33ad68bce82cf57e251d37f6da34341679688a14d9d80d'),
+      hexToBytes('0xcb9394ccda527cbf9de9736bb91a624362c162ff7d763206'),
+      false,
+    ],
+    result:
+      '0xaebbdbef671e446d3509b8f3c141741d926349ed3d96a55b89d2a01ecf3616d4',
+  },
+  {
+    types: ['bytes'],
+    values: [
+      hexToBytes(
+        '0xfb4feefa0a39e9a4b55396a41594bd382252a39efdd457148ba74239daaa600091892f1c5407485d5a424ef7f5affc81c376de4fe52b3d2f0fa45b177e12d5',
+      ),
+    ],
+    result:
+      '0xcf624c7967d89ac3378ccd46008401e47485ae24e188f8dd9fcf52a8f823f753',
+  },
+  {
+    types: ['bytes28[]', 'bytes12', 'uint192[]', 'bytes13'],
+    values: [
+      [
+        hexToBytes(
+          '0xb0705dccb0d02139469c1840bf40e97c8da7c9ddcc2042a4e420e229',
+        ),
+      ],
+      hexToBytes('0x773f0bff569b55392e9f317c'),
+      [
+        BigInt('0x468be662593bb861010bfb9b5f063b21bea20c6a35e83c'),
+        BigInt('0xb49c0b02e0048b49e613fc9e88'),
+      ],
+      hexToBytes('0x47d9086678a0c44a49a379502c'),
+    ],
+    result:
+      '0x77d2ba64953e179136905430213d9e06fe7cafccd4172456d136400562f9a786',
+  },
+  {
+    types: ['int48'],
+    values: [BigInt('0xfa')],
+    result:
+      '0x20da30015b5d36fd72d08b2252872989eb3b00a581529486f93dd8b2ae49a19f',
+  },
+  {
+    types: ['bytes'],
+    values: [hexToBytes('0xf160398cca7090ad999dc6074232')],
+    result:
+      '0x050b508250e745a7d662942c4d3250fa1308515f5200159aa7d92efec274988d',
+  },
+  {
+    types: ['bytes22[]', 'string', 'bool', 'int192'],
+    values: [
+      [
+        hexToBytes('0x8d8fe0e08bd84f816aab2954adb7a444f8f4ba006727'),
+        hexToBytes('0x3ad8d71d48d8a1c0fb257d7804357e288e9781ab53ed'),
+      ],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa',
+      true,
+      BigInt('0x5d41f2b48af03d538c051831'),
+    ],
+    result:
+      '0x8917e5025253c5b59901d42ddc176e425a8259015b475eeda460a8b61e5d2248',
+  },
+  {
+    types: ['bool[]', 'bytes', 'address[2]', 'bytes2'],
+    values: [
+      [false],
+      hexToBytes('0x0facafe1565ca319175b83'),
+      [
+        '0xe19790f840dbae5d25126bc4e1ee307309c2d9d4',
+        '0x92e6a0d58ea86e65cbb03fd6724290bb0505dc5f',
+      ],
+      hexToBytes('0x0ddd'),
+    ],
+    result:
+      '0x8a20e9237208f99c0cd8b1f42f7d160063d2f7b4ca7c8f4b8e0b96b7a5fcd0bf',
+  },
+  {
+    types: ['address', 'address', 'address', 'uint104'],
+    values: [
+      '0x73f092142484e6677a50357f20a1116cd9f2ae55',
+      '0xeae5f884555310ac894e9352be5ae63c34c7d308',
+      '0x499f3fa4a14f52896dc4c4e639985d493b76f067',
+      BigInt('0x15ded7ef0451f4'),
+    ],
+    result:
+      '0x767269742004ab67cfaf62137b736838d9c0ae51c052460f50361bcfcd970469',
+  },
+  {
+    types: ['bytes', 'address'],
+    values: [
+      hexToBytes(
+        '0x587382a91ab7f142d8f7dd41a04f00161dc29ef3051640828765ead0bd03c2a521',
+      ),
+      '0xdeba2fe82ef7bfcb053eb2f4ec451eebc1475629',
+    ],
+    result:
+      '0x035919e66cc7c93aeae29ddc5c705a9d44af0fefa5e151fbb292d4e79aa3458c',
+  },
+  {
+    types: ['bool[1]', 'address', 'address'],
+    values: [
+      [false],
+      '0x94fa700b608c5f5bbcf3705109d218e657aaa91e',
+      '0x8c12a9b43607daf0810d34372fc95c7096d4b235',
+    ],
+    result:
+      '0x12d51c95e0821c9229029730e08571959124a722398cc7e138131818b4d74f3d',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['address', 'string', 'bool'],
+    values: [
+      '0x1214b08dfb1d33606c1948e94322ef846bd9eb6f',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat no',
+      true,
+    ],
+    result:
+      '0x87e525721d24ccc97d11a1b33fea99f4397bbdf64b7762f5a710ca8601d5ab08',
+  },
+  {
+    types: ['string', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nu',
+      '0x78e5bdc6160ddaf60f67c55d714bb4c20e4a5584',
+    ],
+    result:
+      '0x28a01d903b8262c2e63798e1dfc0653e19618c9e944d57549df883a9e25a6f24',
+  },
+  {
+    types: ['uint80', 'int248', 'string', 'bool'],
+    values: [
+      BigInt('0x31'),
+      BigInt('0x3c864555c82c81c34927'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla',
+      false,
+    ],
+    result:
+      '0xdaa8fedbf77a1f741f382abeaae8819a05da69c5fbd4f0984d1bd8d5f35d97c1',
+  },
+  {
+    types: ['address[]', 'address', 'bytes', 'string', 'bytes'],
+    values: [
+      [
+        '0x2797ff8f93a869308b37519470b67473a5eb27c0',
+        '0x203ddb6807dba325f04a0a6eb173e8bc071d4ef4',
+        '0xcc39d151c753fba19893eb0173f55838c6bbcb4b',
+      ],
+      '0x25822bfebc71280cece70f6bf80a2f0ae7a9da16',
+      hexToBytes('0x644c8190be9f3f955fde2a0ebc7945d90347e00fde87b764299b80'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a',
+      hexToBytes(
+        '0x2bebb1ee4a7b3578ef2081d46260262d639c3c74bdec61a34c30186b12378bbcf876ba6d909d8d',
+      ),
+    ],
+    result:
+      '0xb9ce0b5a022f1ed0b79162a72ca41e91a96df8a17dcaee0c6bb8f64d0e7b7ba9',
+  },
+  {
+    types: ['string', 'bytes23'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ',
+      hexToBytes('0xb1ca6dd3eb48e8f62bc23de3af23fc59471277bad20867'),
+    ],
+    result:
+      '0xe52ed71386db5a50f7312ff6cc89169e3634ca0ffe60738109542e2228a41529',
+  },
+  {
+    types: ['bool[2]', 'bool', 'bytes14'],
+    values: [[false, true], true, hexToBytes('0xbeaf8ef98deb98c9f8f60e5b2c77')],
+    result:
+      '0xc0632c611025eef4be69f7441d78a916288d7899d54c7a59238c33e4335fc331',
+  },
+  {
+    types: ['int120'],
+    values: [BigInt('0x4f98f5551758')],
+    result:
+      '0x815b28fcf63cae4e3143ead4f8b6bf1fd88fd10747622623279d415e07640e37',
+  },
+  {
+    types: ['bool', 'bytes5', 'bytes20', 'int48', 'address', 'bool'],
+    values: [
+      false,
+      hexToBytes('0xcfbaedf346'),
+      hexToBytes('0xdd0976b2bdccea63e6bb12ce45234bcda144f259'),
+      BigInt('0xc1e3'),
+      '0x9c5abc5a2f7f1f43317dd4ae60c91f3097da59bc',
+      false,
+    ],
+    result:
+      '0x20b134711cef7c80f3fc7143601ca30f83484b2960d745167db76164f76314f7',
+  },
+  {
+    types: ['bytes23', 'bytes22'],
+    values: [
+      hexToBytes('0x2d70065f70f2726cd7ac8822011a8c9125b4b20ee04b30'),
+      hexToBytes('0xc80bd9150210c8b4391750d45ea492b24bf45450d5f3'),
+    ],
+    result:
+      '0xfc1fc78d4ffc613032bbc81541d45045bee605d9520f3ec9e4b14e528f0a11fb',
+  },
+  {
+    types: ['bytes', 'string'],
+    values: [
+      hexToBytes(
+        '0xb0cd922a5ce3d8785f733acd557c55ff7c0eda4600fee7a26e093099daccca',
+      ),
+      'Lorem ipsum dolor sit amet, con',
+    ],
+    result:
+      '0xad5a23b1a7bdd709e35e0a5ca5477739ecbc8334be252fc868ffc1eddedbbbd8',
+  },
+  {
+    types: ['bool', 'bool', 'bool', 'uint48', 'string', 'bool'],
+    values: [
+      true,
+      true,
+      false,
+      BigInt('0xada52f'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la',
+      true,
+    ],
+    result:
+      '0x276fb0628566a4660e908af2a5c6043044072900bbc58e3dd0c1a04bf33d4576',
+  },
+  {
+    types: ['bool', 'bool', 'bytes', 'int232', 'bytes13'],
+    values: [
+      true,
+      true,
+      hexToBytes('0xb36ae53df48dd180e7c919efe2cee5c3dd09eb96'),
+      BigInt('0x78f2bc'),
+      hexToBytes('0x2fa002261804005ffff57d5d72'),
+    ],
+    result:
+      '0x8ec6d9cf250485623a05a01ef33ddab0d5f34af8789d4bdc14f50a6536f96e0f',
+  },
+  {
+    types: ['int208[]', 'bool'],
+    values: [
+      [BigInt('0x6e79e0b2872362652f8778f5673ab5ebe9c0bb6d125b4a')],
+      true,
+    ],
+    result:
+      '0x5c21dbf77d56d3a6da53bda6c3ea0faa5798d51e868d69ef1c24f174fdd1799d',
+  },
+  {
+    types: ['string', 'bytes32', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co',
+      hexToBytes(
+        '0xaebb5ece66b602cc5c934494e34f025605e2e7994b7a08d974120b1293268601',
+      ),
+      '0x8f0275f2e051cbc6c870c04c1465fcc378562557',
+    ],
+    result:
+      '0x80f7daf589b84a789791ac5192875f2e77df2f0e5dfeb12e6b3df290e6d3ebf7',
+  },
+  {
+    types: ['bytes', 'uint208', 'int120', 'bytes2', 'string'],
+    values: [
+      hexToBytes('0x104defaa57d33fd46b1b3a2656406b1bd89cdb78f0d3ff3e64'),
+      BigInt('0xb8154a'),
+      BigInt('0xa92c5d97ab'),
+      hexToBytes('0x100f'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure d',
+    ],
+    result:
+      '0xb7653f45fc4d4bf8b80d6341bd2b614afb592c904cacbe0db7c7c6fe4334b084',
+  },
+  {
+    types: ['bool', 'uint160', 'address', 'uint40'],
+    values: [
+      false,
+      BigInt('0x5eb56d'),
+      '0x38d462bb435ae283e5ba93a806d513bcdb697489',
+      BigInt('0xd6'),
+    ],
+    result:
+      '0x826cf5a61bfd2ad30cb7ffedf5e1b8ba2d1ae6e366d1790b0016b5dc4c1751b7',
+  },
+  {
+    types: ['int200', 'string', 'uint248', 'address'],
+    values: [
+      BigInt('0x42a9db'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia de',
+      BigInt('0xaa6deb323731e17192cb451245'),
+      '0x36f40d75a03c52a3be47867e097de775c4b3e8ed',
+    ],
+    result:
+      '0x69cc71f0b88b838c9fd129b588306188b00b6635623ae36263fc3e67546007c7',
+  },
+  {
+    types: ['int80', 'bytes', 'address'],
+    values: [
+      BigInt('0xda351102f79f76627c'),
+      hexToBytes('0x7663ce8b73ed9663c6f60ebb925afe47bae76485'),
+      '0xb2b6da1b5ea5a4b2d4c427d4fba3dedbbbb3cce4',
+    ],
+    result:
+      '0x2735e6d01df0d04df824744adfc97aabfcd363f75ee2a6fcdc3349ea722f74c6',
+  },
+  {
+    types: ['int96', 'bytes', 'bytes', 'string', 'address', 'bytes3'],
+    values: [
+      BigInt('0xe44382ee094c9f0f86'),
+      hexToBytes(
+        '0x75001235ff43c1242b5b003805beb09ba38b61cb8ca58852217d9dee21566c29d08dfda0d761b84a4f9bef240caa406d4e',
+      ),
+      hexToBytes(
+        '0x0dadafeaf1469e26a8ba5d7fd8ec8059edc2dbf04fa15d9b4c41b7e5bf02b5831666247e820fa2',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat ',
+      '0xf40016a361b01ff66cd004b807eb6b6c8b15ef12',
+      hexToBytes('0xe3532f'),
+    ],
+    result:
+      '0xf1e68e3557a9b9b80b04c314ccffd1e5a084bc24bcb2df4111e1e72ed32bd144',
+  },
+  {
+    types: ['uint248'],
+    values: [BigInt('0x28bf')],
+    result:
+      '0x86b498af2a7f935e74fe1c42f30ccd4d19822f8164f5363a4bbd1aff16218c2f',
+  },
+  {
+    types: ['bytes', 'string'],
+    values: [
+      hexToBytes('0xc6f5c0'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cill',
+    ],
+    result:
+      '0x24032ec34b3dcf0ce5cdec3b6354fae549229775e30db04ada698a7bce43577e',
+  },
+  {
+    types: ['string', 'bytes13'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim',
+      hexToBytes('0xcb96b775540d703fd1b208c670'),
+    ],
+    result:
+      '0x8bda809cfb6926ef256dd9f53c9eed2233c4e54b69a863beab18621007674a7e',
+  },
+  {
+    types: ['string', 'bytes26[]', 'address', 'bytes', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab',
+      [
+        hexToBytes('0xf97f6b6685f15ed8314d8ec3e38f20a0724d62f3f9367a881e64'),
+        hexToBytes('0x1edff941967dbdc77686df516d542a5228b112cfffed8e0738fc'),
+      ],
+      '0x1e482509e23a678c36ee1f977966139cc952ce3f',
+      hexToBytes(
+        '0xa01f3c1c5b2ef3eae45d6f1f8a2ca83f8b8ece40961092b2203d672824b32893009cad86727da389c5ee31222baa3a74ca91ef1f74b2719527825678',
+      ),
+      false,
+    ],
+    result:
+      '0xc24f2dd6332d22e2c4cf174b5fc860654b89f5e70859e59fcf629aee2cb20054',
+  },
+  {
+    types: ['int48'],
+    values: [BigInt('0x1fe7430c')],
+    result:
+      '0x29e4217269ba3e86eaf0d01b6bfbede444f8e6bdb5cdbbccbd3da9b4f5e83571',
+  },
+  {
+    types: ['bytes13', 'address', 'address'],
+    values: [
+      hexToBytes('0xc4c5312c063b7d91fad3afa29c'),
+      '0xb390f6fb797f2be100efa02155bceaf52edce3be',
+      '0x0776ebf699aaa86402cedaf0d0671bdb710999f9',
+    ],
+    result:
+      '0x57208a49035d67ff5e18b5269bbc3fca1daf584dd1fd0a983d7fc60a0521db55',
+  },
+  {
+    types: ['bool', 'bytes15', 'bytes', 'bool'],
+    values: [
+      true,
+      hexToBytes('0x710cdf77de20fd4ba39924a56cbe20'),
+      hexToBytes(
+        '0x77b52075f858747fe0fef000944bc158747150243e309dc31caadb62501b30a2916287',
+      ),
+      true,
+    ],
+    result:
+      '0x6e0f1db169ad94e2514e23bc061733d8687bb67369239ec506fd77b90e67e96a',
+  },
+  {
+    types: ['bytes'],
+    values: [hexToBytes('0x1334d74e')],
+    result:
+      '0x38a5fc6776c8f400ac6283e6154e5007e13678a43de82248be0a01e2c14996ed',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu ',
+    ],
+    result:
+      '0x8320230c78ead62957d980044d99e8111c4fa1cffa57583fbdfee5fa1500392f',
+  },
+  {
+    types: ['bool[2]', 'string'],
+    values: [
+      [false, false],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in rep',
+    ],
+    result:
+      '0xe7f7d615920d990a7f73ab74cb9c2c7a47669f77f331f457e9b850c364e655e0',
+  },
+  {
+    types: ['bool', 'string'],
+    values: [
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U',
+    ],
+    result:
+      '0x538c721ecc11a26c066fabdb076ae0cc8d78b82d11b8277c5bd5a6c6fba525e6',
+  },
+  {
+    types: ['string', 'address', 'bool', 'bytes'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa',
+      '0x6a18a8c265fbcbd7db6d988b50408c80b95946b0',
+      false,
+      hexToBytes(
+        '0x8e1678e6f3552ad55710e2161adc8aef56bc853863e7bb0ede3af30b9fd83e43cc497e',
+      ),
+    ],
+    result:
+      '0xafee189128229372da6411741843573bffc9c13129889a74463c1e3baebe3037',
+  },
+  {
+    types: ['bytes20', 'address[]', 'address'],
+    values: [
+      hexToBytes('0x773d86e66066f68cb6426b371e691b4f005516f8'),
+      [
+        '0x86c63d84dada16bab88c5d0aef33db9f8ed61bef',
+        '0x0305c9f10d4353c0d3b517e5ae791cb944490d68',
+        '0x70e32f514c1d341c123a5d27e06cca82add81960',
+      ],
+      '0xa475f95cc61f2da54dd24daaea67221518cf02f8',
+    ],
+    result:
+      '0x78d6c2739c938f3f0daa1c0b06f217399d606f8454fd57c2beacb214b21e31c4',
+  },
+  {
+    types: ['bool', 'bool', 'bool', 'bytes', 'bytes18', 'address'],
+    values: [
+      false,
+      false,
+      false,
+      hexToBytes(
+        '0xff3e3f1b7ab27dbabbff001e5037dbe133d1b094e064b671a30a1344c150',
+      ),
+      hexToBytes('0xf7b1a11a8214e3615108479caeba2396791d'),
+      '0x1b5c2afb739d3345927df3a533e654a6cbb2a27c',
+    ],
+    result:
+      '0x3d33563ac1c8fe5de9de311797c173c63bfdc51b8074362e40818540c0d25395',
+  },
+  {
+    types: ['uint16', 'string', 'bytes4', 'address', 'uint40', 'bytes8[]'],
+    values: [
+      BigInt('0x60'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ',
+      hexToBytes('0x412ce90b'),
+      '0x25e43e27c6ce347f145da3f0519515cfd80c1aaf',
+      BigInt('0xd6fbcacf'),
+      [hexToBytes('0x961b78887f9d5d8a'), hexToBytes('0x274e2f7d0a3bab95')],
+    ],
+    result:
+      '0xce469193ecb69863ce5ec7de6005039efb3b21fa46b54340cd56fe99884ab418',
+  },
+  {
+    types: ['int24', 'bytes'],
+    values: [
+      BigInt('0xdcba'),
+      hexToBytes(
+        '0x89e27836bd88890fe993a2c84505547e5e95910a55aa4dc50691b3524af6970eb0008618c93eec13af06f5b42f22991bcaa2583742d95faf26e1e5df180d4c04b62c',
+      ),
+    ],
+    result:
+      '0x1cbcfbf83318711bfb690b13a231bbe760a1f2857debfedfcc85b84e6c6f9e9e',
+  },
+  {
+    types: ['address', 'int24', 'bool', 'bool', 'bytes', 'bool'],
+    values: [
+      '0x44104b0eaf80eb6bfc2417a27d10e59813acadf2',
+      BigInt('0x35cc'),
+      true,
+      false,
+      hexToBytes(
+        '0x062e518c2447f96c5dd0cc170156ca70fc4522fc68a89873ea2d81378a42e542715adcea397daf98d5b81ab8ef869f744508f32cee7f89',
+      ),
+      true,
+    ],
+    result:
+      '0x542c3b3ac83d1a56f84c135f7113cfde5630c544cbeacf47c0a2e4d3f6f7c9dd',
+  },
+  {
+    types: ['uint32', 'address'],
+    values: [BigInt('0x6c7d8a'), '0xf3c8ce545ec1926e3f6d6dfaa7e573f0c20d6b7d'],
+    result:
+      '0x2a336fc688703218343969aa87c91ca78a9814d84e949037f45288b3fac100d5',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['address', 'bool', 'bytes27', 'string', 'bool', 'bytes22'],
+    values: [
+      '0x5cd6c0c211009c23057b6817e48c813d66f8e9d6',
+      true,
+      hexToBytes('0xbe6eb40c95261b716f3a3844779545ad5e9c314a7b70b546396f62'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupt',
+      true,
+      hexToBytes('0x335b76dd0451f28932ce05d54018d67d5df5306c6da1'),
+    ],
+    result:
+      '0xe21618e0b5e46218b93dd76655e82a02091fc009d5cd74f5e0fc43693a95c951',
+  },
+  {
+    types: ['bool', 'int', 'address'],
+    values: [
+      false,
+      BigInt('0x9beb6f952efda947b9754055aa19b8f3ae03'),
+      '0x4531d58056c1991e874930a41d12a302119dcfc5',
+    ],
+    result:
+      '0xec15b000270783c2ee54a506fd0e72c453dc05caae1c75402de03110e51566f7',
+  },
+  {
+    types: ['string', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pa',
+    ],
+    result:
+      '0x60e2d9c779311d1d90a45e27f05c4c2814d93b1e477e0b9ce14737172fecd7ed',
+  },
+  {
+    types: ['int112', 'address', 'string'],
+    values: [
+      BigInt('0x7d9c72324d52c9'),
+      '0x91ac862a771f5a2b6c6a15e85e5fc873c9342de4',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
+    ],
+    result:
+      '0xaf5bac5779987818eded1bfbf0c9124b349d3826abd966230d60504639b4038d',
+  },
+  {
+    types: ['address', 'string', 'address[]', 'bytes4'],
+    values: [
+      '0x4d111dc8760da5eef1bd9ccaf1dc7c6ad2199464',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupt',
+      [
+        '0xec04ff4dae3919c3d402649f361ae907c6b2da71',
+        '0x7244d08eca872470a0f88c72347e8d89cc4df4c6',
+      ],
+      hexToBytes('0x997542c1'),
+    ],
+    result:
+      '0xaf79b9c1eb3bea86d59c34f85a3e31b0bc373e4a9522522ff6cc375d6993cefc',
+  },
+  {
+    types: ['bytes28', 'string', 'bool', 'bytes10', 'bytes'],
+    values: [
+      hexToBytes('0xf553dd27570d0f6291dae31ec32a8a8f05f2f4275bd41a606b21097c'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupi',
+      true,
+      hexToBytes('0xb161b8a119e50a95031b'),
+      hexToBytes(
+        '0xddfeca62b3b4caa3f138ec542537ad7e837734b950a9343891180f533aee8cae21607d2ab215f77289cca4d26647db811efa4ff7c697776c2c305c',
+      ),
+    ],
+    result:
+      '0xd7fb6be45f7b6afdda4ab292a1300ed42b95e0744a8afc3566fc02b496a4f958',
+  },
+  {
+    types: ['address', 'bool'],
+    values: ['0x272275baedad4eb3f8a7ff953faaab8f99da6822', true],
+    result:
+      '0xc4a8f6e3ac10999c6d403ea2e16db5865189ab8ec3e3cabfffe555a62626e6b3',
+  },
+  {
+    types: ['string', 'uint112'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptat',
+      BigInt('0x77afef159f75de'),
+    ],
+    result:
+      '0xe8dff0253ed1cd2520e13548ee63531419af1639dfd6854fdbb78ac296a3d721',
+  },
+  {
+    types: ['bool[]', 'int96', 'bytes25', 'bool', 'uint152'],
+    values: [
+      [true, true, true],
+      BigInt('0xf337f7d0d0b40c43'),
+      hexToBytes('0xa13ea1e7f8af14045a4a4b4a26e0bc02d887dace25b1bdc502'),
+      false,
+      BigInt('0x2b'),
+    ],
+    result:
+      '0xc71823f7d9df8d856d70965a6eccd2c040aa7665dec2ffefb6efdc90ddb3af87',
+  },
+  {
+    types: ['string', 'address', 'string', 'bytes', 'string', 'bytes'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo conseq',
+      '0xb12c9341bbd69bd7c5aababf685afef42d088441',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehender',
+      hexToBytes(
+        '0x4b413ab2fb7e19af0cdd923e731471bbff70351b4b682752de8c570eceb802ff3a6b5179bc04628d',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ',
+      hexToBytes(
+        '0xc642fea93c1ffe96901da64c11a83fc62a7b970ca4451cfb5afcf6f8f5c8e863f286093f1b125a53446c78dc8ef2298bc391b2b9ffcfb3a90d0cedec4fd0e822',
+      ),
+    ],
+    result:
+      '0x4d0954da03b2104ac683665c40e521a9d75f01529e8df956195899b3f594e9d5',
+  },
+  {
+    types: ['int248[1]', 'string'],
+    values: [
+      [BigInt('0x8a9fe0dc6441affd3bc5149288e49018a5fc')],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident',
+    ],
+    result:
+      '0x92d246c8272da556abcbacba5786ef46c4f31ff294a20ab51df67b8d238672c6',
+  },
+  {
+    types: ['bytes10', 'bool', 'bytes4'],
+    values: [
+      hexToBytes('0xaa5c1195d6bfe39202a0'),
+      false,
+      hexToBytes('0xeefed394'),
+    ],
+    result:
+      '0x7ab77869a6bbf77504cf41cb1f6b40e3a83d19f06a968d92be9fd2ec94af993c',
+  },
+  {
+    types: ['address', 'bytes', 'string', 'uint256'],
+    values: [
+      '0x51f29a84690bfe4257c1aa12e865bb742a25d09a',
+      hexToBytes(
+        '0x0039a53924e2ceea196c313dc9777f890a4541b0e52a36bebb14b7c63dabde57e6',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod te',
+      BigInt('0xabd35c0172eda759edafc9d6'),
+    ],
+    result:
+      '0x8f3bb0e2e382cde37bbbbbc9d3349d3c403cfd3131fbd2b279af39d246985a15',
+  },
+  {
+    types: ['int56', 'uint32', 'bytes29', 'string', 'bytes', 'uint40'],
+    values: [
+      BigInt('0x44031d'),
+      BigInt('0x7d'),
+      hexToBytes(
+        '0x1e3c825fbb185a9c1edb65fd690d187cdc38817d44ed00a65f92b4a071',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim',
+      hexToBytes(
+        '0xa54a593294dccbc13d7b99f183a24dfa4541b53fffedeb00301be11da2702e75097d19a4fd76a7e45412',
+      ),
+      BigInt('0x3f872391'),
+    ],
+    result:
+      '0x461363a67f84d197a33ae39a60ba653be67651a0a0932a38e089c6cf7e3d9413',
+  },
+  {
+    types: ['bytes', 'address', 'bytes2'],
+    values: [
+      hexToBytes(
+        '0x65bfc74c9079c15ff3c8007563cc5d70c2c08fd71667a1a8528f7d73ac6d69ab0b71f612643b83c58df4d96983195e5406003e6b5a895b6f792a7404968b68bb02',
+      ),
+      '0xc3971e3b06ba16f006028f3d1640eaadbbe181b8',
+      hexToBytes('0xe165'),
+    ],
+    result:
+      '0x696d0420c4e4c266a3356fcfe76bdd2fd42dcd0b7f7fe0a68738aed0c6e78308',
+  },
+  {
+    types: ['address', 'int64[1]'],
+    values: [
+      '0x4648fdb7a239f4a5157677b6addbc5d2645247e2',
+      [BigInt('0xe661ea91eb')],
+    ],
+    result:
+      '0xe8aac1f3b0a45b58c0db13bb6ca4ea5f9d428bdde04834bfa9235039c1d8fcb7',
+  },
+  {
+    types: ['bytes17', 'bool', 'address', 'uint144', 'address'],
+    values: [
+      hexToBytes('0x17984fd669c8e40118dd6b8a35d76a9049'),
+      true,
+      '0xab155c3dc5ed8c050ca208b6428c3fe01c838127',
+      BigInt('0x5c70ace69d060ed503d7b7ac'),
+      '0x2e0e0a172e3abe818b5e9cfff8aeca21b0a17ac1',
+    ],
+    result:
+      '0x214e251e87896ee49692cedda7fb89c24445eea5ff7449869c2518061f2b6730',
+  },
+  {
+    types: ['bool', 'address', 'bytes', 'bytes32[1]'],
+    values: [
+      false,
+      '0x8a5ce447017bd3f6f653c371f4462925cac9a4e0',
+      hexToBytes(
+        '0xf4cb2f7a682bd3ce789471f8dca748ed1d8915efd1279e5733bcef4f51b0c43676e9cc56596bd5668a1cc652c76522a541c0bb194a0f03c8caeaf7bb0d',
+      ),
+      [
+        hexToBytes(
+          '0xb10d178a93e3acb481df98f1eae8aed4ce738b4056f6121a88116fed66b5a25f',
+        ),
+      ],
+    ],
+    result:
+      '0xa9de67de93a87d05c5be11b60866419960e047e385ff29c3d77d94da75d20e62',
+  },
+  {
+    types: ['bytes', 'address', 'int192', 'bool', 'uint64'],
+    values: [
+      hexToBytes(
+        '0xd67adee96202d15a9b178c059dec27de7ef9f75a4360079c5a41fedcdbecc1f1d41cf5f99a03643c4fbc17af9b340d',
+      ),
+      '0x931016e76680a8de9316c02f562eaa2de92e7977',
+      BigInt('0x29'),
+      false,
+      BigInt('0x76ba7ffa7f'),
+    ],
+    result:
+      '0x647332bd93f9b2d26573c3513f20c5962a77fa1597b08c1d09cca89ba07b59d2',
+  },
+  {
+    types: ['bool', 'bytes'],
+    values: [
+      true,
+      hexToBytes(
+        '0x9d6570734afb5e07e7e438f2fd1301fff721a78adfd8c75a7b34d91cfa53a7fc5b3f79c63043a7a3110096321e34c0956e45ea0a1a129a',
+      ),
+    ],
+    result:
+      '0xb993ad597c9d1641b735e59668a702c9cb3927f17c6dd7b78398adfe3c9fd3cd',
+  },
+  {
+    types: ['bool'],
+    values: [false],
+    result:
+      '0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a',
+  },
+  {
+    types: ['string', 'bytes', 'int88', 'bool', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo',
+      hexToBytes('0x44238465c868c62a769c11a0'),
+      BigInt('0x5dc35d0c96fe'),
+      true,
+      false,
+    ],
+    result:
+      '0x43e3aed25c3905044fa12fe52169f0a1e8fec5bf285b410fa3afe96b882ff380',
+  },
+  {
+    types: ['bool[]', 'bytes21', 'int184', 'int168[]', 'bytes7'],
+    values: [
+      [true, false, false],
+      hexToBytes('0x8b85e4594f958cb99bb7561cddda4900700a5fa901'),
+      BigInt('0x9e31fa6d336e9ded1747a1b9cd2167758b1c8289cd53'),
+      [BigInt('0xeed28c8250407bdc04b9130208a46b4651')],
+      hexToBytes('0xd308927ef2a050'),
+    ],
+    result:
+      '0xfdccc107fd5a91aa23aae201d9f5e0340d10a3f0e7df116db3d886e0fa4fdf23',
+  },
+  {
+    types: ['bytes', 'string', 'address', 'bytes13', 'bytes15', 'bool'],
+    values: [
+      hexToBytes('0x37b0f80bf8133be95e574b281b56fc253b3abec80e606579'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi',
+      '0xa982bf1a6b09efce53d09687afa3bb0f5163695d',
+      hexToBytes('0x23f24f8da3aef396b6630761b7'),
+      hexToBytes('0x0a82a81b0eafd77423d1dd42917327'),
+      true,
+    ],
+    result:
+      '0x15a39e2eeda4fd5009fc627c8fbe28e152a6f0067698f5556437e4f64ed394e1',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ',
+    ],
+    result:
+      '0x3dc63a5c7b5be2e7d021df90cf8a56aa410d450470234c9396c0cd22583e23b8',
+  },
+  {
+    types: ['bytes23', 'address[]', 'address', 'address', 'bytes', 'uint104'],
+    values: [
+      hexToBytes('0x83c1964392bfbf4eca01f1c4481f69458abee87d77d9a9'),
+      ['0x520ea60abeb004e46af9e46dd0114c54d44b5f20'],
+      '0xa08c8ed06383f51b8f902c922a118a6cf7239797',
+      '0x6dbca930231a2f5a68bc0026dafbe87686453fc6',
+      hexToBytes(
+        '0x3d3868871126f9f577e22cbbf13c6ec22309b4c5f12203fc7a7f8347cc799a1b70d9c17c160a9f6b514e9f461252ada7',
+      ),
+      BigInt('0x9770d421'),
+    ],
+    result:
+      '0xc0c5bc222c6c7acd022a94e91b8a7dbbde0daa765c5be1a8f99cd032ab262117',
+  },
+  {
+    types: ['string', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, su',
+    ],
+    result:
+      '0x95679c1f6313f68c9abfc16e3409bfe41efd2af0da130ebe8e010ddc69bbb995',
+  },
+  {
+    types: ['string', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita',
+      false,
+    ],
+    result:
+      '0xa2ba0f674946b58156bf3c8afc951e2bccc2ad717667ef3adcc8fbf77db8e498',
+  },
+  {
+    types: ['bytes28', 'address[]', 'bytes', 'bytes23'],
+    values: [
+      hexToBytes('0xaa00cf2ad04992dbc10f8bc8bc07d01176f4ae120724804cbb133101'),
+      ['0x319f479a4d68a65c156cee281c9e44a679e7f749'],
+      hexToBytes('0xc23286169d743f1e6f1ebec42b094804'),
+      hexToBytes('0xd3bc18fd7b05eb9bd55cfcdcbb8e19ab332568241124c8'),
+    ],
+    result:
+      '0x0adf1c3c5e583feb1ebc32ec4a600895dd183394c396b7949bf6dc590f979533',
+  },
+  {
+    types: ['uint48', 'bool', 'bytes18', 'string', 'bool'],
+    values: [
+      BigInt('0xb8560d84'),
+      true,
+      hexToBytes('0xb3184582e168d13bc687cbba92e9d054cc7a'),
+      'Lorem ipsum dolo',
+      false,
+    ],
+    result:
+      '0xcc32ee679d6d0c7db029dbd5ebc409764091d042d051f12a516ef33e1971dd46',
+  },
+  {
+    types: ['uint136', 'address', 'bool'],
+    values: [
+      BigInt('0xa985'),
+      '0xf3f918a8be466f04fece25cc6905bea02bde2076',
+      true,
+    ],
+    result:
+      '0xf50f095711ec922afb23e31cf92c21d673a592c1816f6cc903935a1a82419c11',
+  },
+  {
+    types: ['int160'],
+    values: [BigInt('0x81aceef593a4491f7eecc0a87b6b6fbd40')],
+    result:
+      '0x3ff6a21b676baa21c797d39a1661d7224d3887891e6777cf55066eabb933abca',
+  },
+  {
+    types: ['bool', 'bytes24', 'address'],
+    values: [
+      false,
+      hexToBytes('0xa286f0ff56e8a7119d01e1645cddc92465c594bd2eaf5450'),
+      '0xe81939cfc3e7133a5b0c78b41d223ff768c36019',
+    ],
+    result:
+      '0x48fc8acddf0b84c47f3e7d6534b1c89960c106d71815630c2657607aa80b90b4',
+  },
+  {
+    types: ['bool', 'uint88', 'string', 'bool', 'address', 'bytes'],
+    values: [
+      true,
+      BigInt('0x8b556e'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temp',
+      true,
+      '0xad7ae511ba7eb674aace9fe89e22cb31d43968e5',
+      hexToBytes(
+        '0x1a5d19a5827853747c170cd36f99242e1229a05aa7d70906d0e2061b12c0bca51108b7241cd9918faafeb28c049fa3da794c3f7103ed1745',
+      ),
+    ],
+    result:
+      '0x6b2037007e257ec0fdf4c1d65f03f34b183e103e974a3ec55569aaa789ff0566',
+  },
+  {
+    types: ['bytes5', 'bytes', 'uint136'],
+    values: [
+      hexToBytes('0x912bf23e44'),
+      hexToBytes('0x1357694d57aacc01c42a5a'),
+      BigInt('0x992e2f'),
+    ],
+    result:
+      '0x639ae62ea310ebfc9055927cb72d762fb4b378cdfa5ac600954a37b06d1a619b',
+  },
+  {
+    types: ['bool', 'address', 'bool'],
+    values: [true, '0x8d65d6416f8feb87a74eb896bad58d1411a78e9f', false],
+    result:
+      '0x88d0b83f1919dc09f0ea66463fac8954a910c7ad55232c3df286f403440351f8',
+  },
+  {
+    types: ['address', 'bool', 'address', 'address'],
+    values: [
+      '0x171a3d7397f9387ff2545c8aac55147a22c258fa',
+      true,
+      '0x646855478f48c6ba1e76be8c65897b44f2f4633a',
+      '0x45e7cc1d9d036cf2679bf57bef2f015ce63a7bee',
+    ],
+    result:
+      '0x25525cfd2832a2374a9ef3a000e5c6ffe5f34cb5d53aa8756f340739f47d9ec1',
+  },
+  {
+    types: ['address', 'bytes'],
+    values: [
+      '0x8e59ea7cd40b488ed22d4b019af7cc69c665ec05',
+      hexToBytes(
+        '0x408971396ae3ea8e0d6a1b45c28b00f3a8910c55c358a0d4bd3ee7a4f86ab29ac7c7797728a158',
+      ),
+    ],
+    result:
+      '0xd24de2703a04c8f16ba638b7a14e3f35b6efbe9338d2750b7b93653a79d95a0e',
+  },
+  {
+    types: ['string', 'bool', 'bytes'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est l',
+      false,
+      hexToBytes('0x8fe3332e488f679799c63f6b972e1326a3df2415ca27198ccaaf'),
+    ],
+    result:
+      '0x1fe97b4c8d6fcd10a07e7dc8d5950733469c6b7dc74bcadfd597e12165621e9e',
+  },
+  {
+    types: ['bytes'],
+    values: [
+      hexToBytes(
+        '0x9fcb897ad81fb3f1ad61a811f7b2654d9e6142efcb060f570658c3fb6f5bf8e0d5968470a870757ee7c7c5cc0d1068e2c75bc8e85fae9ef2154ea1dc7d577367',
+      ),
+    ],
+    result:
+      '0xcff90b31ec11accf87f5fc935be24c0f1dc86db3eeb75dd372a08ca97c7a532c',
+  },
+  {
+    types: ['uint248', 'bool[2]', 'int224'],
+    values: [
+      BigInt('0xfd8abceff9cc17ebb1'),
+      [false, true],
+      BigInt('0x69505ecc0a699e759f'),
+    ],
+    result:
+      '0x2cde60971b22735878585498248a9fe03f59dee83fea72ff61e15b812ac62469',
+  },
+  {
+    types: ['bytes', 'bytes22', 'bool', 'bytes', 'bytes14', 'bool'],
+    values: [
+      hexToBytes(
+        '0xc810de9833dda70fdf6bbdeec67b44eb64feb62bb85303bf99b1f1450c511d29d4ceffab1a784254bf39753b6122d9aaef150d68573242',
+      ),
+      hexToBytes('0x29d17d68a1522f55783ca62d7798450177db5953265e'),
+      false,
+      hexToBytes(
+        '0x09f1b11680759a8c739a1cf0ddc7aded3be99037e949c22bc1d7e89ba8ecebe7913f05c21ca248af3885e765fe080a8670bb7a6c59eb06f370a47b28f1f03d6a3206',
+      ),
+      hexToBytes('0xb095f58caeb2f4660b40d297e385'),
+      true,
+    ],
+    result:
+      '0x3615c7618a86e8de9d3991754d29d21a7745e290cc18693cd2907386b01bc2b7',
+  },
+  {
+    types: ['bytes', 'bool', 'bytes4[]', 'string'],
+    values: [
+      hexToBytes('0x65a689b9a7e5e38188cc512f9d3d10f23ba298'),
+      true,
+      [hexToBytes('0x6c8cbfc6')],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in',
+    ],
+    result:
+      '0xbb2406bd47b0017cc4d8fc7734482d346c6557124de679566013a8c3a2eb0e79',
+  },
+  {
+    types: ['bytes', 'int48', 'bytes1', 'bytes'],
+    values: [
+      hexToBytes(
+        '0x3c0d7b77af30be4a886ff6ac868dacbff67a8911793a456af9a826a435d006ba52554fa14d6923a1980e1de749122b249706a93ff3bce604329674',
+      ),
+      BigInt('0xd9a137f8'),
+      hexToBytes('0x07'),
+      hexToBytes(
+        '0x349abbf5fbdfe7be200532a5df565054adca7f89946f6f6a0a31f8892e8fc9be74ba0df982308a79991a7491ce5d4ab0773e4cb327',
+      ),
+    ],
+    result:
+      '0xa83d1640dce0c3bf94e78b3f209dacb4a7d3f316fde76470ba0e09d0e778f423',
+  },
+  {
+    types: ['bool', 'address', 'bytes17'],
+    values: [
+      false,
+      '0xb1dd201f4a59a7a905a8f228fee4d6688672a1da',
+      hexToBytes('0xec843a96a7501713402c4ad356108f92b6'),
+    ],
+    result:
+      '0x5aea998e70b1f6dffbbcd5ae50f61df0345004d240417161a99aa770755d1135',
+  },
+  {
+    types: ['int16', 'string', 'bytes', 'bytes', 'address', 'bytes'],
+    values: [
+      BigInt('0x45'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehen',
+      hexToBytes('0xb019842fe4042550388db382924ab3146ec177b45de826'),
+      hexToBytes(
+        '0xc2288091a78f2f7188737bc1904ecc1f9120837818d416e4cad2e394d1a288a2150ca8f4f5529ea59806a1524e08bc1a1b4975fdb0',
+      ),
+      '0x376ac5e1fc5e148faca06dad094533a6cf676b8b',
+      hexToBytes(
+        '0x35dbb0c19ed0b57f61ac0292048b4d31057dfafac8627069002f5639bf9631a7a09dfcca06ba395d99ff804861ea83c7a6ca89ae4463a32b32',
+      ),
+    ],
+    result:
+      '0x92eef540db20a1c39026de098288a52c5d8b6ff3be7c43895060c8cabcb567e6',
+  },
+  {
+    types: ['address', 'bytes25', 'bool', 'int24', 'string'],
+    values: [
+      '0x2b669dc6580ce4bba11bebf262b1f9207290cd5c',
+      hexToBytes('0x793029d88145bc870513e9f4fa10c44c0d6e5818338d8003a9'),
+      false,
+      BigInt('0x1b44'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ',
+    ],
+    result:
+      '0x21447c9b13ff612e30defe5b5ef17feb4b44d7eec255db8bf41be9b70e267e99',
+  },
+  {
+    types: ['bytes31', 'bool', 'uint104', 'address', 'address', 'string'],
+    values: [
+      hexToBytes(
+        '0x192620e30a1bcd6d68b1ccc25aee53d975ff2016c2ee452c1abd073a615e13',
+      ),
+      true,
+      BigInt('0x30f3c44502c6169b18c9fc'),
+      '0x2280be5fb7f8b43f4ba79de9585f022170d55817',
+      '0x4aa5a2f75d650700fdda58b842d0b68e1bec9bec',
+      'Lorem ipsum dolor sit amet, conse',
+    ],
+    result:
+      '0xca57567a81e5947b4a7018bcbf65ed9be94723893190cc397a2584d6198b949b',
+  },
+  {
+    types: ['bytes17', 'bytes13'],
+    values: [
+      hexToBytes('0xd1dfc4abb15231ea6f7f47d72f1adc2d0f'),
+      hexToBytes('0x67f17672a1fe31086abd73e299'),
+    ],
+    result:
+      '0x4bd253b04eed5990f68a3249a8a4c16bb0837d3dc46c95205d459aa5c9615f1d',
+  },
+  {
+    types: ['bool', 'int136', 'bool'],
+    values: [false, BigInt('0xecfe9c6dc1'), true],
+    result:
+      '0x63f66539d006087c28d8b3dd61101d675a2f8fde10ca2f73ac0de71fe7ed68da',
+  },
+  {
+    types: ['bool', 'bytes', 'uint200', 'string', 'bool', 'string'],
+    values: [
+      false,
+      hexToBytes(
+        '0xc76c2db14b32bac3ebd0f97b177e825b9186f737b6e46411680e722158b4e8c588f0f64be8a7bf85e5d3bfe5b2c85ea944fc464b46584ab435cf69dbaac621dfd7',
+      ),
+      BigInt('0x6399'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat ',
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit an',
+    ],
+    result:
+      '0xede5bb9b3786fb4759699fcc56261ec62f8811f52a49ef6e00fb04f1b962f1f7',
+  },
+  {
+    types: ['uint160', 'bool', 'string', 'bytes29', 'bytes30'],
+    values: [
+      BigInt('0xa6ef27afcc34025f108c59bf9bbb47e5'),
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud e',
+      hexToBytes(
+        '0xddd89f91c870919c313b5bd37c28df602cd55303caa882a9fe25ec16f9',
+      ),
+      hexToBytes(
+        '0x3607ffa612c842068e9feb17b054b9c135e29085e60d775e71d6201935c2',
+      ),
+    ],
+    result:
+      '0x1515ad8574178e124e8c1143b4c255d54997dfd7e32da8072d9ad21314b84e57',
+  },
+  {
+    types: ['int136', 'address', 'bytes17'],
+    values: [
+      BigInt('0xca33'),
+      '0x9dc424290e0b9b31c684afd462ac131bbceca072',
+      hexToBytes('0x14ff94bc70cfc752e6ae491365103f3841'),
+    ],
+    result:
+      '0x5067905939ca7cae555769f65a56121cd2fe0ad12bcfad076637490d2c07c9d4',
+  },
+  {
+    types: ['address', 'int', 'string', 'bytes'],
+    values: [
+      '0xf1d3dcd125e2da1a852df7a8486cd9986f2ae6a7',
+      BigInt('0x39ed1abc798c3ba27ced6dd7cc09050d916adf03c6557c799bf0f7'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit',
+      hexToBytes(
+        '0x8e56a52af7bfdbef2318c0bf585cb88b93ea94bea6f03bc992a9b688be90ac97c2d62b43406e7cd8',
+      ),
+    ],
+    result:
+      '0x3f22003a812d0acdae376a3ed5a565ff7c8825b3b8ae88a2f601b3d3bc2c254d',
+  },
+  {
+    types: ['address', 'bytes17', 'string'],
+    values: [
+      '0xffc90821346d8a2ca0d4698965e490ff61471b1d',
+      hexToBytes('0x93e4a76575e770c65459127b0ef6182ff1'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehende',
+    ],
+    result:
+      '0x438743c04ca9613860b540d92b062b63281eb3f2c1a9d31f789b1a0af99099de',
+  },
+  {
+    types: ['bytes12', 'bool', 'bytes8', 'int168[2]', 'bool'],
+    values: [
+      hexToBytes('0xc7b4c11f280e602f1e3a1321'),
+      false,
+      hexToBytes('0x1d0be0c04d72f62b'),
+      [
+        BigInt('0xfc4b20f8564490a641c355c1c9'),
+        BigInt('0x37b2c122b8aa25fc3bfaf885cc896166'),
+      ],
+      false,
+    ],
+    result:
+      '0x110a50dda15fc9573a1baa56ae2370dfdf058e469a880ea547b644de64629c07',
+  },
+  {
+    types: ['bytes9', 'bytes24', 'string'],
+    values: [
+      hexToBytes('0x0c3268f0e9edf4408f'),
+      hexToBytes('0xf1fbe98e29c23afb1fb875f7356f69a298cba3760643b899'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis',
+    ],
+    result:
+      '0x0c09bb56f6be7f35862795df654c528835228eed2000287ceac9977d70a6d720',
+  },
+  {
+    types: ['bool', 'bool', 'bytes'],
+    values: [
+      true,
+      false,
+      hexToBytes(
+        '0xa0a7683cba004455e1323e9111e701241b046490efd6b9c709b9a39c5a8b826e389af91477a8c455b06932eab4ffe404d796bfbb020a3ad3',
+      ),
+    ],
+    result:
+      '0x7841fe9191dc11434c06768829b0c4391569a8a727e8d67176cb1e296397964d',
+  },
+  {
+    types: ['string', 'bytes', 'bytes', 'address', 'int176', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do',
+      hexToBytes('0x148fbaf3f0b4a2a491'),
+      hexToBytes(
+        '0xa5558ff96ab6ce1d695e21b40389058dd3223b016e36dc5e1e0b4046f04815e49341',
+      ),
+      '0x2c11e079f76108d883c1500dfc75b40e9f74695f',
+      BigInt('0xec55c5928d28d0d197f03a9e94b77e2241b989'),
+      '0xf76a5eb2fbdea49e0a361914c71a8449f3bc585e',
+    ],
+    result:
+      '0x48db40e84011eec913de910b9a4bfe6f3eeb5c9fb0432ac11a1bec425309cf0a',
+  },
+  {
+    types: ['uint152', 'address[]', 'bytes29', 'bytes', 'string', 'uint'],
+    values: [
+      BigInt('0x34209a0df01c7e77'),
+      [
+        '0x05d0be800e90f7741a168b4bc754f1d9f1e635db',
+        '0xc1a6b175bc19ca035a8b47ae73895d14bc3693c1',
+        '0x446a69e2db60316d60d69a2e4448de78d15962a7',
+      ],
+      hexToBytes(
+        '0x3360f76ef930eeba96f9fde952d735e480ac2605057a9d36384579d378',
+      ),
+      hexToBytes('0x'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali',
+      BigInt('0x2a2a43b290248a5d5e4750d433e7ac77c4acdadfda'),
+    ],
+    result:
+      '0x9a7cafeb21cff0791d4597147aa37a3e1830ec1934ceba5a711cd5f863a7bed3',
+  },
+  {
+    types: ['bytes', 'address'],
+    values: [
+      hexToBytes(
+        '0x12634f748422650758072ae59067b29bb37507432da2f5d422f2c0e5bad2e0f4699a9b0da1d1e266bc02e1c0',
+      ),
+      '0xaf90983f0223f891951c70277bac29f223e3f26d',
+    ],
+    result:
+      '0x9782ee2c60b144860abfff12c0d5d31a5c4c9fafe17365b8512b0e144eff4335',
+  },
+  {
+    types: ['address'],
+    values: ['0xc5c3365078b7ba2110dc6a39eb2a7172d87acd59'],
+    result:
+      '0x3db4df02e0e4f2571c53ca0ec3e8d0125b9b5ee33a61f47b387f3b9bcb329ee5',
+  },
+  {
+    types: ['bytes17', 'string', 'address', 'bytes14', 'address'],
+    values: [
+      hexToBytes('0x17bc3efc449a5754cce6b2d1c67bc1f890'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+      '0x179c971ebd6139483d421876bb7f4f40afcd0649',
+      hexToBytes('0x65f86e711d0538543956652b3e38'),
+      '0xffc234d8178d62e80a0fe11ce998aaf62e20a9de',
+    ],
+    result:
+      '0xc8fd5e70838d91b752574012df52b5de1d2a252ec56d71a9484767115fe6954b',
+  },
+  {
+    types: ['bytes'],
+    values: [
+      hexToBytes(
+        '0xd9e66a22e6ed1248255942014f271d29a0380c6db6d8978dd3d126969995d5a2472ceeb896702fd0ed76b17e41',
+      ),
+    ],
+    result:
+      '0x5e41c10eb8ddc06bd0b20c3ca29071b03c10e76beacf44fb80f9817f167ede9e',
+  },
+  {
+    types: ['string', 'bytes17', 'string', 'uint8'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ',
+      hexToBytes('0xe002898a04cc3c5a0d3160453cfb329268'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, s',
+      BigInt('0x6e'),
+    ],
+    result:
+      '0xe2194326a6dbfb5514b0db3f7d0caf6f8b44ec8e1d57c9f97ae0495648b5b469',
+  },
+  {
+    types: ['string', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id e',
+      '0xe61952d0d6e16c329ffbde50c95123d53701961f',
+    ],
+    result:
+      '0x94631dbfe4424502637ae33f7dcf009a4e4145a46f64e01c7d2840d62cd97ff1',
+  },
+  {
+    types: ['string', 'string', 'bytes23', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur s',
+      'Lorem ipsum dol',
+      hexToBytes('0xa642ecb11539d7bf146ed061d11fa0489774028e8de5ec'),
+      true,
+    ],
+    result:
+      '0x5d065bb660f561b95b993ec6f5e2e7589fa65afdb71f173d50eb2a17f0205357',
+  },
+  {
+    types: ['address', 'int', 'address'],
+    values: [
+      '0xd91a6e4406de4f68a2f62a6030ebb7ed2fbaac5c',
+      BigInt('0xa3cd890e3ffd608287ae'),
+      '0xdc5e1dfcfaeb6602c9b72fdf05fb2648b01cb9e7',
+    ],
+    result:
+      '0x72a7973a1786b9127fa721a70a2083ca27fafed4b5d02b1f9ba4d2aa9be5ca3a',
+  },
+  {
+    types: ['bool[2]', 'bool', 'bool[2]', 'string'],
+    values: [
+      [true, false],
+      true,
+      [false, true],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia ',
+    ],
+    result:
+      '0x25b4c6a26e1812362b89ca2640060f5a23f25a63322cffe8c5cbdd3189bd6c28',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo',
+    ],
+    result:
+      '0x34bc2a7ed499ab20ba2d84d75b04e949d81f514d4ff13ccf865210cf3eca494a',
+  },
+  {
+    types: ['bytes27', 'bool', 'address', 'bytes11', 'bytes27'],
+    values: [
+      hexToBytes('0xd89a17996b5342817f719dadf2ebc21e405084916b8c766f7ea0a1'),
+      false,
+      '0x72e74ea7206e4a45863b49194c4173cd60daa87c',
+      hexToBytes('0xcf8f308dfe8a25d4a6a7cf'),
+      hexToBytes('0xa36287bd14114c90ba87899b60682dd2c9227f6782b3457a1f7438'),
+    ],
+    result:
+      '0x9a0ffc2932c300d228d92bed3087f9c9896ec9625d9dbf0f5531e97ec2f32637',
+  },
+  {
+    types: ['bytes', 'address', 'bytes30'],
+    values: [
+      hexToBytes(
+        '0x6a5d5b25bf8714900d535dadf3a59d0e58c9285d856871a5a6186e4bdf94be586370545a7c0815f4181ef9b1cccad54c',
+      ),
+      '0x231cf7a1b900da94dc39bcef3ac3145d7cc93db1',
+      hexToBytes(
+        '0x9c6fd0b98f94b461821c73caaf981999ef81bd5acc379773098945b6ae00',
+      ),
+    ],
+    result:
+      '0x701c267b985e2c7fdc1f8c886cccc6a1b7dfa2e39725a9f5dcfa5f3997a29202',
+  },
+  {
+    types: ['address', 'uint112'],
+    values: [
+      '0x77c2e14e404343c09a86e1358e03137c416d07c6',
+      BigInt('0xedc7c9af921e'),
+    ],
+    result:
+      '0x20ff0a4bf098da25986503f9490c8214f8d5d3118b3271225e95ba7c694f02c4',
+  },
+  {
+    types: ['address', 'bool', 'bytes', 'bytes'],
+    values: [
+      '0xba379b3d561901118624ff99de688ffcb4a8277e',
+      false,
+      hexToBytes(
+        '0x6482eaa18b75d6b0959547fa15c18e1547fb8368eae5ff3e7b879d0ccbb6f8cd',
+      ),
+      hexToBytes(
+        '0xd5910ed40257767ede40da16306e563a9bfac1b863365e7b065fa3c7b3',
+      ),
+    ],
+    result:
+      '0x3ebf2137c2c3c657d4e0d9e65f2f5b0755a99225c9248e1397168086a9ffbdeb',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco la',
+    ],
+    result:
+      '0x73d0fb6f210400e813b4552752c631755f1e8bbe6e8e9a7908a443358718e10e',
+  },
+  {
+    types: ['string', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupida',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliq',
+    ],
+    result:
+      '0xcf7e6b0e175e2a6a30361daf3cf2ab069c3c56f88bdcd8d07bf5f7646ba8ef4b',
+  },
+  {
+    types: ['bytes', 'address', 'int48'],
+    values: [
+      hexToBytes('0x6553374faadfed28b3e0b6e2711d735d40'),
+      '0x229f490ec9b2ba102ba6c6bcbf1056aba6c82917',
+      BigInt('0x5f628ea9'),
+    ],
+    result:
+      '0x379f2e8b7e3d77ad9c0a6ee33e74d675f2ff63f5c4980ddfd9232785946a29b7',
+  },
+  {
+    types: ['address', 'address', 'bytes'],
+    values: [
+      '0x0d54d7a84e44f6ca080f3e0995c22bbde40f3782',
+      '0x60a7a2e2ee23c6c79a7134cbb78c040659587f38',
+      hexToBytes('0x71e43a1230df9833c938e274667366fa7f989c88'),
+    ],
+    result:
+      '0x3075547b7f34f9d3b3f71f191114f7d80fc3b70f602b97cfef3dd6cf0eb57d89',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud e',
+    ],
+    result:
+      '0x4e76d5f7692c4fbb352b8b2dc28988b32210f2bbbe8a46affc16ede9844799bd',
+  },
+  {
+    types: ['string', 'string', 'bool[]', 'bytes30'],
+    values: [
+      'Lorem ipsum dolor sit amet',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident',
+      [false, false],
+      hexToBytes(
+        '0x999126a491135668788704ee9772ac2da53a31bab581ca7a0c2b039808d2',
+      ),
+    ],
+    result:
+      '0xa87e97ed5c7d023996ec0deea06bfb387fb6528d006ed86fa7cf07d3d23b5114',
+  },
+  {
+    types: ['bool', 'address', 'string'],
+    values: [
+      false,
+      '0xa85a43d95958d26e52b698d2858401df81b44a72',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia ',
+    ],
+    result:
+      '0xd112c9f147965431f4a42d3d0e4bf54067554e8cc46e4843d2a7d760feb399ce',
+  },
+  {
+    types: ['address', 'address', 'bytes', 'string', 'uint64'],
+    values: [
+      '0xc80ab23c2f5b016ba7e5fb1e6064bd55cea05681',
+      '0xd77385d1ab5b2336de98425f70a7f7337ed192ca',
+      hexToBytes(
+        '0x4b03460d9bde379185494c15d7c4478cb754f88b4f7767c9819a9676d0781b5b87d3cfe32c4534c9bebd808a80614691c0647fab18e513b4ee5b18ebcaf2c7fc',
+      ),
+      'Lorem ipsum dolor sit amet, ',
+      BigInt('0xd515806f'),
+    ],
+    result:
+      '0xa3d59501050bee179856f2490f95ea4da9963042d41d9169c3954c7009422b31',
+  },
+  {
+    types: ['bytes26', 'address', 'string'],
+    values: [
+      hexToBytes('0x33d0c1ee73e536773966e37236808413e9272d05d11fbbf3fbe0'),
+      '0xee505b39441d9029c54793a82ad7aecd40299f8d',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat',
+    ],
+    result:
+      '0x42607a78e37c36b43f625d16789dc1b717f33f044ffd9b560c09f1ff53cf7fab',
+  },
+  {
+    types: ['string', 'bytes5[]'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute ir',
+      [hexToBytes('0x334544e057')],
+    ],
+    result:
+      '0x7e131158c411be5b3b7a1733d8e948b4d85b002d3d892cf032e1cada9c28e61d',
+  },
+  {
+    types: ['bytes', 'address', 'bytes', 'int104'],
+    values: [
+      hexToBytes(
+        '0x61721ef53267e3f4b5b1ff02073620f2d6f34575efc49609d684d0e8641ff6c20f8398b5ff51d47718646aff9d25ba28c78c4c61efd179',
+      ),
+      '0x10ed977c581cdb4c670308cc5e3cccee404b331f',
+      hexToBytes('0x9df2e8d80c342ab73f9e2a0ea2701d3abb600ff76637e8'),
+      BigInt('0xe6d2ee7f687c2a7417985e'),
+    ],
+    result:
+      '0xccd82ab240e0926029f5e43747f3a0dda8906c8d79e6102541731ce94efe9889',
+  },
+  {
+    types: ['int240', 'address', 'int152', 'string'],
+    values: [
+      BigInt('0x70455657035e5238a715'),
+      '0x2b96653774659b06d593d0a3b087dec4b6e6c1ea',
+      BigInt('0xf13201fbec3276'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proi',
+    ],
+    result:
+      '0x812d525b890a5e97b7c7c705d81691126b273d884d9f600d94bbd1cd7bf2e17d',
+  },
+  {
+    types: ['address', 'bytes', 'bytes32'],
+    values: [
+      '0xd3e0384b89b59d7e8af7581659acf72be879bda6',
+      hexToBytes('0xbe3f51'),
+      hexToBytes(
+        '0xd50c8fd8e02a41c11760e644a4f51db43df8302b85d812c1374e5a929410ee89',
+      ),
+    ],
+    result:
+      '0xa7a88c6c3b3f03047ea64560a7abff562581f9a554834ec1800ba29ed6d125cb',
+  },
+  {
+    types: ['int96', 'bool', 'address', 'string', 'address'],
+    values: [
+      BigInt('0xe5'),
+      false,
+      '0x12a4c1dd901c12193a3352c011f811b6e2b81bc5',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt',
+      '0x4bf1b569426464aa4b459fd57b197c9b5e26a2e9',
+    ],
+    result:
+      '0x9193f9eb94c4cee70e16b0732914fccc396a96630bf79a79bcc19e9fd97b27a2',
+  },
+  {
+    types: ['bool'],
+    values: [false],
+    result:
+      '0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a',
+  },
+  {
+    types: ['uint232', 'bytes4', 'bytes', 'string'],
+    values: [
+      BigInt('0xedbc30291e22a14eb171454ddf35651bc290'),
+      hexToBytes('0x7ed4d74a'),
+      hexToBytes(
+        '0x9a60345550ebe4499c1096873b27dcd9adb13d46d78ccc1d6e9335554a13d25fe7e56d3e7bc6fe62b329ebbc61af5dcd0a3f53eb397a08',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non p',
+    ],
+    result:
+      '0xeec4d825606bb699b58d3c0a3683dd9415de931757f00711d3b6d1db2637b344',
+  },
+  {
+    types: ['bytes17', 'bytes4', 'bool'],
+    values: [
+      hexToBytes('0x760d3527ef893f5b75fba368763155c64f'),
+      hexToBytes('0x1fcc62f4'),
+      true,
+    ],
+    result:
+      '0x52a63acc6e861c848211f98ad10e08b46ed2cd3600659879a3cb8fae29cdff2e',
+  },
+  {
+    types: ['bytes20', 'bytes', 'bool[1]', 'bool', 'bytes'],
+    values: [
+      hexToBytes('0x7184f5856fb50d2f146b266080322f783adfa99a'),
+      hexToBytes('0xb7dbf78286fe565210f9a57e30509536a57537fa6c3b'),
+      [true],
+      false,
+      hexToBytes('0x85bc35bed2ceb24901e64deed4c0d4fd10a62c8057e16c4c'),
+    ],
+    result:
+      '0x38cbb89fcd3eeea99e8454fbb8c0946c21dc665b34daccd8ca9377cb10d882c9',
+  },
+  {
+    types: ['bytes', 'string', 'bytes22'],
+    values: [
+      hexToBytes(
+        '0xac5955381587aef88376abd271f92f72130d5a16d36bb5fa3d2e76f118c16ea364bfb159e0b63faf8ff0e1ddbd11d6c6c59ec578a699',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, se',
+      hexToBytes('0x152323e8c0f8b55a7cd5b2466a50f418ef7117865614'),
+    ],
+    result:
+      '0xd04f66fa586b5de1f36fd4716adb972a85f697340c2c1b7d0dba8800480b0c1a',
+  },
+  {
+    types: ['string', 'uint240', 'address', 'bool', 'bool[3]'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia d',
+      BigInt('0x415b2707b213dc5d'),
+      '0x6d78fa1d091a581faa0b9681af134e23690c7f93',
+      false,
+      [true, true, true],
+    ],
+    result:
+      '0x6009fd289035b6e305cfcf0ed74c99410c1c24320318179d07d387279b6995f1',
+  },
+  {
+    types: ['address', 'bytes', 'string', 'string', 'int160[3]'],
+    values: [
+      '0x26298ed9d34d14f09e464db4ac2228daa1eb65d3',
+      hexToBytes(
+        '0x6902e3635bfaa5e8f7154f7cdc0f8efc13807f72623708b6240ac7d1fb',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non',
+      [
+        BigInt('0xba3ab735f1'),
+        BigInt('0x9de77674f942'),
+        BigInt('0x33b00c268fbd92'),
+      ],
+    ],
+    result:
+      '0x7323959797275ced234552142326ddcdefa736d2417eda5ddd25ee1e477356c3',
+  },
+  {
+    types: ['address[2]', 'uint216', 'bool', 'bool', 'int80'],
+    values: [
+      [
+        '0xb424641a1810a3a06ea5e33a5d531df93af137dc',
+        '0xcaea7d099f6c4e79f41931f8abe05833146e7ddd',
+      ],
+      BigInt('0x9232147e9bf028d12ba317355058a3d459ee54573507ecfe8e'),
+      true,
+      true,
+      BigInt('0x4b28e532bda3d7'),
+    ],
+    result:
+      '0xfb30834251e06afe4472abef28a1df407297243ae2577c6c613687cac966d7f4',
+  },
+  {
+    types: ['uint144', 'address[2]', 'bool[2]', 'uint96'],
+    values: [
+      BigInt('0x1ced7938f769082c49c'),
+      [
+        '0xa0daff02427e9948b925334571ca43499ab7af53',
+        '0x919968d189ede1390a4dde696ff8221c83797326',
+      ],
+      [false, true],
+      BigInt('0xd33ed9e1b59bf7723c'),
+    ],
+    result:
+      '0x48cb65ef12ae714677158b36f516a8362cd7bdb26ccf68108f58d71d919bb5b8',
+  },
+  {
+    types: ['bytes29', 'uint152', 'bytes5[]', 'bytes', 'bool'],
+    values: [
+      hexToBytes(
+        '0xb41ceb91086da56a465231d08a127122ff3536e25af727747008627494',
+      ),
+      BigInt('0x11c0a4ef0b1c87'),
+      [
+        hexToBytes('0x8a2c6997f5'),
+        hexToBytes('0xfa0c9d7805'),
+        hexToBytes('0x9c23796c18'),
+      ],
+      hexToBytes(
+        '0xabe062ad6cc80bab4d0378765c0c935e8c83119f9fd35df69d05864563d3b96a4c67d95a58',
+      ),
+      false,
+    ],
+    result:
+      '0xaf44dea750156084a7ead357d2dbc06c9954da36aeb6532fc71a26e384921607',
+  },
+  {
+    types: ['bytes', 'address', 'bytes'],
+    values: [
+      hexToBytes('0x2e9b5620b844ff714ff4a7f40c6a'),
+      '0x1f1737d872b4f40c586714f14db8e1dc512f1bd5',
+      hexToBytes(
+        '0xb94b50c3c00ae0245f4c612893d2fd96056086ea8867c88dcfbf621bbb58febb8f1772c8a17d5a27b0',
+      ),
+    ],
+    result:
+      '0xc9ef5e7bd9f8e30d42c4a1005fd0807c07788f0a3fce0e3b110b5661e6b62450',
+  },
+  {
+    types: ['bool', 'uint40'],
+    values: [false, BigInt('0xfa')],
+    result:
+      '0x20da30015b5d36fd72d08b2252872989eb3b00a581529486f93dd8b2ae49a19f',
+  },
+  {
+    types: ['bytes18[2]', 'address', 'bool'],
+    values: [
+      [
+        hexToBytes('0xd5a4f46ca0bc671d17e6a9c35af5e86f00bd'),
+        hexToBytes('0x91eb785a35db1d21f4a03c4252cf7e5e441a'),
+      ],
+      '0x69c474621dbb10bc4736e72f342eb89eb02c40e1',
+      false,
+    ],
+    result:
+      '0x63f032ed10be5bcccc306801f2c38d8f7bb1b2ff1568544fdafb755690c16353',
+  },
+  {
+    types: ['string', 'address', 'bool', 'bytes13', 'string', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint',
+      '0xd9c1211737852d640ba4a49aa7593d7e3034724e',
+      false,
+      hexToBytes('0xa165e0be20ebc169672231cf75'),
+      'L',
+      '0x64c0b38c466e50fe5f9eab0c0841921214a243c6',
+    ],
+    result:
+      '0x24337c32158cd4cb2d4810fd8ae927c3a7f419d6701c5cd0ce11195672f0ce43',
+  },
+  {
+    types: ['bool', 'bytes32', 'int184'],
+    values: [
+      true,
+      hexToBytes(
+        '0x12e2e59244d43b7bdb828a55016a9e4e053a57d7187a81533f2c486d56485115',
+      ),
+      BigInt('0x1157426c46575fac6'),
+    ],
+    result:
+      '0x7673046da540c9056c9b7e57102c3ed10ba6e1e2354d42fc3b9322a5f84dfeda',
+  },
+  {
+    types: ['address', 'bool', 'bytes2', 'string', 'bool[]'],
+    values: [
+      '0xb04d9d2829a5d75755adce257bc0c4533dd4ba6c',
+      false,
+      hexToBytes('0x5812'),
+      'Lorem ipsum dolor sit amet,',
+      [true, true],
+    ],
+    result:
+      '0xdc8abd070f0622e779e9aa2281d4286812b2a368a4df8dfd284cb11948ec75a6',
+  },
+  {
+    types: ['bytes', 'address'],
+    values: [
+      hexToBytes(
+        '0x58dfd039e19c4ff15b44e8895c6e77fdffce14894751ca1b1283a9c5374e18cf361362ff1d24b0074f7286d5eb1fc65044bb52fbc7370b15643baaf45796a563b1',
+      ),
+      '0x82375c1b8bc752003efa53e25b446a6fc628ff0d',
+    ],
+    result:
+      '0xccd08c9218723ab29afb714a8d02c5318872369ef1a6f84df284124aa4f09104',
+  },
+  {
+    types: ['bytes8'],
+    values: [hexToBytes('0x614b8d8bdcfcadaa')],
+    result:
+      '0x54687dd260196a9c455001cb779c763f9dc9a480b2dd6a04f6f0fe036544dc63',
+  },
+  {
+    types: ['bool', 'string'],
+    values: [
+      false,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaec',
+    ],
+    result:
+      '0x4cfd873bee37030da32f7eb0c908d2e54d0d3c9059cf5cabe77625331ae9fd71',
+  },
+  {
+    types: ['bool', 'int32', 'int232', 'string'],
+    values: [
+      false,
+      BigInt('0xed'),
+      BigInt('0xda10c6c7a2e07aef51e0741dff'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud',
+    ],
+    result:
+      '0x3c265a2bb9fe65d8bd5e633a6258352bf8cbfa6eae616b4479a78e8b3e6f407f',
+  },
+  {
+    types: ['bytes3'],
+    values: [hexToBytes('0xcadc23')],
+    result:
+      '0x420a9d988edd15c2496ba896c5bed72d4c329aa5862a29b730eb53af5778fd9b',
+  },
+  {
+    types: ['address', 'uint32', 'bool', 'address'],
+    values: [
+      '0xef1dedeabe5c3f1a29e535c3a3e166dda7840f72',
+      BigInt('0x60'),
+      false,
+      '0x69172e16d8725273000eef65a315b14d3917a907',
+    ],
+    result:
+      '0x3047f2b1f38cac35b5e5ebbcff2f54d61bc8f409ea34447650723104455e3009',
+  },
+  {
+    types: ['bool', 'bytes'],
+    values: [
+      false,
+      hexToBytes(
+        '0xb593e379454437f0740592736ec440c8e7551bfefff4cca00ef35255e3d6a9695a06355f',
+      ),
+    ],
+    result:
+      '0x72f7516b050a4a34624064f99c5f2b6d471b487ea80b87681d4890da19d4921b',
+  },
+  {
+    types: ['address', 'bytes19', 'string'],
+    values: [
+      '0xebed3d1d8a10a1a0f23ddefddf9ad39007d5d727',
+      hexToBytes('0x5b217847da044a19dcbb00720b4747eca734a5'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim v',
+    ],
+    result:
+      '0xf5fa1a5c328d038c21890d25c772f05992d3f686d552f358eab1de11653e3471',
+  },
+  {
+    types: ['bytes20'],
+    values: [hexToBytes('0x5faa277f8c87f77ca01fc02864233782dec2385e')],
+    result:
+      '0x31cb0d8988f57f0636d5d7d881cd88c34b356083dfefc0c60bce9f3254173571',
+  },
+  {
+    types: ['bytes', 'address', 'int184', 'bytes', 'bytes17'],
+    values: [
+      hexToBytes(
+        '0xd97f0d75d87a5b92b3ddd9579d82bcd8e44985c4016f965fa8e058308b451cadd6dfbdbad3f1390cf9fb9675a7da065a7c565079e3',
+      ),
+      '0xc27d5ec697bb684da0497db5408e9b66314292dc',
+      BigInt('0xe003a6c7843bd1157934ff0187d8'),
+      hexToBytes('0x6b98c51a7812da4d7e47a3a35829'),
+      hexToBytes('0x46001d618ef8d35489f5ad629a1d90f631'),
+    ],
+    result:
+      '0x48a141c04cd32e0c31eaf75b6ecaae2e1d9b88be0e7be6aa5ea36838dfd0a7e2',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab',
+    ],
+    result:
+      '0xd9f393fe60b11612f4fda9cbbba9732a04f34c9802de8cc35a3d8b7b218e94dc',
+  },
+  {
+    types: ['int112', 'uint80', 'bytes'],
+    values: [
+      BigInt('0x63254ba8d8f9'),
+      BigInt('0x6f456cb292'),
+      hexToBytes(
+        '0x825c84678896efaaad03d334a932784ac79fddb5334c00e9e318eeb7704f0843af9c7cd0',
+      ),
+    ],
+    result:
+      '0x19e96187e873549f16b9ce535b2e7def2abc448b391a157b933ad91f5a03efcb',
+  },
+  {
+    types: ['bytes28'],
+    values: [
+      hexToBytes('0x10e42bd01b42a606657202166ea92d9ff3271853447f26a644d4970b'),
+    ],
+    result:
+      '0x50010137bda5236bae2231bd3ad20caff75606d6f030e4363e8881e5796e420d',
+  },
+  {
+    types: ['address', 'address[3]', 'bool', 'bool', 'bool'],
+    values: [
+      '0xdee9dab1533e51c8642d3dec61676f2bc0ce496f',
+      [
+        '0x7ba21b9493012b549e899a412c37c9a1a723d7d3',
+        '0x8a782b2f24eab475d262c54302d550dfb5001d12',
+        '0xb95fb1868bc34358d39bb8a198458a0358e1ecc9',
+      ],
+      false,
+      true,
+      true,
+    ],
+    result:
+      '0x901262192e628db4405577be6582eb6841d11b6536ce8d3536a44abd49e5efa6',
+  },
+  {
+    types: ['uint256', 'string', 'int24'],
+    values: [
+      BigInt('0xa2dda6e90427bf33a4dff0d00a160db18aa571'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru',
+      BigInt('0xfb'),
+    ],
+    result:
+      '0xc829cab44902384c3f73178cf1ee831c77987ff3c69dc0201e48b88cfd89ee96',
+  },
+  {
+    types: ['bytes', 'bool', 'string'],
+    values: [
+      hexToBytes('0x58759b58499ce90f52bf8060878d4ae12a2770038f'),
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ',
+    ],
+    result:
+      '0x5bf23f6b3064d7a16243322f275bdf7b656edb8bac642861cbccf16891bfe71e',
+  },
+  {
+    types: ['bytes'],
+    values: [hexToBytes('0x5f766b')],
+    result:
+      '0x655a3e058c6d09b601df925e67fc6e6a692e947430ca34df0d7489d40c4b854e',
+  },
+  {
+    types: ['address'],
+    values: ['0x03319d66a12fe3f00c2868988ea546778ede3f45'],
+    result:
+      '0x2c515f9be7331f252c78ee3a65e669aa87e7288cd91e79e1c9a96e265dba440d',
+  },
+  {
+    types: ['string', 'string', 'bool[]'],
+    values: [
+      'Lorem ipsum d',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit an',
+      [true, false],
+    ],
+    result:
+      '0xe86b4589e1db790b418ccdbdfed596818d4b49cc1eb844eb503b027d79504a63',
+  },
+  {
+    types: ['address', 'uint184', 'bytes30', 'bool'],
+    values: [
+      '0xc538af8c97dcd50ac34ff53c317accfd8c5e1179',
+      BigInt('0x570d83fd9bbd4440f08a9c9af221b37b84'),
+      hexToBytes(
+        '0x02565be8a7e2b9442713851a3ae6ada10fa5904e5f90e4af96f828ccd64a',
+      ),
+      false,
+    ],
+    result:
+      '0x257f84f7eb5504da1563dac27cf7fc715549392904bbef0fd169f527bee49968',
+  },
+  {
+    types: ['bytes', 'bool', 'bytes'],
+    values: [
+      hexToBytes('0x'),
+      true,
+      hexToBytes(
+        '0x3c30ac75a6715a2ad8e0bd933feb61b15a8981259fcf1d5d40f8431dac14bf34be7f67',
+      ),
+    ],
+    result:
+      '0x36103bd131bcc0015cf5ba78a48145fa38447c2272a94ff971a8d8d77dbf16b5',
+  },
+  {
+    types: ['bytes22', 'string', 'address'],
+    values: [
+      hexToBytes('0x9de5aaec7c53ede7612135b3c5718546079c3537492f'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup',
+      '0x110f2cc07ebd2f3ef1ba045e0f6e0eb0f3b9fa5e',
+    ],
+    result:
+      '0xf8f0aa391b1f473a900547174485d1e33a6565f04b7e73254d84554f91c6f881',
+  },
+  {
+    types: ['address'],
+    values: ['0x3cbe8c9b0d822b75507986f586b42871c148dfb6'],
+    result:
+      '0xcc08400df8e42758a50fe0a96824c8e7bbc864c0a1f8af42f967c200e4a8bb60',
+  },
+  {
+    types: ['address', 'bytes13'],
+    values: [
+      '0x7e73c50aa1376ee561c382af6c66f281a3e2b133',
+      hexToBytes('0x2319c9a8cb3f90120753695d38'),
+    ],
+    result:
+      '0x709ab88261a6df6e43c705a958240d96a64b06054621f61bc93f0bc9799257e4',
+  },
+  {
+    types: ['bytes', 'bytes', 'bytes12', 'string'],
+    values: [
+      hexToBytes(
+        '0xf2949ee94ccac37782d3cef157bf8183e9de9d836c93e48773dc7db9d4b62b68f2691e0252fa',
+      ),
+      hexToBytes('0x13d5dc8b12ae8fd3dedc3fee519cb0a6e157'),
+      hexToBytes('0xe611fa35129fb5103e8d7a7c'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt moll',
+    ],
+    result:
+      '0x18c2cd62fc780d22e7824d27e75d5f9cc337906b5f239f6616a8c443594cfde0',
+  },
+  {
+    types: ['address', 'string'],
+    values: [
+      '0x15ad9b64922d8b7c98f23fad6b20ad5d10b8dd0f',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco',
+    ],
+    result:
+      '0xb3398a0e72d3594c54bb8e1cebe186106b2e813a9691d4b1898d8d5bc2ba2470',
+  },
+  {
+    types: ['address', 'bytes13', 'uint88', 'bool', 'uint[]'],
+    values: [
+      '0x352739257785d33c52699efded3b2b6092a81d9d',
+      hexToBytes('0x34786e827af9c0470ce21721d6'),
+      BigInt('0xc8'),
+      true,
+      [
+        BigInt(
+          '0xa0193af877ad98f455f82e43bd3f479ffe509e073d58bc038837d9e6290023',
+        ),
+        BigInt('0x62bee55d9dc9564d47af56e259fd9d2ed289e60a45de6b4ab42ef47a49'),
+        BigInt('0x7c69b875e0ca5542b6f3c391fbb8'),
+      ],
+    ],
+    result:
+      '0x842cafbff82ec4e7a4eeb988cef712a57dc3304613e0b7ce3ac4a291f4e17d7f',
+  },
+  {
+    types: ['int88', 'bool', 'bytes'],
+    values: [
+      BigInt('0xec3806ac0651b8283e8b'),
+      false,
+      hexToBytes('0xe8baced5e780865491bf'),
+    ],
+    result:
+      '0x3b7cb41468a40f77db5fbe658117ab063919999b890e1277a1a291098194551f',
+  },
+  {
+    types: ['string', 'uint112'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed',
+      BigInt('0x806fbc1394e6'),
+    ],
+    result:
+      '0xa89de675629b34602ff9ccea5b7dd8595d3bf7cfcc277baace3daad80b5829ac',
+  },
+  {
+    types: ['string', 'bytes', 'address', 'bytes14', 'bytes', 'bytes'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min',
+      hexToBytes(
+        '0xba4424f6b454875382e163cb19fb4cdeb904fa4b4e2c91d95cdd02a22704f0be1cbf69c0a37d4a4226257ad5703e101769aca144bbe52b6717e3400c378d63dc8a',
+      ),
+      '0x94553ae400a768f8d5c7c0a46c88226726b0f8c7',
+      hexToBytes('0xfcb69a02a45e183bb1cccb8b808b'),
+      hexToBytes(
+        '0x98d609ba004ef0458ae2bd4e086107b09ccb466509b2af22eccb63d222043c13231cd02bc73634bf9af9b538aaa99b5d823ce9d8e588',
+      ),
+      hexToBytes(
+        '0xe6e758b287178c690bfe8cf93fa4c3710954ea4c43c640e6e03c06d5e4ba4468493d8059def6a86f6678',
+      ),
+    ],
+    result:
+      '0xc90ad77dc137b55b3696043fdc58d5502176ba759e81ecc65f26ab3ae7d78e12',
+  },
+  {
+    types: ['bool', 'string', 'uint224', 'string', 'bytes20', 'string'],
+    values: [
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia',
+      BigInt('0x60e60f5c55847c92ecbe'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in vo',
+      hexToBytes('0xb995c07cb5af25ad03bdaa954444aeaf356afb21'),
+      'Lorem',
+    ],
+    result:
+      '0x399768979874c5665beaa75c7fe0e66b7b55967736d586357c788ffdb117cc81',
+  },
+  {
+    types: ['string', 'string', 'bytes', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui o',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit an',
+      hexToBytes(
+        '0xd8f8512b9bdf83cd97848be80ed75d84a7a513252db148d26b5a828edc473a3176de9984b1c9',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exe',
+    ],
+    result:
+      '0xdbfd6cf0081a336f9a2467c95dc1e84433171af87a543cf78745ed106ffd3a10',
+  },
+  {
+    types: ['address', 'string', 'bool', 'string', 'bytes23', 'bytes32'],
+    values: [
+      '0xbbbb9a8981a8335e684934ee40881bc09fe6e57a',
+      'Lorem ipsum',
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu',
+      hexToBytes('0x29fe4b1f6c9f84363a3810ba6fb5aace06ffe312b9a327'),
+      hexToBytes(
+        '0x62bdced3acacfc6fdbf64151dfe7e813200dc80722865f5a91d252d45be4e925',
+      ),
+    ],
+    result:
+      '0x3cf01ad8b57c8f8754584886eea1a8b7a00d78426abee3b5ec9a1094e9f45074',
+  },
+  {
+    types: ['bytes17', 'bool'],
+    values: [hexToBytes('0x970d8f1a4ab26a4cc9fcf031c7c6fcd797'), false],
+    result:
+      '0xa62ed6c9e77191740f5364ffea707f336864ca17b3b8b8f27ddd6d6905bdfb6d',
+  },
+  {
+    types: ['string', 'string', 'address', 'bytes10', 'address', 'bytes31'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proide',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
+      '0x69aa2acefcf72f557f7daec79304b198e6e4cfd0',
+      hexToBytes('0xe62fbedc7fa21e08df86'),
+      '0x39e1b3bc19936e0a842121590869f8d77dfd0d4d',
+      hexToBytes(
+        '0x3f8e55fd62bd4ec10c5fc60a5210d36ed37160ed96a807efd543ba4f73b455',
+      ),
+    ],
+    result:
+      '0xdd8fc2afd93431d12e725b8424b5b1076ed3b4cc49e361de2370ca5db15274df',
+  },
+  {
+    types: ['bool', 'bytes9'],
+    values: [true, hexToBytes('0x57d432a9f65079ae3a')],
+    result:
+      '0x3ea3db6443298864427cc9c0207e08dbdf10d33af05e6c5d22c56b382626abb3',
+  },
+  {
+    types: ['int88', 'bool', 'address', 'string', 'int16'],
+    values: [
+      BigInt('0x218f84ace52c'),
+      true,
+      '0xb59797a6573caec6a67d0163cebd3007edb2f1b2',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est ',
+      BigInt('0x56'),
+    ],
+    result:
+      '0xa02d29cfb84dc94d15344c56dc205f92f0d30f263804d5ad61165c3ad3114615',
+  },
+  {
+    types: ['bytes', 'uint16', 'string'],
+    values: [
+      hexToBytes('0x3ba50e2a73799036ba90127a1150b7a3648c87'),
+      BigInt('0x87'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun',
+    ],
+    result:
+      '0xa3fb7498967a02cb63feca85224447295bb4828d6084afacf154e90b37be96c3',
+  },
+  {
+    types: ['uint112', 'bool', 'bytes', 'bytes'],
+    values: [
+      BigInt('0xc62bb46ea99f76'),
+      false,
+      hexToBytes('0xe1ca6cd5ba'),
+      hexToBytes(
+        '0x425d99bf8f2e415a4fdb0b1c31fa3772740114324ba7c36b68dfd77bd6c88cb4f6de6878317ccfb85126f01f5dd11836671d9e59980285143ef7f8',
+      ),
+    ],
+    result:
+      '0x70feda711f4adb38e70ba349ee51adcd5323cf1ecced436bc1a1582467c7a52a',
+  },
+  {
+    types: ['address', 'bytes'],
+    values: [
+      '0x3c8b7ac9ef1a78c15df3d7296e38268211c0e8d8',
+      hexToBytes(
+        '0x3870d19733119c0592bcb7928cd2c5239fed6da7f324cc6bf1459728bd6a11e239b4b3577b0bee96b25efe56c5ab221998813c9ccd038c1b',
+      ),
+    ],
+    result:
+      '0x0ece34b52ed69bde2ef41113929ee500443e13050834efbb55de13e44bb908cd',
+  },
+  {
+    types: ['bool', 'bytes'],
+    values: [false, hexToBytes('0x008ab3f7dc9d7d5d11dac03e9e')],
+    result:
+      '0x1a9e3416dd79ad65b22c44efd60783a4e3aae30c5f05ee3bde48bc7f594ef3f0',
+  },
+  {
+    types: ['address', 'address'],
+    values: [
+      '0x784441b25cb5acbb20be58213ecab359b2c1cfef',
+      '0xe97779c565db1f8b89f2bb5bc776fc482cf24fb1',
+    ],
+    result:
+      '0x0e3aaa2d60bde45b999c4f5767045aeb79c600a05199f9504463bb1a9c9c7902',
+  },
+  {
+    types: ['bool', 'bytes20', 'address', 'bool'],
+    values: [
+      true,
+      hexToBytes('0x07c77d9dd43f6c26da20ae30584e1d3d2d372aac'),
+      '0xe0b7bba27261740526372653285858dfd106f456',
+      true,
+    ],
+    result:
+      '0x18bddac1b379c11502f9184b2b42aed1b32496a0626971ecf01b254d899cc43d',
+  },
+  {
+    types: ['uint'],
+    values: [
+      BigInt('0x3416e7eb5df6a076ae21842a70a9805af62ea4ba1b0a3a3e27416bd78b5b'),
+    ],
+    result:
+      '0xec777fdbe2a127ac4bdd2397895dd23d62fee59f4d7a1c14f1a2ccdfab32bfb6',
+  },
+  {
+    types: ['bytes8', 'uint192', 'bytes24', 'address'],
+    values: [
+      hexToBytes('0xdc9643cb09b889a0'),
+      BigInt('0x129d'),
+      hexToBytes('0xfa2d08dd7b1dd019a8e1a0b641e9a3f1d434710c1c9d5842'),
+      '0x4877cb7f37a3e5257c31b509ae0c21500805a94f',
+    ],
+    result:
+      '0xebd6d1a5e2be527e3c92f97779c931ce70b32c0b5f14cd60b4673dc78ee53a27',
+  },
+  {
+    types: ['bytes10', 'bytes25', 'address', 'int128', 'address', 'bytes'],
+    values: [
+      hexToBytes('0x736c66a46c4c339711d3'),
+      hexToBytes('0x3dfb54b2b7acf32cdb079fd6bfc82269c3f8c15f95d92a6021'),
+      '0xc2b05cbf524946e3629b1a7b07c2e4a350cf3b27',
+      BigInt('0x88446d16ef119a19a75a00fb144ed8'),
+      '0x34fd7a8ec81493e78008358dd9507c798b60d257',
+      hexToBytes('0xb6a1be96db4da3ef6d5e96fcb1708c8c'),
+    ],
+    result:
+      '0x9be4d5fc2a1f36d05b275023d85efaa4098da13e45dfaa87132d350258502a4f',
+  },
+  {
+    types: ['bool', 'uint224', 'int136', 'address', 'uint112'],
+    values: [
+      true,
+      BigInt('0x2c2d3cadf393d4ff15e27a19ed9bf55f539d'),
+      BigInt('0x9cb417ccebf015acd46fde485f7de6'),
+      '0xc86d8f5323f5c206be73a5cdedb7566a95769183',
+      BigInt('0x72222cd793'),
+    ],
+    result:
+      '0x5a87f8dd88ffb1440b8e2b719135fb32fe6cdd7fc6b056b0a3a7060ca2700aaa',
+  },
+  {
+    types: ['bool', 'bool', 'bytes10', 'address', 'address'],
+    values: [
+      true,
+      false,
+      hexToBytes('0xfa524e907cbbf110ff8d'),
+      '0xc85dab16853bb48810aed32f895c29308d7b3362',
+      '0x6cefc97bab3c8d1346cfe15b234257e7771c953f',
+    ],
+    result:
+      '0xd98d72164c58766cc58589c5657a9089df384fa6a12f43459099b129213f3ceb',
+  },
+  {
+    types: ['bytes', 'string'],
+    values: [
+      hexToBytes(
+        '0xe02cbf2acc01974a7723979f86a47c676a68c2c2a1e3d0d6940fe089239e88',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidata',
+    ],
+    result:
+      '0x45aab40ace45bff77637f979c0cf8ebed7addd30f1a132024e77a043fc937d7f',
+  },
+  {
+    types: ['bytes31', 'address', 'string', 'address', 'bytes26'],
+    values: [
+      hexToBytes(
+        '0xff20a31cbaee2e872db42e0d35fdf97261bfc0fe3fee7abda52c061f701c21',
+      ),
+      '0x5ca88764a2398ffa319737173db25b28d1b5416c',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria',
+      '0x6282da2d5995d5d4bc3bf5d830c0d9280cca6e4b',
+      hexToBytes('0x65b16688f40b320ffb3e66585bea44aa8a77031caaf1e33cb1dc'),
+    ],
+    result:
+      '0x1a76c359a0d2438d6a98298b0eeecf62ae24a5f0c05a3e794f15e5023476ca71',
+  },
+  {
+    types: ['bytes', 'bytes25', 'address', 'bytes17', 'bool', 'uint56[2]'],
+    values: [
+      hexToBytes('0x3d29efeafc0ef95f1216'),
+      hexToBytes('0xd4ec14c6840d5a67a0d93a32fee8274ff562636c033565deec'),
+      '0xf71c0faeb43ebd6db1b67770a6d97f0dff251bac',
+      hexToBytes('0x936966335d62e84fb4c73b50da5a4f58a1'),
+      true,
+      [BigInt('0xf'), BigInt('0x72ac')],
+    ],
+    result:
+      '0x6a02fd142500f2f8071fb77589eec34709ede9ed8116ba23f45e8e3deb621569',
+  },
+  {
+    types: ['bytes9', 'bool', 'bytes'],
+    values: [
+      hexToBytes('0xd25d5d79a43bbd3d9b'),
+      true,
+      hexToBytes(
+        '0x00256fbb5f4d500cbd9ec51a95b590dac0fba80e0db1f4b209ae479c2b06044390eebcf5e37e54d2968e1fa5dc8e34ffa087b4116c6f7fb01d18b5',
+      ),
+    ],
+    result:
+      '0x93eb59b2d837a4bd1480850140c7ff4877ebf8600990ae6e82efcf1c0741d95e',
+  },
+  {
+    types: ['bool', 'int40', 'bytes', 'bool'],
+    values: [
+      true,
+      BigInt('0x923643'),
+      hexToBytes('0x3326ce5d726281ad767aba68bdb2'),
+      true,
+    ],
+    result:
+      '0x2050ff0cfd18c4f250d87067923e9aa7f6ab4eb6dfd3ae2279e8378994f04691',
+  },
+  {
+    types: ['address', 'bytes'],
+    values: [
+      '0x4449d0156735a617e2433bb053e3ff88b7748977',
+      hexToBytes(
+        '0x75c9a83b96381674cbdd2f24845c72238b23d0d2092bda171f68f50ed58c658769ba6a0c7076',
+      ),
+    ],
+    result:
+      '0xfa9effad9f12d1005c528196b82946e6cbf8162c8a7f6cf58e5c2b49add5fb59',
+  },
+  {
+    types: ['address', 'int16', 'string', 'address', 'string'],
+    values: [
+      '0x166e0ab8e69ff8721caeb881b91a7782a6e1b7b5',
+      BigInt('0x37'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu f',
+      '0x780e63c04f14768eba11b43324889bb7f6abfe3e',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim',
+    ],
+    result:
+      '0x5a5b62164b605703829a81ceb17c54ea8378226885da4f46e12e086ab8350832',
+  },
+  {
+    types: ['bytes3[3]'],
+    values: [
+      [hexToBytes('0x74d8e7'), hexToBytes('0x03225c'), hexToBytes('0x18f2c8')],
+    ],
+    result:
+      '0x62e3f728a14efaaa78bb43bc4f110ad6b56281dc792186c8c5af03461d910f74',
+  },
+  {
+    types: ['bytes2', 'uint144', 'bytes31', 'bool'],
+    values: [
+      hexToBytes('0xc99b'),
+      BigInt('0x48139c83cf'),
+      hexToBytes(
+        '0x8ce0064b0d07ddf6ca54421fb427386567187ecd4a584884c4d898f37df74e',
+      ),
+      true,
+    ],
+    result:
+      '0x70ca4a06c036d4e9ebf6d15bd96cb568e45ace34ddd28b80aaa4c634123600f5',
+  },
+  {
+    types: ['bool', 'uint232', 'bool[]'],
+    values: [true, BigInt('0x6fff'), [true, true]],
+    result:
+      '0xb11d912b1e971b7cbc7e00777305f2e1f86641dfb3edd8a17987537d5aa94c11',
+  },
+  {
+    types: ['bool', 'bytes16', 'bool', 'bytes8', 'string', 'bytes'],
+    values: [
+      true,
+      hexToBytes('0xa70f277e0143de99feb0f02db0003930'),
+      false,
+      hexToBytes('0x092a2dcb4b00cb54'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore ',
+      hexToBytes(
+        '0xbdbf72368abcb8388f1025a955220c6d11f27bb6ffd412e8792bfca2cad7034f62e5a800d863f48e39e0121b5b6e69',
+      ),
+    ],
+    result:
+      '0x214a6ba1a36d308c6d591c491513bb279d13a42c03a7e21f9a026b245e8361ae',
+  },
+  {
+    types: ['bool', 'bytes', 'uint160'],
+    values: [true, hexToBytes('0x2071'), BigInt('0x915411faf36aea979ded')],
+    result:
+      '0xb1aad589c66b988c65c1227dec56772fca815026e79b39897b59ec1d6302d89d',
+  },
+  {
+    types: ['address', 'string'],
+    values: [
+      '0x3e1610a923785a4943076408b991e60abd407166',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat n',
+    ],
+    result:
+      '0xbfae94a3f1d7915ae873f6ac93e0917c8fa8bbd7c50d112ff6eeeed27c1967c9',
+  },
+  {
+    types: ['address', 'address', 'string'],
+    values: [
+      '0x4c108a81c695cf7248e04c12be773e1720f81c46',
+      '0xddc15aaabb8040d3fef175cad1b60b6395f363c3',
+      'Lorem ipsum dolor sit amet, consectetur ',
+    ],
+    result:
+      '0x4137e8f0023446a2002b0d893f2f8616735da9332678fca44ef8d155ccb9d153',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex',
+    ],
+    result:
+      '0x9a0c7e26d9c53c87e32b09c58ac9e310b35bf3bcdf755d92e30ca6d3282b4d45',
+  },
+  {
+    types: ['bool', 'string', 'bytes28'],
+    values: [
+      false,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null',
+      hexToBytes('0xeec05bf68fdb2f948d83efb817aa676373b6d4bfc85376afc7de632d'),
+    ],
+    result:
+      '0x816e10e095a60c0711cbe2171f77417ec0c71a7537d972bbc7f3b4693b7e1da0',
+  },
+  {
+    types: ['address', 'string', 'bytes19'],
+    values: [
+      '0x14837cf6ac5fe6acd4f682712aafea583ad608e6',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla p',
+      hexToBytes('0xe456626f49434329e2df9c6be686f19c152f22'),
+    ],
+    result:
+      '0xd23d00d62ed82f0a1baa21efd74b2682805786d3b6d0e63f5482414b37b1061b',
+  },
+  {
+    types: ['bool', 'string', 'bool', 'address', 'int', 'uint24'],
+    values: [
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est',
+      true,
+      '0x54e877f68e8adb9b37a93c84eb59ce800fe33fdf',
+      BigInt('0x913cb463008485a53d54054f4ee668b2acb9b34a81f3fa1faddc8c956cd9'),
+      BigInt('0x4715'),
+    ],
+    result:
+      '0x8b45020138127bd5aace9853674ae277c38eef097a90b510a5a6978261223e04',
+  },
+  {
+    types: ['address', 'string', 'bytes12'],
+    values: [
+      '0x60673135373963e756ddc300e2b8622d366018fc',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolo',
+      hexToBytes('0x054cf950ac3e26588a0969fe'),
+    ],
+    result:
+      '0x799079c2a1c11285b463fa94d22788a50fcd0bbff158478b2cc3be9b94ff3141',
+  },
+  {
+    types: ['string'],
+    values: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d'],
+    result:
+      '0x0e43d48edce94ebecd9065b3eb5786a92c617ddd0de66a6d6ad2b6f75d6099d3',
+  },
+  {
+    types: ['bool', 'address', 'uint176', 'bytes23'],
+    values: [
+      false,
+      '0x7468ae0383892242a25eb1b0cd7109a08eaa4fb8',
+      BigInt('0x96bdd5c8c6d7066f41e1d5'),
+      hexToBytes('0xfc18f758118c9fca6cd4588cc1c4687d7a6289bd5342e2'),
+    ],
+    result:
+      '0x033bcddcd9eaf4758e516ab96591042c82be8f4ff63e74723436247ca4f2ab6e',
+  },
+  {
+    types: ['int72', 'bytes', 'int88', 'bytes26'],
+    values: [
+      BigInt('0xbafb3d'),
+      hexToBytes(
+        '0x03a38a2b6f4f72d704124dc0f1edfb4a039f77f3b1893a77a88b97987ec0ac23d47365e382f9fc935a144536af5ce1',
+      ),
+      BigInt('0x730712'),
+      hexToBytes('0x152a11f6ea62ef34a0a5e191834079dd228545ec28aba1cd178c'),
+    ],
+    result:
+      '0xc66af4aacf111f66d8405d18a3bb23aed55557657ad79e67c2c375ccfd128f05',
+  },
+  {
+    types: ['bytes3', 'string', 'bytes'],
+    values: [
+      hexToBytes('0xfe43eb'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui',
+      hexToBytes(
+        '0x1dd25fff9748f9ecc1297a6d81ef3a26d5d730d5e3940c09371fe43f672dd096ab2493d68b8d3dae34',
+      ),
+    ],
+    result:
+      '0x22610df7c2124d2e401c23f08a86d68be8746fddb2fb4402360bd4209743143f',
+  },
+  {
+    types: ['bool', 'bytes19'],
+    values: [false, hexToBytes('0xe61dcacf95a89789afdca56707380d7ebe9ea9')],
+    result:
+      '0x9dae2c4cea92fc7ca3cabcfb12d3a55b2a23eeaacfa644ebc6d4a3af83bd793e',
+  },
+  {
+    types: ['bytes5'],
+    values: [hexToBytes('0xfe1a1afbf4')],
+    result:
+      '0x1ce699aff3fb2607001e263d3afe9bc02ea23545c1472d178cb557115ebb200b',
+  },
+  {
+    types: ['uint72', 'address[1]', 'address', 'bool', 'uint104'],
+    values: [
+      BigInt('0x42acb7c9'),
+      ['0x725b7c371096b08ec9a675b9bf9d86733274d19d'],
+      '0xe95c452235dde5375490b49199976bfd553077b1',
+      true,
+      BigInt('0x8b4dbed7'),
+    ],
+    result:
+      '0x6371046c95f515b7bd0ad44154f3abc276bec1a302563effdc121bb0cb8e5fc8',
+  },
+  {
+    types: ['bytes', 'address', 'bytes', 'bytes18', 'int168'],
+    values: [
+      hexToBytes('0xec66'),
+      '0xb5efb296df98c7642a7143959b73000f2c880470',
+      hexToBytes(
+        '0x9be528ef1dc301722f3e45090aca3d24bf9be303e82a322bba1e8c7a5256966c70fb44ad8b87c3551e15b92332c59f68fe6fce92f0079292c0dd7628725f1670ed',
+      ),
+      hexToBytes('0x26b32699c5ba136a5937792a8333b5b03afa'),
+      BigInt('0xbb161552944304318ddeceadf44b1029'),
+    ],
+    result:
+      '0xd25788d068ea0cdbbd91640fa34dd9a83cadbdf09a546480309e831c1250bff2',
+  },
+  {
+    types: ['string', 'bool', 'uint232', 'bool', 'int216'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariat',
+      true,
+      BigInt('0x765099'),
+      true,
+      BigInt('0xf9526ad8157e9d4557e6c1d9'),
+    ],
+    result:
+      '0x1b2fe63a1b1eb2ca3dd7f4f89c13d86b1fbd379d6e7b9ebbcb01bbc16f7810ae',
+  },
+  {
+    types: ['string', 'bool', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est lab',
+      true,
+      true,
+    ],
+    result:
+      '0xfcc745e3572cff528cd7eb9043896acb4e37e8915de5c3605e5c630ed44a18f4',
+  },
+  {
+    types: ['bytes12[]', 'bool'],
+    values: [
+      [
+        hexToBytes('0x550c9bb94ca719642b2c07e1'),
+        hexToBytes('0x31771191b91922d4b5e6a212'),
+      ],
+      true,
+    ],
+    result:
+      '0x7850395c0d7cc400d9144ebadc7c849e10a52db00b1311df8525f93fb92413df',
+  },
+  {
+    types: ['uint88', 'string'],
+    values: [
+      BigInt('0xb03ee9d85c85c82e3589'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l',
+    ],
+    result:
+      '0xa5ed6432e0c5a3a453020c5554445b60c02eb27c29118ce1db72a03508abd892',
+  },
+  {
+    types: ['bytes2'],
+    values: [hexToBytes('0x753b')],
+    result:
+      '0x35363dfe93685b9872d6189142d96010b020b09d440e06ccfb9dfd8af1218820',
+  },
+  {
+    types: ['int128', 'string', 'bytes2', 'address', 'uint88', 'string'],
+    values: [
+      BigInt('0x4f4e36ced1d1fa8bfccc3fef'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui off',
+      hexToBytes('0x791b'),
+      '0xab38586a8f477beff0b2fd7552e1c91f85acdadc',
+      BigInt('0xdcd29ee26e56a7d75c5c'),
+      'Lorem ipsum dolor sit amet, consectet',
+    ],
+    result:
+      '0xfdb83682b5e07137f555ce9cd7b3c76be75f161ba0e617d31b535d46babde83c',
+  },
+  {
+    types: ['string', 'string'],
+    values: [
+      'Lorem ipsum',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in v',
+    ],
+    result:
+      '0xfdd5d06085fc3e7f78e0b94d50e05ff32bdbb3c56718d959bf585bd6a405651d',
+  },
+  {
+    types: ['int152'],
+    values: [BigInt('0x60')],
+    result:
+      '0x923f084cbefbcaf58aa7316f02556e6f9a56f3849d775e57a0210f08607b62b3',
+  },
+  {
+    types: ['address', 'bool[1]', 'int32', 'address', 'bytes20', 'bytes16'],
+    values: [
+      '0xb6f721fd767cc365239e3fd092411e443a6af497',
+      [true],
+      BigInt('0xb3'),
+      '0xff39a477d2134a747c532d0e121270e355a42808',
+      hexToBytes('0x6a19f6da5e58cf3d821a35c9a099f1788ee622ed'),
+      hexToBytes('0x15ba662af29fa6a41cec1a3943271ebc'),
+    ],
+    result:
+      '0x6839b3194daa24fe5271ccf51de265a021aa1ffd594bab039124b2f102bdd14a',
+  },
+  {
+    types: ['bytes', 'bytes'],
+    values: [
+      hexToBytes(
+        '0xe2b47e28f5605c25bded2509b5b82620d246d4638fbe885fd52671c809d290484d460f31c2785803056520dcc3',
+      ),
+      hexToBytes(
+        '0x02e27b10ba1d1d89cfdf497f93a766664964349d5f6d70f1cf9165da7c1269cf469c0f118c65176be5896b29937418302f0fcd44789e',
+      ),
+    ],
+    result:
+      '0xf94dda9dd34c263bdd7d38c98e5e26e5955b5c05c1204f646f0ee58563d28f0f',
+  },
+  {
+    types: ['address', 'bytes', 'bool'],
+    values: [
+      '0xbae1d548587ea4829c3602412da2ebdf02184414',
+      hexToBytes(
+        '0xc7c1856e3794abbe2978300491ba8815f6d37642ac08cf77776e65b077',
+      ),
+      true,
+    ],
+    result:
+      '0x9717d6b0749068cb54b537aec05cfea9bd387d75d390800fe7869ae681bd85e9',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['uint176'],
+    values: [BigInt('0xafc54b77a625baec8fc6ed88164fb68b18d72df2')],
+    result:
+      '0x8d73383ebde7c4e3a6e8d59fee241759290d1cbfa34c646552c27984b1197655',
+  },
+  {
+    types: ['uint128', 'bytes27', 'address', 'string'],
+    values: [
+      BigInt('0x54d2e310511af31426cb157616e3'),
+      hexToBytes('0x23c78c5d7efc0058ccf8878e3fecaf7ef8ac0ea732df682eae3f95'),
+      '0x0fbbebe12d567fe30c1070d208ea46d5a38338ba',
+      'Lorem ipsum dolor sit amet, co',
+    ],
+    result:
+      '0x7b45f2a23f5391c9cf1e42ce94d510f8c8a4e7c9b232b4d093c7a83f73fd0748',
+  },
+  {
+    types: ['bytes27', 'bool', 'uint104', 'bytes9', 'bytes19', 'address'],
+    values: [
+      hexToBytes('0x2f32066ae5bd021e867aa45ee635a0758095e2afe2b357fa17e1c9'),
+      true,
+      BigInt('0x1d'),
+      hexToBytes('0xf2d2da3dbe316a9b4b'),
+      hexToBytes('0x6d073eeb57190e1fb2fca686a572abf9d91822'),
+      '0xcbac1fe2a4da2b95ff299678900957bee6fe21f4',
+    ],
+    result:
+      '0x9d20f777c70b44e4603f387f83373fd25757c7fbd3f561007ca094909bbae9e2',
+  },
+  {
+    types: ['bytes28'],
+    values: [
+      hexToBytes('0xc3187687a57c2c98a09617980ef9a844753fbe0a864620ce7cbd0ee0'),
+    ],
+    result:
+      '0x5f3e54c8415667a6cc2e5347f0581d79b007a0b8d8dec3269e8a8f48b40a4f12',
+  },
+  {
+    types: ['bytes'],
+    values: [
+      hexToBytes(
+        '0x8e17777ab3f4506dc3a0100e1b719b859109c5525d7a9f98ecf2b380afd2955fe45f9614fd5418f67c02ef509df736e282628bb3292cf0ddb26d',
+      ),
+    ],
+    result:
+      '0xc0b8ab87a96bdd43951a306c5476067ee5b66f20507ba779d65cb2b3df2283f5',
+  },
+  {
+    types: ['bytes', 'bool', 'bytes', 'bool', 'address', 'uint8'],
+    values: [
+      hexToBytes(
+        '0xc159bd496ddb2f603bfa21150a57700e60d643f9801bfcab86f8cf186caef8950752f81426ad19780260b825adffb54dca55bbdfca45b17ad05fba',
+      ),
+      false,
+      hexToBytes(
+        '0x6f821f036edf3a5c984f49277c4e7954f1cd92ed2103170d5e721b2c9a800ab1063add17dd9004fedf6118dec62a412fc745cd18bf0bef6fcea523',
+      ),
+      false,
+      '0x9e54ca5149ce9f69836e142174a4100049a3494c',
+      BigInt('0x34'),
+    ],
+    result:
+      '0x1cd64ea8b7a069966a9e601b629cbca4ed97c4a5c1ecd682f81a4a322403e78d',
+  },
+  {
+    types: ['int64', 'bool', 'address', 'string', 'bytes15', 'address'],
+    values: [
+      BigInt('0x9f28b4326f5c'),
+      true,
+      '0x14f44487c86fa964bf6e76d227a5f46e37358f82',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
+      hexToBytes('0xd4bea4f5a5f4a3dfbb4a8971409526'),
+      '0x22d2d0fa8bdaa954c693473001126b5107c717df',
+    ],
+    result:
+      '0x1425eba9b8d9bb8d2b4a487ff205efb671b69ba397db6a055bca1110f04c79cb',
+  },
+  {
+    types: ['bool[1]', 'string', 'address', 'bytes', 'bytes', 'bytes'],
+    values: [
+      [true],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occae',
+      '0xb679cd80fd8a6b53a23dff8f9e7cebe656dacc3b',
+      hexToBytes(
+        '0x8d08a6d666a73057817117eb1c087a36a68b666bdb437380d6de55db36d9cb2271c0226f6533dfa764779caddfea990361cfda5e55e86a0d9779cb62e7441df4',
+      ),
+      hexToBytes('0x'),
+      hexToBytes(
+        '0x266e261bf8aa019be3f1c42e659b97ec0ad22db200b0f3786596454b3320748e574429192d3e891367d81bd6',
+      ),
+    ],
+    result:
+      '0x9ffe99ba61e43c37e69168a10292c055f3c8bdc48c19d7c6f7dc11e8a10aef12',
+  },
+  {
+    types: ['bytes', 'bytes'],
+    values: [
+      hexToBytes(
+        '0xe38ad6d669ec2358051add47f365ca676302027c4ab0c76e2c2a964341ed120dd16e44d469636cff2457c6855f8cba64b1c25788696d235426add8de',
+      ),
+      hexToBytes(
+        '0x144d9ce0be77229019bc97ae597d2a43ef5680b6406e02b20db098b666b27e021cf0198a479ed83d826f',
+      ),
+    ],
+    result:
+      '0xd4d2fb5508fcd0cec6a6025af176af6d85038d449efb44f0e31427150813ad57',
+  },
+  {
+    types: ['string', 'bool', 'address', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing',
+      true,
+      '0xbdfb3929d366269ac6b65b6f657c073a64d38af7',
+      true,
+    ],
+    result:
+      '0x046e54030ef868934e157d5c4ad8183ec23ea8bc74be47f4b68a603b952b8342',
+  },
+  {
+    types: ['bytes8'],
+    values: [hexToBytes('0x84740a23283e034c')],
+    result:
+      '0xd7189a8d52368c6ac4e1d760f0598fffa8a8fe9f83f5300be280b1d1db613929',
+  },
+  {
+    types: ['string', 'int56[3]', 'bytes29'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sin',
+      [
+        BigInt('0x2ca8dc71'),
+        BigInt('0xa891085ca1dd'),
+        BigInt('0x670ce5d54786'),
+      ],
+      hexToBytes(
+        '0xeb470ee87a6ea4aed7285733a45ee26e5abc360560e41ba3817509b956',
+      ),
+    ],
+    result:
+      '0x69b8f7d69e0d0d0c0536eee0df6aae7d138a4ccfd2bbeb1a7228a61870019517',
+  },
+  {
+    types: ['bytes', 'bytes17', 'address'],
+    values: [
+      hexToBytes(
+        '0x5f61a5928786c38f492df69c2c24c04dc6df846b4e092f7f2001593aa1a0fbf7d4613b92200c2d494c5e222474d27d0a',
+      ),
+      hexToBytes('0x3a4e52cb1cf24b7dae3a50c2820955f532'),
+      '0x196d2bc1b7cb6ceb7d761ab15521203f8919a2b6',
+    ],
+    result:
+      '0xc0de67c905ae3fd48613b9bf32d4ad701c302ea0cf4e83a5892ec099162eca12',
+  },
+  {
+    types: ['bytes6', 'bytes', 'uint168'],
+    values: [
+      hexToBytes('0x78adf33c2bd1'),
+      hexToBytes(
+        '0x3f60f3637d374bd9027d4089355fec91d4a66f4f556d52620b623ecfe23671663bca359bb2d6b8c75807880efbc51a58248dbaec95c8120768',
+      ),
+      BigInt('0xeeb04e6ca50703d4c372230a25213ba4'),
+    ],
+    result:
+      '0x6a0d8ea16a37a43acd7c8016f8ea05e15af638f888f67de1b6688853c3b530b9',
+  },
+  {
+    types: ['bool', 'string', 'uint224'],
+    values: [
+      false,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia de',
+      BigInt('0x6b1f2a2e1a'),
+    ],
+    result:
+      '0x010d0edb16fb26781afcd90c1365cf146aa6652faf19e15176a21a50cb422662',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proiden',
+    ],
+    result:
+      '0xcd5ea30f7480ad5d6c4dcf6673e5738e0d5a507e80f47652cd701d29c40e3514',
+  },
+  {
+    types: ['string', 'bool', 'bytes', 'address', 'int8'],
+    values: [
+      'Lorem ipsum dolor sit amet, consecte',
+      false,
+      hexToBytes('0x1f8aaa08'),
+      '0xeadc996a56dc2c17eefc1e47d4b564a5929f7bc9',
+      BigInt('0x75'),
+    ],
+    result:
+      '0x8b488df995fea99e0a03ebb9c0f2efd2c9f864cb720ed1eb30193831c6ebcda5',
+  },
+  {
+    types: ['bool', 'address', 'address[3]', 'bytes'],
+    values: [
+      true,
+      '0xde66b70c08f54e9ad316ec7b52167115447dbaa8',
+      [
+        '0x8491b3f6c620332c5ee23238b82b95c05df08f47',
+        '0xdbced98007a20aa59a872a9e23651fec6e7c2bc7',
+        '0xa86455d24907b710777bd023d56cdce92e387a40',
+      ],
+      hexToBytes(
+        '0x019d10669dcb037b1a746f75ba0dbbd8593fd9ebababafff40d66a1c075c428d92a8271e0099a8507b773effbd628ddeb9ecd7ecbc7cd101',
+      ),
+    ],
+    result:
+      '0x38b156198a0bf65bdb862586671608c95c54d58e25c0e23118c770324de181c1',
+  },
+  {
+    types: ['bool', 'bytes7'],
+    values: [false, hexToBytes('0xd0d8930e1ce752')],
+    result:
+      '0xa54dc7a569d92892c52693e4feefee7bf5d317869baa728588f4198a80a8e4e5',
+  },
+  {
+    types: ['bool', 'string', 'address', 'bool[]', 'string'],
+    values: [
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proiden',
+      '0xf0a7ab53a45f45fcc68c52436d5b3b01c06e7cce',
+      [false, false, false],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    ],
+    result:
+      '0x4d3de0e0d00047fb4f7cc53940dd22ff0b00f012a1d340f82a64c012c1d877ee',
+  },
+  {
+    types: ['int144'],
+    values: [BigInt('0xfa1a5f665f7cdc08d9abdc5689f9')],
+    result:
+      '0xf2a39876117c4e213e68cd3c6dccadf339c0597e61180ea8276f2932a77229ee',
+  },
+  {
+    types: ['bytes23', 'bytes'],
+    values: [
+      hexToBytes('0xa3a85d3478c0570262981145677769e14fd61d6ce1674e'),
+      hexToBytes(
+        '0xb7ac3cc258da08606d92b9ec52f7b443b0d72bbfe55b48266f5641012919f818b8700b1ab0b4cb937ebb3d',
+      ),
+    ],
+    result:
+      '0x9db27e1a6e1d484174d88d520877a13ed8fc2910cccc6c3f14ca7769dd7cbe09',
+  },
+  {
+    types: ['bytes1', 'bytes', 'address', 'address', 'int248[3]', 'bytes'],
+    values: [
+      hexToBytes('0x02'),
+      hexToBytes(
+        '0xa6962a7ac4c435cf92209873322d0df0a601123c952e46ed83c527ee7db67847e1d4b43c84bdc22e444181d7f1613c17dd3658217106df',
+      ),
+      '0xc7081dc3f9ed9558ff7e8057e198362e0aea6ace',
+      '0x464fdd8dc283fed7d403c43f9036f7f5e3ce5fff',
+      [
+        BigInt('0x8f149692ee34596519eb49f480cfc56449c7'),
+        BigInt('0xd8915666028e31b1918a2a4ed3272f02351eae'),
+        BigInt('0x81a6c43b534144a9cac496030709623592f8c472607d6b4e0'),
+      ],
+      hexToBytes(
+        '0x9bb9748c4897e52c37d20b9460d4182e254df5339cea2cd1895eef12634d318db8726269b786e0a94e0e75c1e5d9cd996a61104733',
+      ),
+    ],
+    result:
+      '0x83efb69ca4b87e829da81817fcd347ff4d74207a467b2f625c5b1eb0e6d3e572',
+  },
+  {
+    types: ['bytes32'],
+    values: [
+      hexToBytes(
+        '0x4781b5971646c6931f155e96c4ccafcd8a83ecaa7713e2326392cfba6570e5d4',
+      ),
+    ],
+    result:
+      '0xfd6006ed709ba88b3ef82b8fd33bb8ef2043ea68d66254011f2a529244cc6c23',
+  },
+  {
+    types: ['bytes', 'string', 'bytes18', 'address', 'bytes30', 'bytes24'],
+    values: [
+      hexToBytes('0x4b44d910053c455f74d834821e80138ce415d5fa281714c104'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur',
+      hexToBytes('0xd916c83cbdb59aeacba5285b953ba1353f29'),
+      '0xa88bb2aeaff4076d9d8fa22c99a5c5c8267b10ea',
+      hexToBytes(
+        '0x431059bbce207e96b242f53b8f9cd62aada3144c0b5a0718f475a2512581',
+      ),
+      hexToBytes('0x8189bb93b99ae5bdb8c64290c244c7dbeec372f11027a4f0'),
+    ],
+    result:
+      '0xabb3a80b0f5ddfc7c72a4de996a5dad06223246f3158dcc5467bb72318813b94',
+  },
+  {
+    types: ['bytes21', 'uint112', 'bool'],
+    values: [
+      hexToBytes('0x926a685e06705decd0a75755830583a5c414ab1fc7'),
+      BigInt('0x39235ed3016ebd88ae'),
+      true,
+    ],
+    result:
+      '0x37fc232b704d03d41e499a2e2adc0142823f4719cc378b2f422553ee8dd3a375',
+  },
+  {
+    types: ['uint232', 'address[2]', 'string'],
+    values: [
+      BigInt('0xb69ef0e820eb829088788c'),
+      [
+        '0x84d34d57d656fead55ffc0b3e984be11fdb61b6d',
+        '0x2c0bf8f66cbad66bf3d1ddad6aaad286dd611e3d',
+      ],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa',
+    ],
+    result:
+      '0x518beb0180e9260df07e4b7dbd80e7e80fed189d0d41c10811dcca962f863c21',
+  },
+  {
+    types: ['uint200', 'bytes18[2]'],
+    values: [
+      BigInt('0x6e156c'),
+      [
+        hexToBytes('0x7598f86b9744dea480ee1c4a4092174e4203'),
+        hexToBytes('0xd10871771620c1a0d4d5ffd03f2b03cfcf14'),
+      ],
+    ],
+    result:
+      '0x1e2cb04f0523e9a8f7e4605ccd88b9255f1b26153125330286c4f4c2067542be',
+  },
+  {
+    types: ['bytes', 'string', 'uint208', 'bytes', 'string', 'address'],
+    values: [
+      hexToBytes(
+        '0x3f0223b5370c5e2c19c701506bc0ac20ed6d9f2207c857d7769d24c3bec104af89f53c32e4',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla p',
+      BigInt('0x897fd0a94e987c383455ff'),
+      hexToBytes('0x46ee439f3831d21b6ea02cbf5e23a082ae6828f5a12942b2f07e'),
+      'Lorem ipsum dolor sit amet, consectetur',
+      '0x8993bc83a47edf63e7ec7665c817338de5101cda',
+    ],
+    result:
+      '0x1e1028fc6b0dec3790dc9dd768dd255bede689868610d5e403d8bd28bf919b86',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat null',
+    ],
+    result:
+      '0x1172cd68417bf819a7f7ab0a594e62ca4f93ea982d863acf93d60a49ed382d47',
+  },
+  {
+    types: ['string', 'bytes', 'bytes', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing e',
+      hexToBytes(
+        '0xc8b59d0d05c07970c7d2c91610c9631ada32a34e34a7577b168a791636cd6aa8a85cf331cbaf0e6b74c695fdcd2c6bda9e1e7b',
+      ),
+      hexToBytes('0x4ea183e23ee943957f17d54efd56965d340c'),
+      '0x351ba198f5dd54bc0afb280eb9954a96ff95c790',
+    ],
+    result:
+      '0x66ee6531b00dd4b29b9614d69ee97f8d645981bc7961df2200f4e386c6d16b4c',
+  },
+  {
+    types: ['address', 'address', 'string', 'uint48', 'address', 'bytes'],
+    values: [
+      '0xf1f38945242be8544a4cbeb2d7680858be643eeb',
+      '0x52a5b6854bf8a285223024c906a9aec7827b55dd',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i',
+      BigInt('0x1aa0'),
+      '0x699a3dabfd345af3da10508cdfcbafad1bee0700',
+      hexToBytes(
+        '0xa3847072b405fcbdf56b80c0ba8e4e242fd7d921ed564c00cf2bbbb01259cceb',
+      ),
+    ],
+    result:
+      '0xb5f82758c22a61597bdc8c842354bddfbb3320d9f65a96390678b1ba277d9d0c',
+  },
+  {
+    types: ['uint176', 'bytes'],
+    values: [
+      BigInt('0xf4530b0b6a90b99b1d8c0adc'),
+      hexToBytes(
+        '0xd055bdaef95b9394965e71aede04f177ecd7accd8ec0061a37657590cf9132276fbce55c1514a5705f7fed8842c415aaf87f22a9',
+      ),
+    ],
+    result:
+      '0x7b182fde4fa33aff2b6655210bb0344a66b6546303cf412c35954dd4fee99762',
+  },
+  {
+    types: ['address'],
+    values: ['0x15501be6ce1719a5815124e281ca70df145942b7'],
+    result:
+      '0xe4deab410062b5b3ce51c506fa1962b24aedf1cc60ee47dad14971f5bad6eb0e',
+  },
+  {
+    types: ['uint56[]', 'bytes28[3]', 'uint40', 'bytes3[3]'],
+    values: [
+      [BigInt('0xf1de'), BigInt('0xc8d9834220'), BigInt('0xed86e5658b63')],
+      [
+        hexToBytes(
+          '0x6c7f8f59ba6d31e6689d555799b3f98376d6a1e3ddcebf325780a03f',
+        ),
+        hexToBytes(
+          '0xe3f6a480d3688f3c1656c4eeb2719ed198f5c8226c01c87ccdb232fb',
+        ),
+        hexToBytes(
+          '0xbd3b333a576be847da09565838e87e9ff22bfb50221246e3e27c2567',
+        ),
+      ],
+      BigInt('0xfed6'),
+      [hexToBytes('0xa4ec6a'), hexToBytes('0x103e0d'), hexToBytes('0x48668e')],
+    ],
+    result:
+      '0x4c6628db0a686baaff44a500805a217b2473f2f452a1ba9d9bf544958af8dc00',
+  },
+  {
+    types: ['string'],
+    values: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit'],
+    result:
+      '0x086c0e68def8c299e27f7b45a156a934ee7eb03cceaef5b9b2f131d8dc0f0a32',
+  },
+  {
+    types: ['bool'],
+    values: [false],
+    result:
+      '0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a',
+  },
+  {
+    types: ['bool', 'bytes', 'address', 'bytes21', 'string'],
+    values: [
+      false,
+      hexToBytes('0xd19ac0cd22ec842ee08715d9cadf0d373d'),
+      '0x098e1ce23e32afc7a873ecbc8b67c0232367f5dd',
+      hexToBytes('0x72d4745388881cb85bfbab1f2a9e43e024e4a30c3d'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ',
+    ],
+    result:
+      '0x10a03d0f1ab2838153b0e2f7ef7482c507b61135223c90843dd1611f89c9be57',
+  },
+  {
+    types: ['uint136'],
+    values: [BigInt('0xa73f63601e724bc626329b')],
+    result:
+      '0x0ffacc2a364f99a8be87680e16467e70f012fd44521a6ec8e051925b5a855ad3',
+  },
+  {
+    types: ['bytes10', 'uint40', 'bytes', 'bytes6'],
+    values: [
+      hexToBytes('0xdee0116135adaed0fcf3'),
+      BigInt('0xf668'),
+      hexToBytes(
+        '0xd5b03d55aecb4c55cffb0cb0afd7fd3c7a35e84ca66431bcf87eb82d2ff397155b2dc66fa8724a02bbfd4f11944c3cb4d6355864c78cc8',
+      ),
+      hexToBytes('0x9c06174bd4c6'),
+    ],
+    result:
+      '0x307aeed2841e2dd544f6fd897850dbb5b35e5c5a5ac78093aa4258ef9f8711c8',
+  },
+  {
+    types: ['string', 'bytes5', 'int240'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ',
+      hexToBytes('0x38d0cc28bc'),
+      BigInt('0x75521f3b110d9f0887c52156fdcf6c3e6ebdd1'),
+    ],
+    result:
+      '0x728e890a8351ab226ba13c0548288a89dd7d959a675a3472b9bfa8d9dd173cb4',
+  },
+  {
+    types: ['bytes23', 'string', 'address', 'bytes'],
+    values: [
+      hexToBytes('0x93bd302366e68dd8ad221152b3dbcdd4b35ccf8ce086a7'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim ',
+      '0x0768f8eb15eb729de4c5fa97bb671ec1cb36581f',
+      hexToBytes('0xf7d6174bceedaae68288df49d6336e51a4a9f93a4ecb5eac426fad'),
+    ],
+    result:
+      '0x9a00a5775438368c767338d0cc29d3698b0e05e2aaaafc74ece54b0868ac0f24',
+  },
+  {
+    types: ['string', 'uint232[2]', 'bool', 'uint104'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labo',
+      [
+        BigInt('0xaba595e769520d5e5597'),
+        BigInt('0xf63bd194ab1e519337c2e07ea74206acb40c1de0cb'),
+      ],
+      true,
+      BigInt('0x1cfa5c61950551'),
+    ],
+    result:
+      '0xe00c5bf40d7fa34bf19e6d0ea7f71ad2047bc9e044a1499f408093f095762b49',
+  },
+  {
+    types: ['bool', 'address', 'uint184', 'uint104'],
+    values: [
+      false,
+      '0xd44a41c5fe3a57ff3120d7cd983b533a02655182',
+      BigInt('0xb1612acbdc0a4e69d5bc21c21e4a'),
+      BigInt('0xd0c30466c037df'),
+    ],
+    result:
+      '0x29c2252de7a91afa177fbd450064c1ea9b17a2fbe8c0634fadddd36c8bfca4da',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co',
+    ],
+    result:
+      '0x5c68d0efeb8528aa4b29bc3d1a6bffad3981ca197aa4f74d9f8695ef552fedd3',
+  },
+  {
+    types: ['uint240'],
+    values: [BigInt('0xa5e495')],
+    result:
+      '0x9646023d82a7b4709520f2e648fafcd9ca117f00657dda9f59f97f651a8f4224',
+  },
+  {
+    types: ['bytes'],
+    values: [hexToBytes('0x36445cbd930a02710d')],
+    result:
+      '0x7090d9c82518dee1564c23a177f4fb16e890c5ce51bf85ce25dff44b0809b083',
+  },
+  {
+    types: ['bytes', 'bytes3[]', 'bool', 'bool', 'bytes'],
+    values: [
+      hexToBytes('0x834bf3a53c5b7596b4'),
+      [hexToBytes('0x996777'), hexToBytes('0xa8485b')],
+      true,
+      false,
+      hexToBytes('0x62a1fcfb2b8a3842fd'),
+    ],
+    result:
+      '0x1f96f54f4158061c7556182163161334636c52651ac70e40af89719d81da04a2',
+  },
+  {
+    types: ['bool', 'string', 'string'],
+    values: [
+      false,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui o',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. E',
+    ],
+    result:
+      '0x85f3e2c8bbeba8c819c5d09fcce57123bf2ab36d01e3e2ddd97e57657f53c152',
+  },
+  {
+    types: ['bool', 'uint80', 'address'],
+    values: [
+      false,
+      BigInt('0xbe'),
+      '0x4ad2a032320dab517dd2243c647e81a7d1a9b3cc',
+    ],
+    result:
+      '0x6a886286c8ec64780aad4e718f45184ed12bfc18fd97ba193bf134f74478407c',
+  },
+  {
+    types: ['bytes1', 'string', 'string', 'bool', 'bytes23', 'bytes24'],
+    values: [
+      hexToBytes('0x5d'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nu',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci',
+      false,
+      hexToBytes('0x2aee7a1850781696c4c71a2510f221d41795baf0bc8441'),
+      hexToBytes('0x8b4022755be6599d2a15868ff0633d8c1775b33bfb3849e4'),
+    ],
+    result:
+      '0x0730c89f1d69aa0f2bdd4187f70f121ab2e20c0af0978e55f141567248c147b5',
+  },
+  {
+    types: ['address'],
+    values: ['0x9f11068a62e33be947baec0cc99ce7f21c0fd0d9'],
+    result:
+      '0xff3b84069237a9d7ee478357e48d5da136dbd893bfe59b5450d06a36cb372184',
+  },
+  {
+    types: ['bytes14', 'bytes', 'bytes', 'bytes'],
+    values: [
+      hexToBytes('0x75cbbcab5a5edf52c9f099a4eec6'),
+      hexToBytes('0x0e6dd307a5b9e03e42d9f0ce'),
+      hexToBytes(
+        '0x0a14ed530a14414fe62a95b37221974c5fe57abed9180e620364a1653024ad5e116f93bec576818eaca96009007785fdc264fd2e',
+      ),
+      hexToBytes(
+        '0xcb979a940c1065d7de87e113540cef65dea2e2a4fe6efe9cbf184590182ef8a386281f16a2f6f9a5f1c4ec7aeb',
+      ),
+    ],
+    result:
+      '0x7ac61dbb030126c6c61cc78feeca3cf560a1df967875f0a43e4b6447a4fee522',
+  },
+  {
+    types: ['string', 'uint152', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ',
+      BigInt('0x9fce68c2ca8623248d5d'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol',
+    ],
+    result:
+      '0x0191280db399128fffa1782dc175905e563bfb796548989ee39ff791a8be8655',
+  },
+  {
+    types: ['int32', 'string'],
+    values: [
+      BigInt('0xee63f6'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui offic',
+    ],
+    result:
+      '0xc9ddee1d65e2da62a537cadd3701bd506e0b7247b8bc973ef2003115f018ac38',
+  },
+  {
+    types: ['bytes29'],
+    values: [
+      hexToBytes(
+        '0x1efd7491d2aacde0018af71edb41be816c15a6e4baff9718edfbacd50a',
+      ),
+    ],
+    result:
+      '0xcedfac5fed42dd32cbdfdb0b2c229e7dc58cc00a6ed6bba2f375d74acf75e2ac',
+  },
+  {
+    types: ['string', 'address', 'bytes', 'bytes', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Exc',
+      '0x060bcb967e91e0b216123c80565931f0d5b205fe',
+      hexToBytes(
+        '0xed7fa9b69f4ef08c1dc57dc9bae0f64a066c51bbc821c885e224c66a3118523e56c10158555a10be44cdf03a48b3a29cc2c5b2964d3a5502365e',
+      ),
+      hexToBytes(
+        '0x1ccfdbb8590210dfa57cef317ee8c24045474bc5100c01b7037b62affe4b07fe7a4dd71cfaee79698ea77bca1e0e63308d93abca184f2ea186ebbeb4f923f20398',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing el',
+    ],
+    result:
+      '0x9b6c02a9b05639e75ef7f27b0ee80963a95aad3f9815f88ca863a7df7bdae0c2',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['bytes25'],
+    values: [
+      hexToBytes('0xea85090fe4d217122aefa4c05dc72ffd600b85db64b0c69b09'),
+    ],
+    result:
+      '0x2757e2495b3e118e5d89768b67077fec2ed6d16eb1c352a351ded5b81806f66d',
+  },
+  {
+    types: ['address'],
+    values: ['0xf5d280b30dd551f568f4149e7348c8dc240a6ddd'],
+    result:
+      '0x02364b767cb4ea1b0861d68eaa39346fdccb9d038b9e361fbcc7f6477c788a93',
+  },
+  {
+    types: ['address', 'bool', 'address', 'string', 'bool[3]', 'uint88'],
+    values: [
+      '0xca34ad2ac4b8a4c158800c1310dcc6a8367d3416',
+      false,
+      '0xc42d2268e6c869ad478fdd3d0d2aa5c430d7434c',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis n',
+      [true, true, false],
+      BigInt('0x23f16b9e94ac7aadb00f'),
+    ],
+    result:
+      '0x561871c5af1a6ce0fdadca039a8f101be9cf758717a4a5172185d94c8296365f',
+  },
+  {
+    types: ['address', 'bytes', 'string'],
+    values: [
+      '0x1ce9b48ba7007998028b620fa46aace6fcf31edb',
+      hexToBytes(
+        '0xf4b4d1469deece9c3d3575a293a78445996eaca8c5aa85c53659080a56359eaf234c5ce500ae2bca53b24581369df91d4934f8732b1b74fa5729910b01405d',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ',
+    ],
+    result:
+      '0xa18f094c33a6e28b3da62e711675f8d3b27e9464d0beef54b06753edcd87a5b9',
+  },
+  {
+    types: ['bytes2', 'int64', 'int120', 'address', 'bool'],
+    values: [
+      hexToBytes('0x09ff'),
+      BigInt('0xa3'),
+      BigInt('0x20aa44c254f49cc2'),
+      '0xcfbb30bd44b22355e54bf9f627af44a92c77292a',
+      true,
+    ],
+    result:
+      '0xcee9cc07583d12a8ec78173935d6d3bed88584e89c879db8cd4133392935d344',
+  },
+  {
+    types: ['address', 'address'],
+    values: [
+      '0x0572e56741bb2f96ca2302951af61975564dcf26',
+      '0x45a7148d579aff6d28d31ae79f59cf4e2bc96bae',
+    ],
+    result:
+      '0x71a8b4fc3506afee1cd1351000cd9a481ea8a993a3cc931e0ab9dd488ec421a3',
+  },
+  {
+    types: ['int104', 'bytes22', 'bytes4', 'bytes15', 'uint128', 'bytes'],
+    values: [
+      BigInt('0xee4577f75adb'),
+      hexToBytes('0x5cfa7a45ea9a23b016611e0551f574f0bbca091e1c08'),
+      hexToBytes('0xc70cba85'),
+      hexToBytes('0x727621c814aa2a312bb6449e6f705a'),
+      BigInt('0x6334'),
+      hexToBytes('0x7fa73d68b3fcb491'),
+    ],
+    result:
+      '0xc3299e1e1576be6d7d07d1032b15e0b12d103446d41a58212f2ad776ae8e5155',
+  },
+  {
+    types: ['int120'],
+    values: [BigInt('0x2a2c278521510cc3f347a78b42')],
+    result:
+      '0x55fd9cc9b049ba8638dacfbd5d8200d143f8e09279b6b7d5e0f4c041f2b706d3',
+  },
+  {
+    types: ['bytes', 'bool', 'bytes'],
+    values: [
+      hexToBytes('0x019fd387be4cb65498e056c90d428596d0efe3'),
+      true,
+      hexToBytes(
+        '0x7ab72c1727fa65140e67e3d96de4c9ec27c7fb8e6ba15c5b2137ceb5da9b993a',
+      ),
+    ],
+    result:
+      '0x82b79e18f4a7f6e29d145adacfd2dfae098c1cd0bfc71113ba4fd43fc45bc42b',
+  },
+  {
+    types: ['bytes', 'bytes7'],
+    values: [
+      hexToBytes(
+        '0x85175a90a98710a4c828a7e7b49209dab0521284fd2670e8e0c2b37492d8e543742d2764ecd13ff220c413cce4578256d0a35d7c7f59f9ad4f9f6ff61a17',
+      ),
+      hexToBytes('0xc65eabaa24a49a'),
+    ],
+    result:
+      '0x8b1bc98dd19e8f0ed9a01b41d03727b5164f52f25e36003ad21c8557c59e69e9',
+  },
+  {
+    types: ['uint104', 'bool', 'int24[]', 'bytes', 'address'],
+    values: [
+      BigInt('0x515012e857'),
+      true,
+      [BigInt('0x3071'), BigInt('0x5c74')],
+      hexToBytes(
+        '0xed051f48447c60cd4da86b11bd287e86adbb9c1592aa6ec7bf1dbb9401d6c58d9d5a3eeddb062d0a6c4679b4a418f1',
+      ),
+      '0x3e1428d7d315abf2bee302bc5ad9c4552c437f0b',
+    ],
+    result:
+      '0x9d94f56c8a89b6f65e51b48466db5270b81074d02039755e415bffe6e58b42ee',
+  },
+  {
+    types: ['int128', 'address', 'address', 'int184'],
+    values: [
+      BigInt('0xeb69bbc83b6bc116ba'),
+      '0xa8167b8ff3194e0b144022fc61049ba8e15486a2',
+      '0xffe43bbfd8716d468a302316edc5a45439298248',
+      BigInt('0x2301748056ac3b57d5bd55c2b2313403ccb97137f'),
+    ],
+    result:
+      '0xb086f53a74f4062141229d1af145e99b213441a3039122a5c4578bb5c6fe365b',
+  },
+  {
+    types: ['bool', 'bytes14', 'bytes'],
+    values: [
+      true,
+      hexToBytes('0x2ea2adc67a68852274d43723bc76'),
+      hexToBytes(
+        '0x190a8ecc68d76693f0e0db70e27bdb54010365e9bb0bd42392c5e87aca3277461972281d0b24d9f32956ad351e73',
+      ),
+    ],
+    result:
+      '0x2517a57f611648316f7e52c768e979d141f7186d89ddb7d01cca321cc5ba989b',
+  },
+  {
+    types: ['address'],
+    values: ['0xe242e666a28f5d051781fb52cbe612a3702912ea'],
+    result:
+      '0x21f3c0478c1c2c0a366f66469200fb07adce9191236633e1ad349403b2bb3ebb',
+  },
+  {
+    types: ['bool', 'bytes', 'string', 'bool', 'bytes', 'bytes28'],
+    values: [
+      true,
+      hexToBytes(
+        '0x6bc333342ab1087041a6aa9d2a9c987802008c011de0662c276b0b7f28b71d6242174afb7ac3',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U',
+      true,
+      hexToBytes('0xbd783b25a2ae8685e9c9acd4cfba72d9483215ba564fd7e029'),
+      hexToBytes('0x2ff1f4c55dbf72afb2bd8fb43153b7e403e5a33db3f659629cd23bc0'),
+    ],
+    result:
+      '0xac9ff28e4c486b11b207a9bc2f503c64e07d87757058ca9641aee0f927aca64e',
+  },
+  {
+    types: ['int104'],
+    values: [BigInt('0x6')],
+    result:
+      '0xb24dc843f318dfda8f379ccb962e2f9dc4678dd469cf4dda7cb2b77f5137cc4f',
+  },
+  {
+    types: ['bool', 'address', 'bytes', 'uint16', 'uint136'],
+    values: [
+      false,
+      '0xe107104d9d9ef8a730bcbd343a0bdee5c631c508',
+      hexToBytes(
+        '0x80290b215fa5bcd5348ae8b087d87b914eb740103f82563dd9ae7a536c02a410d05fe22efd47fa15c9e5e772ddc02f38e6',
+      ),
+      BigInt('0xcc'),
+      BigInt('0x88b8293c7b2166a0e5'),
+    ],
+    result:
+      '0xdc64f2ab60d7e0064c6815e01d5031e4376bf4e7e2d1184c8741785b99c8daae',
+  },
+  {
+    types: ['bool', 'bool', 'bytes4', 'bool', 'bytes13'],
+    values: [
+      true,
+      false,
+      hexToBytes('0xe2a3b91f'),
+      false,
+      hexToBytes('0x047b3a8ded8d377f8f3cd05414'),
+    ],
+    result:
+      '0x535314dbbd478920f2dafbbbc9f3969f3229e7172a33cd17bb5e5f6eafa6842e',
+  },
+  {
+    types: ['bytes', 'address', 'address', 'string', 'address'],
+    values: [
+      hexToBytes('0x7b06'),
+      '0x6d236dce9a0419f0f09233a0ce07b3505abfa212',
+      '0x35d64c950fc675b3b7a84f5224b97125676d64db',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e',
+      '0xbdca9a401505df8a11c337eddeb22b6da041fbd0',
+    ],
+    result:
+      '0xb1e0fb64e8f2373f4dc7f89e07ed0b5f0049bd27a878be89f51fe82502de50a6',
+  },
+  {
+    types: ['bytes4'],
+    values: [hexToBytes('0x0ca38404')],
+    result:
+      '0xcfa0abdd5385a51276ccdbe3af22aced69c13c7d88e2c5332bbed3fcafc6f646',
+  },
+  {
+    types: ['bool', 'address'],
+    values: [true, '0xcf339f5b867b9877943cafe349aed1cca83fd8b8'],
+    result:
+      '0x210df765dedac82d3c9c2ff975baa6388232710b074dd5e38569ef744c9af94e',
+  },
+  {
+    types: ['bytes', 'string', 'address'],
+    values: [
+      hexToBytes(
+        '0x38c13cd07f3cec4decde59b24cf95db0ec56d59089fe4894a75a4bfa9ff3584c7b04e6030232b4b4c9a16f7450090d3d1890022547',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt moll',
+      '0x647706192288003c4a2ca2c2596861cfd8d93975',
+    ],
+    result:
+      '0xd11fca585ea8df4f9bb40951ca7e95a2a71728052b7d08177636231a81103974',
+  },
+  {
+    types: ['string', 'address', 'bool', 'bytes18', 'bytes', 'int88'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nos',
+      '0xcfc4d42b2caf3d8ce46e129aa517287148c92e43',
+      true,
+      hexToBytes('0xec6d013fa67dd75ed310b51edb889d553f9a'),
+      hexToBytes('0x3c1c9b'),
+      BigInt('0x5648ba82'),
+    ],
+    result:
+      '0xf7bc2af388bd872d2f1600ad4208c46830706476b76771b804b1f39489356fd5',
+  },
+  {
+    types: ['uint104', 'string', 'uint', 'bytes15', 'bool'],
+    values: [
+      BigInt('0x312d77b4f05bb1d1f'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepte',
+      BigInt('0xfd0249507dc8d0d2e1b1be9a83c957123e55bd'),
+      hexToBytes('0x669157a8c13df5a45b96ac8b137af5'),
+      false,
+    ],
+    result:
+      '0xb7b7654d2285a82fa6ad8d8419710b7d92555c04797abefb0ce0ffa005515c17',
+  },
+  {
+    types: ['string', 'bytes', 'bytes', 'bytes'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deser',
+      hexToBytes(
+        '0xe666549fbc44dec5594288be82b40722f682604b480bbbcb7b6f5ed445f8f9035527',
+      ),
+      hexToBytes(
+        '0xba9d2a187fb063007223d37ab8d9b086e44b2b41a46b3508ec8a577e14ae3b9914b5bb5cba97cf2459e9a137cd61afd7',
+      ),
+      hexToBytes(
+        '0x3b866c4d66993a057e3d44581909fad6f36b9fa76bf10334c901329da8f0b28213c5a45d511a73531655f680a1679ffd0769d174f236e03c956abe72d3',
+      ),
+    ],
+    result:
+      '0x182294fc2eeca1aa408a31af7318775e8e3e873f5a7720835bb26f6314370273',
+  },
+  {
+    types: ['string', 'bytes', 'uint184', 'bytes', 'int8'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pro',
+      hexToBytes('0x5d35b44d710634489d2442b14c2a4c5ccf89230547bf28436329b6'),
+      BigInt('0x672c463ba49b2700'),
+      hexToBytes('0x1efc9c15'),
+      BigInt('-35'),
+    ],
+    result:
+      '0xf4e203b6ea33d57616031f0ee50cd26c446771dab81ff75598629153dd5ae754',
+  },
+  {
+    types: ['bytes25', 'bytes', 'bytes14', 'bytes', 'bool'],
+    values: [
+      hexToBytes('0x93dab4836df832b2280c16953933776ef309fc2368e05e40ce'),
+      hexToBytes(
+        '0x065e0923270a7b32178f0025f1e0d3d8375ba10ee0a1e7e9bb657f0e7e8a9068515a50',
+      ),
+      hexToBytes('0x95b5a7ea6270abfa2c1c1dc8a52b'),
+      hexToBytes(
+        '0x94b5be6f0eab131fff3f0fbf826250f0ffc57904437addbbc053622bb85a8aa31a817ddb043794f3f342cd9885d8b62b5f113b0dddee524537f69de7563f36e09d',
+      ),
+      true,
+    ],
+    result:
+      '0x025ac211580c3ca58e2d60dabf2a13b15590d072e51fe2bdf6a646ee8462179b',
+  },
+  {
+    types: ['bool', 'address'],
+    values: [true, '0x755a9fb14ae8b63989556ba3b134c3c1ed5edc8d'],
+    result:
+      '0x29b617dd1e70825addd209239bf061008cd9cb80962013fc202999ff610eca23',
+  },
+  {
+    types: ['bytes', 'int32'],
+    values: [
+      hexToBytes(
+        '0x94495174ed58a2275e21d1a21be02d6f4a5af953f3fe03c61e84ebed038ab57e92f48eced5dbb11b84320a098fb583a569dfa2ffdffec62789',
+      ),
+      BigInt('0x859094'),
+    ],
+    result:
+      '0xbcc6916b0ecddd68289238a9ee6308ca7a29ad5c38b1aaa2f80826fa2af3cc0b',
+  },
+  {
+    types: ['address', 'bytes', 'string', 'bytes', 'string'],
+    values: [
+      '0x489c061bf8e2f6290b1dc5f8c98fa900a1932807',
+      hexToBytes(
+        '0xd609420d4fabd7e7e488619632195dd209b7812a64a1e2a0f6443023cbb0aaa7cac6e272f41863013f42cb5d2068bb4150a01a09462f56',
+      ),
+      'Lorem ipsum dolor sit amet, consec',
+      hexToBytes(
+        '0x7b0a4bfe5d2061897f33d04b45d5296d5eb8c761f5e78720d3effccd392dfa6f42fcd1358e08cc8244cc37',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla ',
+    ],
+    result:
+      '0x47a89c3304d13ba21bbd5c21461a991f161efca7372694dc5c0296d735c2313c',
+  },
+  {
+    types: ['address', 'bool', 'string', 'string', 'address', 'bytes'],
+    values: [
+      '0xb7789e4f499c04beb35112989342a724eb9aa213',
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing e',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ',
+      '0xac7f5e9c53f5359b30b04beddacc5a81b89d05e2',
+      hexToBytes('0x6220757ca5ebd209b7fb2aaedecd6a20e6'),
+    ],
+    result:
+      '0x8fc363d41f5865c8d1d49fda4ece0229f867bb3de313f38eec3c704dd36c7af4',
+  },
+  {
+    types: ['bytes', 'string', 'int216'],
+    values: [
+      hexToBytes(
+        '0xcc5a5289ee262bceac53f1d2c735034a31f881711d34fbc4ef44bb20532ec085',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla ',
+      BigInt('0xdcf'),
+    ],
+    result:
+      '0x0895ead469c3abe5a66cd116502eaa6a7f2a3991bd2c414e6782373785f1415d',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['uint240'],
+    values: [BigInt('0x3dc1ed7742df58')],
+    result:
+      '0xcd9e706c4d0f6f3f4d27e4f9a73b147d7f18c02270b54190f313abb2fa05d984',
+  },
+  {
+    types: ['address', 'bytes20', 'bool', 'address'],
+    values: [
+      '0xa4743e9237e262e8bd07418b5b97c6042fccc9ea',
+      hexToBytes('0x2ff7457ec5c4ce665c709b1252f971de3e829425'),
+      false,
+      '0x9923f70d2a14b34883809a20d06943941908ed1c',
+    ],
+    result:
+      '0x30d6cd8bc02635dd52e8111517363d52a008b3b841e3fcddbf73b6ba1bc03a2f',
+  },
+  {
+    types: ['string', 'bytes7'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pa',
+      hexToBytes('0xa4daadb6c9997f'),
+    ],
+    result:
+      '0xc4da067035558c5bf517380ac71c6566526a5b9bcbb7be03e2c930ba8299a0ca',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in v',
+    ],
+    result:
+      '0x76e3c21aedac5b36c788392de5474a1d32bf2fb37960635f42844fb53deb8c03',
+  },
+  {
+    types: ['bytes19', 'uint232', 'bool', 'bytes', 'bytes28', 'uint128'],
+    values: [
+      hexToBytes('0x21a83bc107a09d18c3e04e164c0ad279552b65'),
+      BigInt('0x8f9777f3b50ef7dac46aebb598a89212'),
+      false,
+      hexToBytes(
+        '0xa265f26eccf6a97286e040047491c754a549d6081528d9175bb56bc5322d1cdfc7ce4dee2117b0fcc5d138',
+      ),
+      hexToBytes('0x78f0522e3a0be9a79a8597e5530963defb985680403794fa39862d4e'),
+      BigInt('0x11ab5f6fd'),
+    ],
+    result:
+      '0x97bf04369be6b7c82e77650b7752aacbd93511d1fdf1e663aca8e664d432bc9d',
+  },
+  {
+    types: ['address', 'string', 'bytes', 'string'],
+    values: [
+      '0x0b4a8f727a76b5fa11f48acc34dea443633afb63',
+      'Lorem ipsum dolor sit amet, consectetur adipis',
+      hexToBytes('0xc3020f7cdeff7384cac060'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate v',
+    ],
+    result:
+      '0x31a9e6ac6f0cdd68488bc8404a1dcb1747cc005dee066104e1a7531da8a1bdbd',
+  },
+  {
+    types: ['bytes3', 'address', 'address[3]', 'string'],
+    values: [
+      hexToBytes('0xa463b5'),
+      '0x097beaec456ce49a8791f9ede5e131936f10b732',
+      [
+        '0xdd5199d1fd3edad0e2f6386c0d2e764a9f43169a',
+        '0x32d40ea4f27bd3715cc33530e5bd72c554426668',
+        '0xdb7f6539146a71027290a71698115de0f69a2b4c',
+      ],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore ',
+    ],
+    result:
+      '0x09d38b5afed869c563a3ddea8f18eb2a00249ce2cf39024e7276d3ed20b02e33',
+  },
+  {
+    types: ['address', 'bytes', 'bytes', 'bytes5'],
+    values: [
+      '0x3bc42744a66a5ddb1cafa3ca2d2d71c0c2a1d262',
+      hexToBytes(
+        '0xda85916a8cb914e6997091288b77352f855f90bc6fd985eebe4795eeb09dd2a75772f4582b53a156aa01e98ee701ea4dcb94d377',
+      ),
+      hexToBytes(
+        '0x93640d93496bb0885f7ca30156e8f6d8e2c0f7ee4d4dd0df1ea91082485507c193e9622c962c90d677a6ef8ed53a4ea2',
+      ),
+      hexToBytes('0xc2eccb8be4'),
+    ],
+    result:
+      '0xb462f2033916464f006316f2f9f4fcbbbf024d4d389df4cca761312ccf8675e4',
+  },
+  {
+    types: ['uint232', 'uint8', 'bool[1]', 'bool'],
+    values: [
+      BigInt('0x873e7422b2bfd28eaafb670747e700d0'),
+      BigInt('0xdb'),
+      [false],
+      true,
+    ],
+    result:
+      '0x0a8f26b2da721fbce883ce31fa7e4033e1a08e36eee41d10c911ba406dfdf9ed',
+  },
+  {
+    types: ['address', 'bool'],
+    values: ['0x6e07468051b3eb8550a57871a9f4a0784116369d', false],
+    result:
+      '0xecf98b947f82720655400745576dfa7a2f6200bbb0f7cb7bdb86a97ce27d139d',
+  },
+  {
+    types: ['bytes32', 'address', 'bytes26', 'bytes'],
+    values: [
+      hexToBytes(
+        '0x7de1e295eac52f31082fe636869a38d0d3dc9feccddae9fb61d090f0496a3bad',
+      ),
+      '0x0958e9b69f3d8a27df937fcdf84b105080332df1',
+      hexToBytes('0x49eadacc8f46a305609602ee23630dd8f4586d23f86d4b85cf2e'),
+      hexToBytes(
+        '0x090796a7f34783b4c73035279366b3e11af59a4e3aa1e84f8de3cc6b53ccd2a3cafa28dd6ed1868d1d9157297437adfcb85039e9a787632ab6dd559528',
+      ),
+    ],
+    result:
+      '0x529b16b0ff89370fd1d7baa97372830c3063c1b07a71b9ae7f2f8c442d9c58b1',
+  },
+  {
+    types: ['bytes', 'bytes23', 'bytes11', 'bytes30'],
+    values: [
+      hexToBytes('0x5a443adbafdb93'),
+      hexToBytes('0x33d0b5bc87ddfc3f985d6ccea301ec1b1b985cbb9dc3df'),
+      hexToBytes('0x7abc6f43c859d4da62931b'),
+      hexToBytes(
+        '0x6c4e2ef4d8426e3fa0f9e6245f4496296dfb918bb101931ed44813d97d87',
+      ),
+    ],
+    result:
+      '0x5d4c03c1711e63fa9cfa485cd1d3b0f0779e67c26c0ff15ccc7b63547cc60772',
+  },
+  {
+    types: ['address', 'string'],
+    values: [
+      '0xae89815bf87d9b593c872fc9b523dcefb92d15c5',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ',
+    ],
+    result:
+      '0x4dadbb21841718bcb80c4355fef35978d18fe1ea2d7703037b1a933a9a04ea5f',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['uint128'],
+    values: [BigInt('0xa3786ed7bf9a3c')],
+    result:
+      '0x8eb450513fe80474866dcb76fb1bfe56eefd7820cb642a9de2c367138cee76f3',
+  },
+  {
+    types: ['bytes', 'bool', 'uint216', 'uint160'],
+    values: [
+      hexToBytes(
+        '0xa9c425cefba64f696545a0a8639105c2d45ad87e887baf9faeedacb38d91cedab3',
+      ),
+      true,
+      BigInt('0x52bfcc081fb9'),
+      BigInt('0xbb75'),
+    ],
+    result:
+      '0x46a6e56d3ebfd28e32c6be1eed3db0e763b5b0e3c03ba415fc9ea876dee63889',
+  },
+  {
+    types: ['int16'],
+    values: [BigInt('0x29')],
+    result:
+      '0x60f55a211852d2eb6a86a0d0294db1dcb4aa44025f67767d14e539a42fb62e93',
+  },
+  {
+    types: ['string', 'uint64', 'bytes', 'uint232[]'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore m',
+      BigInt('0xfe5305'),
+      hexToBytes(
+        '0x4c824463b97f72609dbd272a64398ddb8426b5208fc1b9cc82fad1b9d0f8c1e322083644dfaad49cf2b9eea58df77ea1f47d47bce39bedd66fadb2c238148946',
+      ),
+      [
+        BigInt('0x6c8e53'),
+        BigInt('0x7bb90ae582f8f8'),
+        BigInt('0x142e96068b97a5ba79f86b00ae7ad64da59bd6d9'),
+      ],
+    ],
+    result:
+      '0xdfb47f381977320d9145e4fea90f59bd9890270c66ea05d91453be73898a0219',
+  },
+  {
+    types: ['bytes', 'bool'],
+    values: [hexToBytes('0xce6c471dfb7e97b6b88076d984b7'), false],
+    result:
+      '0x34a9d02ce4f6375d805d5fe0fca12a5619a115af600a6e8ef8f696549aabce11',
+  },
+  {
+    types: ['bytes', 'bytes27', 'bool', 'address[3]', 'bytes'],
+    values: [
+      hexToBytes(
+        '0x41228d45ad62e26347109252378c1095c573088d34a8a727f0feea1493e27c0d9dabf4',
+      ),
+      hexToBytes('0x73557fce70968f76388c18d0ca1cfd5fe53033f37c9b5ce4169770'),
+      true,
+      [
+        '0xcf858e12b15e27032ab44a2f91cbe9dd1d767d46',
+        '0x93ad991e2b0879bbb65ac4b70d55286a28aadd5d',
+        '0xfc478bb38fe975d7b23533bbe8ee83237a5f0f48',
+      ],
+      hexToBytes('0x55d729f9341fdc8210d08e146469e389283bc3c9'),
+    ],
+    result:
+      '0x624feff8a5d140a84a09687ad39bc88d9c37f08be8fe456f0cedf705bb5ea61f',
+  },
+  {
+    types: ['bytes', 'string', 'uint16', 'bytes', 'bytes27', 'bool'],
+    values: [
+      hexToBytes(
+        '0x357233d6091c798e1afd0825d8dd29b8360f19c5c727160c0bd9ba2d53bad0c22700d540076ab5a3c9',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore',
+      BigInt('0x5c'),
+      hexToBytes(
+        '0xbd4bf731022364db78c934f561c1fa867c1b9237ed6e8870e90f4eca48cc0f49',
+      ),
+      hexToBytes('0xec5a4cc486c08482f87c3b04c6a355a6639759fd0d54503bd2a31c'),
+      false,
+    ],
+    result:
+      '0xf07857403ddff7c019adfd9b908fcfecf7265e137465633b71244331bb72ddbf',
+  },
+  {
+    types: ['bytes', 'bool', 'bytes14', 'string'],
+    values: [
+      hexToBytes('0x86'),
+      false,
+      hexToBytes('0x36760626e7163e25d9e02791f6cf'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehe',
+    ],
+    result:
+      '0xeee6db20bc0806fc8559449fd32970ae6583b09979d00e217bf96a9325c62f89',
+  },
+  {
+    types: ['address', 'uint40', 'string', 'bytes32[3]'],
+    values: [
+      '0xcb59cc8b38cc398fe99e541a7504e0f357343972',
+      BigInt('0x26b1'),
+      'Lorem ipsum dolor sit ',
+      [
+        hexToBytes(
+          '0x22c04039ea56cec186a8418d4b4fa1abfcb35e69a4601e01c983ac4ee9e9156a',
+        ),
+        hexToBytes(
+          '0x2aa7c82fe510221a772684e333fff6306decf6b1836c53232a36861a610cea95',
+        ),
+        hexToBytes(
+          '0xaa673747d69334d6f7ba470051867124c903eef9d71e486f92bfa70e6bda517a',
+        ),
+      ],
+    ],
+    result:
+      '0xd93cd56f67d00f6d920e21827e998af0159723bd0369bc0665a7a4c350c40565',
+  },
+  {
+    types: ['bytes2'],
+    values: [hexToBytes('0x6a61')],
+    result:
+      '0xae846a22849db1f0024cee31458b3e5fc93e526aa17e5dc41cb40c174f0373c2',
+  },
+  {
+    types: ['int104', 'bytes'],
+    values: [
+      BigInt('0x1d'),
+      hexToBytes('0x1ff6078421903d660e2c57f147e8e9641665cb8f1d9d1f56'),
+    ],
+    result:
+      '0x04c85d3f0c810d7bad6914c7f36e69433c542baa313cc6b3fcb6805af48b91bb',
+  },
+  {
+    types: ['bool', 'address', 'uint240', 'uint72'],
+    values: [
+      false,
+      '0xab82ceb0245cbd5919e4a0e9f05f734ee101dadb',
+      BigInt('0x99d50d35123ec86350edc2a6bb6c7aa0448e1dff'),
+      BigInt('0x7d43'),
+    ],
+    result:
+      '0xa146bb598915416151535b6297dbb0e548d77e222b984ffd615caf632c589eac',
+  },
+  {
+    types: ['string', 'address', 'int144', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volu',
+      '0x8acb58f029f88dabcf0c13bc6f879bf813451061',
+      BigInt('0x7bc6dbf483b1bb5d9870aae626af3c495'),
+      false,
+    ],
+    result:
+      '0x44b4c1d6b0553d70657b85518db469a460bb982c25443e22c5347a396baf080d',
+  },
+  {
+    types: ['uint200', 'string'],
+    values: [
+      BigInt('0x1f53da23c9d07c070437cef1b1b6a38caaa47fe24e58'),
+      'Lorem ipsum dolor sit amet, consectetur adipis',
+    ],
+    result:
+      '0xccde2ce9aa48c4b5ebfd44d6258ef26f5c0609fe15bb7c9e356bcbe67b6d4c8c',
+  },
+  {
+    types: ['uint248', 'bytes3', 'bytes', 'string'],
+    values: [
+      BigInt('0x6e0db3444ee0430f9b2a'),
+      hexToBytes('0x50bc7a'),
+      hexToBytes('0xec35c61f68040abab02ace16166d09bfba435040'),
+      'Lorem ipsum dolor s',
+    ],
+    result:
+      '0xbb1ca642d6243070c20342dfb0c4b683561b811155e5d7991e271fec9d85639d',
+  },
+  {
+    types: ['bool', 'string', 'bool'],
+    values: [false, 'Lorem ipsum dolor s', false],
+    result:
+      '0xed67272a2357fb7cb9bb5c058cc9521a536f42dc1c01f9ceb1d7ca5f0634e721',
+  },
+  {
+    types: ['bool', 'bool', 'uint96', 'bool', 'bool', 'string'],
+    values: [
+      true,
+      true,
+      BigInt('0x590db4692e8254ea'),
+      false,
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est labor',
+    ],
+    result:
+      '0x48f11ae145d9d20aecaad9c62756a18f2757fde748897a75546dbc2df41d8e22',
+  },
+  {
+    types: ['string', 'bytes4'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate',
+      hexToBytes('0x7b843a62'),
+    ],
+    result:
+      '0x1c4a4810278bd157a34b5e0939a12e10495b6a1e97484bc31a3b74e0d585cf1e',
+  },
+  {
+    types: ['uint256', 'address', 'bytes19', 'address', 'address', 'bytes'],
+    values: [
+      BigInt('0xead51814c739c948b3fbf227ad47'),
+      '0x04bf3cbbb1f5f1471b24b67c8f7a5e604abb1cd8',
+      hexToBytes('0x648c4eaf5dde280562f1d084d5319f23bbef97'),
+      '0xb97ac621c739b52703e47e0d69450b644149389e',
+      '0x918eee0f9845c4cf943b2ec17b704708bf4736a0',
+      hexToBytes('0x1ae9dd874a5397d058cf7bb871fc08f8'),
+    ],
+    result:
+      '0x45a6cd7cdc70e514c7e497882d42fb60aa2225f977f908ed7b520d4df3e01827',
+  },
+  {
+    types: ['bool', 'bytes'],
+    values: [
+      true,
+      hexToBytes(
+        '0x0e3ed0244c8a461aa10e6a1febabc4e9bb13db4308fbc544034dfe91da2e45abbb596b499228541a1e27cfc0665f1f3c74dc4afe766a6165956d',
+      ),
+    ],
+    result:
+      '0x7b1d73418c0da93f498c4de7c2ce165f48dc37fa98ecab5f75ec766b0c9bb8c4',
+  },
+  {
+    types: ['string', 'bytes20'],
+    values: [
+      'Lorem ipsum dolor sit amet, conse',
+      hexToBytes('0x1042b3da64226600def10ab1a7f42befdf094a2a'),
+    ],
+    result:
+      '0x85e683f2c89ce7b1f550978e92a172d2c1df6c07f02284c712ec0c8c45c5837f',
+  },
+  {
+    types: ['bytes10', 'address', 'address'],
+    values: [
+      hexToBytes('0x8b6acf783fc66807bd74'),
+      '0x3c0ff013910242798ec5e3605b48d281f3546bae',
+      '0xc583bd0c5e5ea62f423a54a063b4102136c63e2f',
+    ],
+    result:
+      '0x1f56aabddb83373e75a75dc523410edc6a88432877091e2b64c2c4c37489771b',
+  },
+  {
+    types: ['string', 'address', 'uint128', 'bytes30', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore ',
+      '0xb045ef09305126ce2c83987f3306e555e2902fd0',
+      BigInt('0x8cd0210deca8ffc41f4dd05e459cf5'),
+      hexToBytes(
+        '0x76296eadea93b4ddb9f32aecad7c5207f52c0c49a31500f8fa39fd705fb4',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. E',
+    ],
+    result:
+      '0x9668d60ead5ad4958318f6720830bca783c80464c39e2d9162837dbb390e390d',
+  },
+  {
+    types: ['bytes24', 'address'],
+    values: [
+      hexToBytes('0x1294a6ed5e113b9d67eb5624dffff33f26bece09870c9f36'),
+      '0x0c0196503673339fd65341b605b61fbbbde082e6',
+    ],
+    result:
+      '0x629f6b2566c8a537fc12d2b81f752dc98acff6d7f8e1589a1f8775026e4bcbb4',
+  },
+  {
+    types: ['address', 'bool', 'address'],
+    values: [
+      '0xa2289a32929fce0fc66f31219436630d72824e21',
+      true,
+      '0x0c674203a57e357e6108eb008743af93cf90c412',
+    ],
+    result:
+      '0x597c2f58cb67bb48a45d0211c0c537b008e419570ef5e706faa527ab6e814b98',
+  },
+  {
+    types: ['bytes14', 'bytes19'],
+    values: [
+      hexToBytes('0xc4c0200120eb34097a1478e70d88'),
+      hexToBytes('0x8421e24dee8484e57fb7ee1b64b3f9ca39b18a'),
+    ],
+    result:
+      '0x9b4bd2fc2d9186575aa76aac65d43b82ee98579c3b3e4a755fefd0978d1cd216',
+  },
+  {
+    types: ['address', 'string'],
+    values: [
+      '0x208cbdef1bc1cf15e437b748544056654cfec248',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla',
+    ],
+    result:
+      '0xf8d65e078f50f1c08556758b96df3c03f14603841ed8a634b9d13b868c41966f',
+  },
+  {
+    types: ['bytes30', 'bytes', 'address'],
+    values: [
+      hexToBytes(
+        '0xbfc9e0d586a03647d2a65dd3f5d1e6428c709c13bb2f1b9a48bac88b3088',
+      ),
+      hexToBytes('0x39dd9fb56c9db4261347'),
+      '0x6d65b0f3f0883307aa07d095b83191ff0f166d12',
+    ],
+    result:
+      '0xad0e66533bebe8230f1739766e9e72b64ebdc1abd2010d28f7a06fa0c047f153',
+  },
+  {
+    types: ['bytes', 'address', 'uint40', 'address', 'bytes23'],
+    values: [
+      hexToBytes(
+        '0xe942447e6a9fb03eda74eeee278c652739a79b7a8c7aa588c92939e3bfba6652add2f04ea046c5a83178a065633a408bfd29dce04b3e',
+      ),
+      '0xe5c8965bd0b8b0a237355448ec8f0d91a91b8825',
+      BigInt('0x8176'),
+      '0x093d16eed5f6f486cd45841e4639ecd70da196cc',
+      hexToBytes('0x01513b28d47ed2f4338d452b03c792a240285185d20bbb'),
+    ],
+    result:
+      '0xdc92eeed083e60a54ed9caae776cd2dd394ccdabdcf2a2de0abd4bf944ffe691',
+  },
+  {
+    types: ['address', 'uint144', 'bytes', 'bytes', 'bytes', 'int256[3]'],
+    values: [
+      '0x921eca1f48238d8e74aa8b1ddf6575fd3e7cd67c',
+      BigInt('0xecbe83ddc537e80'),
+      hexToBytes(
+        '0xed958272da4dd752bce2a9bedb5b4e35e7f1c51e8623b5d983eab2c33363447a6c24ce91f44b978276994a9b341918748bde6ed0e7dafd',
+      ),
+      hexToBytes('0xb17292355bd2a0095bbfb430799b3a38370b20b8561f2ad42022a7'),
+      hexToBytes('0x0e567c3a'),
+      [
+        BigInt('0x7035b9253aef1d56120becb0c5ab3f5dc0a6'),
+        BigInt('0xb96842c9d4bedd'),
+        BigInt('0xc866599c6f'),
+      ],
+    ],
+    result:
+      '0xc70684b6edc935bdbaf1cbfa260f428cff2e9f6308f8c1ce7e7bd95741bd4fcd',
+  },
+  {
+    types: ['address'],
+    values: ['0x0f10624f4b38d04d459ee66be633a95e358cde2c'],
+    result:
+      '0xc309fee0594b1e397df7bf136cf2c837066be145b32450f77a9ee069e68aa710',
+  },
+  {
+    types: ['bool', 'address', 'bool[]', 'uint32', 'uint200'],
+    values: [
+      true,
+      '0x67d9adf5217d14b18a2df0ac15bd62916b5c8688',
+      [true],
+      BigInt('0x9318'),
+      BigInt('0x9d7e55aa7'),
+    ],
+    result:
+      '0x64eacef4effbcd0fd5c452a3ddd2cb7240d20a41a2302726170cc925df1f7e96',
+  },
+  {
+    types: ['bytes6', 'bytes', 'string', 'string'],
+    values: [
+      hexToBytes('0x4cd7a70c34a5'),
+      hexToBytes(
+        '0x9af6e3d119bbda6a4f4d107f810df0b5c152be9e011aeb22a1283cd9d5',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Except',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco la',
+    ],
+    result:
+      '0x42ebe39e72821c9b03a134e66af8d52e0b006614de22c3b63d8ad6014f1edda0',
+  },
+  {
+    types: ['bytes', 'string', 'int120'],
+    values: [
+      hexToBytes(
+        '0x788b3e77d5233161119421b49ab9ae07e0201348a665e20a08c9a829cb4ff29b07554d91169bd061bb072fe7aa4c22',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ',
+      BigInt('0xba22a56c'),
+    ],
+    result:
+      '0x4d1a0341937cd7af107946180c6249951f9ce65b19e718f2c54f54ea71e45177',
+  },
+  {
+    types: ['bytes', 'address'],
+    values: [
+      hexToBytes('0x7258bd7d4247239b2c62afbdea86e7'),
+      '0x938ce6216cd00645cc7651a8b05b88c5d30a9283',
+    ],
+    result:
+      '0xcb688483a05e8b9d6f7756a5bcb648d4b987aa26d52c21bc3d44f6b6114a5747',
+  },
+  {
+    types: ['bool', 'string', 'string', 'int248', 'address', 'bytes2'],
+    values: [
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed',
+      BigInt('0x2d20c92fb0c7944afd94f'),
+      '0x5268e6839a111bdc5166f8189516fbb22e82d36f',
+      hexToBytes('0x96cd'),
+    ],
+    result:
+      '0x6f00fee1e2de66931965a2f312477336152c8e0cc045ee6379d279fec03d48df',
+  },
+  {
+    types: ['string', 'address', 'address', 'uint104[3]', 'bytes18'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
+      '0x4d126d81daa1009a647d015b76e4786d609932ec',
+      '0xb7f59b5568abaf42eddaca17185cb56ec82018d4',
+      [
+        BigInt('0xdd829b60124094e0c7'),
+        BigInt('0x45054697c2277778ae1419'),
+        BigInt('0x26004284a8eb50c4c9'),
+      ],
+      hexToBytes('0x9e6f660fb0604885891eff6eee0fcde05e31'),
+    ],
+    result:
+      '0xf9f93599a8dd2237da44e00e3d1f24a1fd38df9839b929c84836e953729fe27f',
+  },
+  {
+    types: ['int16', 'address[2]', 'string'],
+    values: [
+      BigInt('0x28'),
+      [
+        '0xcbe0d79b7ca8cc5dbc2a85b17eff4a041f994850',
+        '0xb64c34527c52621b37b2c86db9c84964a0acb27a',
+      ],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum d',
+    ],
+    result:
+      '0xe5b18606bff03ed04fb608d124c596b541f24eee996701e14f365211606e40ed',
+  },
+  {
+    types: ['uint8', 'int48', 'address'],
+    values: [
+      BigInt('0xe9'),
+      BigInt('0xea19'),
+      '0xfac0f7b7e25256b1e27bea91c5f06863d336fb6e',
+    ],
+    result:
+      '0x009b9a7d5bd9c78a8b0320cfb89ce8ae65dd583fb44ca9484549f91719741636',
+  },
+  {
+    types: ['bool', 'address', 'uint128', 'bytes24', 'address'],
+    values: [
+      false,
+      '0x853641a9b449729b18dfb836e83e49af8dcb2186',
+      BigInt('0x6e4043fac1'),
+      hexToBytes('0x820b6e7e62a11bbf479812b3b1b335c4ef5c4c60839c7751'),
+      '0xbfec3286f530119b3bb4ad45640a65db051ada75',
+    ],
+    result:
+      '0xf418b2718485b37e1398df67683b9773958dd37ab7eaabbada2075d0263ed38c',
+  },
+  {
+    types: ['address[1]', 'string', 'string', 'address[]'],
+    values: [
+      ['0xe9f1237c155caae2ac283ba630836106d60a008d'],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu',
+      [
+        '0x66b942f543d7fbb1f7b2c3a9b46a644e41cffd02',
+        '0x18ee4307ba3493d730e582a327da7765d1911b5d',
+      ],
+    ],
+    result:
+      '0xde2ce35202af9123afa65a76d03aec874eba7df01103507e2658406e18981fe0',
+  },
+  {
+    types: ['bool', 'string', 'bytes', 'int200[2]'],
+    values: [
+      false,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et',
+      hexToBytes(
+        '0xecff5a03e5bd331e8f3b15f635b45c7b55843d78c432706e185d8ee1d1afb41d678bed691557bc915350a54f99b8ce2861d63c8aedd9a9fceba59b9813120b',
+      ),
+      [
+        BigInt('0x40b2991230bb8122d3d4'),
+        BigInt('0x99acef74a4ade923f800adfd4b32'),
+      ],
+    ],
+    result:
+      '0xb0f7290af8fb05d224a4ecf9f9247428fe45800413e6432dc094645c663f69ba',
+  },
+  {
+    types: ['bytes29', 'uint24', 'bytes17', 'bool', 'int136', 'bytes27'],
+    values: [
+      hexToBytes(
+        '0x4c093ad187f9f922c33f451b1cb064d9e45ed0c516775cc7cbde891a66',
+      ),
+      BigInt('0x90e7'),
+      hexToBytes('0xfb350195e7522225f340e063b738e8a7ed'),
+      true,
+      BigInt('0x3a5fade6695228271d3e'),
+      hexToBytes('0x305da0898b81842392e4ce48ad15343d97f38250f75c2a78ee9128'),
+    ],
+    result:
+      '0xde385c1b81865262d3abec7e50f28c89f735174b6fce2f41b21f3d4aec2fab03',
+  },
+  {
+    types: ['int184', 'bool', 'int232'],
+    values: [
+      BigInt('0xb4b58dbad4c10cb251668a29bc1d95'),
+      false,
+      BigInt('0x4412adcf79b1457ee808b6c698bbbcf4'),
+    ],
+    result:
+      '0x48a67d74133a3c59eedb17339b3e54085542f709722a88b79dda161a5c6b7dc4',
+  },
+  {
+    types: ['string', 'bytes', 'bytes8', 'bytes', 'address', 'bytes'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea c',
+      hexToBytes('0xe6ffa84978ce3426b6a039501377141736'),
+      hexToBytes('0x4f638cbe303abed9'),
+      hexToBytes('0x38a498f9112eec8865b7a649'),
+      '0x89188da7cf8c36ab84da1a0b5a2cc9eed833fa9c',
+      hexToBytes(
+        '0x0535f5aff2c137bdd2e58dc28deefdfd1aae746c7859eef2965c073994d1f601ec608cf4cab890ec6738382e4eea49a6d7709f7ebebbf84ff4e895a50e40923c32a3',
+      ),
+    ],
+    result:
+      '0xc9d879f84de9a6e9df3ad4881091849ad9b4ce65112a616fbb75bd0e903efa12',
+  },
+  {
+    types: ['string', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cu',
+      'Lorem ipsum dolor sit amet, consectet',
+    ],
+    result:
+      '0xe3f46d3807e923fcad3f393ebd998356d9b7eb76f62841a1a1eb69ae64d5a514',
+  },
+  {
+    types: ['bytes13', 'address'],
+    values: [
+      hexToBytes('0xa43bc7f50110bb08129ebf7a8d'),
+      '0xc87ab9c122b245394d677f52da29ce533c04f30f',
+    ],
+    result:
+      '0x4bd52b9ff9b427766d767c3ef9efad330e63cf2bc257bf9104035a4f6c43bfda',
+  },
+  {
+    types: ['string', 'int', 'uint232', 'string', 'string', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labo',
+      BigInt('0x826b4aa3c503'),
+      BigInt('0xc3f65cd2d57c5d98dcf6993e60'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum d',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+      true,
+    ],
+    result:
+      '0x401c3b0e3a5b2278e0511585c4654086b7c80dda6d9f5c51718e87a2de5ad461',
+  },
+  {
+    types: ['bytes', 'bytes'],
+    values: [
+      hexToBytes('0xbd2f1ff802e4659ea5e4ad2d399be20dc66f50f735a0194155b551'),
+      hexToBytes(
+        '0x5b7f3132f6a49ba7298c69cfe80fdaff1c9cc3627ae5e0a7baa570645e81e1d53a4ea0e71c083488b1',
+      ),
+    ],
+    result:
+      '0x1baa856cc8c5491ae02170b1ab6010f78c1158d588d3e52489ce11f831d8d6c3',
+  },
+  {
+    types: ['bytes', 'address'],
+    values: [
+      hexToBytes(
+        '0x5b648b958347cb59cb07274ec0daf4d390064e68e6bb0f4b0e940bfb68754e1654c69939bea0a0af8767d36444215395cb9b55bb23261f1dbb',
+      ),
+      '0xf131c64fb2040cf068500f0cafbf66bf9cf2d45f',
+    ],
+    result:
+      '0x0e8dd32bf46e262c9af48adfa92f60bb357519107d00e1d95721297cf2c2d5fe',
+  },
+  {
+    types: ['bytes6'],
+    values: [hexToBytes('0x9487a65d568d')],
+    result:
+      '0x1e3d4a945e3dae2c387a558bf91a28dcf842101374f96c280c1207e7da1512a9',
+  },
+  {
+    types: ['bool', 'uint16', 'string', 'address[]'],
+    values: [
+      true,
+      BigInt('0xa'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
+      ['0xa99504e1379f352073f09214ee6580cb0730ea7f'],
+    ],
+    result:
+      '0x33dad2e978b3758154d3ccad17790b1961aa6a6f5ac1f07837a33213cec4e222',
+  },
+  {
+    types: ['int', 'bytes20', 'int192', 'bytes11[]'],
+    values: [
+      BigInt('0xe152b5368a845b91bca3679b00f3fc'),
+      hexToBytes('0x73ef095ab1e004a7d5c5f4ea6b28a2ef12ac2dd2'),
+      BigInt('0x3bec26389034e3cca5b30888a341c1e67181'),
+      [
+        hexToBytes('0x33a2fabb0bb702638b7f14'),
+        hexToBytes('0x3f4e89c54c6a94223687e4'),
+        hexToBytes('0x4ebfe36a60efabb644ea12'),
+      ],
+    ],
+    result:
+      '0x671ec08c4966a751658e8f2cae9b817a1a38666bfe0c86f3ce81026fee14dfcd',
+  },
+  {
+    types: ['bytes', 'uint80', 'string', 'uint168', 'bytes', 'uint112'],
+    values: [
+      hexToBytes('0xa255799f53c22aee7e3b560b4c30546d'),
+      BigInt('0x6aa09d1cf4fa39'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit an',
+      BigInt('0x9de0747ef52607cad15fbd60374c596e8acd146b'),
+      hexToBytes(
+        '0xaf4cf3cc38a90b0cb41d2d5adaf9238af225aafb3f786f6803e4fc2808d59553bc22bde1c59ef8425c4cf4dcbe1091fdc3d58ad4a5be',
+      ),
+      BigInt('0x3428a3'),
+    ],
+    result:
+      '0x53ac030c69a2e60a561aa811bffd62e2da431a5b9a4d93c5f880ba0a117ce7bf',
+  },
+  {
+    types: ['bool[3]', 'bytes'],
+    values: [
+      [true, false, true],
+      hexToBytes(
+        '0xb1e02e3988714f8a3002e9a15f781ba84d6fc6df9419a8b07ceca659af',
+      ),
+    ],
+    result:
+      '0x74c6700b370f9cf51e78e6acde5ce546b647c819df1c5428e0ef8ae1e9af808a',
+  },
+  {
+    types: ['int40[]', 'address', 'string'],
+    values: [
+      [BigInt('0x2f12'), BigInt('0x26'), BigInt('0xc30ee89f')],
+      '0xad36c8d840bc32bcde3d89244d9bb4d84391b1e0',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ',
+    ],
+    result:
+      '0x44a633f2d85d5c25d2342f1dc53c7785a93f8f8e99e1d962b04ad45554ec733c',
+  },
+  {
+    types: ['bytes', 'bytes3', 'bool[]', 'address[]', 'bytes15'],
+    values: [
+      hexToBytes(
+        '0xe6c772d31f239ab9b86419f44727eb341cae108a09b3c19e7c1c8b4412192fdbed85c41c9b85c7f110607c1c39e49a52333907d203baf6b8fa021a469af04506d2',
+      ),
+      hexToBytes('0x3ae166'),
+      [false],
+      [
+        '0xb3f75a0f2ab4807b8d1d9d282a32b694efd04bb4',
+        '0x1d5d425f1faf84d4667137b6b8d523e4b8161f4c',
+      ],
+      hexToBytes('0xd5ef2bf14c08ad2423e7fe9aee8a7e'),
+    ],
+    result:
+      '0xcbb2e2c0acb660226dc693881f9b2b70686a2fa163b92abb7d1eaccae6bce0ec',
+  },
+  {
+    types: ['address', 'address', 'address', 'bytes', 'uint96', 'int232'],
+    values: [
+      '0x479e31d1802a76e38771d64599b7c521ab9ccbab',
+      '0x36c0e6038e473e701be4b9ca38e51fc278da3e94',
+      '0xfd473cc47582cb167e642a52b57d0ec3c371546e',
+      hexToBytes(
+        '0x4c7f219327594dff9d2762378db858808768a6a0b4cca8ade270efbb8d2f431d1443d72faea919e59c8ba38680dd452b84e044a4aef4',
+      ),
+      BigInt('0xf3e2efb6cb'),
+      BigInt('0xe1656a7013d7ef64c873'),
+    ],
+    result:
+      '0xd9150b5e30bb14959e5b1f0cae2ee8e96ca823abb73e4d2f98472201dbc1d007',
+  },
+  {
+    types: ['string', 'bytes', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint oc',
+      hexToBytes('0x5f06159cd2a59cd471d536a42d3d62b2e5ff0f8f'),
+      '0xb18870b1a675955cb8c13d0f0c79799fee9c0eae',
+    ],
+    result:
+      '0x9801afec2312dcf1ca9a2816d0598214f8006b72435095613e702159e0202ea7',
+  },
+  {
+    types: ['address', 'bytes22', 'uint160', 'bool', 'bytes'],
+    values: [
+      '0x6eb455ecef295298dc97f9f5e83520af1f0534d8',
+      hexToBytes('0x21853207633f9d203b189cdfe343ebefab12142cc2f5'),
+      BigInt('0x1139718c41150cf51bc5a9'),
+      false,
+      hexToBytes('0x3db707a84ed49a6c5428772ef97c212f8f84406c50b99ce774a6de'),
+    ],
+    result:
+      '0x5060764fd0ac77bb68db277f35696c0a09cc9d8db798d6a0c933e7fc220b5672',
+  },
+  {
+    types: ['string', 'bool[]'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia de',
+      [true],
+    ],
+    result:
+      '0x8144503c61e0b9eb585fe2b086fea01cd1c23c452d6069d12f7c3aba5222ead8',
+  },
+  {
+    types: ['string', 'bytes', 'bytes22', 'bytes'],
+    values: [
+      'Lorem ipsum dolor sit amet',
+      hexToBytes(
+        '0x750b6e1d4974f3c01ff84ae866ce2ff0a5ac4b2482f7e21e02fd9bd846d2f0dc7efe45868257d13ba9db9c780de60bb18c916f65ac9eb67ebffdd7662d29ed',
+      ),
+      hexToBytes('0x70c1d2235eca391dc1cffd58da5b8e5231477d2f87c4'),
+      hexToBytes('0x77fca550c99a8f0ad7f22d'),
+    ],
+    result:
+      '0x084cd1af2c7c06a7d0ca84b0801b63751bd2d0428003889ea0b6ae146a22f456',
+  },
+  {
+    types: ['int136[]', 'bytes', 'bytes', 'bytes'],
+    values: [
+      [BigInt('0xccd7284874c44c33b78b2cacc726')],
+      hexToBytes(
+        '0x86eebc069c92b8ba906282630413747a5811055c5f404b854518da2192d6169c333fbe08f722d3d5ab0bac35050c8460eb8a8f35ee6d5846e113cd',
+      ),
+      hexToBytes(
+        '0xc2ce5aec18de8326ec59751bad1dda838004c01ed532f7f370db9997fe046e4bf6a7feca1625126a9bbffe81',
+      ),
+      hexToBytes(
+        '0x053ba91c7bc17fda68e4f58cda6b5adb081f02774d4548b736a943a83b8ddf62fb077a040b0109ada42c65caf71175725142430516e276cc3e99',
+      ),
+    ],
+    result:
+      '0xf6beaea34b1f13927a7c7d81965bc17ab7b3cbcf38f89dc789e7a782a8b1828b',
+  },
+  {
+    types: ['int240', 'bool', 'int136', 'bytes6', 'address', 'string'],
+    values: [
+      BigInt('0xe86572'),
+      false,
+      BigInt('0xa04c7280'),
+      hexToBytes('0xa7c496d14b58'),
+      '0xb953d2099aa2a5c40597b4e604da8d7685f9bd54',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupid',
+    ],
+    result:
+      '0x0efe6a0f4a710333e9085a464c3faaa72a7a4ca6cd10758283a0dd46a67ae7a8',
+  },
+  {
+    types: ['uint16', 'string', 'bool[3]', 'int48'],
+    values: [
+      BigInt('0xf1'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qui',
+      [true, false, false],
+      BigInt('0xfe30'),
+    ],
+    result:
+      '0xba4afb28b232ff675692dc8066e6ae3f8d443631989d5dedd9625af20b0f73e3',
+  },
+  {
+    types: ['int104', 'int96', 'int56'],
+    values: [BigInt('0x713009e3ab93dc4c48a0'), BigInt('0x94'), BigInt('0x53')],
+    result:
+      '0x907c494afc2339f8e762a87fae69328f6ef2d9c911e975793c0ef8ca3fe198aa',
+  },
+  {
+    types: ['bytes15', 'bool', 'bool'],
+    values: [hexToBytes('0xc9795a9ead8d40a78a09d4d29517eb'), false, true],
+    result:
+      '0x6b0cc2d3e9b9f932434e33d01ba53de2aa9dfb0b8102cc1056245fb93016c55f',
+  },
+  {
+    types: ['bool[]', 'bool', 'address'],
+    values: [
+      [false, true, true],
+      false,
+      '0x25b5638b9a1de02571245213a5316c6aea7f5c90',
+    ],
+    result:
+      '0xf934decfb6dd86e21d36c928621e4e86c07ef1b3097a3c4b8aa21e242e38c51a',
+  },
+  {
+    types: ['bytes', 'address'],
+    values: [
+      hexToBytes(
+        '0x1dce024c1fdba4439954126438fd31883cf0073d9baf8cbce8cb6c26227e05fa4b9aa2a460826e66b7211f9a9bac190103c563a2e08b36e60a76',
+      ),
+      '0x3fc4e77386221619462aed6c0bc0dabf380e5cc3',
+    ],
+    result:
+      '0xe08a0199907faba83b15cc9be561b5e19e939881db07c99398e6bd0534b0a066',
+  },
+  {
+    types: ['string', 'bytes23', 'address', 'bytes', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ',
+      hexToBytes('0x61404863fb6bedb757008a9f807171f0593926f4e46eb8'),
+      '0xb5bb1bb857fa3884a13c52a3d7e4e52bdebbee37',
+      hexToBytes(
+        '0xa1171bdce50248c64a4bd0659157ee056f6e8310b0a788fc2c01a4296112a380ad6e340ee62a9a933cb28e8e1fdb3a204b22323055e75341',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend',
+    ],
+    result:
+      '0x8b277e70f5ecc34e39b369d1f9423154c291532ce83ae661f687d84e5312ba7b',
+  },
+  {
+    types: ['bytes30', 'string', 'bytes30', 'string'],
+    values: [
+      hexToBytes(
+        '0xc8e9929d293afeec4ec3b8e198cc364bdf9d4a26d0b535d82332543017cd',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor',
+      hexToBytes(
+        '0x8081154caf1fcd5698c83ae24d512e4f36a968a314a1060172b19d3c1b49',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fu',
+    ],
+    result:
+      '0x8adfa58eda70824947da29639c773aae42b7338d8a8471a9173591fd603cf151',
+  },
+  {
+    types: ['address', 'uint144[2]', 'bytes16', 'string', 'uint96'],
+    values: [
+      '0xe7a74c51c816f0967da39b79e72c15c2f1c16215',
+      [BigInt('0x7cf3fa65ef'), BigInt('0xc24f53bb60476c55a35bd4')],
+      hexToBytes('0xbed0b4e915ae7d48ddf12111d7764b12'),
+      'Lorem ipsum dolor sit amet, c',
+      BigInt('0xf385e924be20'),
+    ],
+    result:
+      '0x7466a6b4c305838b7084f849f1d52aed7b8294b32ee87578461a8c3a9722c4d4',
+  },
+  {
+    types: ['int80', 'bytes', 'uint248'],
+    values: [
+      BigInt('0x977933'),
+      hexToBytes('0x2a422d6fc001a467'),
+      BigInt('0xcb52d2bd673fe0fdc33f8e45d07aaaf2110b'),
+    ],
+    result:
+      '0x1f819c184d71980b04fa08e44c5bdb85e36852e52c5f2d3389c96fbd04dd3227',
+  },
+  {
+    types: ['string', 'bytes21[3]', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit an',
+      [
+        hexToBytes('0xe373af9e0cf8fe0249e0c531b14619fd7f6fce039c'),
+        hexToBytes('0x3a9c208d17e0ebe5cebb769eb1bb0ac568473f7273'),
+        hexToBytes('0xe2d0fc4ccd4a94d31ad4b5217ebd8a3a36db36336d'),
+      ],
+      '0x86b5919966e27a209e643f2919649ee5c10a1021',
+    ],
+    result:
+      '0x831cdfbe0298583b60234254e5c40ee1cadc504ebea4fb3c8e6bc833c6fa917c',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['bool', 'uint216', 'string', 'bytes21', 'bool', 'string'],
+    values: [
+      false,
+      BigInt('0x162f3623e1b921bc150ff8a38e1161f8ad'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui',
+      hexToBytes('0xf8bf8e56d33397a16bc66db49aa915787010c12209'),
+      false,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est labor',
+    ],
+    result:
+      '0xbb9664cf5db6c4066556ed9d42f5863ef500478768b85f213ce32386862a02fb',
+  },
+  {
+    types: ['address', 'string', 'string', 'string', 'bool[1]', 'bytes'],
+    values: [
+      '0x8db14d2db359f48306d308606945ab0ee3ae3518',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, ',
+      [true],
+      hexToBytes('0xe277591b046759052106ff2f7c6bb091'),
+    ],
+    result:
+      '0x3eae95982a9e19a7635714501e778f924ecded934df37282ac5c6aed7f9933eb',
+  },
+  {
+    types: ['bytes', 'int216', 'string', 'bool', 'int184', 'bool'],
+    values: [
+      hexToBytes(
+        '0xa3ea92418de5592f2040a794892379252008b4dba758e054e19c144cc09811ff596424aa1419ba11ef929ea9359f0df00b42345b100ae4f3eaad4c0936131c6d',
+      ),
+      BigInt('0x9144c3ae3176b2c2402391ac689b96a00b093d9221'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ',
+      false,
+      BigInt('0x5a3440029650b5652773dc0271'),
+      false,
+    ],
+    result:
+      '0x40c22ff543e5e3ee651109bf1b227c5accd19fa9f0188783a0f4016817c4ce84',
+  },
+  {
+    types: ['bool', 'string'],
+    values: [
+      false,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi u',
+    ],
+    result:
+      '0x1886e1e49d590cd4f30c1f1031fea64f0818b0a5e1768d4ab5528ecc64e40dbd',
+  },
+  {
+    types: ['int112', 'string', 'string'],
+    values: [
+      BigInt('0x6bbde13193e3eb1696'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat ',
+      'Lorem ipsum dolor sit amet, consectetur ad',
+    ],
+    result:
+      '0x4f2020061e01808d550e9fed9ac27839f0822e2eb32551dbc099b766a38805e2',
+  },
+  {
+    types: ['int184', 'address', 'int128', 'bytes16'],
+    values: [
+      BigInt('0x8cea4c66f8ac165f69289764e72650a58f96f81c'),
+      '0x4673b7f8bc10a25cb880f53933c75d555ea6dfff',
+      BigInt('0xa4960a0d2914f0c30c93'),
+      hexToBytes('0xf395a1dbf5745ba1fd2ff284bd2b3d6f'),
+    ],
+    result:
+      '0x5e95964501776c572c0643fc6a5345738410821835fab82dc341c151d8780f99',
+  },
+  {
+    types: ['bool[1]', 'string'],
+    values: [
+      [false],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co',
+    ],
+    result:
+      '0x9cd5ac2a55c049c207b275c964f7730036a64e9983782921b694d784f1ed8973',
+  },
+  {
+    types: ['bytes26', 'address'],
+    values: [
+      hexToBytes('0xa9e3ce38ab49650f5ebc0ed0d742c2e91f29a0c416eec97954e8'),
+      '0xc65104512d74534916be40da1436ca8b2e1a2440',
+    ],
+    result:
+      '0xf8cd140446fed55a55e4fbe5884f01aaad2eaf6c7ddce8f3e7babc13c9d656ad',
+  },
+  {
+    types: ['bytes30'],
+    values: [
+      hexToBytes(
+        '0xa6477c459551bf4c2ef206ee1d74421b33fcbf994c6f0a6685f5f5342138',
+      ),
+    ],
+    result:
+      '0x708c5f027fcf9c2559e8d007f8b0e9377b6c3900101eb996b73bd366ca438a18',
+  },
+  {
+    types: ['address', 'bool[]'],
+    values: [
+      '0x7c6f553a6bb8663f60cb8d3a182c778c01d0c432',
+      [true, false, false],
+    ],
+    result:
+      '0x151d6c8732f6741b0430d442cf9c9a839da78f718a47bfc9c80ddceb10236365',
+  },
+  {
+    types: ['bytes19'],
+    values: [hexToBytes('0x6685ffb0a3bc7d2e3745e7368de7c7d386a0cc')],
+    result:
+      '0x40111ff2bb92e19db4b325d358a86013a0780cc8ddbb8f784ad7cb149282f842',
+  },
+  {
+    types: ['bytes28'],
+    values: [
+      hexToBytes('0xb5f047b3c8744923ffa172a5035b0b75bc7bb86c2f3ef3c5a69b0d61'),
+    ],
+    result:
+      '0xd4b2a1e85de7b488eef929609683789706c112df355c597ab3c20cdf764c76dc',
+  },
+  {
+    types: ['bytes', 'bytes4', 'bool'],
+    values: [
+      hexToBytes(
+        '0xa708998ba772b06c7c1d485d1c6ee5a4210d0c9d44afc54bf54187038d0ea866489f58cfebca02e17a30a46092126bcc7731f0295adfca20643acfa4db57',
+      ),
+      hexToBytes('0x56b1dcf2'),
+      true,
+    ],
+    result:
+      '0x891df6c7724e9ef4c3d46822063e404d8adb2c6b9c7640d49503d9680b118dfd',
+  },
+  {
+    types: ['int112[]', 'address', 'bool'],
+    values: [
+      [BigInt('0x2cdd45a350787ce704a487cd88')],
+      '0x0fd09d8ca967b849b3aeb241010524d11b8aa90a',
+      true,
+    ],
+    result:
+      '0x50932472931bc89eab44a9e67c02dc83b638004a482d9e6a796329414f918a30',
+  },
+  {
+    types: ['bytes', 'bytes24', 'address', 'bool', 'int184', 'uint104'],
+    values: [
+      hexToBytes(
+        '0x6b014ceb12d0145a346fe90c6834857728dae21e085acd0f5050721f84b2569b3e89a5c00d3237c8070fbf239337c0277d9b4d3b294308daa3e1aead8d',
+      ),
+      hexToBytes('0xb993e55a820e4932f1fdcce44677fe64364c171f29d0b4fa'),
+      '0x72a5b6cc0e995bf49e0369f699204904fbe91b11',
+      false,
+      BigInt('0x166ef42db5eb12528d3a2ecfef1b9353'),
+      BigInt('0xecfb9f3d'),
+    ],
+    result:
+      '0x25a3743a141a951aff448da17052ea73bb4bb36b8ff611655fcfcfad89126525',
+  },
+  {
+    types: ['string', 'string', 'uint144', 'bytes7', 'bytes10'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed',
+      BigInt('0x112c9d3bac42b10980'),
+      hexToBytes('0xaf197f016ed463'),
+      hexToBytes('0x255597ddbbf8064c00e8'),
+    ],
+    result:
+      '0xdfd7e3fddeaebe58f9b438e9dff24d129da3ffd198f95de870635b64735b4a58',
+  },
+  {
+    types: ['bytes', 'bytes24', 'address', 'string'],
+    values: [
+      hexToBytes(
+        '0xf8f698904ac8b0bf0d4af8d9a3504ea5b006abc9f78c128faa0c5b90cc2d871bead62a62d83df7c528dae05fd13391126347d4eafcc5',
+      ),
+      hexToBytes('0x4c6e609cc9bef9e4771c4f617dd4a26e50f7b583dea559e0'),
+      '0x115a592cb5550208f4d8f8c23702350a424711c0',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco lab',
+    ],
+    result:
+      '0x249a8cb1dc19f3a4290979c78193060acfcfd3aeb2a076dc235195f02a62594b',
+  },
+  {
+    types: ['bytes', 'bytes'],
+    values: [
+      hexToBytes('0xab196eafe73c0775dc32e761fa97c94468850340f4b71b7f153ecd42'),
+      hexToBytes(
+        '0x5dc85247e511137fc078a41212a6ce77970478bcd615db86877cecdf5dd4cb42e5b4b14488baf514f130380874ef4a768ea1f914ef4e',
+      ),
+    ],
+    result:
+      '0xff440c140e7df2d038edf31061cf2ab16949bf9a54fe5d3e8e9bbbba438491cb',
+  },
+  {
+    types: ['bytes21', 'bytes', 'int224'],
+    values: [
+      hexToBytes('0xf9bd75fe7f1f0def9f08d6ac7ba2808811e8cae3b6'),
+      hexToBytes(
+        '0x058d53d05e5d0c194c85a471fc7dba95f9e1b22392a166b14cf698bcfb11e03d5d',
+      ),
+      BigInt('0xb07087ce16e5d740bb93fa'),
+    ],
+    result:
+      '0x5a543115ebfec200486e61697be97175989d4256a140bcbf8066df45f2c4db99',
+  },
+  {
+    types: ['bytes28', 'int224', 'bytes', 'uint248', 'bool', 'bool'],
+    values: [
+      hexToBytes('0x39505e0543aeed93b9cfa6b39136867a528564aa9df3549214cf9282'),
+      BigInt('0xcf9b75fd37a614da186622d13d4eeab743c'),
+      hexToBytes(
+        '0x7c0dc5e579e2e199e5412f8988453c67474a25e37a38e1d72ceced4a5f89b65b82605800969c4364f60e9a9da380e539a508',
+      ),
+      BigInt('0x34dbe31559cf06ca305af473ba672ea470f0f248'),
+      true,
+      true,
+    ],
+    result:
+      '0x096e96fd4913767cf1eac6bd7da25245298847203041e2df6f09fa5c30a045e0',
+  },
+  {
+    types: ['string', 'bytes', 'bytes', 'string', 'bytes28'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in ',
+      hexToBytes(
+        '0x4b3a5c1e9548a59ba874b055a274a22d009a56484c36ea6e3b68a7c0b37a745c7f6615290f01d6e1517e689238a0e65ab41ecd',
+      ),
+      hexToBytes(
+        '0xcd0d4e13650f9755cbe28d519efbb08341121c97b9fc46ade0c7ca7c3ee874f90f5341b03010bf0eeab96e950c1cd36f10333e',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt m',
+      hexToBytes('0xb6ce8640a628e04208255a7c00480a8f129f3acebc8ea073a8625d42'),
+    ],
+    result:
+      '0xf901c456b832eb9a546adc156c244d8a6133e38131e1cffd4567cd305f70eaf5',
+  },
+  {
+    types: ['int72', 'string'],
+    values: [
+      BigInt('0x904ae73cfb2'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui off',
+    ],
+    result:
+      '0x4f278ab2c8f1c09501fda7adaf23ee5c835bc18d7790992b5f4d79bc002ca623',
+  },
+  {
+    types: ['address', 'string', 'bool', 'bytes18'],
+    values: [
+      '0x144d566e260187c87e55e5695e5f6ac97c52031a',
+      'Lorem ipsum dolor sit amet',
+      false,
+      hexToBytes('0x90bfc4ed96c084c7d2e274ad37411c0b15ad'),
+    ],
+    result:
+      '0x3d31140bdb342935d0dcecf0a1cfb91cd5c0d41c65e2ca4f45d66b267001afca',
+  },
+  {
+    types: ['address'],
+    values: ['0xeb4d39d2bfb3440d69f69fca7a31c984ef4eee28'],
+    result:
+      '0x723a0552668ff0e9cc219f6a4eb4b90ddaf89ec8957090164d93d2175fcba8bd',
+  },
+  {
+    types: ['string', 'bytes', 'bytes10', 'int136', 'bool', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proi',
+      hexToBytes(
+        '0xc8fbb817553d8ee1baa68f7bf27a9bfce11b45c88413029ff28dc34056',
+      ),
+      hexToBytes('0x596484bbafd4f99a0378'),
+      BigInt('0xa3adafb028300c12e1334c98'),
+      false,
+      '0x3a6debf013a565a473f4530605b290b9e5e9fc20',
+    ],
+    result:
+      '0x5e42b255ca4e8b5028c84783324de41610cdcb40b62a0861c6c6a9f9dba7ec52',
+  },
+  {
+    types: ['bool', 'bool', 'address', 'address', 'address'],
+    values: [
+      true,
+      true,
+      '0xd393e2f926b19f67c41280cff319d482c1c97254',
+      '0x1a3c979e1393fed9c17a9802cf9260eb358c2cc5',
+      '0x90257739b08c93ee6ee4c14013c6d4888d6f5154',
+    ],
+    result:
+      '0xaa7e41f8f3f682f63533b1ed72983ff0fc73afed6fe3ab9db386450fe07536f0',
+  },
+  {
+    types: ['bool', 'bytes10', 'address', 'bool', 'bytes'],
+    values: [
+      true,
+      hexToBytes('0xae7529383b7f2be6ba75'),
+      '0x359bb4c2a1e431a4ce9b0467a89a31fee46527c4',
+      false,
+      hexToBytes('0x032335a4b1d2e474bd7181'),
+    ],
+    result:
+      '0x1da3eda426766c3a4c983a7ac80841e1cf5d92c62cb1545502f830206f92fceb',
+  },
+  {
+    types: ['bool', 'int88', 'int136'],
+    values: [false, BigInt('0x3c33c7'), BigInt('0xc4a77375503211d9a33c22f9')],
+    result:
+      '0xe8523207ada96fe20b9dcdefb2c0d35210e5e4b5f4a08a549351e38cd59e56fd',
+  },
+  {
+    types: ['address', 'bytes'],
+    values: [
+      '0x1066aac003e07c839d7abd4a8acc2fe38ee616ac',
+      hexToBytes('0xc8c223ce7646bc779325456e28686718a0aabe1efc664f8946cb'),
+    ],
+    result:
+      '0x3caeeef1002838a7849d6e6362ee774d89401231751a2bc5fdeeb0f0fec3dd26',
+  },
+  {
+    types: ['address[3]', 'uint232', 'string'],
+    values: [
+      [
+        '0xf98dbded5e82f995a2d9dd7b2f44f8be6d921d17',
+        '0x16d9d40b639b58acc836c410d0f73867f89ac0dc',
+        '0x474fc95aab39d58a34e88a09d91aa0c1d94ab8f3',
+      ],
+      BigInt('0xaea90011c58cbadec2a1ddedf83ed325130f1f'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la',
+    ],
+    result:
+      '0x29e1c2aeef6945af4bb8863914bc325eba0ecadd7a7e51393891782ff3d403c6',
+  },
+  {
+    types: ['uint224', 'bytes', 'bool[]', 'string', 'bytes1', 'int72'],
+    values: [
+      BigInt('0xb574dcef13dd96'),
+      hexToBytes('0x997e0d6b1fb9c9f10dc598f07e0444fba138fd'),
+      [false, false, false],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non p',
+      hexToBytes('0xc0'),
+      BigInt('0xf6'),
+    ],
+    result:
+      '0xe302207f979fac1befb18877ea9d7511ad898d6f16ba1fb7ae647126dd0536f2',
+  },
+  {
+    types: ['string', 'bytes4', 'bool[]'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ',
+      hexToBytes('0x22cf4d9a'),
+      [true, true],
+    ],
+    result:
+      '0xb10252f2f572ad0b03e0a1b857162ee6612ed74308b75ff41c7d6ec723e6608f',
+  },
+  {
+    types: ['bytes', 'bytes', 'int176', 'bytes19', 'address', 'int136'],
+    values: [
+      hexToBytes('0xb85b98f35debb10e2f1b383824067e493420d1'),
+      hexToBytes(
+        '0x572cc4e9e1f54ba915b722444f71b08cd67cfefdbffa83a8e017bd1b3958acda7f37625b92693e28',
+      ),
+      BigInt('0xbe'),
+      hexToBytes('0xcc77e3c34284ac6f24421cc615356799235fc0'),
+      '0x1cb98bcf0287163a986dc3976480966045bbedeb',
+      BigInt('0x86a954e9bb3711b9c99e81630f'),
+    ],
+    result:
+      '0x96ab256266726564704847911d59c89858f48b4094c2afea86b8ead4e686d035',
+  },
+  {
+    types: ['int40', 'bytes', 'uint120'],
+    values: [
+      BigInt('0x630b20'),
+      hexToBytes('0x41512ad615904deef1c4098e724d677622de0b0d3ba89d02c3'),
+      BigInt('0x7b52'),
+    ],
+    result:
+      '0x6afe40b60845e69e514d2f41c9cd676d2856fbc7584cc519bba37fcfb6dccf69',
+  },
+  {
+    types: ['bool', 'bytes'],
+    values: [
+      false,
+      hexToBytes(
+        '0xa55c938222d97715ad4e0e67006c08344dea87adaceb0da4786fc29e1f5069c8827e6ba7c03b7682ea3ac66b',
+      ),
+    ],
+    result:
+      '0x635d5f475d407a91ba9a266079314e46eedf6608fe4b2a33246e5fff5931f823',
+  },
+  {
+    types: ['bytes5', 'bytes', 'uint64', 'bool', 'bytes5'],
+    values: [
+      hexToBytes('0xecf8454209'),
+      hexToBytes(
+        '0x9519dca3488604de20fea70bdfda199e306e3577333696d169ed1350386dcfeb7fc77c70174404c504',
+      ),
+      BigInt('0xaad63cd948b634'),
+      false,
+      hexToBytes('0xa5ae80c928'),
+    ],
+    result:
+      '0x42386a7b3639cc8e04dcf05cc9c549fdef09d69742a6c6495bc41936907ed841',
+  },
+  {
+    types: ['string', 'int24', 'bytes21', 'address[2]'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc',
+      BigInt('0xeb05'),
+      hexToBytes('0xbc4ecb0581470dc733d7e324062dca1f79368b2464'),
+      [
+        '0x0020b62183eb9dd9d7894e482e7edc08f7812412',
+        '0x518674a83952c072903fdf79b77204fd0e3e9a7f',
+      ],
+    ],
+    result:
+      '0x225205a4929dee035904d3397f37a0d1b2db1488d09ef1ebd451b358d72fce49',
+  },
+  {
+    types: ['bytes30[3]', 'bytes'],
+    values: [
+      [
+        hexToBytes(
+          '0x74eb9b9957401c44a890bda3ab0b7120f368080426b0017b91f0ab21c661',
+        ),
+        hexToBytes(
+          '0x5364b955f0e1449d83ddb616229e510302c535dbbf86aa11c4e2aab5af68',
+        ),
+        hexToBytes(
+          '0x299b522421ab61457d35459216a349b6ad6154ad63ee9818d687800a7157',
+        ),
+      ],
+      hexToBytes('0xe0e20cd7645d1acff984d5'),
+    ],
+    result:
+      '0x339291a796acd587fde9dd32b125d06a72de85e05e70225cc9b2e4932c08a061',
+  },
+  {
+    types: ['address'],
+    values: ['0x87afb181903b8703fcdcb160477ce1a52fd801c2'],
+    result:
+      '0x825bfde0325c7457b5c15c1ae836431b805bd4d78b5265a72a5504eb5333de04',
+  },
+  {
+    types: ['bool'],
+    values: [false],
+    result:
+      '0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a',
+  },
+  {
+    types: ['int224', 'string', 'address'],
+    values: [
+      BigInt('0x4'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr',
+      '0x1c6ada5ea2aeb9ad9b408239ef0837a757a220bc',
+    ],
+    result:
+      '0x68749ccf45c1aa3fe303d055f3f8c98ae671935fd885efda79588e261ea77c2a',
+  },
+  {
+    types: ['bytes24', 'string', 'bytes7', 'bytes22', 'bytes24[]'],
+    values: [
+      hexToBytes('0xb36c37996f776c1f0b6b05fb44972a8b7f803c8cfc0b8a12'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr',
+      hexToBytes('0x04d3b70e490fbe'),
+      hexToBytes('0x67e416984fad96f80cd7d505a5257c7ba0c18d917986'),
+      [
+        hexToBytes('0x204d2a1c4958192fc1145ba6510ed1d822ffa1eb91b0c1b7'),
+        hexToBytes('0xb1e7206be4bd2831a64c99b60362c3d39e2699c8bdcf6756'),
+      ],
+    ],
+    result:
+      '0xff8b0c21e1de68d7c3e54475df9981050f7d8926f1d9a9546a3f857e9c395140',
+  },
+  {
+    types: ['string', 'bytes', 'int32', 'bytes', 'bytes', 'uint216'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore e',
+      hexToBytes(
+        '0x9ede2d648a18296fbedb83dd6ef2375e0d2a1cc0a6e109ad89fa44f47ba55085b0fad6cfe40144a8165672b5a5250e24fab777abf81c4472780b591a85',
+      ),
+      BigInt('0x82e'),
+      hexToBytes('0xf43f4591631533ae24f29b3a692f826259d4f6ea09d92a31'),
+      hexToBytes('0xa8494e4a6c3c5f92e4b94fda19febd489aa980cbbdfa'),
+      BigInt('0x3163c479836d273f7824a1'),
+    ],
+    result:
+      '0xde5d38595ec9f6967a90a52609b7bbf6ff5b8eda70332a2a992a575bcc32a69d',
+  },
+  {
+    types: ['string', 'address', 'bool', 'address', 'string', 'bytes'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et do',
+      '0xdaf52d0893f9a307ad2c77d7137a6a55a49b45ec',
+      false,
+      '0xc508dc78c344882c72f9e53869193d42093005b8',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
+      hexToBytes('0xc0d4b0fbda68445d46c4283433e74008accde363329d'),
+    ],
+    result:
+      '0x7189b2ee88858a47c9550b2b0907deb0ba9ef9f9ba434cfe6dda6d10b78f44f4',
+  },
+  {
+    types: ['bytes32', 'address', 'bytes11', 'bool'],
+    values: [
+      hexToBytes(
+        '0x78f423e5a56019cd35648f9c59aef9d880f0c2770c2f058366e5598676b436ee',
+      ),
+      '0x7bc16c177082920a338454fac9eec956ace319f5',
+      hexToBytes('0x712b24edabe4124e3b8a77'),
+      false,
+    ],
+    result:
+      '0xa7d0effb4a6abf9a90d2ec4a4cfe4959d8c94a14b7d10f6765484bb8a30c8e2a',
+  },
+  {
+    types: ['string', 'int56', 'bytes'],
+    values: [
+      'Lorem ipsum dolor sit amet, con',
+      BigInt('0x3b0f'),
+      hexToBytes('0x19df73e0'),
+    ],
+    result:
+      '0xf2cba857c7880158549a0093500d3c21aeb7309d334288734200e4e91caebb67',
+  },
+  {
+    types: ['bool', 'bytes', 'bytes19', 'bytes25'],
+    values: [
+      false,
+      hexToBytes(
+        '0x0127b4bdd02b76e03a43975d0db4829387849afea2b7e259c12b36dd357522031ac39ec5',
+      ),
+      hexToBytes('0xc18d1b12b7aa94b762ac98893d805e24076d1c'),
+      hexToBytes('0x2f77feebf7b89b2d5b394f6abffd1381c9b99d1076bf36a2fe'),
+    ],
+    result:
+      '0x899b4274bd339a3bbcf061b9528966437932df2406590605bd3141be59a5a8cc',
+  },
+  {
+    types: ['bytes1'],
+    values: [hexToBytes('0xb7')],
+    result:
+      '0x5c2af9f8d78b43812c6ee78e9baf7d72fc48f01866fe29adac0c17d89e061a4f',
+  },
+  {
+    types: ['address[]'],
+    values: [
+      [
+        '0x061bed99bab3f895f3374abb8ec8af1fc3eb8f1a',
+        '0x1917c26adc8e3ceb8ee05264f4b6549e861380bd',
+        '0x98423bb2ea09b61a6c1a005169eebe43069b2222',
+      ],
+    ],
+    result:
+      '0x0f3585575e25eb423029aa7c0d86ae1cd5a3da6607a38d6cbf09d93665de9172',
+  },
+  {
+    types: ['bytes', 'bytes', 'int152'],
+    values: [
+      hexToBytes('0x72fd8f7ba7bdfa66'),
+      hexToBytes(
+        '0x3c8eab7e2c1a8ecadb0f1ef49828bab7a4e8b910c709a5010b54f3836771940918914e3f893f90f280bf',
+      ),
+      BigInt('0x7207179193005a066f16c1'),
+    ],
+    result:
+      '0x76bbc7e9ac8120f0646e9eb9701799577d0035f7019ecc8835a17c7e8bed337f',
+  },
+  {
+    types: ['address', 'bytes6', 'int80', 'string', 'bytes15'],
+    values: [
+      '0x5ee0c5a7c714776350c4da8e3655866f2fb293a8',
+      hexToBytes('0xb2921cc314f3'),
+      BigInt('0x5dd2c6433dfa'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini',
+      hexToBytes('0xb72627a4fa28ecb0e8e546cd4a50ce'),
+    ],
+    result:
+      '0x695ec45be85a5027c4b6c67a35aa35bd2fe8efedd821881aebb1c99d7fd2ba00',
+  },
+  {
+    types: ['bytes', 'bool'],
+    values: [
+      hexToBytes(
+        '0x5c678d0f1bb4fe45891aa41e4cb72757172dabdd589e18e9f808919fe07be165cc27e2ed2d5e801c2f0c2d3a72f32d3dd53b968b166ad4abd0e748a4',
+      ),
+      true,
+    ],
+    result:
+      '0xa0561f20d37e82b9e367db23962a04cf6cb97dedf3a3a708042f08588e5581b9',
+  },
+  {
+    types: ['address', 'string', 'bytes'],
+    values: [
+      '0xabc521c809073a0c3fb9488456e8aae683265e50',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est la',
+      hexToBytes('0x099545156b3b18f1100ae503ec97c32b35'),
+    ],
+    result:
+      '0x624e3a55f1e6815307507a852ba9e8c379dd3ddea0d40f592cb18cf48b9ef9c1',
+  },
+  {
+    types: ['bytes14', 'uint248', 'bytes31', 'bytes9'],
+    values: [
+      hexToBytes('0x4e963fe464073e218aa9c2b6609f'),
+      BigInt('0x84305e25'),
+      hexToBytes(
+        '0xb3db999b478275bf251149996ba843979c63cbd26e0af71e1ee7d98f2b901a',
+      ),
+      hexToBytes('0x100c4119fa4b767087'),
+    ],
+    result:
+      '0xffb44717968993767339b6117a86559f9621b4c171ae6562cc2b991230bd975d',
+  },
+  {
+    types: ['uint72', 'bool', 'bytes7', 'bytes', 'bool[]'],
+    values: [
+      BigInt('0x1c98070e'),
+      false,
+      hexToBytes('0x32d651c92ca43b'),
+      hexToBytes(
+        '0x599aff156b57e28ba88d55ec7d6302bad6e8cc861474b6aa9154fcb265e82127cb7aaab0e9ca329981adf65e06f6cf29e192e63ca2875c6d',
+      ),
+      [false],
+    ],
+    result:
+      '0xb7c70a1ecbb5c0e303cf8d37929bd569ee579f9f48eb7dc412acc2f25d1ce6e5',
+  },
+  {
+    types: ['bytes19', 'bool', 'address', 'bool', 'int240'],
+    values: [
+      hexToBytes('0x0f08c30aad225d993f2bdf69785dec3079428c'),
+      false,
+      '0x4f2cd71364a820c4f7af922586cc1039801177b0',
+      false,
+      BigInt('0x34ee8829a54c3b'),
+    ],
+    result:
+      '0x8756323f5eed1c7162215ceff85e7c4be1d1323faa05854de7b0f3828a069fb1',
+  },
+  {
+    types: ['bytes28', 'bytes23', 'bytes', 'bool', 'uint80', 'bool'],
+    values: [
+      hexToBytes('0x05a00f093b70eb9d7f61084ef420eb1e0178a9b7aa6b21117fb740ba'),
+      hexToBytes('0x0bb8fecd00faff7dbd5bdf72c0bf343db153545abcb196'),
+      hexToBytes(
+        '0xb41e289e437a0a6d2db4b360ddf28be385e467d29e073c7c950c2d2f6efe157abc0d53527741d62928',
+      ),
+      true,
+      BigInt('0xc4b2119107f5'),
+      true,
+    ],
+    result:
+      '0xac21e52f2c93740bfbdda2e02d1ca91cce64816817fad49add2be94daefd0e4b',
+  },
+  {
+    types: ['int48', 'uint168', 'int136', 'address[2]', 'string'],
+    values: [
+      BigInt('0x304a'),
+      BigInt('0x7e3bbd0fe347316bac7868e4ffa6ac6f1c'),
+      BigInt('0x3050634bd3b2c945fc'),
+      [
+        '0xfa2ed0ac8b2fc28b56655e27b254ede5dd5da228',
+        '0x1ba17c137da4142e0c9fc1dc3650b920593cf4e9',
+      ],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi',
+    ],
+    result:
+      '0x832481f8f769f1a3886348f27629e50fca0efa8000ab4bf95b075b5c09d7e029',
+  },
+  {
+    types: ['string', 'address', 'string', 'uint40', 'bytes19'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate v',
+      '0x9d4338adcf299d8bad2f4329458d0e6f097baaf9',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore e',
+      BigInt('0x57'),
+      hexToBytes('0x26850b0d2cd00c67f25870b9ff54dced2945e6'),
+    ],
+    result:
+      '0x0bac6683b01301155301803fc19a4d49ef7649f463eb1632770e53d811520292',
+  },
+  {
+    types: ['bool', 'int40[3]', 'bytes', 'string'],
+    values: [
+      true,
+      [BigInt('0x900d'), BigInt('0x8d'), BigInt('0x5e3e4a06')],
+      hexToBytes(
+        '0xd682601d3e722bb514c76d0caef542ab43639e095a4bfa742f6116fbed',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in repr',
+    ],
+    result:
+      '0x0dce4a0909809e7bf0e1bd005b0b3f111d011299f3a1d2881d2de9425c7384e5',
+  },
+  {
+    types: ['bool'],
+    values: [false],
+    result:
+      '0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a',
+  },
+  {
+    types: ['uint48[1]', 'bytes25'],
+    values: [
+      [BigInt('0xaf0e7c191b')],
+      hexToBytes('0x336455e90a796c0fcdf5c1425e4c8ef0e22ce6ddc674e269fe'),
+    ],
+    result:
+      '0xba87965c4e471db8a2ce6f90447f183314185f0ed7c2abe2f5fea61883e3c30c',
+  },
+  {
+    types: ['int160', 'bytes', 'bool'],
+    values: [BigInt('0x5a7564'), hexToBytes('0x22f9e84e22'), true],
+    result:
+      '0x0f1927e3f90334bbfb036cb914ec95a87ed060ee0344f929d27d05a3e4435437',
+  },
+  {
+    types: ['bytes25', 'bytes'],
+    values: [
+      hexToBytes('0x582155995f7168ba54b2b917a0e6414753375c579f476f2510'),
+      hexToBytes('0x44bc6d28c07caebf87782e67422d5f5e83'),
+    ],
+    result:
+      '0xf5616559aae110b20e049d77356e1418f07c04ed01552700880db26ec37ea5e5',
+  },
+  {
+    types: ['string'],
+    values: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit,'],
+    result:
+      '0x51332ea3cf27a9518b02fe07288bb73e9be9dc3e6ab422b5c6c24d24a7fe332c',
+  },
+  {
+    types: ['bytes4', 'bytes25'],
+    values: [
+      hexToBytes('0xdd3e01d5'),
+      hexToBytes('0x35b246938a58474c61faed7c60fa087b9e5918b857655e25e8'),
+    ],
+    result:
+      '0xd54c58ccdfb03ce06b50198d88d90725a5e65417891972050e2efb7d0a531ab9',
+  },
+  {
+    types: ['address', 'address', 'bool', 'bytes', 'bytes6[]', 'address'],
+    values: [
+      '0xbb8819d839cb496e783c1ba83ab5f57968582149',
+      '0xad4369f9f737b5c1e1f5316c3137730f475930a2',
+      true,
+      hexToBytes('0x61214ceec5eef3d110f1a33f'),
+      [
+        hexToBytes('0x448de7457b0d'),
+        hexToBytes('0x56d89423d041'),
+        hexToBytes('0x76149089815f'),
+      ],
+      '0xe43ef100e892be60605d39630fdfd4805dc2df39',
+    ],
+    result:
+      '0x772386667ce0d586da5408b6325284e3759d2720080a75bb58d707762e1462a0',
+  },
+  {
+    types: ['int96', 'bool'],
+    values: [BigInt('0x1abd9fbb0b0e'), true],
+    result:
+      '0x47366524e286975098a4e19e57dab4f1ac0f41dc8ea85d5e6a1078214b5c1d1e',
+  },
+  {
+    types: ['address', 'bool'],
+    values: ['0xa893b02536d19639016535c0978597af82cc6b33', true],
+    result:
+      '0xe763ca3b82fe4dab6cf82fc2b2674742772cf74719aa5d07dd49d6afd7f065cb',
+  },
+  {
+    types: ['bool', 'bytes', 'bool', 'string'],
+    values: [
+      false,
+      hexToBytes('0xe12af5a40e8099b3ef23a3657a2dd7ee86cd'),
+      false,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in repreh',
+    ],
+    result:
+      '0x58e84ea60f743dd2ab2afbdd1cf8e49c3de74d42bfbd1886b0381926ccb98864',
+  },
+  {
+    types: ['uint256'],
+    values: [BigInt('0x3bf4eeb22a02fc6245579c13fd8095e425')],
+    result:
+      '0xe7d1563525fb99338b8ab65c896c476ed5286fd07bd9a0ab039796d44abf36b3',
+  },
+  {
+    types: ['bytes', 'address'],
+    values: [
+      hexToBytes(
+        '0xc571a545f75d754ae5a5444522843cef52cf674fd13c0ac9956ac2792418624e',
+      ),
+      '0x6261376b904a9638c38f1cd5f0f3ffd3297b8e74',
+    ],
+    result:
+      '0x174676aa0ecafcec14e6ebd0f9ddf83d4b45925c701ea4c592af639e64dd4c32',
+  },
+  {
+    types: ['address'],
+    values: ['0x59a71b5ae0f81e49d538e06eeb037fa647ad8ab8'],
+    result:
+      '0x52a53f9fdeed095d4871b1482bff05e3a6ee1ac67988dec1c8ffea1e38c90048',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci',
+    ],
+    result:
+      '0x228527c854960f0435cfb5a9a29fde3175e6f2201dacb756bc815a0773c906a5',
+  },
+  {
+    types: ['bool', 'bytes'],
+    values: [
+      true,
+      hexToBytes(
+        '0x5460f4bdffec4441d2acd7e9b4bb015da331270ccf43e8bf5a32648f9a03372d243ef946c429ef0c7df28240708500595c612818fb971aaa58f726df',
+      ),
+    ],
+    result:
+      '0x75313251ac9ebf2dfcf47205357dabed30689420ae2e4361956f0b619cac5c86',
+  },
+  {
+    types: ['string', 'string', 'string', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure d',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu',
+      'Lorem ipsum dolor sit amet',
+      false,
+    ],
+    result:
+      '0xb6ea96e5104e470c4d2725bbd763a34559cfa416ee5d70361283bfecc93523df',
+  },
+  {
+    types: ['bytes15[1]', 'address', 'address', 'address'],
+    values: [
+      [hexToBytes('0x99a6637fadddb7491f062dece7be0d')],
+      '0xf050f4d27b4153daf27d564eba547c90409cf234',
+      '0x9104df1368493d909928883a4cce3c2aca222e53',
+      '0xc00de96ac0dc9729fdffd598fe1b8f3a9377bb54',
+    ],
+    result:
+      '0xd7118fd0b70b9e6e7f9404c0705e885a26e42dcb6886f6e2d86ea4c09cd90c97',
+  },
+  {
+    types: ['string', 'string', 'uint248', 'bytes2'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pr',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ani',
+      BigInt('0xb4ee'),
+      hexToBytes('0x4d41'),
+    ],
+    result:
+      '0xe953bfea9643d34c9978c5415ae64334518316071d46f443cacc58d013107562',
+  },
+  {
+    types: ['uint152', 'bytes32', 'bytes5', 'bytes28', 'int168'],
+    values: [
+      BigInt('0x44c4b1ce18557b2709882b0e07c62f'),
+      hexToBytes(
+        '0x6d15a459e15c17adb1dff4cfa3227b58953b6c2595a5fac5022280218b906a7f',
+      ),
+      hexToBytes('0x75d4e6956b'),
+      hexToBytes('0x311cca1422890a314ef59320985bef77b2eb6565bac9efddfe613490'),
+      BigInt('0x728c7279c34bdd8c'),
+    ],
+    result:
+      '0xe84e76706bbdbd3a233423dd8bf46b5376864d7019e1171aa81b27c430161cc0',
+  },
+  {
+    types: ['bytes', 'bool'],
+    values: [hexToBytes('0xefe6'), true],
+    result:
+      '0x9761d81829c2f63e4686fbec79c86501cc27e5d5ad319437ad86e1336fa21c0b',
+  },
+  {
+    types: ['address', 'address'],
+    values: [
+      '0x4fd3a28cc4d4fb908379635c051353d6e762efdc',
+      '0x20a0edef80534b685f5c0cb8e2c98cb2ef79dddc',
+    ],
+    result:
+      '0x548e4f912f202371aa2a8033c554d0f027ed7b476fc290473a9fcfb1b00ed38f',
+  },
+  {
+    types: ['bytes17', 'bytes2', 'uint248[]', 'uint104', 'bytes19', 'bool'],
+    values: [
+      hexToBytes('0x72361be81cb86dc1da005b643a29575209'),
+      hexToBytes('0x6b8b'),
+      [
+        BigInt('0x5e66faa5c192a9a6f3447caee52f1bb2716d8a280fd76230a3268f1f'),
+        BigInt('0xd379a7'),
+        BigInt('0x99bac2bd8b23e1420f81'),
+      ],
+      BigInt('0x7424'),
+      hexToBytes('0x8ac856d45a6e4818ce73bcb5679ef0b9d74a6b'),
+      false,
+    ],
+    result:
+      '0xcc943ae590352a9224372eac505bb7c1251ead88022fbd26894f94914f6adb2b',
+  },
+  {
+    types: ['string', 'bytes', 'bool', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volupt',
+      hexToBytes('0x'),
+      true,
+      false,
+    ],
+    result:
+      '0x07af134841b3360d7b0c7e8ee51a786da969955969049c7aba4fc5ea59399520',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['string', 'bytes11', 'bytes', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ',
+      hexToBytes('0x8fd23a4f8d61b1574370ba'),
+      hexToBytes(
+        '0xa1835d6e24a530af693a85ee43d2b3df0e9a3a7babdd8c09d73b128125536e75c2ed7f7f1e5d621970ad52146b5ac3271afb',
+      ),
+      true,
+    ],
+    result:
+      '0x65fdb369684790321b272ce4a7c4e8d9be0d02c9d7100336132d0e28cdb26f2d',
+  },
+  {
+    types: ['bytes'],
+    values: [
+      hexToBytes(
+        '0x64949664378c0b502eaf0794d12f242a7e14da769deb212ad1e246c9e47882fa135f946e4b46de',
+      ),
+    ],
+    result:
+      '0xf8484e009f6fe26da984d31c09eb804052484d49ef80873dcb3a50606acdeea8',
+  },
+  {
+    types: ['uint192', 'bytes'],
+    values: [
+      BigInt('0x77b95f464748e54dcce221deff8a'),
+      hexToBytes('0xf12f652ad9ca04bf5bbc7c31461aac66ee03407c98c872ce8968'),
+    ],
+    result:
+      '0xea26fa799cbe16deb7eb9a66d3f75660f018a762a0a5e7638f52908e0c1aaf7a',
+  },
+  {
+    types: ['bool', 'bytes5', 'bytes32', 'uint80[2]', 'uint192'],
+    values: [
+      false,
+      hexToBytes('0x0b45c9f42e'),
+      hexToBytes(
+        '0xb16c8e479ddc4a629d8c6e821342ca674038da4089b7c8bf2f7f57125cc600b2',
+      ),
+      [BigInt('0x165adf3f77'), BigInt('0xc39b7c7179c13f95db')],
+      BigInt('0xf728af833486f01663a225e15155b936f2f9'),
+    ],
+    result:
+      '0x1b7fb183c26bc7aac5403e04010ea37b3d8e151f75dbd645e23849341017f2fc',
+  },
+  {
+    types: ['int40', 'address'],
+    values: [
+      BigInt('0xc3188ebd'),
+      '0xf88f8ff4ec9b184ace33536ec2a27b646be7b787',
+    ],
+    result:
+      '0x7425c8656e4067fea46117db42ec143a4f7ae63cf7727f25c16f5a0ad691f5ea',
+  },
+  {
+    types: ['bytes'],
+    values: [hexToBytes('0x81dfd45b97722849427c0b531acdf060d977ce9beb1e93')],
+    result:
+      '0xe98445d24bced1f86b58a95dd65cf0d80e3de1b81a30304d294056cb2d90b9bc',
+  },
+  {
+    types: ['int40', 'bool', 'string'],
+    values: [
+      BigInt('0x28'),
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo c',
+    ],
+    result:
+      '0x3cda1cae9796ab8788525ac2ecf4a3cf0392c596760d4abb75c07ceaa7410181',
+  },
+  {
+    types: ['string', 'address[]', 'bool', 'address', 'bytes28', 'bytes'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor ',
+      ['0x639cbebaace3bea08590bd9d1f6b7972b9a8950c'],
+      false,
+      '0x5c465bffab918f395e330998ef5b16edb72b102b',
+      hexToBytes('0x8e77dd75d031559feabf3cd622e9ac22dfe07b91e2e6f96fe32aea4d'),
+      hexToBytes(
+        '0xc967dfc518b2c7d9cbf4bba970a58a27df8593141cdbdd3509a71b026c132c8f5ffe534c8459086221f9b05143a7',
+      ),
+    ],
+    result:
+      '0x8a926fd0daab07051f4c36ee8978f9a321edd5ac426ccc54f087171bc4e70b08',
+  },
+  {
+    types: ['uint48', 'int256', 'bytes', 'bool'],
+    values: [
+      BigInt('0xfd'),
+      BigInt('0x826ebb2538be0302f072bd9fec956f1f59'),
+      hexToBytes('0xceadbf7b05f7823e8b28bbd5995dc9fae6dde8e3e5'),
+      false,
+    ],
+    result:
+      '0x68d7943f5298bc524290de4776d14c5c4c533dcf0529b1f77984d1aa26e906ba',
+  },
+  {
+    types: ['address'],
+    values: ['0x19ec7bc22c3f320343dc59c8da1587947bfa1d32'],
+    result:
+      '0x302c82a2e15dd2f042c7abb4477c4874c4e186a0f1a35a4b92a39846e149a74d',
+  },
+  {
+    types: ['bool', 'address', 'bytes12', 'uint104'],
+    values: [
+      false,
+      '0x7e8a010e228744c2c5dcd7ce016d1159a2220fdc',
+      hexToBytes('0x2d63bec9b6cf31f03250fe9b'),
+      BigInt('0x69b495ac'),
+    ],
+    result:
+      '0x22154561ab494bf7b7ac39199257db647e6add7803191d20581bc1b2f3147eca',
+  },
+  {
+    types: ['address', 'string', 'bytes19', 'int72'],
+    values: [
+      '0x30adbdc19d030998156a6573da8885ee89f52a67',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute i',
+      hexToBytes('0x975a79ea607ae4510831ce48e41ec134ebab9e'),
+      BigInt('0xc27ec5'),
+    ],
+    result:
+      '0x638c8c2cf5c89724afb9cb4d12534b174145391d7640ef3a4400d82b3cd45a0f',
+  },
+  {
+    types: ['bytes30'],
+    values: [
+      hexToBytes(
+        '0x45c42eee40c01284a2adf67511b8c53abe4656c6d9b7fb70b43be03ae17a',
+      ),
+    ],
+    result:
+      '0xd7ea116f90fd24ffb75a27437e7b820fb0dfdeb12528bb7f172f336f985bd2a1',
+  },
+  {
+    types: ['bytes22', 'bool'],
+    values: [
+      hexToBytes('0xa768a0fdb72a76cbd2b0b7be9c79796dc89c529bb70b'),
+      false,
+    ],
+    result:
+      '0x29e1ac1851b360ac6d58d47895648a2e0044955641bb911462935ea7c91ac783',
+  },
+  {
+    types: ['address', 'uint184'],
+    values: [
+      '0x075e6d0d9061a4dfa6ea4c0b5fd5bca9aa553695',
+      BigInt('0xf5dea58074e6e92ffa946db695583d17'),
+    ],
+    result:
+      '0x05c018354a46503fdfef7762386c6d8dcd83be131c264758002e0c7e261f4511',
+  },
+  {
+    types: ['bytes27', 'address[]', 'bytes', 'bytes29'],
+    values: [
+      hexToBytes('0x0d1328e519a31cc428da70f4075336494bf83ac2673b5f09efe6a5'),
+      ['0x087fe4e3ca0fd02d534bfa1a476621bb327cb3da'],
+      hexToBytes(
+        '0x2a924d5fbd24f91c6589770a6a8b7d346699b5fc5bf2003c898fe77f3628c299f9a5c3686f28fbac2de48af952cc345a9768d9a5b0e81061',
+      ),
+      hexToBytes(
+        '0xacf2f4c285ecbf9aec83c22f171b9c75dcec64ab581546c56acf8e92cb',
+      ),
+    ],
+    result:
+      '0x7b86717efa913781b09ed5618ea760f90e1001ef283049a9b422ab0299160c52',
+  },
+  {
+    types: ['bool', 'bytes14'],
+    values: [false, hexToBytes('0xbc026b20a55c47e6986b7513558c')],
+    result:
+      '0xf073ae3ea10569c53ee6400457bb760542e91f9ccccd1e601134fcec66793081',
+  },
+  {
+    types: ['int', 'bytes15', 'bytes', 'string'],
+    values: [
+      BigInt('0xaaff675172594f787dcff52cbc7c93f183c1284a3c487b1a'),
+      hexToBytes('0xfa19717e03d286d077309505137cc1'),
+      hexToBytes('0x44d54f'),
+      'Lorem ipsum dolor sit amet, consecte',
+    ],
+    result:
+      '0xae014dfcea4d693321ac4dfd71d79a15e188ec70dab2993d292a386dc0b9460d',
+  },
+  {
+    types: ['address'],
+    values: ['0xf597978bde4c3362bda32f3e090f9869ab03e476'],
+    result:
+      '0xa4fb4b36f5d4eb3449d0ec4064ddb227e877d53fa51bed90cf9aecd11051016e',
+  },
+  {
+    types: ['int40'],
+    values: [BigInt('0xcc4c68f2')],
+    result:
+      '0x3118e809f5d54c08f65f3e65545380ee08875d36d31a380cfd35f08a87b36453',
+  },
+  {
+    types: ['string', 'bytes13'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est lab',
+      hexToBytes('0xd7ca8c77085816b4ea5dad8941'),
+    ],
+    result:
+      '0xa3179eadd17362aa626aec065f11c7058aad93cd24684845c4fa211e619273e0',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['int216', 'bool'],
+    values: [BigInt('0xc325038aea1628f347674f4a'), false],
+    result:
+      '0xe24c39f8d86c8edb3db7d7eb25dcc93f07c72a5802c03c14b4bf3ef0b8020e27',
+  },
+  {
+    types: ['bytes28', 'bytes4'],
+    values: [
+      hexToBytes('0xfb7654bf1963e3259954f9c49e1ea615a58af1d84fd675e1c09db985'),
+      hexToBytes('0x7a9a5c5e'),
+    ],
+    result:
+      '0x2fdf627ae0cb3dcf39ee178669f9e577b69cbf07fcadefdd3db0e70a032ec028',
+  },
+  {
+    types: ['bool'],
+    values: [false],
+    result:
+      '0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a',
+  },
+  {
+    types: ['bool', 'int232', 'string', 'address'],
+    values: [
+      false,
+      BigInt('0x4e139206afcada0bf034148fe1d2e99c78509aa3c66ed7cf1cf9ef3'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fug',
+      '0xc377d0f357201ecc68554daa03cbf511a04860d8',
+    ],
+    result:
+      '0x203472559e086a6d81da289ed7ab63d4895e07fa0b6829dd9ee6bb90966cb288',
+  },
+  {
+    types: ['bytes18'],
+    values: [hexToBytes('0x190ee42b696e3a109baad1396fbd82c08d6a')],
+    result:
+      '0x47f65504e62e3da1c9eb64938495b498d7e51eba6e100d920f364a8fd9bc816d',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['string', 'uint168', 'bool', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi u',
+      BigInt('0x9732612c59'),
+      false,
+      false,
+    ],
+    result:
+      '0x46c441f76599dc86d1f1df88d92eec43500835fe9809636f8f8981e3583bc14e',
+  },
+  {
+    types: ['string'],
+    values: ['Lorem ipsum dolor sit amet, c'],
+    result:
+      '0x370f72658eb8df11fefd4f561ed98a64c9dbd68a2047f038c752bdb11d69a4a9',
+  },
+  {
+    types: ['bool', 'bool', 'address'],
+    values: [false, false, '0x3c8406e1fc6e1483af25d875dee8bcfbaf1008fc'],
+    result:
+      '0xbe7aebac6bd222a4d68130ffe7838024b30a05e1e8885fb86b458dbcc51f3bee',
+  },
+  {
+    types: ['address', 'bytes', 'bool'],
+    values: [
+      '0x26e7046f95b3cb9734ba24e67f1351caac0376d9',
+      hexToBytes(
+        '0x358b5d2669114c068aba4fe0e38bef34029af40d70718492d28a425f2c2fb0def056490a68db707154',
+      ),
+      true,
+    ],
+    result:
+      '0x5b53558eed8f813a9ad0fcda0f35302f89364f7d65c87dc0ccdb979152028206',
+  },
+  {
+    types: ['bool', 'uint8', 'string', 'bytes'],
+    values: [
+      true,
+      BigInt('0xb6'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit',
+      hexToBytes(
+        '0x64bcc596713f70260f1d698ca4a840b41e30700871606ae5aaa679d5ab717ee178',
+      ),
+    ],
+    result:
+      '0x49d0eb21e7ab917b9505dea437d7228727a6fe79bc3bee71ba142d4ae07d49bb',
+  },
+  {
+    types: ['bytes20', 'bytes29'],
+    values: [
+      hexToBytes('0x5b3ee39d6d7fb3133b310e94af720fddc5610d88'),
+      hexToBytes(
+        '0x9cdb673ae813ac85ba836bd901c4fda1011132bbe77fe0aaded739c23b',
+      ),
+    ],
+    result:
+      '0xae2849f3b1e8c25124fd6a293c875e1df76e6d71d579e21994362caa0822420c',
+  },
+  {
+    types: ['bytes3'],
+    values: [hexToBytes('0x732910')],
+    result:
+      '0x8c6e785709423721252e52d0a94a330c9a9b00ca9cf4f344b0c07ce2d7415e57',
+  },
+  {
+    types: ['int40', 'address', 'string'],
+    values: [
+      BigInt('0xfb7c0b7c'),
+      '0x5e66b36bedb67d675e7045271f7e6f94b4c852bd',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore ',
+    ],
+    result:
+      '0xda1933a7c9f5a2071d3ad6b9a2244c15065f060f915c0c27d78d6bcd8a39a2de',
+  },
+  {
+    types: ['bytes', 'string', 'bool', 'bytes', 'bool'],
+    values: [
+      hexToBytes('0x0f6711a0d4b37b4cbd5ff66901cd1be3d83efb7761337690f4d3a5b1'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab',
+      true,
+      hexToBytes(
+        '0x757dddd453b6c2fccbc0c28dc17656f94b7e64d8a85ca9ab539072f3eedade4c84b9ad4b0f03fce1b2aa8444a8',
+      ),
+      false,
+    ],
+    result:
+      '0x1363f0f838712ee49072dd93e099bff7a928a0877e0b6d06e3665979e8243132',
+  },
+  {
+    types: ['bool', 'bytes', 'bytes16', 'string', 'bytes', 'uint160'],
+    values: [
+      false,
+      hexToBytes('0xcd4f065032d8d6c97f1fccacbf8b3fbc90aec9c34d13'),
+      hexToBytes('0x7928516a7d5d3f9fc080c0fd6d095b49'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
+      hexToBytes(
+        '0x3b8cd4effb3da7255134195323d638f6911d3779ce81e1ef0512b9cbbc0ad0400dee9662a629b638f714',
+      ),
+      BigInt('0xe532'),
+    ],
+    result:
+      '0x25a51a1c67738517cbcf7fa1876d4fec203a52f1a8fc814776dbbca67e46f4e1',
+  },
+  {
+    types: ['bool', 'uint80', 'string'],
+    values: [
+      false,
+      BigInt('0x9ed480c861'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse c',
+    ],
+    result:
+      '0xfa22c877ea519df63e72abe70d166987e748e8d355a814e63ced8f4e462e3f52',
+  },
+  {
+    types: ['bool', 'bytes'],
+    values: [
+      false,
+      hexToBytes(
+        '0x3a7be827a231fb4397e56342bf26bb14905076c0920b5de2562837e3bb03c4d718b526f0bad8',
+      ),
+    ],
+    result:
+      '0x873bb9d124437716858f768360b47bc4f4de68dd87e8d391bef8e1fb4311c7de',
+  },
+  {
+    types: ['address', 'bool', 'address', 'bytes', 'string', 'address'],
+    values: [
+      '0xd8969130aed097bc3cc4d0ef968cec2b382aaf2f',
+      true,
+      '0x6835c4468ce9bb6e3d9357a2cce39d996818902e',
+      hexToBytes('0x01a4'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia',
+      '0x1bbf685af863391ef969a390d22c03d39f2992da',
+    ],
+    result:
+      '0xa3edb74337af4a387eb096c78e0735176ca623c2e84cf02a9e26132ad0828bcd',
+  },
+  {
+    types: ['address', 'string', 'uint8', 'string', 'bytes', 'bytes13'],
+    values: [
+      '0xf003e5294fc24eb99a85a5e2f5466a4e49c4187d',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exe',
+      BigInt('0xc6'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit',
+      hexToBytes(
+        '0xd827ac15faa0e8cd3dd8c0d7420d8e90aaad90337cb05ad13e2472effe8be79e9289fa403dea09ee28f373cbf2fcd6325637117fae1cb12caf458907',
+      ),
+      hexToBytes('0x0567c79afb6eb5afe64a109748'),
+    ],
+    result:
+      '0x4738e496f4e455347b8182d6d1994f910e5b668c1f32ff295525c2accd3622fa',
+  },
+  {
+    types: ['uint32'],
+    values: [BigInt('0xd8b79c')],
+    result:
+      '0x2efd0dd451800bde98de3f18bf82d4e99ffc89947933e58d01889d205bc299d8',
+  },
+  {
+    types: ['bytes'],
+    values: [
+      hexToBytes(
+        '0x979d8ac5faebc8b86394efcbde6530eafe3a4c03c1b73427c009590cc39f90f5de6ac0ff606d5ee6c99203f5a30a9660c7aa',
+      ),
+    ],
+    result:
+      '0xe7df198d30b7f48301652dc066b03aa270d370ae9971c84a739e6c658f18bfc6',
+  },
+  {
+    types: ['bytes'],
+    values: [
+      hexToBytes(
+        '0xfddb884b4e9382c210d88fcd6e3c0cede226474ca475a95673109d99c54b544190',
+      ),
+    ],
+    result:
+      '0xb1dd307d15d1a3ef228439216685fd9ded6abd9b8031bf2d244144e71650e03c',
+  },
+  {
+    types: ['bool', 'int208', 'bytes6', 'bytes', 'string'],
+    values: [
+      false,
+      BigInt('0x1dbdbecc9e8370c83f22e0f58767'),
+      hexToBytes('0x81445996e414'),
+      hexToBytes(
+        '0x65219e5b994ec3740dadd7b425db4fe5ef18168328b118c812c76a2740ebf6748275d498206975',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et',
+    ],
+    result:
+      '0x4add4fb0cfb3270168cb661ede579b44e3541337eab3ced06f74d51f6061cafd',
+  },
+  {
+    types: ['bytes'],
+    values: [
+      hexToBytes('0x5135496df6ed1db9348443fdb8996a3c6bb3a4317d9c10b139df'),
+    ],
+    result:
+      '0x457dc37d3430f519aaf206cb50f724f27b87ef3d8f3b5027e1d88b638395dad3',
+  },
+  {
+    types: ['address'],
+    values: ['0x2431588084408b3edeec116efb2c6e8e9e7d0d4e'],
+    result:
+      '0x39df2ac943d23d72c78b760241977863dfbb879965697169e325e38bf6e2f13d',
+  },
+  {
+    types: ['bytes4[]', 'bool'],
+    values: [[hexToBytes('0x75459814')], true],
+    result:
+      '0x10fbf87ee49fee5fefb1948c3c1eabb75a5c845793c5ca82597ec109a327ada1',
+  },
+  {
+    types: ['address'],
+    values: ['0x3702c4685d5c0a87a983dfc5ea45e54ccacbe451'],
+    result:
+      '0xc38171f1dab28c1a18c3d6cc8bf28ba19e65ffe078194e91aa2f03440d22b3e5',
+  },
+  {
+    types: ['bytes', 'string'],
+    values: [
+      hexToBytes(
+        '0x660d0c504048a860eff25174681cdd3c3f383c217d3d55fb872e88c6a0d7b6414652478a1641994b',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum do',
+    ],
+    result:
+      '0x45078a7cdd1b556fbf5b212a05211d70faeff8f7d6a0f2924424b40a795e41e0',
+  },
+  {
+    types: ['int96', 'address'],
+    values: [
+      BigInt('0xb6ccad223f23f6d9912ce4'),
+      '0x228c18bb9de6a2db7d955cacacc52a6324e0ffb7',
+    ],
+    result:
+      '0x3568a4c421006259c6256268f7390d02ed2c536eb4fc78fcc16a3406d2a58646',
+  },
+  {
+    types: ['address', 'string', 'bytes'],
+    values: [
+      '0x7a3e18c70f8bd929219afde86f332ad8d9cf45a7',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse',
+      hexToBytes(
+        '0x16e259cd19305c021473333ba137134355b58a400f6c8bc076859cad07f760d480d6506c3086824fb7',
+      ),
+    ],
+    result:
+      '0xdc86d1ecbdcb092722b6a99eeca7fab314b40aac9f4047face1fda6a37d1d116',
+  },
+  {
+    types: ['string', 'address[]', 'bytes', 'string', 'bytes24'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat ',
+      [
+        '0x97b5ab4350ecf472094ccd8467313fdf2c76a928',
+        '0xae191a0327d9d4c448f3fbbb384bcc1bcb42fc52',
+      ],
+      hexToBytes('0x5a4760f3b520e41317a900d41c0498dd747d22fc'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat n',
+      hexToBytes('0x326517819da7dfac152bce50dff5fa7999fe5bfac2ecd6b3'),
+    ],
+    result:
+      '0x0cd6abb55ff96ab9eac9d6fae671d5fd05d5b9e94d3d676e5c8b4d45f4cbd752',
+  },
+  {
+    types: ['bool', 'uint112', 'uint80', 'uint168'],
+    values: [
+      true,
+      BigInt('0x738dd3163290eff608b6'),
+      BigInt('0x834faddde80314d87e'),
+      BigInt('0x2d11'),
+    ],
+    result:
+      '0x1cfc52f5b3cdb33843a7adc8d998355aab4f4ee81d6d545c122952ced7fd77e7',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini',
+    ],
+    result:
+      '0x1d2630f73ab3352ff1473bcc33558bf1df1360bfb824cd11b66c689a1344bb42',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupida',
+    ],
+    result:
+      '0x4b9f1bd3a78c64fe60144f0fbd0f7a9aafcf8e35032b0b23b09fac2bd4bd9d17',
+  },
+  {
+    types: ['string', 'address', 'bytes', 'string', 'bytes16'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in cul',
+      '0xa7a7c9b7b9e93fe88226fb47a867a61f0ae66092',
+      hexToBytes('0x89c8e276'),
+      'Lorem ipsum dolor sit amet, consect',
+      hexToBytes('0x682371a9b1b6d732544a76416c7e287a'),
+    ],
+    result:
+      '0xd5dcffd4f636cde482debf7858678176f716b468fb32464b8c28321a272b6d8a',
+  },
+  {
+    types: ['string', 'bytes19[]', 'bytes24', 'uint240[]', 'bytes2', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labor',
+      [
+        hexToBytes('0x48afe5a5810c931351094a1917b2a8c20cd4b3'),
+        hexToBytes('0xc06dc164fb75539e6e5e38ab8b32b12c09ee44'),
+      ],
+      hexToBytes('0xb7340c365017416ac5506223df3e2238155ce914ab402165'),
+      [BigInt('0xd9')],
+      hexToBytes('0x0c82'),
+      '0x40ee972108e35585327468bf253c76ab88e53bc8',
+    ],
+    result:
+      '0x5b8f44d5ed7e7618c40775984361c8f4f3510603ce97165d0a07473d6e2179fd',
+  },
+  {
+    types: ['bytes24[3]', 'bytes', 'bytes13', 'string', 'bytes'],
+    values: [
+      [
+        hexToBytes('0x3b5834661e2f1d5fed59ad36fc2d546e8e11ca7c6cde7141'),
+        hexToBytes('0x04d9f9af3324dc2a3a468aa19fbcf522f1248a3b56142dbd'),
+        hexToBytes('0x060c7a73ac2a8253d7431070e1ab2a5056c7c938f881791b'),
+      ],
+      hexToBytes(
+        '0xe36a501d1c625e1ccd0f9eb4b0c11df5af97e5525189f363976ae70ada7bd99b56010c72e6e89eff7c7e9a78c1f03c083e57a9b351598f',
+      ),
+      hexToBytes('0xd4b1160a19c54383093f7a0357'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugi',
+      hexToBytes('0x8f8e1727720987ac836b811f625a6d42db168cb26243f3cba483'),
+    ],
+    result:
+      '0x34800f5fb45d39d5950d8c9487e4c284d12bf14cfedeb4c8ab68cfe03b6988e7',
+  },
+  {
+    types: ['bytes22', 'string', 'bytes14', 'bytes', 'bytes14'],
+    values: [
+      hexToBytes('0x5ab59291b1caf3b2ded7c0a2e6134c143ce19955c7cd'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia',
+      hexToBytes('0xde5bde703f591fe91e403ddccdd2'),
+      hexToBytes(
+        '0x3368cc30da41665394e531c0c431eff9934f726f1052ab0e38599443daa70091a703d6cb2c4350dd906e51de65825212bffe',
+      ),
+      hexToBytes('0x3a7cd7bf4177094c4ad3e66598fd'),
+    ],
+    result:
+      '0x5f4c501d7bf7ce936a11844100ee57b4e83f61fd90aea3e6de8451f27c8c9156',
+  },
+  {
+    types: ['bytes11', 'bytes32', 'bytes21'],
+    values: [
+      hexToBytes('0x74be3c24694282d6155634'),
+      hexToBytes(
+        '0xfbd283fa937bbf3f5e37228c5c3296e9f94d8471b6983ae8bc6624984ee4a77d',
+      ),
+      hexToBytes('0x488aa9b721e3d1ce1ea8359775ae2333d182b53b79'),
+    ],
+    result:
+      '0xf459c8bc8648c5fcac1fd3afbf7349ffbeddfef770f0103b5f11331bb5f2dfc3',
+  },
+  {
+    types: ['bytes', 'bytes18', 'uint16'],
+    values: [
+      hexToBytes('0x58a211d661e4778b5f32'),
+      hexToBytes('0xb1c890057bf07a43ee95b3c983e39ce2ec31'),
+      BigInt('0xd3'),
+    ],
+    result:
+      '0x35aaaa0630e86d3abe91e3857569652a0bd94468f64b4251bf5cbff869844d0e',
+  },
+  {
+    types: ['bool', 'bytes', 'int256'],
+    values: [
+      true,
+      hexToBytes('0xb92e76a51043f7747e38f9ccfc0f72af6eeffa726a4f'),
+      BigInt('0x91fbb7'),
+    ],
+    result:
+      '0x5d685ba544507c6905a5aafed4f32b6bcde1bc7dbcd9f315b1d9eb2a3fe46ac4',
+  },
+  {
+    types: ['address', 'bytes30', 'address', 'bytes7', 'string'],
+    values: [
+      '0xe64c5f8952d8200cbdd92ab550e7d4bfc9c59aee',
+      hexToBytes(
+        '0x27eca0d37fd4b20a57afdda796d7dadb6627385c0fb3dd43544468f84b93',
+      ),
+      '0xa21702fd151484a2bb0f64a45b4fed63c59610d5',
+      hexToBytes('0x74f685d7ecc4a8'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,',
+    ],
+    result:
+      '0xfc124f7ecfcea1eefaf20c8a4ea4afa2d2be42e96e21e6629db5e48902644a49',
+  },
+  {
+    types: ['address', 'address'],
+    values: [
+      '0xe0505aa6f929aab69651ece976650cbf7c72d2d2',
+      '0xe8bd3d2c0adf43cf0294afbb602248ade613af0a',
+    ],
+    result:
+      '0xd846443754a2a95ea3dbd5e2c380fe9cc2d480b112192a4148b18168cc84b5e6',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cill',
+    ],
+    result:
+      '0x6066c46be71f4acbc9651b7e629387d3bb059865b1fa32f14db40fdfa6d9a543',
+  },
+  {
+    types: ['address'],
+    values: ['0x621628d1a5869f6f5255cf0445f9597961a4c284'],
+    result:
+      '0x660e78cfa5c64b683133b9e713342d58edbadf070b27cd7efb75e31c9b7cf369',
+  },
+  {
+    types: ['bytes', 'string', 'address'],
+    values: [
+      hexToBytes('0x797b'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia',
+      '0xd7c238eebd74be7a42d5282f33107b34aa28afea',
+    ],
+    result:
+      '0x520b91437e0535eaf50362d036650d292f2dc6235cef312e9d5bef56b2703e33',
+  },
+  {
+    types: ['string', 'bool[1]', 'bytes5', 'bytes14'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, se',
+      [true],
+      hexToBytes('0xf1f5c9339f'),
+      hexToBytes('0xc81aa2d91200fd80b4d5c2c5e932'),
+    ],
+    result:
+      '0x33c6db651ff98aaeb0b25acdaaf068e5c0a28f902c15fe3284bced18a221277f',
+  },
+  {
+    types: ['uint256', 'int240'],
+    values: [
+      BigInt('0xdd72d27450'),
+      BigInt('0x4d7acde3b7e97b0b44a167aa56f99dc835fa4cafe165edc93c'),
+    ],
+    result:
+      '0xd825e37888f9b70d5296aa803317962d362e1b9856e2093138b8a6b3d742ace2',
+  },
+  {
+    types: ['uint200', 'bytes', 'bytes17', 'string'],
+    values: [
+      BigInt('0xf1099f19417c703d482af5c63dcfa2cf38cdf1db0b6099f6'),
+      hexToBytes(
+        '0x07306cf9649f03050c720320a4c85bbb3aae7d7fe2ec8f5912c88fc8bbf5e7a47512f9bee69544bf',
+      ),
+      hexToBytes('0x5bbec5d3b1efae7bd1d1dd3e38f27bc3e4'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    ],
+    result:
+      '0x82a1410d4e079aeac97c084fcdc584854a2d9298cb04bbdfb2c75bf606aff669',
+  },
+  {
+    types: ['bytes', 'int168', 'string'],
+    values: [
+      hexToBytes(
+        '0x542cd2b1a4d521de2e3a351d6b8ec4e2cba824f393b7017931974e23168b30ef02a74a5d2f25d4f768a2f0c281726cc285f6bc3d',
+      ),
+      BigInt('0x1fdd6689cfc005c70fa7c21d121e0c75974e'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat c',
+    ],
+    result:
+      '0xa785fb0c8a658de5baca1ec054210d92b4a2dfb3f94d771d44543ae47d7c8959',
+  },
+  {
+    types: ['bool', 'string', 'int32'],
+    values: [false, 'Lorem ipsum dolor sit amet, consec', BigInt('0xe3d5a3')],
+    result:
+      '0x59056d49ab6bfa7ef66f8a0cc8930735bdd8fc2ed11081b5ff11b4590a62f5ec',
+  },
+  {
+    types: ['bool', 'bool', 'bool'],
+    values: [true, true, false],
+    result:
+      '0xbce9e184d52afc063499f86cb758361bb2858f21e1b0189d0066b9d5a43de554',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proiden',
+    ],
+    result:
+      '0xcd5ea30f7480ad5d6c4dcf6673e5738e0d5a507e80f47652cd701d29c40e3514',
+  },
+  {
+    types: ['address', 'bytes14'],
+    values: [
+      '0x0b9c63ad8996989c5ce2ebfa34386a4c33392848',
+      hexToBytes('0x3485d76f3d68202769d4a7fcf65f'),
+    ],
+    result:
+      '0x2c5f02839cc12d2a5ff078179d7e17a401efb5c282f1ce97447c2d0abb38289f',
+  },
+  {
+    types: ['bytes', 'string', 'address', 'string'],
+    values: [
+      hexToBytes('0x94a33a8d6597df1bb9'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do',
+      '0x9f0b04add4c519e838a6823e81cc9603eb14612f',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut en',
+    ],
+    result:
+      '0x7b5a162a8e9e54c34b4cf034190a1e544bf3bd671d3314415cb33387ffc87a7c',
+  },
+  {
+    types: ['bytes29', 'string', 'uint'],
+    values: [
+      hexToBytes(
+        '0xcadbbf982484e73a1eccfd219c841c08c4fc148dbf7694c8e343c62a0b',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est lab',
+      BigInt('0xae6a655c2588b4f725bdbfb4f5ca053ad35288a5'),
+    ],
+    result:
+      '0xba02f3fe62fe1ed52b13cbcc231dc9f9d9407d6d0d3bc4ceabe252b3fd1f881e',
+  },
+  {
+    types: ['bytes26', 'address', 'address', 'bool', 'string', 'bool[2]'],
+    values: [
+      hexToBytes('0xc84bcb547a424990cfe89f537e8dba425d8117a28d418eafca28'),
+      '0x7225f0c5164c75b7ca3b153882d44b922d148ed4',
+      '0x5476573cfc24f9eda50184127cc183b21f92c8ed',
+      false,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occ',
+      [false, false],
+    ],
+    result:
+      '0x530af4461fe2abe543f6847946a1ad40e70478432d89ca3f21d148f2f1604217',
+  },
+  {
+    types: ['bool', 'bool', 'bytes24[2]', 'bool[3]'],
+    values: [
+      true,
+      true,
+      [
+        hexToBytes('0x94fdf2b1f1eacbf71013ff263cd3a50e01c660ffb5571172'),
+        hexToBytes('0x3aedbd761a200c7f06cbb7ec8ee94034bd0cafbf363d870c'),
+      ],
+      [false, true, true],
+    ],
+    result:
+      '0x209493f0977d96b6d9ae5d3012a6467789d20325f88a21433e1d56c4d976710f',
+  },
+  {
+    types: ['address', 'string', 'bool', 'bytes'],
+    values: [
+      '0xf9dc38658d6317aa1a13eefe17e41ac25be384f7',
+      'Lorem ipsum dolor sit amet, consectetur',
+      true,
+      hexToBytes('0x'),
+    ],
+    result:
+      '0xd26e2e508ea16184ca01d85ca83e67eb0e8ad32302ca934b24adea147de57cab',
+  },
+  {
+    types: ['address', 'bool[]'],
+    values: ['0x791524bda159dd6ea1c466a9980bd0a7fd8e8708', [true]],
+    result:
+      '0x216b24964324abdf5d7417fa2877387fcf400b7a3a7c3fbfd2aa8d278abbc58c',
+  },
+  {
+    types: ['bytes1', 'address'],
+    values: [hexToBytes('0xab'), '0x0eb2ad7f5265edfd1e53106a05a5e9d344015874'],
+    result:
+      '0xd13a0df57cb38aace0a2b1c7f35bd3dae8c443d6d80df568de4c060a744d1787',
+  },
+  {
+    types: ['address'],
+    values: ['0xd649147c3f060d8e0045be681550f425b2ffb92e'],
+    result:
+      '0x94b1bd7f81831ad85d12056a79b861dd20dec21542143b9a0509aefcf6fac5aa',
+  },
+  {
+    types: ['string', 'string', 'address', 'int72', 'bytes16'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupi',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi u',
+      '0x351831d1d8b6ef480b9ca0f4031151aadb95d6a5',
+      BigInt('0xfa3e38'),
+      hexToBytes('0xf2f0e681ecd515599188f003b2494fdc'),
+    ],
+    result:
+      '0x97caafd78075bd0c59e03fab0dae462ac6b54ab9d12510284f4368d51d7703b8',
+  },
+  {
+    types: ['bytes11'],
+    values: [hexToBytes('0x051f2fdbd564e6c06fe361')],
+    result:
+      '0x8b0c4834ed987c958f13d856a6f49980bd2ce425d9eb9647d376437c82e30ee5',
+  },
+  {
+    types: ['string', 'uint16', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt ',
+      BigInt('0xca'),
+      '0x78e463bbb8f820a3bf8ac65a5a0e4e0c0e7ae5b9',
+    ],
+    result:
+      '0x851d4735de146087cd8e1addee0ce596b7a51c915ea33cde1b604767d011e4fc',
+  },
+  {
+    types: ['uint8', 'bytes', 'bytes'],
+    values: [
+      BigInt('0xf'),
+      hexToBytes('0x09a3ad87e011ee7355c285e5'),
+      hexToBytes('0xa5b98f6d47ef6079435059dc2dcd514183'),
+    ],
+    result:
+      '0x8285f2ba21ebe0d197240adce5614c85205be268a2632ab973cd1cd009f3377a',
+  },
+  {
+    types: ['string', 'string', 'string', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volu',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea ',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserun',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ',
+    ],
+    result:
+      '0x852b36220f1cae550403dd7e806f9e3e7b4e6631d8e7a4b9db860188933c074e',
+  },
+  {
+    types: ['string', 'bool'],
+    values: ['Lorem ipsum dol', false],
+    result:
+      '0x09d504e8050ff695b524ee209fd676d71c771269c8b58dd9c6ce943180c23343',
+  },
+  {
+    types: ['bytes8', 'bytes', 'int248', 'address'],
+    values: [
+      hexToBytes('0x26bb7d2258c70cf7'),
+      hexToBytes(
+        '0xa4d638784c7d0a2feefbad80c04179bf48a6f7a734f603b041f8e0b29fdcdff6ba24a0aac7add9f968222426b395e9',
+      ),
+      BigInt('0xb25ecdd63850c82c5a7fabee0a135771314659738707c61a1ccc19914335'),
+      '0xebf1cf3d31c0a90ed774d7a1bca3c4bb98305fab',
+    ],
+    result:
+      '0x8a3d71a17105e48847e595f036f73997c61daee868dcdf8f387a5341534f8b85',
+  },
+  {
+    types: ['bool', 'bytes', 'uint40', 'bool', 'string', 'int136'],
+    values: [
+      true,
+      hexToBytes('0x5b15dafaa0'),
+      BigInt('0xa0'),
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,',
+      BigInt('0x454d9e20dc'),
+    ],
+    result:
+      '0xae7373e9d79be88ac83c488a1073caa2e28cc76f68bb1cfbef83f3bf6f6d9654',
+  },
+  {
+    types: ['string', 'int48[]', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit a',
+      [BigInt('0x44c2589ba2'), BigInt('0x4abaeb29'), BigInt('0x2e933aa0')],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse ci',
+    ],
+    result:
+      '0x45056ddb55dbdd955c940e6642d0c303951389fe6d1caa5dd89ef76c9adafa06',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex e',
+    ],
+    result:
+      '0x9e96a4b8947bfbf94b01d81d7299b018cc179a2d4c94ced10f46da8dcb9f1906',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui offi',
+    ],
+    result:
+      '0x3e203616394a566b6c4927960550ed1183a6c293e4cc108c6bc0e86fba571e23',
+  },
+  {
+    types: ['bool', 'bool'],
+    values: [false, true],
+    result:
+      '0x49d03a195e239b52779866b33024210fc7dc66e9c2998975c0aa45c1702549d5',
+  },
+  {
+    types: ['address', 'uint24', 'bool', 'string', 'bool'],
+    values: [
+      '0x8fbafcd0455ba228e7f4d64365b470ea1df256c8',
+      BigInt('0x67fd'),
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru',
+      false,
+    ],
+    result:
+      '0xfd00224440a9f36e551cf15b1a80f7f000b99c307103bed53bc08a988af3acac',
+  },
+  {
+    types: ['bytes', 'address', 'string', 'uint144'],
+    values: [
+      hexToBytes(
+        '0x3c5cb670cbe8df1c991aa3f2670bdd90a1820be02ee4209a8bfc9257c6bd5853a39643c9f231f36d863f2b49182eb01dc073c15a31349675f4',
+      ),
+      '0x0c92f39abde60bba9347e033789485fcbc96c2dc',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ',
+      BigInt('0x8473d193b7bb'),
+    ],
+    result:
+      '0x01f0fe5dad521a3550fa16f81bfe81fef762b3ab50ea9e3766ceca8a1ab96295',
+  },
+  {
+    types: ['string', 'string', 'bytes', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labori',
+      hexToBytes(
+        '0x9d86c2a1f28b6f9cc1863f43991314cb7e0a9a3fefbc2429f632594c57decc101a51e9c4d6bd56bd1aa78e9f3280cf',
+      ),
+      '0x6af4c8173c4485e6114085d90801badbdef3936c',
+    ],
+    result:
+      '0x3dc3144d9bc6e3b98d9bb2da3759642c3ffd70216d1edaeaaf965cf76e6313c1',
+  },
+  {
+    types: ['int200', 'address', 'bytes18'],
+    values: [
+      BigInt('0xcf8877fddc8880453d42f1721859021a'),
+      '0xc184c86e5663085c7b0420c0853f1c13c1da9669',
+      hexToBytes('0x0b372a94577de4dc6571ebc22fbc4e2b263e'),
+    ],
+    result:
+      '0xc3fc5a9e3c10c80c74b681497c04a8cd080c4b62cb7379770b506d6ab917d8ff',
+  },
+  {
+    types: ['bool', 'string'],
+    values: [
+      false,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ul',
+    ],
+    result:
+      '0x49b39f066531da9f3c80a40bf6980bb7d9be4bc60c755696b12223a2a1270167',
+  },
+  {
+    types: ['bytes3'],
+    values: [hexToBytes('0xd3090e')],
+    result:
+      '0xd9e6da8e6db327da079bf8f512fe9fe02cd549ef28c7790d1e7d05ea14c109d0',
+  },
+  {
+    types: ['int152[2]', 'string'],
+    values: [
+      [BigInt('0x9144b3bf05'), BigInt('0x85eac1d639995613a0')],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est labo',
+    ],
+    result:
+      '0x602a7cb6ded280c6cca958930b76907a4abf709ea2e3a74846075e600564049f',
+  },
+  {
+    types: ['bool', 'bytes15'],
+    values: [false, hexToBytes('0xf81f19c81fdd1b5c771d8115ecedc9')],
+    result:
+      '0xedd75bfb9374f335b880ec728db562b108beea9447b0d1e147e261554a445fcd',
+  },
+  {
+    types: ['bool', 'bool', 'bytes'],
+    values: [true, true, hexToBytes('0x54d8e4cc558e6f60f4aef01d4256d2')],
+    result:
+      '0x6d827a69fb6a558ef5fa03c8896c76a00699be8254c3ac787eede5fc12993b15',
+  },
+  {
+    types: ['bool', 'bytes26', 'bytes', 'bytes3', 'address', 'bool'],
+    values: [
+      false,
+      hexToBytes('0xa9a2e53f611837c0dabfbbda1ed0c6b5deb0092ef30e0135fe67'),
+      hexToBytes('0xae48214acc0c8df7064488e9'),
+      hexToBytes('0x1d158e'),
+      '0x010b3324b73c4c39aefc57cecd9fe3ff990002ae',
+      false,
+    ],
+    result:
+      '0xec6f70ba779b1fbb1ff2ad0a5dd7a4b6fde9bf121c4b153aba33634c09c41be1',
+  },
+  {
+    types: ['bool', 'bool'],
+    values: [false, true],
+    result:
+      '0x49d03a195e239b52779866b33024210fc7dc66e9c2998975c0aa45c1702549d5',
+  },
+  {
+    types: ['bytes4', 'uint'],
+    values: [
+      hexToBytes('0x1d4928c6'),
+      BigInt('0xc965567d74aae355bc53ede1db48652d'),
+    ],
+    result:
+      '0x9f68a70a071e6243eebb13249b6eb0bd8794b549e41fe7de370e10f496cfcace',
+  },
+  {
+    types: ['address', 'bytes6', 'address', 'int24'],
+    values: [
+      '0xd3071aa7a3c72c2557d4ff7e1cac5341005b1b96',
+      hexToBytes('0xec9c7b171cd5'),
+      '0xaed93aa66e89d49a5fa0cafb5adbe2f91005f8d0',
+      BigInt('0xc1'),
+    ],
+    result:
+      '0xf95ee281fd55e022831ce14817772f27bdc8f4cc6bda1f8453e7e0fc3e4352dc',
+  },
+  {
+    types: ['bytes26', 'address', 'bool', 'string', 'uint176'],
+    values: [
+      hexToBytes('0x488220e0d5be6115a27b2bf0ca24d58943887ddb986184498de3'),
+      '0x2d68a0b7ba899880a98c8f15dc9582ced441f895',
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa',
+      BigInt('0xe73c9e3051387780'),
+    ],
+    result:
+      '0x785b4b3334a66ab0e6f1f3e84457fb0ccbc7a1ef299952154fcf97cc5f9fb086',
+  },
+  {
+    types: ['string', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Dui',
+      '0x47d5d276a5b417a49a24df5adf03c90c33fa269a',
+    ],
+    result:
+      '0x6a7c35fee8fc75bbe2e217c8f4696c8f4841441f393f3d050f3d489fe951369f',
+  },
+  {
+    types: ['bool', 'bytes16'],
+    values: [true, hexToBytes('0x0156fb89fd784e5fd5f73f2416051c95')],
+    result:
+      '0xeb9c689e82632b7d0c8dfa13e2897146970689ff0aff907cc2be8ccd5ea2894d',
+  },
+  {
+    types: ['bytes29', 'address', 'bytes13', 'string', 'bool'],
+    values: [
+      hexToBytes(
+        '0x8b54f037c896ecf27fcffeb180e3b9026b46891fdab57be550aa7ce499',
+      ),
+      '0xc3db9e150c92de360adb55bf058cee22617a12f9',
+      hexToBytes('0xa38502d762ec7174ddc5a45e44'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequ',
+      true,
+    ],
+    result:
+      '0x934254d1aabe1abb66a840625377175c703a773b280bc5f09f531aeb5d99ca39',
+  },
+  {
+    types: ['uint96', 'bool'],
+    values: [BigInt('0xf2c135ae90'), true],
+    result:
+      '0xe7e616be578054cef7bab8fdc56c351209c83574692a295b52aa4574d5790812',
+  },
+  {
+    types: ['bytes', 'bytes7', 'string'],
+    values: [
+      hexToBytes('0xcc4779686739f0eb30d43f008c93b46def55462eee96ffaaf5b18cb0'),
+      hexToBytes('0xa850ec4e509c69'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui ',
+    ],
+    result:
+      '0x41d21ea6d98b5906732c8ddd1a0e3787062101d25e410b559465c3d55433450a',
+  },
+  {
+    types: ['address', 'int192', 'bool', 'address', 'bytes24'],
+    values: [
+      '0xae4272e6b65b9e67943aa305d03978453f1cdc00',
+      BigInt('0x3f4c3930eed426756b77e25106'),
+      false,
+      '0xd67e2f9c6931622b8f57dde218688e89e832c672',
+      hexToBytes('0xeb9ac53f03a22260cf0fdcad12e6218de0952aca749f9d11'),
+    ],
+    result:
+      '0x31ca50e6d3b22240aa510b50651e740f37b1942ed010a356672d0d04e53f3945',
+  },
+  {
+    types: ['bytes', 'bytes7', 'bytes26', 'address', 'address'],
+    values: [
+      hexToBytes(
+        '0x3ad6167f5e756d06986d1fd69e8c96db5e92bc4888393f9c3dd0d4f78a65a64a5d33a9',
+      ),
+      hexToBytes('0x0571c7e8ba42a1'),
+      hexToBytes('0xc22497b652fdeb0de0067fac621287ba4ddc207499d41bd78c6d'),
+      '0x6a0eb271092cb477481a8e2441b963cc6e1d8dab',
+      '0x208686f94f2070edd53b14541610991fb92e1003',
+    ],
+    result:
+      '0xab3908b2dafb90c972ed7e82d79208faeb263cbd864164755e882248ccc8fefd',
+  },
+  {
+    types: ['uint184'],
+    values: [BigInt('0xad657a9298c3a4ef')],
+    result:
+      '0x845b0cce15e1da8c3deb8b9fabaa63b32c52b535a8981c9b62dca101af09ab57',
+  },
+  {
+    types: ['string', 'int200', 'bool', 'bytes27'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occ',
+      BigInt('0x46caf0e9bb26f3a36'),
+      true,
+      hexToBytes('0xbda2846874571994af641b93dcab067c12f9edb1f4f4d20ead6965'),
+    ],
+    result:
+      '0xca412e6b8dc9262727766f581b63f94a2c11a4f8912bea8294b7887bc9d0fc4d',
+  },
+  {
+    types: ['uint232', 'uint64', 'string', 'string'],
+    values: [
+      BigInt('0xbabf957e42cb0e074b3a604de5'),
+      BigInt('0x8b1c821e'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore mag',
+    ],
+    result:
+      '0xad7d3484b68d219f135a5f49a2c28a043fe1d3a9d35d565c989c22cb61146b85',
+  },
+  {
+    types: ['bytes', 'bytes'],
+    values: [
+      hexToBytes('0xa7a2f7687387d57e28867198a8b8'),
+      hexToBytes('0xd804f5aba72c78eed93b687135369a7dfa7306b6242319b9fca36a3e'),
+    ],
+    result:
+      '0x8b4b572d94ef83c43cf2609751263a40eb80c12ddefc117798a1541c93fe7427',
+  },
+  {
+    types: ['string', 'address', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim i',
+      '0xdc238b1e1cb99121d21da78a9882cc6f0405a1bd',
+      '0x4546cd70d585e89ee0dc1128241ec72f0e2fc09d',
+    ],
+    result:
+      '0x7b6732e15a855a5aad17aebbe9196e47310e31f318d6dc9fa576b3880a4bb62a',
+  },
+  {
+    types: ['bytes26', 'bool', 'uint40', 'address', 'uint56', 'address'],
+    values: [
+      hexToBytes('0xbac21e168250f7b4931e984d05a61fbc10e8bce18b787c6b0fc5'),
+      false,
+      BigInt('0x7b'),
+      '0x8b4ac0147470efa480642a92000da92ae37e82a5',
+      BigInt('0xc8a37df1ade6'),
+      '0x6f322d1e956a552979d9740575837e2e819722c1',
+    ],
+    result:
+      '0x2b7244da5625e88ee5d96427934ef56302b5e2a4d60991cfbaf7d6b28e0eba7a',
+  },
+  {
+    types: ['bool', 'int104', 'bytes28'],
+    values: [
+      false,
+      BigInt('0xc4c8223c7c70fd047377ab33'),
+      hexToBytes('0x0f5f557b65435176c2961f580a2f8e832032bc5fd7e7efdd54ade581'),
+    ],
+    result:
+      '0xe39acc3d52f0bf079fd65a85ed287e5a58d5850f35df70dba1085e8af1691105',
+  },
+  {
+    types: ['int224', 'bytes18', 'bytes11', 'bool', 'bool'],
+    values: [
+      BigInt('0x9b7683'),
+      hexToBytes('0x4fb692ee0af88b3b4df64cea14d27a2dc3f1'),
+      hexToBytes('0x34bc30a54972a63ff068df'),
+      false,
+      false,
+    ],
+    result:
+      '0xe70502249c0f141d00634358bded48713315ed9a62486c38218300e4a9268f2d',
+  },
+  {
+    types: ['address', 'uint256'],
+    values: [
+      '0x3b4462e90544ea4895c4a191ba49fdb1e580aae6',
+      BigInt('0xc93b4c5ef13c22206d79eb8155249bb269ae423d5ac156ce789fbd68dc'),
+    ],
+    result:
+      '0x0c4357f1bfa8f259fa47ca93b90127c353b0a5310a4124f9fafac9083820460b',
+  },
+  {
+    types: ['bytes', 'address', 'bytes32', 'address'],
+    values: [
+      hexToBytes(
+        '0xfe817efff2047d8eef9fed0dc8ba5c0e24df6b469c7deadadf7467668fe9975850e696c11aa21cade9e6424e9d5638a1626ea6757e669366e3',
+      ),
+      '0xff065ad24d8f70f22da268d8c77e601a1af44f7f',
+      hexToBytes(
+        '0xa31937d01df722124824236b260066d9e4e6186bad2e547b2f4a7cef2cad7365',
+      ),
+      '0x758c04258b4fcf5588579a51f0fe4fd393dd4013',
+    ],
+    result:
+      '0xf1cdce99217121cb8cb919dc830a0938589e43b96c5c191d0d898778ebc58829',
+  },
+  {
+    types: ['address', 'uint232', 'bool', 'bool'],
+    values: [
+      '0x8675633ed4ce485213412942fecc1841c18c151c',
+      BigInt('0x90da9478dc41f9d181682233e6c47f78'),
+      true,
+      false,
+    ],
+    result:
+      '0x63a2b372af9a843dbd4d18c18cd27c9799f8fde57eff7e24b15e7ea06bcf5401',
+  },
+  {
+    types: ['bool', 'uint32', 'uint200'],
+    values: [false, BigInt('0x90'), BigInt('0xc6cf447755f786ff09')],
+    result:
+      '0xe4d0dc039f20cebbc72b8a71d1e753297bbc81fe71fbb4a24c8189ea3c6a266c',
+  },
+  {
+    types: ['int128', 'string', 'bytes', 'string', 'address'],
+    values: [
+      BigInt('0x385697'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
+      hexToBytes('0x9b141719bdebb0e2357b56cc9fecd10ea9b85b10b0'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidata',
+      '0xbb67e770cab31136eb3549d0b7b2d5e62bccb3e7',
+    ],
+    result:
+      '0x8173985256aa459957cd9d4252e1900f8031e2362605b4baaf3c78c490718105',
+  },
+  {
+    types: ['address', 'bytes10', 'bytes25', 'address'],
+    values: [
+      '0x0e3eed137ad980aece0a3e205d6d6bf6d111973c',
+      hexToBytes('0xa05e3ab4e3846f5019c2'),
+      hexToBytes('0xfa02147ef88e3a78d829c19951d303f3822de2de84f74a1ea1'),
+      '0x84c83f5126939dcbd55caf34bafff080d925267d',
+    ],
+    result:
+      '0xd75c40c8b8f4fb239e87e48d3ae5b713fb5cd4bf3d358baf7952b14b964b93b1',
+  },
+  {
+    types: ['string', 'bytes30', 'bool', 'int176'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do',
+      hexToBytes(
+        '0x84f0dbba239f9b4e4cba59bdad85700178e526b32109caf6a4ef4c84ac1a',
+      ),
+      true,
+      BigInt('0x6ed78413e0f297c8b5eafb1e23'),
+    ],
+    result:
+      '0x49977e94b482639f47176d5d1507f8b434574a8d3b98bedee63f6a4352b70ad3',
+  },
+  {
+    types: ['bool[3]', 'bool', 'address'],
+    values: [
+      [false, false, true],
+      false,
+      '0xe5b1e92c666b9b053c2f96bfb509b5781a18bbfd',
+    ],
+    result:
+      '0x6825c912faf412c1ff3a52b9a3220f72a9332a43859b5daded0ef544cd234274',
+  },
+  {
+    types: ['uint232', 'bytes20', 'uint216'],
+    values: [
+      BigInt('0x57f6c590473d'),
+      hexToBytes('0x1169235916606cfbcdc3b875a71eb9b14ae24296'),
+      BigInt('0xadc4ae9b88'),
+    ],
+    result:
+      '0x0a8155f148b1d5c5568b9746b5e02b6b98de89dc5dac424833b3c213f82ba767',
+  },
+  {
+    types: ['bytes3', 'bytes21', 'bytes'],
+    values: [
+      hexToBytes('0x2620bc'),
+      hexToBytes('0x3377f457594b05da6c671678ff3f108e12b1b86a4f'),
+      hexToBytes(
+        '0x1d00a6488c64cd38f38f7fb92da2d01bab1ff2305987ae7cd5a6647201c1184589794d16cf9cbbd32cf1ce482e5b5a0974eb24d2a6ba8ee0232a0f',
+      ),
+    ],
+    result:
+      '0xa5bf34df6e5e218c3a0d9e2ac67899fb0803b56f1e0358fce08f7e74d092739d',
+  },
+  {
+    types: ['string', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaec',
+      false,
+    ],
+    result:
+      '0xd56c5f4d2cb02b9dda1ad97a8848e4083068db304b11ee93cb71938491b69c3c',
+  },
+  {
+    types: ['bytes15', 'int240', 'string', 'string', 'bytes'],
+    values: [
+      hexToBytes('0xf5b3475f3c461d6ecdfedeb9521ee3'),
+      BigInt('0xfd6f79d9'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod te',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et ',
+      hexToBytes('0x7c336c61a683b9a3580528b3fcc84c1f4227'),
+    ],
+    result:
+      '0x6d1fe269b5e61331980d3cb17f0773f81710b6692d14942f738eed281a829af0',
+  },
+  {
+    types: ['uint32[1]', 'address', 'bytes', 'string', 'int112'],
+    values: [
+      [BigInt('0x80b1bc')],
+      '0xfa67afe93ea9f7d619cd4d7c81e71e4d025a3841',
+      hexToBytes('0xe9c8750f9d10a29c7783'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui',
+      BigInt('0xcb4e70'),
+    ],
+    result:
+      '0x408ab1bc3257e9b8028479324adfd93ebcbb1648e532ba04f87232774dca6cc0',
+  },
+  {
+    types: ['address', 'address'],
+    values: [
+      '0x326972b131f8bfa75746f83f58ccf4dc2dc27d36',
+      '0xda7aa37fb20ef534a397506fc159465c92e6c5f4',
+    ],
+    result:
+      '0x7e470bab03fa35620e840c3156688abea8e4258159a46edb93adf10538fb4ca7',
+  },
+  {
+    types: ['uint192'],
+    values: [BigInt('0xf39bb54d13c39a1692c224d6ab4a88')],
+    result:
+      '0x7699422424fe92ae96676f88f85378e115750c80be0f23c9d73a136047f6b15f',
+  },
+  {
+    types: ['string', 'bytes8', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est ',
+      hexToBytes('0x52176142137bb64b'),
+      '0x5a9962410ae6c2c7589107ca4f50447c03ee85db',
+    ],
+    result:
+      '0xe3e86bcd3efc162d2f6834d1438b0ae4360ebf17ef1127f983a3194fccba5f51',
+  },
+  {
+    types: ['bytes', 'bytes29[]', 'address', 'bool', 'bool', 'int48'],
+    values: [
+      hexToBytes(
+        '0xead4604ebcf36cea5e47538d8e14cb9214f6e9f1fbdb76581e54bf330eb8533a1880efcd91608346e8f6e7b068e4',
+      ),
+      [
+        hexToBytes(
+          '0x5fa618d89e61200798e3661a8da64932d7a95bd36ce9b78fe502c2a725',
+        ),
+        hexToBytes(
+          '0xba267bf62e7e408ee3e4fe5e2db942cce0f8f305eea254962e0f732bc8',
+        ),
+      ],
+      '0x6f4b0d09104d92123cebd9ca7809f410ff846d8c',
+      true,
+      false,
+      BigInt('0x61'),
+    ],
+    result:
+      '0x930ea641a02502f4df69b5552d5782700f253fdd85dde0c0d9c1ef6c76fb1baa',
+  },
+  {
+    types: ['bool', 'bytes11', 'address', 'bool', 'bytes'],
+    values: [
+      true,
+      hexToBytes('0xbf1b062375ec2d71015d25'),
+      '0xecf7240defd7c013629ffb3b1eb464bc6a6aed9c',
+      false,
+      hexToBytes('0xde831267364cec21ab2eb3e146cfe5261de2'),
+    ],
+    result:
+      '0x41d8d7e7935db7de93b356e948caf68e039c8f3648bd6d7a145ed54d31c7bbf7',
+  },
+  {
+    types: ['bool', 'bool', 'address[2]'],
+    values: [
+      false,
+      false,
+      [
+        '0x925799df457d6dde6f025acf3332d7e22e4e6b0f',
+        '0xafd50f6c48652a8cba2b32bad55b38ee653bb7ad',
+      ],
+    ],
+    result:
+      '0xe7db43674358cb623900c98b31d725ababcc4cb80cfc0f379a9756616cec649a',
+  },
+  {
+    types: ['int216', 'int8'],
+    values: [BigInt('0x69'), BigInt('0x1e')],
+    result:
+      '0x1886f341851dc77015905aec0fb18f580e70a7ca94496b793b32e1196ff06779',
+  },
+  {
+    types: ['bool', 'address'],
+    values: [false, '0x8d07d2b0927625dc9978f99a23c934c6eb05048f'],
+    result:
+      '0xd5d63732ec1c6ef48725d7b1dab3f3154d5aa6ba3120bf93d97beba62e49b982',
+  },
+  {
+    types: ['uint8', 'address'],
+    values: [BigInt('0xcd'), '0x227b6ddd7bbe1c9bcd0feec040deb9aad29c8073'],
+    result:
+      '0x1838b3201e386d50b772bee788bec4144d75da53ec25d9619986396cfad0dbfb',
+  },
+  {
+    types: ['address'],
+    values: ['0x1452a0329265d65d019fd98f24043d0e90c65716'],
+    result:
+      '0xbba82f988a7482d4ba9e43176854ade967e34483887fc5bc42a87b1ce700a255',
+  },
+  {
+    types: ['bytes', 'address', 'int224[3]', 'bytes', 'bytes', 'string'],
+    values: [
+      hexToBytes(
+        '0xccaf6148c0f7b6a4ae7a7507494b526687c0a4cffe0b9dd619b081904b0b7870',
+      ),
+      '0x5d9f4d47f08e40918eedec7a28222e708e32afe0',
+      [
+        BigInt('0x1b80895111a466681fbe4b78fd51b34666ddf316cef77863'),
+        BigInt('0x5c72f9ce8bf0e85144380c5470d0b8'),
+        BigInt('0xa856a3d0bfeaa2459c7f089'),
+      ],
+      hexToBytes(
+        '0x3af8b2f3713ff20f232353b92690101bb3f898e9005bf33da622c3a8b4b0ff0019b9338a526bef55677ee4b04bf33e15e8',
+      ),
+      hexToBytes('0x49a88947bb9b80a84a463b'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute ',
+    ],
+    result:
+      '0x78923ef1e60c4efcb2453820b304ac30288c413139184ffd97c1c5daee3e7df6',
+  },
+  {
+    types: ['string'],
+    values: ['Lorem ipsum dolor sit amet, consectetur adipisc'],
+    result:
+      '0x28fe0f1891e3abb9bd7997907e05a01af2d4b261342520769701fb708d54658c',
+  },
+  {
+    types: ['bytes1', 'address', 'address'],
+    values: [
+      hexToBytes('0x17'),
+      '0x201ac5106f4e3cde2be464bffedc96a61c57f684',
+      '0x7fc57287298a98d761d0ffe2206a26b356bb569a',
+    ],
+    result:
+      '0x6219d2baef8b842b46b8b4180731cab69d7f2109f63e7c4aa303d93e672f99f2',
+  },
+  {
+    types: ['bool'],
+    values: [false],
+    result:
+      '0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a',
+  },
+  {
+    types: ['int64[]', 'bytes', 'address'],
+    values: [
+      [BigInt('0x6b50d3f280'), BigInt('0x715f3844'), BigInt('0xe586209c7310')],
+      hexToBytes(
+        '0x548c9087bf5fda13f44f50160fed06e83e0fcdc2dd5df5f69af99e6a65218fec4e75983b5bab84b295f6411066d3bbf158b6ec5604df970470459c533a10',
+      ),
+      '0x03480bc175842f970a69ef7969e7dac81851a5b3',
+    ],
+    result:
+      '0xdf40d6e643bc2c6e793769c75d1632275c8d93ea3fdb834c86f57240c1052673',
+  },
+  {
+    types: ['int176', 'int88', 'int56', 'bytes'],
+    values: [
+      BigInt('0x1d11dbe368277f937d7661d8e954684ea6'),
+      BigInt('0x50'),
+      BigInt('0x37a'),
+      hexToBytes('0xe5ee7437767db7ec8c331d817c351f911e450f'),
+    ],
+    result:
+      '0x03ea1a842ef84cf74a4e20bde0c8ac3a06eb132de055a4d80e5720dab091e560',
+  },
+  {
+    types: ['string', 'int152', 'address', 'string', 'int40'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pr',
+      BigInt('0x16f80b670babe1'),
+      '0xc97bd5d301db6612cb78bf34231d6066c44ea374',
+      'Lorem ipsum dolor sit amet, con',
+      BigInt('0xc206254f'),
+    ],
+    result:
+      '0x79420b2c5260d5116385955c984c93aa546e2ad32a7e35b315309af7972f4456',
+  },
+  {
+    types: ['address', 'string', 'address'],
+    values: [
+      '0x48a9d0b06fcac3da3a023d5702f5581db3d84b9e',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullam',
+      '0x40b1fc051e2aeca684a1b6ca92f868748c35bb73',
+    ],
+    result:
+      '0xeaff28d0043ee1b96f2bd293e0b54e0eff2453f571b28877bdd8b5c0e9a3cc10',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['bool', 'bytes'],
+    values: [false, hexToBytes('0xfe2366e9919188c5d1f9462e')],
+    result:
+      '0x693e18405e9889af7d60016361d8c508c90b5ac8b7aab7ff35a0759e137c36af',
+  },
+  {
+    types: ['bytes', 'uint96', 'string', 'bytes'],
+    values: [
+      hexToBytes('0xf473'),
+      BigInt('0xc6f5f8'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate ve',
+      hexToBytes('0x10ab7c0d45e0015a2dca2c6dcc33f48f86346bdb69'),
+    ],
+    result:
+      '0xf038efb61f35c0058fdb3f2a6581dcf22605cb10712bd889ee39ba3c8023be59',
+  },
+  {
+    types: ['bytes28', 'bytes', 'int32'],
+    values: [
+      hexToBytes('0xe1f4c6d8c1cfe3086d13580043b0c452de4e22377bdf441ad111b70c'),
+      hexToBytes('0x626d22efa52e2a304121c400a13cdb45a74c0cae166807ede700f1f1'),
+      BigInt('0x864cc0'),
+    ],
+    result:
+      '0x62b778d542878a6053cff0db01990239364cc3d6bdbbb53f9d382b40744e506b',
+  },
+  {
+    types: ['address', 'bytes26'],
+    values: [
+      '0xd3cf06570acf7e79b1f6e123f264d751c3ec28b4',
+      hexToBytes('0xc76ebc22e4013a1d2f49fff87358beb40dff08fab450935319ab'),
+    ],
+    result:
+      '0x78cc2c3c9be637aa5ea3af562efd73f44955de0f891782d615aa77a2c8e8efe1',
+  },
+  {
+    types: ['bytes25[1]', 'string', 'bytes', 'bytes', 'int184', 'uint104'],
+    values: [
+      [hexToBytes('0xf3eb2f4bb995bb4792fc42f3ff14f555dc4da8fbf0dc2fd99a')],
+      'Lor',
+      hexToBytes(
+        '0x1389bd7c79b7ce662aa06d5d5930d559794127520cf8dabf93777b54a62d564abe',
+      ),
+      hexToBytes(
+        '0x563c85a33302deec36738ce1d77b163c10b290a29f7fecbd0d11b2cbfce3a9e7b378e624c183ffaef3c15a8f76efec8e332e3a0aef2b1b54602e9325a98933ef',
+      ),
+      BigInt('0x310cc7077a314d89f4dcab5c2806f8368a8ab01809b3'),
+      BigInt('0x2516'),
+    ],
+    result:
+      '0xcf2dda74b7070e7aa8dd1f79cd48e4fd1f18f663b47adb44d8bc42088f59e9de',
+  },
+  {
+    types: ['string', 'bool', 'int128', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut l',
+      true,
+      BigInt('0x467695'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo',
+    ],
+    result:
+      '0x41a5f9a1fc40978ecaaee4609de6f8e90b158f2bc373ef41cc5ef26e0a692033',
+  },
+  {
+    types: ['string', 'bytes22', 'bytes16', 'bool', 'address', 'bytes'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do',
+      hexToBytes('0x183120126c67642655f37db8728602beafe2e419782f'),
+      hexToBytes('0xe5caeda4f9ca0f7f9bc0b3cbc093d24e'),
+      true,
+      '0x3cce2e205122ed2fe1a2dfc209dda1bb1731e26c',
+      hexToBytes(
+        '0x9033ab4df1dea712ce8aeae5c81811f62179af83fdc86c81ef50c2da1f1573444f2d7cf6eec31ebe7cb9ddccaa3d3874d2f83ea44b361e308f1b5f84bb0b02',
+      ),
+    ],
+    result:
+      '0x3df5fc283f83228d1ac29357433140412965d828c2453111437e64aa8508f122',
+  },
+  {
+    types: ['string', 'bytes11'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu',
+      hexToBytes('0xce5a84091c8ae2dce69cfb'),
+    ],
+    result:
+      '0x3a6d3023a41126aa12448eb9fe09725f1e268e97f6c8c24b9c596caba11f30a1',
+  },
+  {
+    types: ['bytes8', 'bytes27', 'address', 'bool'],
+    values: [
+      hexToBytes('0x62fd582367642e6f'),
+      hexToBytes('0x207b946096dca601f0bd568f901699518b4887b830f563f0b0dd36'),
+      '0xb621a4b85b92ee3aae1a31c0b8eb20aef6404bfb',
+      true,
+    ],
+    result:
+      '0x99cf989ba6668b61bad590035e3d3e4c9aae74b113942933b46a46754687f759',
+  },
+  {
+    types: ['bytes32', 'bool', 'bytes12', 'uint136[]', 'bool'],
+    values: [
+      hexToBytes(
+        '0x105b853bbc03bc84478167acaa50d5ca3d8ba2b2bea4dfc307ae730cd8e2231c',
+      ),
+      false,
+      hexToBytes('0xfcd524f411aff1e511f66de9'),
+      [BigInt('0xed54ba0ded184d')],
+      false,
+    ],
+    result:
+      '0x998d061868953425bfa872e3a7f5c35d7e13c79549429d9dd87c9468cf3b77a1',
+  },
+  {
+    types: ['address', 'uint128', 'string', 'string', 'uint96'],
+    values: [
+      '0x72d50b1f1d517e4d9217d6211543bec1a2ca5bd8',
+      BigInt('0xafbcf74401380176e7'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id e',
+      BigInt('0xab'),
+    ],
+    result:
+      '0x64e16481f503468d92ba1069a456aef5acba8d133ed7ca63ac0e560167f6bca8',
+  },
+  {
+    types: ['bool[3]', 'bytes', 'string', 'address', 'bool'],
+    values: [
+      [false, false, true],
+      hexToBytes(
+        '0xe5866066fe119a450f3a815c2604e5b50bff9807011b8b8fe5fb81085a51c61d02',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non p',
+      '0xb3c1ba9419b0a7a91cc7ce2061d8b6c46c85a5c1',
+      false,
+    ],
+    result:
+      '0x4f306435f69c3d6244289795e867b8b103a2bafaef2005b35ff8ecff79730faf',
+  },
+  {
+    types: ['address', 'address', 'bytes8'],
+    values: [
+      '0x7a479118a1da6960046a9b2826644d2bead0e7aa',
+      '0xcbaa9318d1c83825f605c29de636885764aaf916',
+      hexToBytes('0x22bf06ec338fcc4f'),
+    ],
+    result:
+      '0x244da358507cc1a47c3b7f4a60a1c46658e709a62542c5d11c6606cf66f38201',
+  },
+  {
+    types: ['bytes', 'address', 'address'],
+    values: [
+      hexToBytes('0xd2cc0d486b2a'),
+      '0xf4083821c3407690f202fc67d1bf831d54d8d363',
+      '0xdca0e4168e7105eb2fb3668d6d2bbd6f450259c6',
+    ],
+    result:
+      '0x40264c8274f09b863d8b0f4c83c9df303dc03a40846a662d8eb96523dac27d23',
+  },
+  {
+    types: ['int80', 'address'],
+    values: [
+      BigInt('0xe535bb1008'),
+      '0x3c31555e594fb5298aa182fa62cd6fc20e73270f',
+    ],
+    result:
+      '0x9075fe9b3120b29a1a86abb53ecc18ddf7dce81abaa8740a648f7a965b51d1cf',
+  },
+  {
+    types: ['bytes21'],
+    values: [hexToBytes('0xa6d0639b1cd447e6afcd5477a69f03f098a311c789')],
+    result:
+      '0xc30f9b2bd4dabe89e6784c059ed67d28d3252886d540466f1b6ee037d9c05dec',
+  },
+  {
+    types: ['bool', 'address'],
+    values: [true, '0x804c8532507ff9356a6ffb2d13d03d887d316d95'],
+    result:
+      '0x4278e471ec25b53d048642130861e1d0ea996b36f7fd2fde805c751f5c3fe642',
+  },
+  {
+    types: ['address', 'int160', 'bytes24', 'address', 'uint128'],
+    values: [
+      '0x225de626120711e8b02b90ba88fe14160368925b',
+      BigInt('0xdbfc29cd3e2b89cdafb64371af3d55696d5b'),
+      hexToBytes('0x65d96a8d8a5e8f4246fea11e024f8f04e2fca8d2e4dbc7a9'),
+      '0x565329820d7b81042f04a6fd1bf153d0f494e0e4',
+      BigInt('0xc552ed6d'),
+    ],
+    result:
+      '0x05667e8515d3d8faedd9b4939a7f1be0fe3cba15ad8447dc546b5f6b3e6de40f',
+  },
+  {
+    types: ['uint96', 'uint24', 'string'],
+    values: [
+      BigInt('0xcb'),
+      BigInt('0xf6'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur ',
+    ],
+    result:
+      '0xa09fa252ba7579e4e5a7c1c0ba3ba495247619ffe1c36767351a2e4bff11bdf1',
+  },
+  {
+    types: ['bytes', 'string', 'bytes4', 'bytes1', 'bytes19'],
+    values: [
+      hexToBytes('0x98127538462a391d02e78242fd4334'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor',
+      hexToBytes('0x5e26dfe5'),
+      hexToBytes('0x07'),
+      hexToBytes('0xd1ebd8b4aeec4feceae74743598bcac3a325cc'),
+    ],
+    result:
+      '0xc9cca53f48e459001afb72ef1f565e86ef1bb4b260d4b8ba6a4940bcf092e645',
+  },
+  {
+    types: ['string', 'string', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit an',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute ',
+      '0x91193edc13d4c7b10452c32217c4e15e2a8b2b76',
+    ],
+    result:
+      '0x4c526c5992a3171b02e945750ec83bf154447605d7f841c7592be92e71ab9397',
+  },
+  {
+    types: ['bool', 'string', 'int216'],
+    values: [
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex e',
+      BigInt('0x52bb7a18d05f'),
+    ],
+    result:
+      '0x54249ed33340e7ba500c91bbedefdc55110ff052bff6199cf09fdf794114cac3',
+  },
+  {
+    types: ['int96', 'uint32[]', 'bytes', 'string'],
+    values: [
+      BigInt('0xdb'),
+      [BigInt('0xbea3'), BigInt('0xf0')],
+      hexToBytes('0x7a6d6a602bee4445ae377f1489f5176595fac080c4e031'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est l',
+    ],
+    result:
+      '0xb8cfc7c92a9067efa5e5adadfc734cf032243410ae4771c1539122bb756ad613',
+  },
+  {
+    types: ['bool', 'address', 'uint200', 'bytes30', 'bytes'],
+    values: [
+      false,
+      '0xbe41fa0623f650b2a77285b35144b88225d7682d',
+      BigInt('0x227688bb532647a7'),
+      hexToBytes(
+        '0x2e61a3998e710d3bc28693892c46800e77a053b38adb8995cb582956f60a',
+      ),
+      hexToBytes(
+        '0xf1550420bfbeeb92b60c99111ca7fbc5e191c0c79ffee367e8c3e4a4f7d04868b662009eaa7d9049b39b',
+      ),
+    ],
+    result:
+      '0x2b1f54112f8b1c7747c7310286edf11e6829d19ce2fe552215f5b939f0085abb',
+  },
+  {
+    types: ['address[]', 'bool', 'bytes29', 'string', 'string'],
+    values: [
+      [
+        '0xb929897dca1bb8e83e578aeb7164c057df1c20d4',
+        '0x4158d4946ba736166fd4f5d0b60efcef03d876c5',
+      ],
+      true,
+      hexToBytes(
+        '0x5264d581650028425e9a479ded35e53af52df8b07c504462b59e3217b9',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc',
+    ],
+    result:
+      '0xda5e67bb5cb1be1f483c600fc3ab0a0d83acb09525e1ccd32225f11053947d41',
+  },
+  {
+    types: ['int96'],
+    values: [BigInt('0xa9d7181f2d84bb6c68')],
+    result:
+      '0x92ee6d6c9b74046763ff193e4eefb89b43a737be6ddd46b290bf88dd19988858',
+  },
+  {
+    types: ['address'],
+    values: ['0x489d43305fb0f1a615ff5dcae37fee528b6535d1'],
+    result:
+      '0x4e2b2b18e18595185b50f835af10cda9a40171bfd0fea2a70cbb42e61f6e5327',
+  },
+  {
+    types: ['bytes3'],
+    values: [hexToBytes('0x7cbae7')],
+    result:
+      '0x8f5c78557dfcb63db46c62e4a2b715644423bd23dadf61eec73dc95a3eaa81a1',
+  },
+  {
+    types: ['int136', 'bytes'],
+    values: [
+      BigInt('0xcd006b3249d6916cab92'),
+      hexToBytes(
+        '0x126f54ed3d77c9345e7035ba9c3d6b4f8adc0b66824eb1e2843c140ac45a39417f357cbd44f87c58f12d022b9b536174f09ba0',
+      ),
+    ],
+    result:
+      '0xbd09a0e5c7ad6e57a3c52256b35391fcc2499065cb04dda313a10f155038cef1',
+  },
+  {
+    types: ['bytes1', 'bytes1', 'bytes', 'address', 'bytes13', 'uint56'],
+    values: [
+      hexToBytes('0xee'),
+      hexToBytes('0x36'),
+      hexToBytes(
+        '0x6ee4a6aa522d776ab8d2edf0540e87076bbed531c554ac01c0e00448333ba3c109f167fedeeb785ccb890acfea5211971bcd72',
+      ),
+      '0x09bceb840b2b4ae45299f4bea2a98dd07d9080a2',
+      hexToBytes('0xbefdf7124f9384d2740aaa1b1b'),
+      BigInt('0x26423f1e6f60'),
+    ],
+    result:
+      '0x587ae6d592c9a27c7cabf90b3583f5cdb0269b525bef5690617ddb3716c5e597',
+  },
+  {
+    types: ['uint240'],
+    values: [BigInt('0xa7fa090a')],
+    result:
+      '0x1e1ee27b698c39b89260a0a3ed6f6f111d3ff0e9b9c8bc8d9c65a7f3ed93cde2',
+  },
+  {
+    types: ['bool', 'uint184', 'bytes19', 'bytes32', 'string', 'address'],
+    values: [
+      false,
+      BigInt('0x50a595f4bee167'),
+      hexToBytes('0x0a0d60008d13cbebae084f48309a16b3a7d54c'),
+      hexToBytes(
+        '0x7d0de330c0c583ec6dc3eecc6afa604410a60d12051e3587b8d300ccc300af00',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupid',
+      '0x59322937492286f2208f62dff82ca0338b37e927',
+    ],
+    result:
+      '0x588940338d70e88134db81a9b7e800f6b5e2f9c4683b163344a37056d3e2b041',
+  },
+  {
+    types: ['bytes5', 'int176', 'bytes28', 'bool', 'bytes'],
+    values: [
+      hexToBytes('0x58d9b78ec9'),
+      BigInt('0xd6ef80aa2933e0ab49950693d7d50025d330'),
+      hexToBytes('0xf82fe8274b6dd2d1071e9c13b0c4b83745e7247da7b0ea075d5f363b'),
+      true,
+      hexToBytes('0x31765ba9edb8'),
+    ],
+    result:
+      '0x2ee84a33fc1fbde625e64c3255d871d380c716e1f843c928ecbd976230ad7e25',
+  },
+  {
+    types: ['bool'],
+    values: [false],
+    result:
+      '0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['uint224', 'bool', 'uint24', 'bool'],
+    values: [BigInt('0x4096bde8844e471e'), false, BigInt('0x379d'), true],
+    result:
+      '0xf4451d1f9f554f4add602ebe805f9ac161077c3bb1c5d168a841323376a2da5e',
+  },
+  {
+    types: ['bytes32', 'bytes', 'int232'],
+    values: [
+      hexToBytes(
+        '0x5645dfa1e306e8d698993b512b58e172f450ea759787544ca91df5344cfa5804',
+      ),
+      hexToBytes('0xe02b5ee6c45a4c825feac0f50931636c8c'),
+      BigInt('0xdbe422a72f8363dc9c532734eb1272072cd364b5'),
+    ],
+    result:
+      '0xbd213fe0d83231e46fa4eac8699ce5e680debc791a4e73b7614781cf8aca314b',
+  },
+  {
+    types: ['bytes'],
+    values: [hexToBytes('0x1ed4120a7e894119d065')],
+    result:
+      '0x4102b24c407b6acdcb6c700875680622cf30ed5586d341a84f3d81271db202d0',
+  },
+  {
+    types: ['bytes21', 'bytes', 'string', 'int208', 'bytes10'],
+    values: [
+      hexToBytes('0xff8417589999c109d8e8b7ead1fba8c4c59b9b524a'),
+      hexToBytes(
+        '0x87bfd7b2e90897c96a9cd7c2fa69f10b4876ef1df8aee11ed4c9567c4bbcf2d3e0bbdbd185b9aac45eb80709ad27e2fc72dd0c86ad6ddf02',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim i',
+      BigInt('0x8338fa260b0af3ad'),
+      hexToBytes('0xf09e6a53bcb06dfef030'),
+    ],
+    result:
+      '0x9413e490e43b3ce5291530abeaabb6a3202009ab68567499239ccebe8285a169',
+  },
+  {
+    types: ['bool', 'bytes16'],
+    values: [true, hexToBytes('0x3c5ebc8b6539740e757e6453dbb618d7')],
+    result:
+      '0x11bff0eecd8126ee99a4a02077e0b80e59a230b42d544712444fb12e437e3a42',
+  },
+  {
+    types: ['string', 'uint168', 'address', 'bool', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui offici',
+      BigInt('0x1539adde63'),
+      '0xca789edfbee7e373afd1199dff449ebb661eb820',
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iru',
+    ],
+    result:
+      '0xb5a73cce9b4b9ecc5ac71e1bc9ef0485cf2b43b9d3ba966e238d3313ccce2f51',
+  },
+  {
+    types: ['address', 'bytes22', 'bytes', 'string', 'address'],
+    values: [
+      '0xc2d5d76a2aece317a52d85e316d67f5d4d216e9e',
+      hexToBytes('0x1ca2bf73295a1aca3b026c178ac0f1769a3a7f26c40e'),
+      hexToBytes('0x81c1d088fd4df8b671f47667f4bcef5d'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui of',
+      '0x1dc9bb8a22e5f0ef7ede378ea090de8b5d8481a6',
+    ],
+    result:
+      '0x9003a5484c9c3e6146e26549289265100292c6ef3936b73cc7149c577012d090',
+  },
+  {
+    types: ['address', 'bool', 'bytes'],
+    values: [
+      '0xbe1a71ee9a2df720b715c1d1a38ae8ab6434f969',
+      false,
+      hexToBytes(
+        '0x1621bcb92fbd45d1758d631e1c7d784d77d0fbd41c6e4ec4478feea432ed8d2c67fb53cacc52c997ed64321d8e82b6c8170572e993871e38',
+      ),
+    ],
+    result:
+      '0xf18412a17f6de82d7d3b79818f811713ffd170a90f796e3e11655d248524e011',
+  },
+  {
+    types: ['uint96', 'address', 'bytes', 'bool'],
+    values: [
+      BigInt('0x8968309f09b928cf'),
+      '0x38b99590cfb627cd29cee94c994ad30cd347144c',
+      hexToBytes(
+        '0x2521bec37014c40f406b5084a68301d67e247e92cac25ebadc5c23d2f0423287af7f8049369958aa9e16921810ad714734a4',
+      ),
+      false,
+    ],
+    result:
+      '0xf666c27d60870ca12f2d3885d1ffa13526fa06fb990a64bdd74d6d37b23535b2',
+  },
+  {
+    types: ['bool', 'bytes25', 'bytes', 'int56', 'bytes'],
+    values: [
+      true,
+      hexToBytes('0x411bc7345256de87fa595e1e54209e44611eced02db9620515'),
+      hexToBytes('0x8eeb199586000ecb1fe7f167805f2346'),
+      BigInt('0xb125413c'),
+      hexToBytes('0x8ae67aa9c7'),
+    ],
+    result:
+      '0xb5476a82bb1d9692bf59a55d081046b616dc6cfaa9c79bf0b279bafa8738d397',
+  },
+  {
+    types: ['uint216', 'bool[]', 'bytes21'],
+    values: [
+      BigInt('0x2c17c8fb83c3f390a4f59459dbc1d4c4'),
+      [false, true],
+      hexToBytes('0x04faae718c91e076e242ade81f68ef9ba7516ed92d'),
+    ],
+    result:
+      '0x36214794f396b1dc35e32cefc8a3d8fbc26a71618b87999ab09650f692b02fa3',
+  },
+  {
+    types: ['bytes', 'address', 'string', 'bytes30', 'bytes'],
+    values: [
+      hexToBytes(
+        '0x751f5fc00c05a125d905737d124c9c9cd4c3bffd8b542c298cfeeef09ed8d2d5ee2ed8bb7e76e12933cff9',
+      ),
+      '0xfc8b39086e02f116142dcda9ab2fecf17f92863e',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim',
+      hexToBytes(
+        '0xe1ece983b3b318edb75c4b6f364a52d8cfeb528c9d841aea94101fb4d884',
+      ),
+      hexToBytes(
+        '0x4d9303562e64a5d1349db1faba8306fe6a1162ef2588d372ac29ed17372c6a583a1b76',
+      ),
+    ],
+    result:
+      '0xcd4342253bc0a1e57965b9baab13a0407c437641adb3eade6020e53aef568bc9',
+  },
+  {
+    types: ['bytes', 'bytes', 'bytes', 'bytes23', 'bytes', 'bool'],
+    values: [
+      hexToBytes(
+        '0xdaf89880ed2527fdd845144f46dfe9c04e0267af96a73b417e61b6d7cc59ddc933424f9793a8827dac4fdc72',
+      ),
+      hexToBytes('0x'),
+      hexToBytes(
+        '0x6e4b232a225a0c6352f004ae3067507bd4fe90e9dfa22ce3815ed7ec7235bafcb6441f675d4f9c0a4578d3f45dcd335c70ba28a8f59565a542e56082',
+      ),
+      hexToBytes('0x9656ba75a6d9fa9af57296907d9e752d0c2a888d6db9df'),
+      hexToBytes(
+        '0x3eedcde71915b814362972abc7fdb077d51b9baf44c3118b68344007e7e3472f15aa6ce1ae3ffe373f7340ef1530dcd195',
+      ),
+      true,
+    ],
+    result:
+      '0x0da45bf024f05f8106597e56ad66b69a266e4dc730ba0891ae2464ca69cf5a7a',
+  },
+  {
+    types: ['string', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderi',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate',
+    ],
+    result:
+      '0x080f11e68bab7a08df18cdd7ddc9d5dbca674d919536d4947ef8651d0f785c10',
+  },
+  {
+    types: ['uint128', 'bool'],
+    values: [BigInt('0x370664282789dc4803'), true],
+    result:
+      '0x3a34dcbe04a5a659d9d7a333754391e511ced1d231aac4143d70eb1f6b15569e',
+  },
+  {
+    types: ['bytes26', 'address', 'bytes13', 'uint24', 'string'],
+    values: [
+      hexToBytes('0x35e8383fc153fb6de1b39b9900dd8b39f4908fbcc7fd95a84f5b'),
+      '0xd005803aee3a98a2315944aba97c84ca0f71242a',
+      hexToBytes('0x01d08f6ee6ffe6b407fa59f210'),
+      BigInt('0x7d5d'),
+      'Lorem ipsum dolor sit amet, consectetur adi',
+    ],
+    result:
+      '0x26cc2cb34f0be15f49c6dda85a14b418b028697850b92305c8550dc34b29c84a',
+  },
+  {
+    types: ['address'],
+    values: ['0x9c7e2fd511f2962674d190768516786c0fa3dc51'],
+    result:
+      '0x269001375bbc2321d34262beb8bfe118861eb3419005393e0af9493c17957b91',
+  },
+  {
+    types: ['int40', 'bool'],
+    values: [BigInt('0x3c'), true],
+    result:
+      '0x16218178d77004cf5442b471ea73e211ca4128a45e6dd6fb9aa2c06f3b0e1fe4',
+  },
+  {
+    types: ['bytes', 'bytes27', 'int16', 'bool', 'bytes16'],
+    values: [
+      hexToBytes(
+        '0xa45c3b1445c7562135b25b830c4348cdacb3f4e95272ed7748436f8531143821f1656fa2b67e9483fafcf86365bc155455f3dd',
+      ),
+      hexToBytes('0x37586aca5c13d3db124c8221075b702b7b9c7799511b9b8ac7e169'),
+      BigInt('0x37'),
+      false,
+      hexToBytes('0xae7f8f16cd6f064f51db51d1d6ab5d81'),
+    ],
+    result:
+      '0x42ab3830df5dadeb8fef6fe359828d3affd84464d635d22179d440e6c7905f3e',
+  },
+  {
+    types: ['bytes29', 'uint80', 'bytes'],
+    values: [
+      hexToBytes(
+        '0x8812d48b2aac3f585edbb377afa3b95ff311772c4df262f30331f4fc20',
+      ),
+      BigInt('0xea5cb1e6724cc466'),
+      hexToBytes(
+        '0x711936a70a232b7adaff7c29671aae7a35bd50e914a689fc0e31cd16b1',
+      ),
+    ],
+    result:
+      '0x45cf40fef3ea2e7db23d48515cb916a69be8be45e63dc06665f19156d7f814a3',
+  },
+  {
+    types: ['bool', 'bytes', 'string'],
+    values: [
+      true,
+      hexToBytes(
+        '0xd085b271a6dd126e6837c185226cfd0707381c24dc2450788369c0c7b2dfa4f7c203e686044ccd8a',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut en',
+    ],
+    result:
+      '0x20cca6d75ee87be4aed48ad2fbbdbfb2e707a8b93c35e9fc123198d0f36e095c',
+  },
+  {
+    types: ['bytes', 'bool[]'],
+    values: [hexToBytes('0x58fe878519f8e9b2e28a'), [true, false, true]],
+    result:
+      '0x24df9e2afc395478ef4ca041235488e13f7ddeb567cc336378a73a9309fe5172',
+  },
+  {
+    types: ['string', 'bytes', 'bytes', 'int88'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qui',
+      hexToBytes(
+        '0x329be5f8bad6e93988992299aee00d1ff19f4ab7796ae238d22226a657d559fa5623254c6dfbc15995ecc3d92079e9428945a32e0ab4e355',
+      ),
+      hexToBytes(
+        '0x0a7d3d1c92f4e490e01533c886d6e5987c3172d92525accda3e999f520584ad4185e0cafea38997ecf9fe7eff544becdce97b1532e9e0a319748b8cd9f90c3',
+      ),
+      BigInt('0x33ba4a2c30813a7'),
+    ],
+    result:
+      '0x40844adad775894e0fd5c69f09d52a1bc61f5a789fa833da0f0bcd21056deb36',
+  },
+  {
+    types: ['int256'],
+    values: [BigInt('0xa4e767')],
+    result:
+      '0x54fe2b37641fb073f23399c6b0ff292aab5e3f121269415d36d340a62827ccd8',
+  },
+  {
+    types: ['address', 'bytes', 'bytes', 'bool'],
+    values: [
+      '0x96724e2e417b2d54e65653c4f4f4f67a304f8c97',
+      hexToBytes(
+        '0x14c63e0e9bc31a738ec4f43b62da4d975f694db5c0ca81fad04ae069cf5b',
+      ),
+      hexToBytes(
+        '0xb6481409d5da4ba6f8b826cc527b496f2ad295e7f544aa0906b1ce08b26662c18d9a118f8fcdab7b36f0236c028b06008fcd7678621477804a5f923b85',
+      ),
+      true,
+    ],
+    result:
+      '0xf4bbdfc881bfd6934f3771829cd7703b8c58cc2be0003423116e0edf13985288',
+  },
+  {
+    types: ['bytes5', 'address', 'bytes23'],
+    values: [
+      hexToBytes('0x203c34cd4b'),
+      '0x00f867de5dad365a279985a97dffd301dff3015c',
+      hexToBytes('0x48030ed6b65cc5a793a2df1993127cb3a3c1c65c441549'),
+    ],
+    result:
+      '0x7195b6de6093b249a1a436ded74e41beb7142bb9a055c7438061810dd8c1fdfc',
+  },
+  {
+    types: ['bytes', 'bytes'],
+    values: [
+      hexToBytes('0x'),
+      hexToBytes(
+        '0x1de41698f1af609c883a1790767b7066ef20f80c33bded530446efa649d3d5',
+      ),
+    ],
+    result:
+      '0x1da8a96393a095e2eaab49a8d1d7670ae115c60732518e3b68a7384a8df55a37',
+  },
+  {
+    types: ['string', 'uint216', 'bytes19', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla paria',
+      BigInt('0x4c16f7d115b191ff2631c3d2939bc86a9f7336'),
+      hexToBytes('0x8dca59909558e7d1ca179958c30d0a4d208173'),
+      true,
+    ],
+    result:
+      '0x4ffd2ecfa77afc527ac7c859e34f832bcd54a26044f0eeb50a7e5b8a64907a6f',
+  },
+  {
+    types: ['bytes', 'int128[1]', 'address', 'bytes'],
+    values: [
+      hexToBytes('0x05d18cb0c5d36dad2b0436f2f2d9595e72140f90593f80b70252'),
+      [BigInt('0x7a59201c790bbaf77c286f')],
+      '0xb2592d27440831b357c758e64438a6423c2b50ec',
+      hexToBytes(
+        '0xa70b575a169af1807f5ac281c7ffdd58e1f2ed05686260c6b416671909e9e7',
+      ),
+    ],
+    result:
+      '0x3be7d91db5818c7b9e29646d8b45396c820a7e81eaaada42f1936cfcc246c7c4',
+  },
+  {
+    types: ['address', 'bytes', 'uint40', 'bytes'],
+    values: [
+      '0x724eaf66962ab78eb53c74bbb6501ba62b9feb5e',
+      hexToBytes('0xa816947264ee812542ff3ea2e6b50bda0cb8a5d44309'),
+      BigInt('0x30022e'),
+      hexToBytes('0xb78c7c6648468d49cc973cb73872'),
+    ],
+    result:
+      '0xbf810fd1ed174258ef823fd2bbd40c279eb7422c3536d4ee5565aee8fe4e2e5f',
+  },
+  {
+    types: ['address', 'bytes1', 'address'],
+    values: [
+      '0xdef4b3d6cc2d1672d5d840063b9afc131b7e0841',
+      hexToBytes('0xf5'),
+      '0x81cc1687e274e7e94acf7a5f0dcf28200644a394',
+    ],
+    result:
+      '0xe0ee4b8f6df245f870da539ba1f395624d62c97ebc566a1a8110794892d677aa',
+  },
+  {
+    types: ['int32', 'bytes', 'bytes', 'address', 'address[2]', 'bytes9'],
+    values: [
+      BigInt('0x38'),
+      hexToBytes(
+        '0x9d480f2c797243fa08b2b0117a80dde1c9767a210e76a7d95adbb01c59dab87debbb049cc7b6ad7153e33df8d3c2ebf5c46264b56f996acd2209f0fd343f',
+      ),
+      hexToBytes(
+        '0x444bbb45cd6dfc76367c8b1f9233151d7d69079bd803750489390c7387de',
+      ),
+      '0x420100f3f605742d2ffac6a1c8f3b1e43de8d908',
+      [
+        '0xa685a8eaaecd387ae57d508418685cf7158c6865',
+        '0x214f6923bb867d9b86fe6f6e8f05e9a96e3ace2a',
+      ],
+      hexToBytes('0x38b320d46fea7133fe'),
+    ],
+    result:
+      '0x60f2606f2cff0f0cfc405c7b40873ae5067d9774cfa20c35d47d1d0e8bf8e2ca',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['uint88'],
+    values: [BigInt('0x47426e')],
+    result:
+      '0xe8741f8ce25adffd70fb1bbfb784016e6c1759e58eada2af9d9f1c4ccaa4d241',
+  },
+  {
+    types: ['uint224', 'address', 'bool'],
+    values: [
+      BigInt('0xe96312255211'),
+      '0xb48961773544c903c040304aef01f7fb46599234',
+      true,
+    ],
+    result:
+      '0x3eda590f7a78324faa1b2ab8f9ef9667d294f51ca79448bcdb9fa7976a0460da',
+  },
+  {
+    types: ['int24', 'int8', 'bytes'],
+    values: [
+      BigInt('0x24'),
+      BigInt('-104'),
+      hexToBytes(
+        '0xe0957b63fa164d492ab503dff0931f4179d761372fc45df65e6335d2c4a0f6ff4b0892',
+      ),
+    ],
+    result:
+      '0xac216b9404cf560bcd62af3195f90a54ca6d0349cb512a5f20616e22dde916e4',
+  },
+  {
+    types: ['bool', 'int216', 'string', 'bytes16'],
+    values: [
+      true,
+      BigInt('0x58ac1e81fec23fa30d437eb75c'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
+      hexToBytes('0xd8756794e0135c901285545d87d7d73c'),
+    ],
+    result:
+      '0x11460f4142ce071b0704cb32372d34b08344f13dd1c7f6077394343114bf157d',
+  },
+  {
+    types: ['bytes', 'string', 'bool', 'address', 'int32', 'address'],
+    values: [
+      hexToBytes('0x5e82200c1da4d3ce14e6a216d5cc1cdd376fc76349feaf72fe153385'),
+      'Lorem ipsum dolor sit amet, consectetur adipi',
+      false,
+      '0x7c02b69017a0526a4b3fd02dc2bc06a73b142d8f',
+      BigInt('0xb0'),
+      '0x267f81a2aaa110886c15bad07a58625b00fac412',
+    ],
+    result:
+      '0xad186d3bc92048fa549dd8464e92c0af2c427a177ce517dd8fd26991ff3d9156',
+  },
+  {
+    types: ['uint144[]'],
+    values: [
+      [
+        BigInt('0xa731b188a702c0aab76aea60a55f2f51'),
+        BigInt('0xd03a29d61e12bc5b78dbde4333b9'),
+        BigInt('0xd1890d1cf0c7df1e90ddf5d9316f70fdde'),
+      ],
+    ],
+    result:
+      '0xd204a93ce4f9cf35a42cf9e21112c95e7103657aae6ba923fbf0910901c499ea',
+  },
+  {
+    types: ['address', 'bytes2', 'bytes23[]', 'bool'],
+    values: [
+      '0xfbf643ed216db7cfbda2e94c3a3527995e53ff76',
+      hexToBytes('0x9eef'),
+      [hexToBytes('0x8e094d2b183b9e5bb6cbc6781a0eb4c28220058d747705')],
+      true,
+    ],
+    result:
+      '0x73ed23c6b1882dea589b030377096f6056f0da7535d91915ee56c672bc9a7c71',
+  },
+  {
+    types: ['bytes11', 'bytes14'],
+    values: [
+      hexToBytes('0xdab7890d5c41bc0ab144e2'),
+      hexToBytes('0x32b1e0beaf37f819c3473fa77804'),
+    ],
+    result:
+      '0x65db4ee4ee433dcc5b36eec16a3694e8628d79c693cc409718f7177c863001a9',
+  },
+  {
+    types: ['bytes', 'uint160', 'bytes6'],
+    values: [
+      hexToBytes('0x5bde992a975e80eb5622655dc4d5176abe57df8786568bdaeb'),
+      BigInt('0xf7a0a478f784bacd1e0d32d2421d898424'),
+      hexToBytes('0xdda4b5614572'),
+    ],
+    result:
+      '0x311013102be884be75f00f15cb2bc4d0079588efecf485a47ca853a7b2d200b5',
+  },
+  {
+    types: ['bytes', 'bytes23', 'uint', 'uint80', 'address[]'],
+    values: [
+      hexToBytes('0xb50214db8adf0f366dd7b1f438250d95'),
+      hexToBytes('0xae830861b44c7769711d7cc42a9d35c734b816751e921c'),
+      BigInt('0x1ea01f722be5583076b5fc599a2c80'),
+      BigInt('0xb1cfa3'),
+      [
+        '0x7ccad27cdb819a486eb97439a0a94b8372a7414d',
+        '0xa0a9e229acaac67c89c40b772395337a84722fb5',
+      ],
+    ],
+    result:
+      '0x37296b646dd5bf6e4cb15d3c428bded58a9a94f1c76638ba10e27be12bf0d44c',
+  },
+  {
+    types: ['int48', 'string', 'string', 'bool', 'bytes', 'bool'],
+    values: [
+      BigInt('0xdf'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea co',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dol',
+      true,
+      hexToBytes('0x984f643666670c6e897ea8714f418b'),
+      false,
+    ],
+    result:
+      '0x8d309486b7019d1a70b268877995965a688bc6a149d4cae6428611c377ba6036',
+  },
+  {
+    types: ['string', 'bytes15', 'bytes14'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu',
+      hexToBytes('0x80b91b5a6d4d625fc336b3842eb213'),
+      hexToBytes('0xf91754f5892889a27cb872067886'),
+    ],
+    result:
+      '0x5fc7a0424b069c0553a750312f6d891b694d7c289c96f9e610d2248817efb65b',
+  },
+  {
+    types: ['address', 'uint40', 'address', 'uint216'],
+    values: [
+      '0x6fc7dd117abc633d2d40d7a14c5ccca8728908b0',
+      BigInt('0x5cd5ef'),
+      '0xe0b72e7e6f5b002ac48c4a49ad8ad04c51d4de4f',
+      BigInt('0x8a357a483071ea6c8dd5'),
+    ],
+    result:
+      '0x621d8340fdec5fce0ff0659324e7cd079bc5699286f9db77e3d80868ba977b67',
+  },
+  {
+    types: ['bytes17', 'uint200'],
+    values: [
+      hexToBytes('0x9535dae5a1d77ce1563bd89bef7a91b07d'),
+      BigInt('0x46dfd78500e7b30410a7dee5283b4b335805'),
+    ],
+    result:
+      '0x5d8ad6164bf9417beb4ec20ea1c54f903c1b59a20fb11aed56c46b0c03a9437b',
+  },
+  {
+    types: ['string'],
+    values: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed '],
+    result:
+      '0xdabf19b17ef2b6afbf9c00e1062b185139640b1e0ae4ad87f305fba423648534',
+  },
+  {
+    types: ['bytes', 'address', 'string', 'bool[]', 'uint120', 'bytes7'],
+    values: [
+      hexToBytes('0x97d7b1'),
+      '0x1770f841dd348660fbff97c46aad2428caa67bbe',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint ',
+      [true, false, true],
+      BigInt('0x108739265a29dd7cafea570a'),
+      hexToBytes('0x505b4c70ca2392'),
+    ],
+    result:
+      '0xe1293211bc9b07a87fd7af46f6e0799619cffa1594b6d3664b58d7d87b58850e',
+  },
+  {
+    types: ['bool', 'string', 'bytes25'],
+    values: [
+      false,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut al',
+      hexToBytes('0x851908527b754e65f7ebe25568fff7eef0d95838c59951f795'),
+    ],
+    result:
+      '0x8b08aaa18fed52ea4ecdbc0be7c06e77065a4b12fe5dd313cc375608b34e39af',
+  },
+  {
+    types: ['string', 'bytes22', 'bool', 'address', 'bytes30', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id e',
+      hexToBytes('0x72b3db1c1cf073160562b1468dc6b4fec37e331df4ec'),
+      false,
+      '0x13ee94901b12e666d3998219539ba4f0c46ccb51',
+      hexToBytes(
+        '0x4c71709e8ba057774be13b2e2048522d0f5b1d25d88da4f9c8f2ec3b307f',
+      ),
+      false,
+    ],
+    result:
+      '0x6a63ca61ffadcf9ba9da7b6f4514a0eff69bf2fba2a17838eb2694f5a239b75d',
+  },
+  {
+    types: ['address'],
+    values: ['0x1ab9cadcb8794bd65ae964e81bd9346e9f9e24ea'],
+    result:
+      '0xa2a37e12df50d5c40119187bc075fdcf497bc7a6d94c0fc397b1bc829f5d0825',
+  },
+  {
+    types: ['bytes', 'bytes', 'address'],
+    values: [
+      hexToBytes(
+        '0xfb3578ff709fc67cf6fe457908c1c7e63935bb0a828a74c5603aa9f1a22eea8057cd1f614f',
+      ),
+      hexToBytes('0x7be672ba0344d131c3a4f7e7f37459ae'),
+      '0x297d68d5e5e1f5cfc781bddc66124ecd621509ba',
+    ],
+    result:
+      '0x0bc6ee9476debd4e0383c86f292801f3607378d49525bb5d5f23a4371f3d9a90',
+  },
+  {
+    types: ['string', 'string', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est ',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cons',
+    ],
+    result:
+      '0xc6b3a8a065986487964c9cb54b311eaca88a888ecb42d21251fff1fba9eee35a',
+  },
+  {
+    types: ['bytes32', 'address', 'bool', 'uint112'],
+    values: [
+      hexToBytes(
+        '0x48de2fb1182c4b7301b054ba118799b417dc1e248bb780230779479c34112253',
+      ),
+      '0xc8fa71beffd9cdf9a41995a17343bd06f9fdcd9e',
+      true,
+      BigInt('0x5f30'),
+    ],
+    result:
+      '0x2b50609bb40ef08e1fc6860b7182d44a89d10f08638966281e529b6963025173',
+  },
+  {
+    types: ['bytes'],
+    values: [hexToBytes('0x6ebbb51cee4eddb61688')],
+    result:
+      '0xd92c65a7272133c34aa10179bbc3967eb53b85b774c2bec4b314dc5eee9a6548',
+  },
+  {
+    types: ['bytes1', 'bool', 'int88', 'address', 'bool[]', 'bytes16'],
+    values: [
+      hexToBytes('0x61'),
+      true,
+      BigInt('0x7885d27d0a'),
+      '0x16d1fb053e1a5679f5695a65e723b6f336c49109',
+      [false, true, false],
+      hexToBytes('0x3d97d831f5594a6d0c76f9b8f0ab8acd'),
+    ],
+    result:
+      '0x95f4b05e761bda2cd3ea9c2f739f08eec29c609f424477bdc5563f0e158fc717',
+  },
+  {
+    types: ['bytes', 'bytes', 'bytes', 'bool', 'address'],
+    values: [
+      hexToBytes(
+        '0x94028162ce1cae37b2536a18aae8b42e7ab17e3bd115177040bcaf98a3448ea273f93178dab7f37953',
+      ),
+      hexToBytes(
+        '0x47a88ceb0c902feca805af8fe1c623121e5f1e0fcae031c169189a4f08b4',
+      ),
+      hexToBytes('0xfd17ddd0acbe2ede9b6e219f927d4db925573f29dbde12751b'),
+      false,
+      '0x462c8c8926d23371e9c2c9da4f82747ad25873d3',
+    ],
+    result:
+      '0xbc1a4a91f97282bdc9de7977b0c8add06b9a99933feff9b561df41b9f04e9a33',
+  },
+  {
+    types: ['address', 'bytes'],
+    values: [
+      '0x51a06d83c8980a40108fec778485eeecc0752fdb',
+      hexToBytes('0xf917c141485034c3feb9c20cd7954e9e3e0bb7af0aec'),
+    ],
+    result:
+      '0xdb04f9ccfba2c8eabe5a508fa11820bba4406b7d7921ce5103b49544441b78f9',
+  },
+  {
+    types: ['string', 'address[]', 'bytes', 'string', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat no',
+      ['0x116adddd763708f0245f52c12e504896a9e40c8f'],
+      hexToBytes(
+        '0x5ee9dbe448fdc602d538e5888cdf60cc2f6454a9722b1bddf83f19804be2b12ed44b349f2cc24315369fb65398c2b9b9fce63187536d',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ani',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost',
+    ],
+    result:
+      '0xe4816d72b90928156654165b2f92cd4b0d551b940dcdafda115eba38b9e99b45',
+  },
+  {
+    types: ['address', 'string'],
+    values: [
+      '0x4c7a7e7281c66ff02becd4b64f34cca6ff12e3ae',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis ',
+    ],
+    result:
+      '0x2e66feccd75799fc29abca4c98cde51af6fc476223b09fd5ba5c08aff04cb51e',
+  },
+  {
+    types: ['bytes4[3]'],
+    values: [
+      [
+        hexToBytes('0x07e22954'),
+        hexToBytes('0x2a9e5642'),
+        hexToBytes('0xbef1c398'),
+      ],
+    ],
+    result:
+      '0x2bc028655f2d75d95c74a596c248a2e8a6793043926e3aa7ff4b546961c6ad81',
+  },
+  {
+    types: ['address', 'bytes', 'string', 'string', 'string'],
+    values: [
+      '0xc97b9076ef8ac92bdbf550598d03d939bb3077cd',
+      hexToBytes(
+        '0x8afe15d3b5a4e0d6b9a340d9deb99d4eec95d9cedcbead787af1117eead0',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occae',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est labo',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, ',
+    ],
+    result:
+      '0xf35da5f947035d8f4976717463519962c2d8eb7954bbdfcf11db81bd105c665a',
+  },
+  {
+    types: ['bool', 'address', 'bool[1]', 'string', 'address', 'bytes'],
+    values: [
+      false,
+      '0x37f4ea4e0aaea840b6398c4ae812a30d2097958e',
+      [true],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita',
+      '0xf40e876d89ccd7fd4822ab9cc7405f0451937963',
+      hexToBytes('0x18'),
+    ],
+    result:
+      '0x3111fec504aa0765601bb2c96c5edfb097e1c1221ae4047a724f43040e94a4bd',
+  },
+  {
+    types: ['string', 'int176'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit i',
+      BigInt('0x98021dcb985ceee7f6afbeb945cd9ffb8b'),
+    ],
+    result:
+      '0x1f3bbba5b2042e4a2c97d97e38a6a8cc5a929a5973bbacb8ac46584e0f1f34a1',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est',
+    ],
+    result:
+      '0xa77c0a7848d42dd669e078c80b95c4b7fdb5f8eeebbb540efb9f91f2182322d2',
+  },
+  {
+    types: ['string', 'address', 'bool', 'uint120', 'bytes12'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et ',
+      '0xf2ad6788bebed5233930dcccecb2af312d73d5a3',
+      true,
+      BigInt('0xc09e4c72d687c9b49ecf969be072'),
+      hexToBytes('0x7ff4ef847209fd19f9b78534'),
+    ],
+    result:
+      '0x2bb3d4052ee8ad26da051b17d08947374dbfd51d7da179da010a19199f6d8edb',
+  },
+  {
+    types: ['bool', 'address'],
+    values: [false, '0x01b5d082d9d6a6b2cb7dd3f711dab42a1121031b'],
+    result:
+      '0x4f5b376aef848559a47edc4bc1b29139f726efd38806f7d3ce398eec144ecc49',
+  },
+  {
+    types: ['bytes', 'bytes', 'int48', 'bytes22[1]', 'int176', 'bytes13'],
+    values: [
+      hexToBytes(
+        '0x15d24a3bfb446ebd9936c0ec4efa63d0c849fdbfda429085b1ef68f7553816e36ee912dc72cd82a7621765fb2989958e1606436907bdc695f8f167cd3d0df1cc3a',
+      ),
+      hexToBytes(
+        '0x032c796b8a5b83cf2480a0c9e0fd78d0faf570259c8c30bddb12d2a0ef80',
+      ),
+      BigInt('0xf3c563c7'),
+      [hexToBytes('0xa2e39c692732742a6071dcc823d9c37afde2e362b673')],
+      BigInt('0xf87b0a82621b7fb825bb72'),
+      hexToBytes('0x5a4062884d7377ddae8f5af6f1'),
+    ],
+    result:
+      '0xf883f2722e86473bd87df167580ab2b329e216a85a8606f861e3ab4d4cb8a63a',
+  },
+  {
+    types: ['address', 'bytes3', 'string', 'bytes', 'bytes26'],
+    values: [
+      '0x9ce16321bb7e4b36f82242d141ae6f83aee56864',
+      hexToBytes('0x18f85c'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud e',
+      hexToBytes(
+        '0xd82977b5ecca76c5464e06d9b034e5de205b75de5d2b4a309be40bef97501151dbe77d84192899c79816b4acfb7e4e05c2639fb71d79ab',
+      ),
+      hexToBytes('0x2c6c4f22e4ca6c9447d6c043ce42ce661346b8aacee000a6b5ac'),
+    ],
+    result:
+      '0x892c99afa99f8fa30bf0bbe9c596af35e2158af85ed72ecf9df524149fd3a3e5',
+  },
+  {
+    types: ['bool', 'bytes10', 'uint176'],
+    values: [
+      false,
+      hexToBytes('0xfb9cc70473459dcc24ab'),
+      BigInt('0x7273d5777ad4207e766557ed77'),
+    ],
+    result:
+      '0xf9a97b81bb3aa71e79f7c11e8b4ce99f28e01ba1194616056e85e93325f6808e',
+  },
+  {
+    types: ['bool'],
+    values: [false],
+    result:
+      '0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a',
+  },
+  {
+    types: ['bool'],
+    values: [false],
+    result:
+      '0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a',
+  },
+  {
+    types: ['bool', 'address', 'int192[3]'],
+    values: [
+      true,
+      '0x7e9ce5b2866f2736eabc7e321c4807beb9872897',
+      [
+        BigInt('0xa32f0df4eaec80c90dafaa7edfff92ac4b4cb3'),
+        BigInt('0xcfe1bb12901f7dda1f01549f5b51f587821a0517'),
+        BigInt('0xda37e734a9c95d73bb4110bec441c0c2a93ab4ec6f0200'),
+      ],
+    ],
+    result:
+      '0xf17ee962207e46d09bb55f9fc31edd0293f7681dcc865f6ae89c71e2d75ee9b3',
+  },
+  {
+    types: ['bool'],
+    values: [false],
+    result:
+      '0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a',
+  },
+  {
+    types: ['bytes', 'bytes26'],
+    values: [
+      hexToBytes(
+        '0xff6b95ef857056fdd49c945969f72cd42e24e6f9485b218b4a82676e07331cce95c07ab74257f1f317a3f9bcc9f5107c86e6bccfbb1f508963ec4e5d40144b9076',
+      ),
+      hexToBytes('0x315d3f1d7807a22086bc287ef8b1cb588368b58e1563c15c845c'),
+    ],
+    result:
+      '0xa4fed2df5e540a0ea9729007200bcd21cfd1a3881e65dede7c5edcb643e3d427',
+  },
+  {
+    types: ['uint136', 'address', 'string', 'address', 'bytes', 'int208'],
+    values: [
+      BigInt('0x6ff0d7474038745c34'),
+      '0x315d8ad03e4e5150a3dd2eaffee2eb42d22277b2',
+      'Lorem ipsum dolor sit amet, consecte',
+      '0x3534a16425a87c831f3c9a88c81f2c2be3462164',
+      hexToBytes('0x984055b9ebe267'),
+      BigInt('0xf4ca75b88f98ab578ac015651a149fb17754b7a1'),
+    ],
+    result:
+      '0x37801cb6a74bb24f2cac2b968396c62e0439d44eb5c01feb65480c90aed86dec',
+  },
+  {
+    types: ['address', 'bytes', 'bool'],
+    values: [
+      '0xd8cc1ed84f150621164dd80a302f62f693b2e890',
+      hexToBytes('0xe3bf'),
+      true,
+    ],
+    result:
+      '0x74888b9590cb2e2d59d9f562d4cde0e4081ccb645a9947d77317bee974750359',
+  },
+  {
+    types: ['string', 'uint24'],
+    values: ['Lorem ipsum dolor sit amet, consectetur a', BigInt('0x2f')],
+    result:
+      '0xe18e94b6bce37503bc115f450304d40d20cca756238496ba83f388382ba63860',
+  },
+  {
+    types: ['string', 'bytes17', 'bytes29', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qui',
+      hexToBytes('0x1be6cf113a6d08a847393223724df6c1e2'),
+      hexToBytes(
+        '0xd0f879204cb21fd0720c6d2cc0ed7c966f71d76b36364187b2f509246d',
+      ),
+      false,
+    ],
+    result:
+      '0x97edbff87646506e050c376060fe5a30048ac59abc7de16c23b69edddf177f4a',
+  },
+  {
+    types: ['bytes1', 'bool'],
+    values: [hexToBytes('0x9f'), false],
+    result:
+      '0x82c3d551fb3c15338d7d76e76343132aba4dde20862d8c96cfa57dd600e2f5f4',
+  },
+  {
+    types: ['string', 'string', 'address', 'uint256', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet,',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini',
+      '0x7ec3f98146991c554e65037da5ecf9f7113b06c5',
+      BigInt('0xdc1f4f0f9157a434398e2605b622b1'),
+      '0x56eee3253baa39f394a32708066d1e592e527102',
+    ],
+    result:
+      '0x17083a6abd6b6b2e6a23134122c69f739a778b40fa918d8b26c78f9f216717e3',
+  },
+  {
+    types: ['bool', 'bool'],
+    values: [true, false],
+    result:
+      '0x628bf3596747d233f1e6533345700066bf458fa48daedaf04a7be6c392902476',
+  },
+  {
+    types: ['address', 'bytes', 'bytes', 'bytes26', 'int80'],
+    values: [
+      '0xbafdc80d026e53e2a2dca2aeab0490ac8038be70',
+      hexToBytes(
+        '0xb26fa42f2e2295da30cecc1ccee6d9158522e28a3eb5a42d645e4e4901b1cc90680784d5ab433b51e0cae93282ba327ea61ea1c8fa',
+      ),
+      hexToBytes('0xf8'),
+      hexToBytes('0x77cf1f7ce76a23c7bc5da02aea11ea10ac01173dba26dfaac1dd'),
+      BigInt('0xcb4958'),
+    ],
+    result:
+      '0x72d7eccdb7bd34278eb64380570d4a73e5b798d55c2bdcce5599a658c9ddd835',
+  },
+  {
+    types: ['int240', 'address', 'int240', 'bytes', 'string', 'string'],
+    values: [
+      BigInt('0xd6d354b81468a9cba4806c78015adb719edc83f5bfa5'),
+      '0x3488c6fe88e098767c71339bbbc645cab64fa6af',
+      BigInt('0xd11e42a34bd543abe4e714b58242f47aeaa0ddfe015ab193ecc8569d'),
+      hexToBytes('0xa5d338371f30d8488896bc27f98a6c01a4a7'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ',
+      'Lorem ipsum dolor sit amet, consectetur ad',
+    ],
+    result:
+      '0x04a419efae2602ad1aba6a29c4d955eb43e4763e0831e4f4a90ffe52152b057d',
+  },
+  {
+    types: ['string', 'address', 'string', 'bytes13', 'int88'],
+    values: [
+      'Lorem ipsu',
+      '0xa02f9ebd27c43282bba96fb91eef4d680d29eb22',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat',
+      hexToBytes('0xe43586632d854258d2afaa8959'),
+      BigInt('0x24f60208'),
+    ],
+    result:
+      '0x46ac0d9089d9d4abba13bbbecca6a4291407e2a2dd0cf230c1aa36ff5cc1498f',
+  },
+  {
+    types: ['address'],
+    values: ['0x05c89f1d43b4ab3f0a81ccd29e42e5f94e35ff27'],
+    result:
+      '0xf1ff17de8f8a4a45fe549667e4d31f03653464c541f41f373dce41c0654cf691',
+  },
+  {
+    types: ['bytes', 'uint240', 'bytes25'],
+    values: [
+      hexToBytes(
+        '0x9d9c00287c3e344bf65f96c39276061ec2e0b66cbde1d4a02e546df5a2ad6f893e65c5dfe14a34d22067902b0a11e382af76a0',
+      ),
+      BigInt('0x8bb0408e09bb5f6ac40df78c0ce17f7ba766c116f61b5c71bc37210c59'),
+      hexToBytes('0x5422a64ea049a8e8adc1378b446fb007daa53ca962ccf12a8f'),
+    ],
+    result:
+      '0x9f79b6c84fcfcc449d1e66986eef17cae34112eb0c2a0ed385ddf38bde274b64',
+  },
+  {
+    types: ['bytes7', 'bool', 'bytes', 'bytes', 'bool'],
+    values: [
+      hexToBytes('0x389acea3df34c8'),
+      false,
+      hexToBytes(
+        '0xc682cb4050c73e3390ab704e8d391ccd2d9fea1cc6fd1c2955d633a787ca33a2c6536cd53c56e1c14e4d22915d2d9c097741',
+      ),
+      hexToBytes('0xe7c111'),
+      false,
+    ],
+    result:
+      '0x9f1257a882239d8f4b45863600d347cb83855e13349a89fa6226f6ebf9a447fc',
+  },
+  {
+    types: ['bytes', 'bytes', 'bytes32', 'bool', 'string', 'int32[2]'],
+    values: [
+      hexToBytes('0x84031760e59a7f378379134ba3958e272e8ba9f8cce98239'),
+      hexToBytes('0xc5'),
+      hexToBytes(
+        '0x81449055ae4c5c890e66724ba815b7925f9bb9660d565ef3e24f8752bbf837ec',
+      ),
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
+      [BigInt('0xb693'), BigInt('0xf06')],
+    ],
+    result:
+      '0x5614833451b1d0503adb07e04bdab4a5b0d451f19b188fd47a80ed3f5ec2ca3a',
+  },
+  {
+    types: ['address', 'bytes'],
+    values: [
+      '0x414a32433492eaf0cc29875b0f53b1a9d709d456',
+      hexToBytes(
+        '0x3d92cc2c04d9ef97f5cda3bc48a6bc4485c61f08cd11071d7d4c90565a6e8399cd7cd078472f188fc26ba2985935dc3b8f91f0fd88',
+      ),
+    ],
+    result:
+      '0xd87923742c63da42d42eb4b4a2891b263503e8b08043d2afae9c439800b98c46',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ex',
+    ],
+    result:
+      '0x1285ab5f2fa8c533c5b1de78ef30de084df74625c39809432be89e857d4d59b0',
+  },
+  {
+    types: ['bytes23', 'string', 'bytes', 'bool'],
+    values: [
+      hexToBytes('0x5a0ce71fd811bd1ceb8323e1f4f427bdf52176c178228c'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore e',
+      hexToBytes(
+        '0xa6cf7f1784e12be5ced18470e41e48d8eac9f7e7e99c0c25955929f3c70c830a29e2670060544c1985c204af0b',
+      ),
+      true,
+    ],
+    result:
+      '0x8690adf57255e864f34d4558cacbd98962e4f3a072547d961f564b43340e81c4',
+  },
+  {
+    types: ['string', 'uint80', 'bytes18', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui offi',
+      BigInt('0x8dd715ceec5eaa56'),
+      hexToBytes('0xd2e599a874dee02c6b4b49f4735d6fdfbac1'),
+      '0xc6f533750750a6889d70fc21b5809f242c77eee4',
+    ],
+    result:
+      '0x6d4630ff6485c26dc2f0fc6dfc4369a4f7f5500ddbf79830e441fdc6452f402f',
+  },
+  {
+    types: ['string', 'string', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad',
+      '0x3f523975a3fb7b134c465a2e269b52f01db9a277',
+    ],
+    result:
+      '0x0464e544628c850ae2eb6c649376637777a51afc875c558510964553ca886ddb',
+  },
+  {
+    types: ['bytes28', 'int80', 'string', 'bytes22', 'address', 'address'],
+    values: [
+      hexToBytes('0x04d314d048fd4944d5e1fdfdab1eda59acfbb5c79107f00a8900894c'),
+      BigInt('0xf19bb0'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor',
+      hexToBytes('0xc34083df95f7bb92b217a0c557b49fa65ff4e95bf7eb'),
+      '0xabdb8a3934f2127aa9cbb86976af8ca6952ecbc0',
+      '0x13b7815dc95fc9c739af67aa18600db3e3412715',
+    ],
+    result:
+      '0xe1203fe2cf86cd607c42d27322216e6f9e572e69a3157fd45c1f29f0741599ee',
+  },
+  {
+    types: ['uint104', 'uint8', 'uint24', 'string', 'string'],
+    values: [
+      BigInt('0x802c2075df70d6b214'),
+      BigInt('0xc3'),
+      BigInt('0xa1'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad ',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui of',
+    ],
+    result:
+      '0xed31063d296662d915cc7db3963f20310a1a441ea7088060349409fe9d1cc096',
+  },
+  {
+    types: ['bytes', 'bool', 'string', 'string'],
+    values: [
+      hexToBytes(
+        '0x3a55daa0716bc49d57f43512de80c83d935464665904eaa0288f22c8b198d8f202be50a7254e27238a',
+      ),
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Except',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore e',
+    ],
+    result:
+      '0x8caee060f2d641edd01d1fb5c5f0f2d50b8ef828cc0694c06586cda22c7da769',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['bytes2', 'int', 'int96'],
+    values: [
+      hexToBytes('0x365b'),
+      BigInt('0x61b4b91da2b3faf4d12e1831436a55497e019b24673905'),
+      BigInt('0x39a89c9c08c4689d7ec48d'),
+    ],
+    result:
+      '0x2fdc315c8b1a254236f96c0ed77770ab3b6e11c034f80a50e02758b3992a8838',
+  },
+  {
+    types: ['bytes26', 'string'],
+    values: [
+      hexToBytes('0x1945d50b4137792171baca6f5f67a6550d6b44b36b055390fd72'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culp',
+    ],
+    result:
+      '0xc509f8a296d0bcd6ac0e41226b152fb18c4eb7bf1b824905b042d8a63a484a02',
+  },
+  {
+    types: ['bytes8', 'bytes', 'bytes5', 'bytes31', 'bool'],
+    values: [
+      hexToBytes('0xb5dac5a30385b3ea'),
+      hexToBytes(
+        '0x5977d4d810cd68bb2f527f962502631ac49d8b4820e05e4263cde730a203f046c1489f8353359eb5574cbbf4ac3ceeaa91726defcd672502fde2e189f54c4b96',
+      ),
+      hexToBytes('0x227b84b1fb'),
+      hexToBytes(
+        '0xaf681722962c6441a1852f5b74d569551895e0398b43c9cf24bbc9a78ec349',
+      ),
+      false,
+    ],
+    result:
+      '0x2dfacc4003ca7c067a699e547d5756c0104c19f18d0d0eadbcc814d93399e9b9',
+  },
+  {
+    types: ['address', 'int32'],
+    values: ['0x20cde5c0aeb3d3234619451252402ab5c8a5ab90', BigInt('0x6d863')],
+    result:
+      '0x613c6a9437ee246e8c8f172339a8c8b9fa1b479eeb8de95e89eeb1cabc6a597e',
+  },
+  {
+    types: ['bytes', 'int120', 'bytes', 'address'],
+    values: [
+      hexToBytes(
+        '0xf9965990c64f9cda7551900d753379b15b4e0030c02221b80f149019a3fcb7eaa3',
+      ),
+      BigInt('0xebd59967d1b2'),
+      hexToBytes(
+        '0x6dfe3248427756f5f8cefc6a3b35e05b309be5d2610ca984d67a51f256d292e83c530820fe6b6f4caac0f2221566d0e5fe518188a928827f582429',
+      ),
+      '0xd778c2ff34efa347abd98b4ef52ab364fab3dfdb',
+    ],
+    result:
+      '0x363669ba237087ea4f8d260c4d521f718221f2993d1e06b7d10e25f238da5cbd',
+  },
+  {
+    types: ['bytes', 'bytes', 'address'],
+    values: [
+      hexToBytes(
+        '0x1e292ed56ef5342bfca91d14e2e1d05a1bfc4a9d7e494ea7a4b7a6bbaf90d84544b36ce0bdfac1b462',
+      ),
+      hexToBytes(
+        '0xcffa097cf1b87c3886adf419a74a352bbb012f4392cf853734ec702a8e0932db90',
+      ),
+      '0x965f7995918d67ed05a886dc1ec1d0c2b0981d0e',
+    ],
+    result:
+      '0x10116e97ea31e1025e42589077d757a93d1f2954810bc6a8bf6656009a7cd9c7',
+  },
+  {
+    types: ['bool', 'address', 'address', 'bool'],
+    values: [
+      true,
+      '0x49e22548af8e64090d6852d22971371b89ac597b',
+      '0x6bee7c3dc480e332fde16f1866d2c0e783a16f0b',
+      true,
+    ],
+    result:
+      '0xc196ef7d4270b64b9b8715b0073cf7599024c6e361e19572a98c436096bef716',
+  },
+  {
+    types: ['string', 'bytes'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, qui',
+      hexToBytes('0xf85a8957ca059a7b26ed89'),
+    ],
+    result:
+      '0x146d8ebbbbc94ce1cbfdbe27f4a3c334cc905aeaabe23fc0c8dfdff993c1d54b',
+  },
+  {
+    types: ['bytes', 'string', 'bytes16', 'bytes', 'address'],
+    values: [
+      hexToBytes('0xf3103e35804b'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut al',
+      hexToBytes('0x7335d532f6a29765874eaaf30582a3d7'),
+      hexToBytes('0x786dad104fa3154c055d8a2ceb5650383fdfe3e509081d9b04c0a5'),
+      '0xb24552e499ff6b2abff0180b2f6c99d867cf242d',
+    ],
+    result:
+      '0x5f0eae702a5593f997f610f341f60ae4615cd13661472a7bdd0a89a61938e027',
+  },
+  {
+    types: ['address', 'bytes', 'uint88'],
+    values: [
+      '0x2e9d3437e13ab9f2d60d12cf657724d955e6dc1e',
+      hexToBytes(
+        '0x51baf8eb36c671d311b12124d28c4166b213368c534a16956e10822336',
+      ),
+      BigInt('0xf46eacc6af88b3a8b072'),
+    ],
+    result:
+      '0x0da8be9bfb65f6ef319e90c8ea2aaca9ad7a0a53e649c53426fa747e41c70c4d',
+  },
+  {
+    types: ['bytes22'],
+    values: [hexToBytes('0xb3d2c961e7b7b7a87fe6ac834544c9effb2185c54feb')],
+    result:
+      '0xbc27d089812eaa36c13342a9e339cb4cb0a9e94f98d835fa5a4f9242cbdff4b9',
+  },
+  {
+    types: ['int128'],
+    values: [BigInt('0x311e')],
+    result:
+      '0xbb95a096ed4df15c263dba4bfe64c686e0dd1f48ed29d398eb61b12039b00527',
+  },
+  {
+    types: ['int64', 'bytes19', 'bytes', 'bytes', 'address', 'bool'],
+    values: [
+      BigInt('0x35da'),
+      hexToBytes('0xb21071728e270f1f582b69c6f9fc83f9a08f0b'),
+      hexToBytes(
+        '0xc2b5f395b7d249de6d2e928d192b28340f7a8c76362de175de8a5e557ec846a5331c97fe18b3e5235b859b79a31c0dcafbd88b2cc7a2565f2f57',
+      ),
+      hexToBytes(
+        '0x108573c4658d52ef0c7d08e4a4d3aa6f9b019572d269996339fb19a9a61939df962aad02ef641bd0aee965',
+      ),
+      '0x41d080a27a5c85679dddc99278878fe56958127e',
+      false,
+    ],
+    result:
+      '0x0de900169c816de3e65098cbeb2969150f153e775fe07b98e94d9f0a4b49965c',
+  },
+  {
+    types: ['address', 'string', 'uint8', 'bytes12', 'address'],
+    values: [
+      '0x61c0dfd42555f573e9a701b40fcf1426e5796068',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt ',
+      BigInt('0x2c'),
+      hexToBytes('0x133b06202a31c5b3e563cfc1'),
+      '0xae8d71a7a89c9e558d943d104f560404f7585676',
+    ],
+    result:
+      '0x751d8b1ee35d4cc134814fca542c6eef2a083f584f5f6d744dffa59e05ede0ef',
+  },
+  {
+    types: ['string', 'bool', 'address[2]', 'string', 'address'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ',
+      true,
+      [
+        '0xcdcbc7962ddf6f79757f8239051de225ff953bc4',
+        '0x045cea9fc164fae9f2258264b87c8b0826b208d7',
+      ],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim',
+      '0xbb2b7aee87c9b32c6875fcbf97f2c7260d2fb9fd',
+    ],
+    result:
+      '0x6cf2d1bf2993b4e9b5269f6e4046b71e087e1683f45d412bdaee7790ce15db58',
+  },
+  {
+    types: ['bytes19', 'address'],
+    values: [
+      hexToBytes('0x9437bdde4df895a1c509756c3db03e6cdff826'),
+      '0x1846cb2f6594c82c037986a79344920e7c7ed914',
+    ],
+    result:
+      '0x665397a138da04c5d3787f5b4caa56afddca3df2664c6a623071d9b3de9dd66b',
+  },
+  {
+    types: ['address', 'bytes9', 'int56', 'uint176', 'bytes'],
+    values: [
+      '0xd6be643e384de44090f507e4df6856bae9020591',
+      hexToBytes('0x07c4383293d285f2cb'),
+      BigInt('0x74e276b2ac'),
+      BigInt('0x5d'),
+      hexToBytes('0x1c0f2e6397e2eab296c613cf0d89f88a069d9fd5'),
+    ],
+    result:
+      '0x9340e6d1e1d97e7e22a4a3b4b46d6798c34d2115c6c2b0c00a5f835fbbcd89f7',
+  },
+  {
+    types: ['bool', 'address[2]'],
+    values: [
+      true,
+      [
+        '0x6e4854ee06b39979224ce1fb92e7f724e51d5010',
+        '0xc5433c5ba35721ee0bb12892274a07786f319499',
+      ],
+    ],
+    result:
+      '0x4e0e5c8577f0d65598d9dee0ed7465c4878a8d96db2fd18bed839bac10f890ec',
+  },
+  {
+    types: ['bytes', 'string', 'address', 'address', 'bool', 'bool'],
+    values: [
+      hexToBytes('0x2d204f37'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ex',
+      '0x20df74b393deec19019b398b61af454ebb48d120',
+      '0x52556b52a35715966102a78399a6b7db102bd7b1',
+      true,
+      false,
+    ],
+    result:
+      '0xc9d9f5be1e23627ff5e22363b76421790adfa36f63512524d28db51953d0d09d',
+  },
+  {
+    types: ['string', 'bytes', 'bytes', 'uint200[]'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun',
+      hexToBytes('0xa748d236f0f6f3e5243de9fafabe22d3ac21b983da9511'),
+      hexToBytes(
+        '0x27f1b876af118bda1830e3c1bef10e870391772c9d3417350dc2533b2c1c2900258a8b',
+      ),
+      [BigInt('0x60a09f3d'), BigInt('0x961ba3303d9e78554286')],
+    ],
+    result:
+      '0x84bb93a6fdcd3e11b11f6f13ce91f2f20e745896ad412266c0de20b77a7ae64f',
+  },
+  {
+    types: ['bool', 'string', 'string', 'string', 'bytes', 'bool'],
+    values: [
+      false,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa ',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru',
+      hexToBytes('0x82ba421285'),
+      true,
+    ],
+    result:
+      '0x0ed341c54b457949fd951e49c579e77c3b33ce53f6ada3ba495ec22df57695b8',
+  },
+  {
+    types: ['bytes8', 'string'],
+    values: [
+      hexToBytes('0x7ee7617030f55166'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim',
+    ],
+    result:
+      '0xa2f89c2e68f74a33bffc351df11b8fab630139ae2d5307cb4a4bebefb81ee5af',
+  },
+  {
+    types: ['uint224', 'bytes'],
+    values: [
+      BigInt('0x8e7fba05cd9618832747bc47e36937f53b358c369a'),
+      hexToBytes('0xcaf4a2607ff0eb'),
+    ],
+    result:
+      '0xa764434d8a51f2349513698a4115785bdb2d4f796b2a9da625f38c35b00e0409',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost',
+    ],
+    result:
+      '0xb932d4c2cfb480574ec5a647ce8a5716b93e1430e0a12486da0b46e6bd82459e',
+  },
+  {
+    types: ['bool[2]'],
+    values: [[false, true]],
+    result:
+      '0xa6eef7e35abe7026729641147f7915573c7e97b47efa546f5f6e3230263bcb49',
+  },
+  {
+    types: ['bytes', 'address', 'address', 'bytes', 'address'],
+    values: [
+      hexToBytes('0x981d6274632b384d'),
+      '0x2de48a16ab843b1ce65ce1456d94796ad6f38528',
+      '0x7c79598cf91f447aa798dbde44c3b66878d3c178',
+      hexToBytes(
+        '0x750c65e5ad008736ac9bbf961ff7acedb4ef758e71ca54d84f3b7a85e90aa83c396a2ebc095670ae742eaa6d',
+      ),
+      '0xb6be02c653c307d81eeb441526223d8ca9dc29b8',
+    ],
+    result:
+      '0x32ec86992e5f3a71175a19e40730621ffeef428a293e18f085fbc3043361ee4d',
+  },
+  {
+    types: ['bytes12', 'string', 'bytes'],
+    values: [
+      hexToBytes('0x4aa18c35a3ea87a87e36d558'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc',
+      hexToBytes('0x4172f3695a3be4'),
+    ],
+    result:
+      '0xee75dc907dbf6d6800cb6dc44f05ae704609003be2004c3ab1240c2cc0c25874',
+  },
+  {
+    types: ['bool', 'uint128[1]'],
+    values: [true, [BigInt('0xf1acfd9c1bee3758')]],
+    result:
+      '0xd590febadf920071e88db5dfd966e783923fb3d24a73bc4ccb9d714b1d8c3c67',
+  },
+  {
+    types: ['bytes30', 'uint112'],
+    values: [
+      hexToBytes(
+        '0x7918df8586ed8580db35a1fce15a3f7be345f3709657d703c8025fa9e448',
+      ),
+      BigInt('0x935069fed652'),
+    ],
+    result:
+      '0x11948ee378ce3abcbf22c85176484cb11eaee733e33852753a563d46d33cc188',
+  },
+  {
+    types: ['bool', 'bytes2', 'int200'],
+    values: [false, hexToBytes('0xdfcf'), BigInt('0xc1609ed3ec')],
+    result:
+      '0xd804212ab54551f15560a555aaa4a358a930bfbc0ccf74aa00591dd20c783432',
+  },
+  {
+    types: ['bytes11', 'int96', 'address', 'bytes', 'bool'],
+    values: [
+      hexToBytes('0xc0a3db7f196f0125e749b7'),
+      BigInt('0x1ee64b'),
+      '0xbca3b257e00ccecc4c1c11eaf379e0a806b0171a',
+      hexToBytes(
+        '0xcdf6e83b9d7cc96d56a514b1394ef05724d8acacda997c2703c6be8a4310f4c9',
+      ),
+      false,
+    ],
+    result:
+      '0xe1905db4106bb71861868dfa823952147f94630f7d0817f7f4c114e26db6fbea',
+  },
+  {
+    types: ['bytes', 'bool', 'bool', 'address'],
+    values: [
+      hexToBytes('0x6851a278d2c089886abf717bd1dab600181be5d82efe19cd8379adc0'),
+      false,
+      false,
+      '0x2ab7acb39746eab2965284dd316b1ec74fcd650c',
+    ],
+    result:
+      '0xac8468c5af56bda20af2ac62d60c63c9881c84ad26209a6a397665d784a68d98',
+  },
+  {
+    types: ['bool', 'int152', 'address', 'bool'],
+    values: [
+      false,
+      BigInt('0x62d858045c59c4a4629f0228fc6cf2e2'),
+      '0x596f110aeae47b24078b2fb646e0d0efdaabd554',
+      false,
+    ],
+    result:
+      '0x7c433d430c8aceef110e9526f27e2deb76af0bb8278b92a2d5989ffb1c71b873',
+  },
+  {
+    types: ['int120', 'bytes', 'bytes12'],
+    values: [
+      BigInt('0x80d38867201750f85d'),
+      hexToBytes(
+        '0x60a5151792d525a17b93751253561203231ac86588659f570fa595a49939da8f701c491d2b',
+      ),
+      hexToBytes('0x0f997340f75d988e80bd1243'),
+    ],
+    result:
+      '0x39fa77b0b9a771ed9dd37965bfdd74193bd790f9c99b4d93009b1566e94f3226',
+  },
+  {
+    types: ['string', 'uint112', 'bool', 'bytes23'],
+    values: [
+      'Lorem ipsum dol',
+      BigInt('0x40'),
+      false,
+      hexToBytes('0x23f899fa321473782645ef81a7aa8e83c6808dc51b7aa9'),
+    ],
+    result:
+      '0x28336aabaebfc18f8d0910c035cfb5e3c19238c723608735d558201157713fe3',
+  },
+  {
+    types: ['address', 'bytes', 'address[]', 'address'],
+    values: [
+      '0x0e3c9e3d5a23fe77097be133d47d6f23ef3e388d',
+      hexToBytes('0x6188714b27e8407c95'),
+      [
+        '0x3ba5cd9092c132d97281dd5890c780835c78452b',
+        '0xab03fa910057e5d1db56655ac31eec81a294c491',
+        '0x3b3685cbfc13cf9f7f8a54d885f5e89692d346a6',
+      ],
+      '0x7e4c411c99732a6641689861e817c9e4a67833e6',
+    ],
+    result:
+      '0x6774fbfd039e17859bd23732dedb7823a9a0cd3e1c5d1930520ca5ccf019fb98',
+  },
+  {
+    types: ['bool', 'bytes10', 'string', 'string', 'bool'],
+    values: [
+      true,
+      hexToBytes('0x7d7ffad6050e1961ecb8'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ',
+      false,
+    ],
+    result:
+      '0xbe0823eae93072291acf02d64b663a05e03067da4417047e5c5d854173d377fa',
+  },
+  {
+    types: ['uint8', 'bytes14'],
+    values: [BigInt('0x23'), hexToBytes('0x578e519a6c8e129d34b5834ec105')],
+    result:
+      '0x7916e343b875d582558ecedd4f7fb8be5c8cc54f99eb4180f10612bf7806319c',
+  },
+  {
+    types: ['bytes', 'bytes', 'uint192', 'address'],
+    values: [
+      hexToBytes('0x88198537ac28e21dc7'),
+      hexToBytes(
+        '0x2f3cf9126d675466e679d74f9b8978e513e9fc1bb905fb0449973cf71e96ef5cce30',
+      ),
+      BigInt('0x62d4ac'),
+      '0x03a26d81595ab9b195c15f12cf3e1b8be0d16a67',
+    ],
+    result:
+      '0xd33c7a50419063fce0af335deba910f4c485857de9e6b8b8411e449c67d2bf0f',
+  },
+  {
+    types: ['bytes18', 'address'],
+    values: [
+      hexToBytes('0x5e3a7a69e02431bc433fed1545f3e0828597'),
+      '0xc7a624bc3b41c8c70b0513341d1450f9ebdac796',
+    ],
+    result:
+      '0xa25792c602950e314a8f1162aacd89b0da05ed25bcdba648dafcb10f93eaf07b',
+  },
+  {
+    types: ['string', 'bytes', 'int168', 'bytes30'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit a',
+      hexToBytes('0xa7dccd82dd33c94a'),
+      BigInt('0x2df7bfaeb87acd'),
+      hexToBytes(
+        '0x6e0f14cc4b4c2dd61a5a5037739f90cc66b5f3b3df39d142a4bee11abc1d',
+      ),
+    ],
+    result:
+      '0xc7164090608849f307d5772c17401c73e01576fc501397d99597bab943990b1b',
+  },
+  {
+    types: ['uint232', 'bool'],
+    values: [BigInt('0x10c90d4dc403a541ffff7c4ea3c0eda738873e7d13a2c0'), false],
+    result:
+      '0x3fa770eb9b5e4479e0d3c6714bf6a161312ba3a90c9c9bf544f72ef0b052894e',
+  },
+  {
+    types: ['bytes', 'address', 'bool', 'bytes3'],
+    values: [
+      hexToBytes(
+        '0xf7c973d81466fdf1131652248df58971d4c93f1afcd5907da4eee57a0d8f75fbbdc2613721b3e9b040b85418a716cd18e97d658fefd08d963ca4ca7840',
+      ),
+      '0x75c9622d6b1119d0ad5862e6fe4bc1c9d7c590b5',
+      true,
+      hexToBytes('0x884f48'),
+    ],
+    result:
+      '0x494d52a4b2df02b07e76ac6ddae31096f464a5f844b466eddc5e0e7fd5f2413e',
+  },
+  {
+    types: ['int64'],
+    values: [BigInt('0x67dc')],
+    result:
+      '0x51ded367da0172dbe987a3c874f21ac46dc054380676bcd0be6cda0d429a5eb1',
+  },
+  {
+    types: ['bytes31'],
+    values: [
+      hexToBytes(
+        '0xff112a96f3c505a62fd39fc3b8c3b5b643b0956e7727569877c8a10b98741f',
+      ),
+    ],
+    result:
+      '0x76194a006213022d20477578b303a1e262e2cd21d76504c210d26ea27da8290d',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ',
+    ],
+    result:
+      '0x5c49827eefc4bc7afaa1584f8da692bdabb9f80b17a09004f50550d4ac7386e8',
+  },
+  {
+    types: ['bool', 'bytes', 'bool', 'string'],
+    values: [
+      true,
+      hexToBytes('0x23'),
+      false,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deser',
+    ],
+    result:
+      '0x8702cc003ba6a523958585f290e78eb2d46bdc4deda9c3b969d7b7b9b889be25',
+  },
+  {
+    types: ['uint240', 'bytes3'],
+    values: [BigInt('0x28a8'), hexToBytes('0xb4b321')],
+    result:
+      '0x78b25a7e8c8856e1cc342d689c9307aaae27cdf567dc842cbdf9059a12db238f',
+  },
+  {
+    types: ['int48', 'bytes24', 'int32', 'bytes'],
+    values: [
+      BigInt('0xcc811d6700'),
+      hexToBytes('0xfff6fca92d067b4d751235526d24f5a093a041c095a4f105'),
+      BigInt('0xf0'),
+      hexToBytes(
+        '0xa82f2f343a2bdfafd1b75fc4adddca4246de1ee29d657a034e42bb6e24d05e835279950c0d27c5c29b0a942fb203a637dea34d',
+      ),
+    ],
+    result:
+      '0xfd920133b1e7c94baa625877e4cf06277c872fe6ab9c12b71e3e41de8c11f42a',
+  },
+  {
+    types: ['string', 'bool', 'bytes'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidat',
+      false,
+      hexToBytes(
+        '0x3e0c72435c9b52e2b0233f5df6a9e49645ee7a486c34d87cd0d54691df389db623f6ef66515a2a1cdf',
+      ),
+    ],
+    result:
+      '0x20cce6b9fe1d723af7bcbdea1285f048e262a2c64af91b8e03a61e864baf2c44',
+  },
+  {
+    types: ['uint144'],
+    values: [BigInt('0x1ab6df834816f677')],
+    result:
+      '0x6f096077f81b081d2d2c3bc36e6c63ec5e99b2cf3ef34804d0de341358bd0368',
+  },
+  {
+    types: ['bool', 'bool', 'bytes1', 'address'],
+    values: [
+      true,
+      false,
+      hexToBytes('0x20'),
+      '0x36fa4c38cf785f5bdcd3ed3ecfb3a9d6782a9b6b',
+    ],
+    result:
+      '0x2f7290e26d5138eb358e02805e1328b4294abedf10eb8a36db3f99fc072328f1',
+  },
+  {
+    types: ['bytes13'],
+    values: [hexToBytes('0x333d5377d5385aa5c3b2ac1fc1')],
+    result:
+      '0xdfe2f2542bc641b46f7bd5dbf5a88445c5e20d74811b48d2a8254d78c6de458c',
+  },
+  {
+    types: ['bytes18', 'bytes5', 'bool', 'string'],
+    values: [
+      hexToBytes('0xc88177ae3ff85a518165a3a82e54e2d9cb7c'),
+      hexToBytes('0x3143edc8bd'),
+      false,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse ',
+    ],
+    result:
+      '0x10f5817ea93c45a365dab65fb145cf353457a9bba1282848f05909362a1d16da',
+  },
+  {
+    types: ['uint184', 'bool'],
+    values: [BigInt('0xc446051880e0cf397b6b3a0662'), true],
+    result:
+      '0x3897813b07c4e9fc82bf2203bc464d1121d3a77cf8d204691fcd98053d4ed502',
+  },
+  {
+    types: ['bytes'],
+    values: [
+      hexToBytes(
+        '0xcce7317197452eb7ad8fde4ef82b570dadd5160a7e3df1fcdf6c65a44e702f59413fb62ac845ca5751534a74d0',
+      ),
+    ],
+    result:
+      '0xe6193d21b27f1e6e29e1d195d2ee233b03b36f99f811264852e6ed4bb6a6177e',
+  },
+  {
+    types: ['int200', 'string'],
+    values: [
+      BigInt('0xbd2f240e3393807e5d0e63ec'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco la',
+    ],
+    result:
+      '0x19f70f8d7e8c8597591110502d03a211d6b6506379f435a3e8390f80ea522afc',
+  },
+  {
+    types: ['int24', 'address[]', 'bytes10'],
+    values: [
+      BigInt('0x8c'),
+      ['0x66ae9515d78d3eeebbc8ef098ed1f80168209b4a'],
+      hexToBytes('0x1b88608caccd75d0caf7'),
+    ],
+    result:
+      '0x5f4cb99142e4ed3a3cc620681e57f03ffcddac9b60490265d2babf209a05aeff',
+  },
+  {
+    types: ['bytes', 'string'],
+    values: [
+      hexToBytes(
+        '0xf264626386db631f379c8e107182ac0575a6e351eb3ba60f782d3adf0c',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu ',
+    ],
+    result:
+      '0x3a8f3dcb74607db201e9ff72903da8ce98bf428066385df46baa00dcd3c3f63b',
+  },
+  {
+    types: ['bool', 'bytes'],
+    values: [true, hexToBytes('0x77e28e8d3d440d0651e283b89bf13c2d75')],
+    result:
+      '0x5bbc9a5a74055f3715f821b5cd17ca82e7dc22f3c08a51a742b2002275e3a9d1',
+  },
+  {
+    types: ['uint64'],
+    values: [BigInt('0xdc')],
+    result:
+      '0x216e02cfe6fc4c28ea37fee86951861908fb6a63636e9028941548f664eda8cb',
+  },
+  {
+    types: ['bytes26', 'bytes23'],
+    values: [
+      hexToBytes('0xf646dac7b2f14bd7b85d06801357a3bf4ff0de245c8bec4276e7'),
+      hexToBytes('0xad503427f9684b6d3871d42beeec4ef6c903f6fd9215a0'),
+    ],
+    result:
+      '0xa7a4b773f6d0b373d0d65afe531c2d0f931622ac9c23cfe924c2b5c207911765',
+  },
+  {
+    types: ['bytes27[]', 'bytes', 'bytes23', 'string'],
+    values: [
+      [hexToBytes('0x2c430532e3108efd778644fce23a709846961ca66593080f2b6a92')],
+      hexToBytes('0xf6d5446a3fd71ecd211ba11a728cb177d3'),
+      hexToBytes('0x857e2660187e2b7b215678239f7d73ea36867ce50cac8d'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi',
+    ],
+    result:
+      '0x88ee91ce4cd1c5defe62fedf2abf147d7cc3bb8bdc194597f944ca2d91ec3ca4',
+  },
+  {
+    types: ['bytes21', 'uint40', 'bool'],
+    values: [
+      hexToBytes('0xa102b03d58a7439f1d94b59f79059b2a8893ad97b3'),
+      BigInt('0x5d99'),
+      true,
+    ],
+    result:
+      '0x4a4a6cedadbee3532423b5a6bea22b410af8119d4b3787a8fce995c033c15598',
+  },
+  {
+    types: ['address', 'address', 'bytes8', 'bytes', 'string'],
+    values: [
+      '0x32325142f5901b8938c7dfd483bc2040095bf535',
+      '0x8e13542c022511836889a124da5399da53ab761b',
+      hexToBytes('0xd8064c9c32e62289'),
+      hexToBytes(
+        '0x8a37dfe7fcc19c589657ddafff4291173ee07f94046d62b23d64aa1a9d39',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit',
+    ],
+    result:
+      '0x79aa53061b0e8debcbbb6622a44863f1db7ac83b0ba43ea622958a216ff819a3',
+  },
+  {
+    types: ['bool', 'bytes31', 'string'],
+    values: [
+      true,
+      hexToBytes(
+        '0xa611841ab916ff24d08e792d18b7049c585d68c46408a64cbdaed8d58dabac',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ex',
+    ],
+    result:
+      '0x4d585a3b1c2b28bb36d8b117c15175d68afc1cf679880c4b26460f5f38fa45b1',
+  },
+  {
+    types: ['address'],
+    values: ['0x07b25ad439efbbd9608fac75081f229277623868'],
+    result:
+      '0xdfeb420162d8f61fe008c96b779a5db5214a274fdedf9676217acad26f68260c',
+  },
+  {
+    types: ['address', 'string', 'uint8'],
+    values: [
+      '0xa49a378d255786c86784be007f85b4722de3d253',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt u',
+      BigInt('0x59'),
+    ],
+    result:
+      '0xa44e26a82d708c077f7b1e54d3fac8c43b274a7b1f5b4445e96144abee4aa218',
+  },
+  {
+    types: ['uint216', 'bytes', 'bytes27', 'address'],
+    values: [
+      BigInt('0x2c2e3d5ab961cd9ac71138819bc2c48c248cfda34'),
+      hexToBytes('0x9e8e838b755c06d3788c734cfea275aa2a6e3d1fe4f5'),
+      hexToBytes('0x519a43bd5ad1aa5463f67c0825d531a1f477213638a90a24fddec8'),
+      '0x4bddc3e7d122dcdb1cf46a037f79814159f10dc8',
+    ],
+    result:
+      '0x5a349de474296ac8139601145b51c12ef656db8244b0a12d5f8f719f0f523f5d',
+  },
+  {
+    types: ['bool', 'bytes16', 'string', 'bytes5', 'uint208'],
+    values: [
+      false,
+      hexToBytes('0xa491fd09d89c429bbec18f03ed9a8222'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu',
+      hexToBytes('0xfadbbdd234'),
+      BigInt('0x3c8adc0bf'),
+    ],
+    result:
+      '0x1e27a6dd5f8c89ab55bc2688c6a1f55d51cb777bb0e5104f2f3210f91a6afab8',
+  },
+  {
+    types: ['address', 'bool'],
+    values: ['0xad71ebc556119e8f5d0a63821b841858864d7ba6', true],
+    result:
+      '0xf096fa09f5622002b1ff219d4899756fc04e4f0644b25c51f88b113ac597f7ae',
+  },
+  {
+    types: ['bool', 'bytes20', 'bytes9[2]', 'bytes', 'string', 'string'],
+    values: [
+      true,
+      hexToBytes('0xe3faac49c90645a773f33b97720b8badacd86a80'),
+      [hexToBytes('0xe968ecbc8eccef4d18'), hexToBytes('0x12580dc4f4ef010243')],
+      hexToBytes('0xf801516ae1c84a58474cecb0186d84c3667a9f0f3a73459436'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco lab',
+      'L',
+    ],
+    result:
+      '0x148b1d8067e7bda3e523b1082e437c8372948488ae77a4923f2acc18f46b9465',
+  },
+  {
+    types: ['bytes', 'bool'],
+    values: [
+      hexToBytes(
+        '0x0202d8e3f1f565b8d8df54cc87f32db9cdff57a77f7903da3fefa38d624886c510e6653f91',
+      ),
+      false,
+    ],
+    result:
+      '0x7885575bccd168be0876da5f4e1417fc5614a05d6af361465606bdb69cee9760',
+  },
+  {
+    types: ['address', 'bytes', 'bool'],
+    values: [
+      '0x4ea047b57de564b94b858a3c9c4a0b1669010fe0',
+      hexToBytes('0x407e'),
+      true,
+    ],
+    result:
+      '0x5104591163e30589f9de7776f77f54c57840b561f04e869e71c715c4af8dde57',
+  },
+  {
+    types: ['string', 'bytes', 'uint16', 'bytes', 'bool', 'bytes27'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat ',
+      hexToBytes('0x4f0f6d038bda734306e666ac2579410f9304acc53bfe2ce4'),
+      BigInt('0xd8'),
+      hexToBytes('0xf2d30ce401f0a3f72efd2367c23041e44b1cc2454c9b4ecb7803'),
+      true,
+      hexToBytes('0xd4fe9ce5427ada4ce8376db3b52f48ea2aa6f425523df4707ba735'),
+    ],
+    result:
+      '0x53601fe1f97db07ef9cae90c322b7ae52719a997588b6673950c0aed650c7131',
+  },
+  {
+    types: ['address'],
+    values: ['0xf1fe025a87c9b3486ed7a454261cf35b7a8bde1c'],
+    result:
+      '0x79082ee14216d9f1a2cc340aaf29e104d1e6377679459b3b6651f9a3b21d0eb7',
+  },
+  {
+    types: ['bytes18', 'address', 'bytes6', 'bytes'],
+    values: [
+      hexToBytes('0x597bc3b2c93edec5a61fcbbd7eba9c22b265'),
+      '0x40b275e0e205cb911cad77daf17665033eb0bfaa',
+      hexToBytes('0xd9975a907155'),
+      hexToBytes('0xb85db0ffef1207d3b3c082337d6d'),
+    ],
+    result:
+      '0x6eceea4e4a3e6ff91fb027ae26a868624f9b3b8f46751695853a6fc63df0fe37',
+  },
+  {
+    types: ['address', 'string', 'bytes6'],
+    values: [
+      '0xd01cb8bde32162612ac9bef2c67ded3c4a51a888',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer',
+      hexToBytes('0xeac66d60c2a2'),
+    ],
+    result:
+      '0x67853cfe43b554190a20b08266e234d0b9cf004d90e16e49b157468a24e637b9',
+  },
+  {
+    types: ['address', 'int48'],
+    values: ['0xcb4481b7f7047f4695b7b32dd6891b232334437e', BigInt('0x80')],
+    result:
+      '0x7e38bee5794113a9b0316ba5590989e564325d29a76c3c289aa5336e0cebc775',
+  },
+  {
+    types: ['address'],
+    values: ['0xff16f19d90d0162388682b415ab75306c07a4191'],
+    result:
+      '0x3acf8d59d6857f9b57ee41520b0418f16c0a3d4d6e16ec0a846ef57b01434582',
+  },
+  {
+    types: ['int24', 'string', 'bytes', 'bytes25'],
+    values: [
+      BigInt('0xe0ee'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sin',
+      hexToBytes('0x69d882bfdf579bae01d6212afdd3f5e0'),
+      hexToBytes('0xb658d73e57848406385920fe21b2d8ae2f261dd8fea2718d8e'),
+    ],
+    result:
+      '0xb1423de658ef22f6437133b11ff9b37f04d52480ac30a3cb472ef1515cf1b36b',
+  },
+  {
+    types: ['int160', 'string', 'bytes', 'bytes'],
+    values: [
+      BigInt('0x91fc1cd4cf08cbc4162a0ad6'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali',
+      hexToBytes(
+        '0x091ad96458faa23aa77174a0a8c6c18fc312165581333e9c5ade08a3fb002b2103c6489b19d94ee6620ea280a4af5258814cd9087a0eb78205ecd4d7121cd938bc',
+      ),
+      hexToBytes('0xbd3a4286dfee018a71ddc9efd5a8cb5817061a106940'),
+    ],
+    result:
+      '0x58c5d4fe7726c458a4e24b57e1c71d858deaaabf1f5dfcff4925472b2d4b3af1',
+  },
+  {
+    types: ['bytes', 'bytes15'],
+    values: [
+      hexToBytes('0x95e50a070bb0c57750b3'),
+      hexToBytes('0x8c1578a9efd60b2e4f4f6bc363858f'),
+    ],
+    result:
+      '0x21982d9e15ce82586cb0416f1f3bd21d9bd2f6bcd46c9fd39d7e4251876c15ca',
+  },
+  {
+    types: ['address', 'bytes', 'bytes19', 'address', 'string'],
+    values: [
+      '0xe5a89f3794bc76947956073b11b23ac6ebdd29a4',
+      hexToBytes(
+        '0xb85cb62d8e757eb9ad4e6221a9c77762b4f70ef06aa4b2e88588320ac1bfbb1abb237f827b94',
+      ),
+      hexToBytes('0x69cb691b42f8a01643049f0a73271512c94709'),
+      '0xfd964cfb2f402f94405b25308d60a563790c2141',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nul',
+    ],
+    result:
+      '0x8ea196ee824ea43326c92c13941e4e3810b428e627ffc9eebffa4776bd61e36c',
+  },
+  {
+    types: ['address', 'string', 'int24', 'string'],
+    values: [
+      '0x0d834c35dce8c84b991649e7f79cabda1073a187',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing ',
+      BigInt('0x3d'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse c',
+    ],
+    result:
+      '0xe2a4485040474fd66952ddab53f28bb2e1ec4b4ea9cb8ed25de26bf29ef8b47f',
+  },
+  {
+    types: ['address', 'int152'],
+    values: [
+      '0x9b48ce44023b4c397a5e4ce5c06e454d5c76b132',
+      BigInt('0xa9838b6b37631385'),
+    ],
+    result:
+      '0x267074914d4062c446ad9333d162d3dc79ac59d08165086a2a688b7cfbad07c0',
+  },
+  {
+    types: ['int256', 'address', 'int120', 'address'],
+    values: [
+      BigInt('0x92c7b5ec45a66ee8f31b'),
+      '0x4d24fbe1be0611c1eac333984bd94fdd3d6b4da8',
+      BigInt('0x12fa035e9466'),
+      '0x264a729176e9a09fa13f4bd3ed87aef3c6879206',
+    ],
+    result:
+      '0x400da5c2956d0b0634a6e413132fd404d3aa8c0637d64a26e2b89638b9fe492a',
+  },
+  {
+    types: ['bool', 'string'],
+    values: [false, 'Lorem ipsum dolor'],
+    result:
+      '0xfd122ccdec3f7b2a6ad921628146775ba62f093848f200107edc876af8c53ec7',
+  },
+  {
+    types: ['bytes', 'uint16', 'string', 'address', 'string'],
+    values: [
+      hexToBytes(
+        '0xf3b71e59b9b1fc7b307e2006ec6d03aeeb69a2bd7bf6e0d34764c825a548dc1891f3ad6dbfd98f7e228ff3043b38a83ceb382c20fe59092dc86c032494',
+      ),
+      BigInt('0xe0'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in repre',
+      '0x9212dfbb407cc736578cc5d755359ada189cfbb9',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
+    ],
+    result:
+      '0x724c9718a55224232199beff03a023fbe35434db77cedc50a1f48504265c6730',
+  },
+  {
+    types: ['address'],
+    values: ['0x6457dac4624111aeaa294b138f16937bcc96a98f'],
+    result:
+      '0x14aaf0a358947b5a657a48836261358afb98904afd6b40ec60e5a35de2f5af88',
+  },
+  {
+    types: ['int144'],
+    values: [BigInt('0xcc147f267053124956552850')],
+    result:
+      '0x4dc6ca5adf3cf470972b23e728bd70dab57b2d53c15241756b4446a79f0d6d62',
+  },
+  {
+    types: ['uint', 'address'],
+    values: [
+      BigInt('0x1ea64f9fdd93'),
+      '0x5d198131492869ae08d5dac3c2451188f28aa9c9',
+    ],
+    result:
+      '0xa4c9467ba4eb34d99190192c537486fb2d92d9fd363cd7be54f183a30038e85b',
+  },
+  {
+    types: ['address[1]', 'bytes11', 'address', 'uint256'],
+    values: [
+      ['0x3c691da13e943dd707f32aa8e5795aa4b15ac930'],
+      hexToBytes('0x7ce31088f5af6161c46139'),
+      '0x7b49225998ad2a6393da1ebb72b8969fb3bd8e80',
+      BigInt('0x8839f4409287286082f1637f437f133fcd6d13f02c6993c7d46ea0de855'),
+    ],
+    result:
+      '0xd78c90e51b05b6e93c08bf2f89a7925b1c40354f0b1b1e8ee7d1163f1b10bcdb',
+  },
+  {
+    types: ['address', 'int168', 'int152', 'address[2]'],
+    values: [
+      '0x03afe3d078679897534d74ea32a11a41422f5000',
+      BigInt('0x32'),
+      BigInt('0xb2a17fe082'),
+      [
+        '0x8c97039d8f89733b9b2c138eb87924751083ac36',
+        '0x5e32065f86d4f0bbfcf270085f0e877b569cccba',
+      ],
+    ],
+    result:
+      '0xbee054c53950aa0e384c5488b6c570197a75e666946d33a757f61f92856d235b',
+  },
+  {
+    types: ['string', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut l',
+      false,
+    ],
+    result:
+      '0x6a7c2c06db87399c1c1c480765321abf3fee79de24d6b46e2cb4aee2d139ad6e',
+  },
+  {
+    types: ['string', 'int168', 'bool', 'address[]'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sin',
+      BigInt('0xbe788d0db7c82834b2909476628ee1fc'),
+      false,
+      ['0x22f7b9dd9e93c98e6e2d0122dec46b36b9901998'],
+    ],
+    result:
+      '0x2a148ec856d7e6cd7173afcb5f483f58ad57c2567e73c0624b6b105b92d9967f',
+  },
+  {
+    types: ['bytes'],
+    values: [
+      hexToBytes(
+        '0x349edd877e832ca9433c9e1a2e646b26d1273b1dc01f4babc39c44008944bff61b63d9',
+      ),
+    ],
+    result:
+      '0x9870156432f50b60c0be25ecfd2e2c0679f916ded69514d3cf434c23929de378',
+  },
+  {
+    types: ['address'],
+    values: ['0x763a3a615037212a5e3d247b936e1cd3dfab1681'],
+    result:
+      '0x2791a72ccf63335ec0854181ab8ccf5283be7862dc14fbb2049b886598c8c73e',
+  },
+  {
+    types: ['uint224'],
+    values: [BigInt('0x7df6fe8c1847091e')],
+    result:
+      '0x2763b1986efc995054dcd58d0fb9c480398691088e01a866ea6ed8248104b12b',
+  },
+  {
+    types: ['int232', 'address'],
+    values: [
+      BigInt('0x1d8fcd4828bb4b3818ef'),
+      '0xeb98f81700486f969fcf52ca379bf966b90ebb76',
+    ],
+    result:
+      '0x546e0fec36a15d2edc6670b963c418eb0ab8233f125cd2e9d6860bfe94a7a168',
+  },
+  {
+    types: ['string', 'address[]'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullam',
+      [
+        '0x043b6d575dbbf69eb72d5011470f6a9987348e5f',
+        '0x075f5388519477c82d36e7ff505c0d6a31801c61',
+      ],
+    ],
+    result:
+      '0x14bc72557d016e50b2a140fc577683317d8697e8c5b53dcebfc39c4325b50a7f',
+  },
+  {
+    types: ['bool', 'address', 'address'],
+    values: [
+      true,
+      '0x13cb42217e80694a3c367b2db98d3cf05e409be0',
+      '0x05741faf412c1afc3c4f68fa297e740f0d73faec',
+    ],
+    result:
+      '0x61d953b98be0b0cab79344a7456cc5075860116d8e05453e42efb27bf80a03a3',
+  },
+  {
+    types: ['bytes28', 'address'],
+    values: [
+      hexToBytes('0xcb43d75a0a9373f1da99ad25ce95b6dbf1ca583b02bfe0ed84790642'),
+      '0x0594637a563264a43ef8870bdbc75466b541704b',
+    ],
+    result:
+      '0xcecd04af8fc0622ba248df4d4b7b9df36b330b5d555bbb53e02f867e00ff7090',
+  },
+  {
+    types: ['bytes17[1]', 'address', 'bool', 'int168', 'address', 'bool'],
+    values: [
+      [hexToBytes('0xae38deddfc5e5b0cedf744ca229699795b')],
+      '0x2379d082470cd47819c4234106483e5ebb5a7efd',
+      true,
+      BigInt('0x31d266ea63016a4d2da28bc7'),
+      '0x52b58438d32ac0e026021b50a34ddb98754cbfd1',
+      false,
+    ],
+    result:
+      '0xc1500b9e87938bbd1c0ab51d2621b6e94979840f9d5590430e210a9ee6930fea',
+  },
+  {
+    types: ['string', 'bool', 'bytes', 'address', 'address', 'uint160[1]'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ',
+      true,
+      hexToBytes(
+        '0x768bd15ac81085f84d64d8dcc641148ff2f4396bd0bc4c83110a91ffe03b122f4a877fed339927ef2c265a5b956ae510ba30eb1790c06b664bafaeabbfc6',
+      ),
+      '0x29dba9fe625f8c7d1777ab3476955c880f4efe3b',
+      '0xfb9cb3c917b9028e299525aa1996688d1aff79e5',
+      [BigInt('0x7835d015d20a41')],
+    ],
+    result:
+      '0x90b9b8abbe03c6b22aa48ba9da2dfacf6b70ffcce0114862fbd4f183db16a638',
+  },
+  {
+    types: ['address', 'bool', 'bytes', 'bool', 'bytes9', 'address'],
+    values: [
+      '0x72893e3362993bc9d85cf49e23e79cde021ea79e',
+      false,
+      hexToBytes(
+        '0x9cb9364a704c58b1978722f760a4838dbcfbaff79910aa311415391950d7d7e880640f949bd0cf9b52',
+      ),
+      false,
+      hexToBytes('0x7ea61e7c5172d7fce4'),
+      '0x33faa2168fc95582f80ed5ec0ae9e40f07f92db0',
+    ],
+    result:
+      '0x9269bf4cf01aba39f18c87f07274373cad75bf6860fcdc8604a7c77acb0ec426',
+  },
+  {
+    types: ['address', 'address'],
+    values: [
+      '0x240a77c369e46d5d3a0d266c9ee260de06eade36',
+      '0x81fe0655217a72e1da9dee9c6a9f4cb4f0f3ad69',
+    ],
+    result:
+      '0x3962ef15b2fc4d5e8d5e3458e1d38277227abfb543a84c06f76e9a9720df189d',
+  },
+  {
+    types: ['bool'],
+    values: [false],
+    result:
+      '0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a',
+  },
+  {
+    types: ['bytes', 'bytes', 'bytes'],
+    values: [
+      hexToBytes(
+        '0x4ef89197ba76ccdbc322f0e91a393de814026cd8a58ec711e5662ecbf03ca11669b844b26c56e6b541f659381e87a96d3af95b62',
+      ),
+      hexToBytes(
+        '0x223c2f42a42b79c59b79076d70884874fcd18663fbc1334c82bacaf0b1c1e3d0ca62f22f4ef96e540ddca714',
+      ),
+      hexToBytes('0xd59746a69ab768fbe52b98fd10fe3c4a67f00f739b9b8b1875ea'),
+    ],
+    result:
+      '0xb7fb354cc85865981f183c6f2885159149049f9107b04b0137c09c15105ac315',
+  },
+  {
+    types: ['bytes', 'bytes16'],
+    values: [
+      hexToBytes(
+        '0x4982da5e1bb48b8820aaaac216351f789fad6123f850f1916f712a09fc73d323e893a672a142bd7ef8e8a1c561f69c2b489b74',
+      ),
+      hexToBytes('0x542cc73755f454e17424d5b4f2c27dde'),
+    ],
+    result:
+      '0xd3c13d6a3dca2bfd57ff9cabb58120d40a535cc543b67d52db7c57e64fa8243a',
+  },
+  {
+    types: ['bytes5', 'string', 'bool', 'bool'],
+    values: [
+      hexToBytes('0x5c89803b27'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in ',
+      false,
+      true,
+    ],
+    result:
+      '0x1ed0ce5fdca93079691619099a8ff2493b6c8ff1157682b45647cef5d3653d4d',
+  },
+  {
+    types: ['int256', 'bytes4', 'bytes', 'bytes12', 'bytes', 'address'],
+    values: [
+      BigInt('0xb859c4395124ea4a345c29'),
+      hexToBytes('0x4406bf1a'),
+      hexToBytes('0x6b22'),
+      hexToBytes('0x9458f00e0005cd28338f6959'),
+      hexToBytes('0xfb80907dbc3197b6f83b'),
+      '0xd555a957beb61081c5a5082bd8598be3a31eaac8',
+    ],
+    result:
+      '0x934d4e5c9fe3af960b10cff32447c2548877174280737c8c51f7fd7d3aa2fb4b',
+  },
+  {
+    types: ['bytes', 'address', 'bool', 'int'],
+    values: [
+      hexToBytes('0x887493f18937da27945be96715dae65a590c9ae4795bf4b9cd6d'),
+      '0x45ed84364838b2941a98f4e055014478b73f4e1d',
+      true,
+      BigInt('0x303c4a'),
+    ],
+    result:
+      '0x05d8dc8efcb1d5543de0ed2dfb5df501281385cf15538ecc5fe9868c6502e198',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['string', 'bool', 'bytes', 'address', 'bytes13', 'bytes28'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea c',
+      false,
+      hexToBytes(
+        '0x0f7e63d89f76faaae9b6c5769dac23b303f18722870ad6762cdef0abaa94a4a3b3b68e6d806a363e267124b3',
+      ),
+      '0xea780777015ddc63040d0e6d560f45eaaaafa3ec',
+      hexToBytes('0x8af17acde2b3d0f33dbf40f89e'),
+      hexToBytes('0x579c406f07f290b515884039b1c94e76d39c1aabecba99b0f41e4b5c'),
+    ],
+    result:
+      '0x9eba4b39f4d2216a81df5bccd00d83a5a0700aeebe70186a744833fbb7393a85',
+  },
+  {
+    types: ['bool', 'bytes31', 'bytes23'],
+    values: [
+      true,
+      hexToBytes(
+        '0xccb184d15d69803a6f32fdf9cc6072295b6915e18f47f4f9c8b507e6797856',
+      ),
+      hexToBytes('0x9abd29027cc9c9d83a7a13882932163ff63129d5d42120'),
+    ],
+    result:
+      '0xa0d86f9ee5e1523a91e5fa3084037be5b7eee5afadf5589bbb1a78c651ee4f51',
+  },
+  {
+    types: ['int152'],
+    values: [BigInt('0x4e8617021e7217ca68c278')],
+    result:
+      '0x29c5b0455bfe5973f65ac0a81b2987c49cbc5cfade33347e99ffb1d85b01bb03',
+  },
+  {
+    types: ['int184', 'int200', 'uint144[1]'],
+    values: [
+      BigInt('0x3c87d6576c70'),
+      BigInt('0x8decc2c40d2476b30598a66d56'),
+      [BigInt('0x35')],
+    ],
+    result:
+      '0x6c8a4ad9d9c140ee5bf6c94c005fbf563a21f61618052bb214dd98e3b0eab56e',
+  },
+  {
+    types: ['bool', 'address', 'string', 'string', 'address'],
+    values: [
+      true,
+      '0x34771ec45044c9bba9d53c80ecef39d144817a75',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut',
+      '0x4626c4b2383c00a25272a0d98baf23b0bbb722dd',
+    ],
+    result:
+      '0xab04abce432106140c8595cfe0ab6186653c858be7e2ad41a838731fa93ce562',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['bytes', 'bytes6'],
+    values: [
+      hexToBytes('0xa8c54d1e1ff42e4c73b299c3f39ae288ed36b538'),
+      hexToBytes('0x6e4bb2ab725b'),
+    ],
+    result:
+      '0xca7862c616e1ba936b0132b2dc77c82a6ebf0f7f1efe175602fc8b99dcfcf681',
+  },
+  {
+    types: ['bytes1'],
+    values: [hexToBytes('0x8b')],
+    result:
+      '0x72349b72e984e08e12205611b778f4085a42a677a9671ed41bc2e3a3c67e38f7',
+  },
+  {
+    types: ['string', 'bool[]', 'int200', 'string', 'int224', 'address[]'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipi',
+      [true],
+      BigInt('0xa9a36c'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati',
+      BigInt('0x50c4b8d00e71'),
+      ['0xdb06f3493c197c0d19ce7715773efa2df4bfca01'],
+    ],
+    result:
+      '0x36ec55932136e5b79b64e618c517abe7f9ba81437601c2d8562a673920b32858',
+  },
+  {
+    types: ['string', 'uint104', 'address[2]', 'bytes', 'int144', 'int96'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa q',
+      BigInt('0xe76e4bb334d741e2c943'),
+      [
+        '0x8c60873403b1d749819cd091e661cd0f2d279315',
+        '0xf2bb888c0d65a50ccc73ff50792d904f445a0fde',
+      ],
+      hexToBytes(
+        '0x2e678fc86590c9aed1781dd374396fe30bc97807139bd872a3d0ad779588c6e6',
+      ),
+      BigInt('0x66f3'),
+      BigInt('0x5b29252f2e'),
+    ],
+    result:
+      '0x18e33a0ad6e44979fa68f9b581555d77088bd8216d315c0e5c657c94f5bd0dc1',
+  },
+  {
+    types: ['bool', 'bool', 'string', 'bytes7'],
+    values: [
+      true,
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu',
+      hexToBytes('0x276b12401efe44'),
+    ],
+    result:
+      '0x6fd69af1166dd299ed08f374dc3063a2be654c9aaef3974b1291a7870a4a3adc',
+  },
+  {
+    types: ['string', 'bytes15', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min',
+      hexToBytes('0x917bd0e91a6ef4eae3b3c6eea2e5ed'),
+      'Lo',
+    ],
+    result:
+      '0xda24dc3bc07fceb46edc8972976c0ee3170f9167d2181a0acbd42d16f32db950',
+  },
+  {
+    types: ['bytes3'],
+    values: [hexToBytes('0xb662eb')],
+    result:
+      '0x2c68797fbd298b95916a7f933e1f8e5fae993cbbd42adba9d3d94d74f330abce',
+  },
+  {
+    types: ['bytes27', 'string', 'uint160', 'string', 'string'],
+    values: [
+      hexToBytes('0x5c4191828f9555ab21438a6c3127490835b1b5715078080ed84d86'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qu',
+      BigInt('0x718d337dcc03dd'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute ',
+    ],
+    result:
+      '0xe4d7c147be3e2570c37cf9c6f8a6914552657bc162c607f9efc4d3ac77c75d5c',
+  },
+  {
+    types: ['bool', 'int48[2]', 'string', 'bytes'],
+    values: [
+      false,
+      [BigInt('0xf6f37d832c'), BigInt('0xf745a6be')],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ',
+      hexToBytes(
+        '0x00196e2a0ed932eb023ba2d9941de5d4782bf3a45d0028ee36595b3c6afb13dfffb031421e5b81f5',
+      ),
+    ],
+    result:
+      '0x814f2034cdf3333202d29dc3969b70f64a785e1ce17a13c7f4856caa9fb0f0a5',
+  },
+  {
+    types: ['string', 'bool', 'bytes', 'bool', 'bytes', 'bool[]'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adi',
+      false,
+      hexToBytes('0x7f4b2e63b699bf26e506e1f696031365bc9e50bb4a7454'),
+      false,
+      hexToBytes(
+        '0x76e6a4256da986fb72a704d388750d89a97f74eea8e1b5571df3fd506792952d9c3b04a5d90c6616fea8122202449b46d85846970d0828ae',
+      ),
+      [false, true, true],
+    ],
+    result:
+      '0x4d629c27e9a92a9e53506dc6741fc52590d2de81c52a1d49b795cebea018591a',
+  },
+  {
+    types: ['bytes'],
+    values: [
+      hexToBytes('0xe788f697b2a6dd6ddb138a4b333aa91bd6b7d4a3b7024c9fe3d1e1'),
+    ],
+    result:
+      '0xc638001aa1cf377b0c896668f485c17e40eb6c372979b43ebf9c280769b144ed',
+  },
+  {
+    types: ['string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut eni',
+    ],
+    result:
+      '0x8505ca1d7c2480ab969a6f5ab70731ee0e399bf371c1d99b89124876d813f58d',
+  },
+  {
+    types: ['int72', 'bytes8', 'bool', 'uint160', 'bool', 'int8'],
+    values: [
+      BigInt('0x7eb7704291ce'),
+      hexToBytes('0x7c11c040bb4ea7cd'),
+      true,
+      BigInt('0x247abc69a6c0cc332e28'),
+      false,
+      BigInt('-72'),
+    ],
+    result:
+      '0x5a4720d55cbf995cf8db4641e52e1bf5189a91e934ffd4dd6bb24de21403e0f0',
+  },
+  {
+    types: ['bytes', 'address', 'bytes', 'int128'],
+    values: [
+      hexToBytes('0x5b56679a3ce7dcb71c0ca39e9bd75f0a5f57'),
+      '0xdee98a7be0f2fb13f789edc000d9f827564a4711',
+      hexToBytes('0x70d6d3e54fb53b960578433f716a70e9e6ff'),
+      BigInt('0xe4'),
+    ],
+    result:
+      '0x90777cdc1a707c891523459d1731a8b3cabc399d27697137cd9dc0d5d5e77fc8',
+  },
+  {
+    types: ['bytes22[1]', 'address', 'int192[]', 'bytes3', 'string', 'uint88'],
+    values: [
+      [hexToBytes('0x86a85e843c5cf7b0e98991eb0e8c6e4ed0c2424e3ba4')],
+      '0xf7fa9ae939e89e5183ea2f7c77993a0e9a5a05c2',
+      [
+        BigInt('0xa35eed0eed0bd4'),
+        BigInt('0x3f0165defb63'),
+        BigInt('0xf6b25de19df2d797'),
+      ],
+      hexToBytes('0x0142cf'),
+      'L',
+      BigInt('0x6df9f9a7'),
+    ],
+    result:
+      '0xfb465fb7f0005ffb03cb4f6e15168415d98c0663cc81990d2dd81174b71aa84a',
+  },
+  {
+    types: ['int56', 'bytes25', 'bool[3]', 'int240', 'bool', 'bool'],
+    values: [
+      BigInt('0xcf3f86da91c4'),
+      hexToBytes('0xcb89af383ab3ed7b0f9e3f43daedaae82380be17cfe84f728c'),
+      [true, false, false],
+      BigInt('0xa392'),
+      false,
+      true,
+    ],
+    result:
+      '0xad985cf036b2a0c7588755a63cf018e2ca03d388a81ff06ad94c0c9010bfe6c7',
+  },
+  {
+    types: ['string', 'string', 'uint', 'address[3]', 'bool[1]', 'uint248'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui offi',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt u',
+      BigInt('0xe7a2885e5760ea01a995ad2d'),
+      [
+        '0xf02c120a8c19d667aa914bcb27990cb69d8b051b',
+        '0x8e9cc74467f27fda979b38254146ec9f786c0bdc',
+        '0x9dd48a78140baddf1c350c395dc7c0646b78e3f6',
+      ],
+      [false],
+      BigInt('0x83b3a84f4478e3b034f894d610'),
+    ],
+    result:
+      '0x935888c1724b8f7af79fd8eb91629f9109e3643aa5afa302d83f301b39e79086',
+  },
+  {
+    types: ['address', 'bytes', 'address'],
+    values: [
+      '0x445f9813610d5e137eada3f3b41de59a86a216c9',
+      hexToBytes('0x83324cf603129394b4e5'),
+      '0xc649be46e6fc31dc072397067ac55f992e22d193',
+    ],
+    result:
+      '0xe199f3c5e2b652bc10b576c2a4768ab367f8e81a7356f529fab2bebe1490c4f6',
+  },
+  {
+    types: ['address', 'bytes4', 'bytes', 'string'],
+    values: [
+      '0x86e570feef8d793bd5fb1c66d9442d74fcf8bb61',
+      hexToBytes('0x4d0a97ca'),
+      hexToBytes('0x63063dc0ab626a47ed9e7fdf0d3e'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut eni',
+    ],
+    result:
+      '0x5d5d903fe36abb354eae99fc2043bd62548d24cd124e30c4891dea36d0f9b05b',
+  },
+  {
+    types: ['int72', 'int152', 'bytes11', 'bytes13', 'bool'],
+    values: [
+      BigInt('0xfa3218e76eadf7'),
+      BigInt('0x9ac7ffbbe84ab86e322f37'),
+      hexToBytes('0x103320d931643d27dc3501'),
+      hexToBytes('0xe8b0778a0120aa3412a997d211'),
+      true,
+    ],
+    result:
+      '0x7ae614a77eeed0e018668986d872c3fe515ba08d43ad4342c17e34ba473088a3',
+  },
+  {
+    types: ['bytes2', 'string', 'bytes19', 'bytes14'],
+    values: [
+      hexToBytes('0x830b'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ',
+      hexToBytes('0x4599b27310df2a3a493ccdf6ab04b9c21f4aed'),
+      hexToBytes('0x1c525e45227b28ac7a767405bfc9'),
+    ],
+    result:
+      '0xfa179500bf07c22f27ff32be865f59a15838fd1598d6ff7f3281eaaf4eea0ba9',
+  },
+  {
+    types: ['bytes23', 'bytes', 'int232', 'string', 'bool', 'bool'],
+    values: [
+      hexToBytes('0x0f2d6d17d51515b33342f39d002ebf94e80928c0217132'),
+      hexToBytes('0xcde685f9ca4c04489a52'),
+      BigInt('0x195b664a4f867a99d37269cfa4cecc767ee267afd9'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ul',
+      false,
+      false,
+    ],
+    result:
+      '0xae8a9accfeb9ead052129840ef8dc52caadbff343fd03f8db8e827f5ad534feb',
+  },
+  {
+    types: ['bool[]', 'int72[]', 'bytes', 'bytes18'],
+    values: [
+      [false, true, true],
+      [BigInt('0x49a8c842'), BigInt('0xa6eca6')],
+      hexToBytes(
+        '0x0dad31de93dba162d32dfed5844b5603d33a63b43df8f54a089422aa970390df79dd',
+      ),
+      hexToBytes('0x5a863ecf8593c0efc8e803728ef9acfd472a'),
+    ],
+    result:
+      '0x09dfd6768e10fa97eb27c2c66d528a081e49fcea20f7a98e1648829273c4ed64',
+  },
+  {
+    types: ['string', 'int152'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven',
+      BigInt('0x543a290e8a377a2c'),
+    ],
+    result:
+      '0x5844f3071e46f09d705f08dafca890f37b44ead5b126c193df79bcb06430751e',
+  },
+  {
+    types: ['string', 'string', 'address', 'bytes10', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolo',
+      'Lorem ipsum dolor sit amet, conse',
+      '0x708f095856c1526d152211c514a1e8dbf5065406',
+      hexToBytes('0x90a0be4c27cae44ecc6e'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla',
+    ],
+    result:
+      '0x65e2f7de81d03d33744563415bfa45b4149a8bb249676561ec3d7f318221bb58',
+  },
+  {
+    types: ['bytes', 'address', 'bytes'],
+    values: [
+      hexToBytes('0x288dd529c39a4eb4b3f0709da2cedf9164ee85c4'),
+      '0x96cb8561755de562cd37c9d299fb382e0546a833',
+      hexToBytes('0x8872'),
+    ],
+    result:
+      '0x3a44be87a575785aa8f0be166103b76727b2031d39be41d9131cdfa92a6637b1',
+  },
+  {
+    types: ['bytes20', 'uint8'],
+    values: [
+      hexToBytes('0x5ac3fda450c82838bf555038898b3f83b25ab6d7'),
+      BigInt('0x1d'),
+    ],
+    result:
+      '0xc12b2197f929d7fd3a82aa85a91109ba73d41c19fa8be925af30849abfd877fe',
+  },
+  {
+    types: ['bool', 'address[]', 'bool', 'bytes3', 'bytes7[1]', 'int56'],
+    values: [
+      false,
+      [
+        '0x36cfcd5ba261ca1d5ab9567f3eeb554fd6b6b19e',
+        '0x70b91990bfb1979df697c0d54037605731728275',
+      ],
+      true,
+      hexToBytes('0xb31541'),
+      [hexToBytes('0x1184df710dde7f')],
+      BigInt('0x2f'),
+    ],
+    result:
+      '0x7f5c7e33275ed0006842b50e04eba8143947b94f2e2e4d9dfbab163058b9bb1d',
+  },
+  {
+    types: ['string'],
+    values: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, '],
+    result:
+      '0x3df4efcbe6c7f15c672e1f522483c1896d7de9ac9f350c41debf8a1766a21ba4',
+  },
+  {
+    types: ['int192', 'bytes', 'bytes'],
+    values: [
+      BigInt('0x273680a7897e80763cf299f6570c833bb6e9'),
+      hexToBytes('0x7d0ceded9a0577884fe22f43738bc8bdc05f23e97e'),
+      hexToBytes('0xf02feffaa88aefa27573af4fd21a98ca4c'),
+    ],
+    result:
+      '0x6fd69759b77a1cdfc5965ad671c1347d6fb6e662514bc70e4eaf92c24236a13f',
+  },
+  {
+    types: ['address', 'string', 'string', 'bytes3', 'bytes', 'uint192'],
+    values: [
+      '0xe65f4710a0ad38efb975120a9b20c1779b116ea2',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla',
+      hexToBytes('0x394387'),
+      hexToBytes(
+        '0x7abf18cd61b7e026ef495480b3389cb3c48f160e0efd76e0dbefda60ec13ed64cbd2bb78634b5e',
+      ),
+      BigInt('0x535b1f'),
+    ],
+    result:
+      '0xee7bff61bfb10ca532601432ea1f992670e65306c8dc856cbd0510a469d71ab6',
+  },
+  {
+    types: ['string', 'uint224', 'bytes23', 'bytes15'],
+    values: [
+      'Lorem ipsum d',
+      BigInt('0xa5f3bed7c1aaeacdc3d6f26cee7233'),
+      hexToBytes('0x8020d11385cbbc53b515842c0cc6a05d006ed55ab09c7e'),
+      hexToBytes('0xbfea6bc84770a5af8afd9eff39f8aa'),
+    ],
+    result:
+      '0x318cb977d35284dee23f94ed49c7e2640f8cde3766bf68606e8f773fa7c34d4d',
+  },
+  {
+    types: ['uint56', 'bytes28'],
+    values: [
+      BigInt('0xaab9b20861'),
+      hexToBytes('0x27d33565066d0efc15a8a9b4eb5e01b4a275ca11ea55949e9192ca9a'),
+    ],
+    result:
+      '0x4baa49d7bc3d485fbd386187d31b10be44ceedf6faa0d1eb84645b32b37bd523',
+  },
+  {
+    types: ['bool', 'int208', 'uint88', 'bytes', 'bytes21', 'uint48'],
+    values: [
+      false,
+      BigInt('0xa3530a7da9d0b2d76792f1c03989'),
+      BigInt('0x94298557fff23a51be'),
+      hexToBytes(
+        '0x983a9bcda81ae8efea0d03e3be1ed135246783c014f1ffa4b9660ec60d17da6c9933608e05ee0ef910fe46c4266cf8aa2c6fcc08e76b68b15c98e3aa09fa68892c',
+      ),
+      hexToBytes('0xe5b71fd23505a9f468977b17ce5ae5de2dd4f57963'),
+      BigInt('0x41a6fe3d'),
+    ],
+    result:
+      '0x2c74fed42cb531b7a06dac285f095467e973a473cce73af310202c4e51c12dc5',
+  },
+  {
+    types: ['bytes', 'address', 'bytes', 'int88', 'bool'],
+    values: [
+      hexToBytes(
+        '0xc41a799760f068d7ebd4c267cd7c882329ce0efa13fd6ba0bd81abf50477bf54b4a3c12db865745102',
+      ),
+      '0x34cceae72b2705217ac779c79fead9c4b73b50e6',
+      hexToBytes(
+        '0x3e1459858545f3e22578f8d64adc507e2dc27e7bff9763d40f167b773e5862f856e007aa8940d1698ca0740eb7ed22e46ce628a9c033b496eb6561d23db6914971db',
+      ),
+      BigInt('0x5b6108a604f718'),
+      false,
+    ],
+    result:
+      '0x91f49cdd69077cf32b0621446307349da61e7f32173311c16ca0cc4d723da2ba',
+  },
+  {
+    types: ['bytes', 'bool'],
+    values: [hexToBytes('0x261549e3b9191a487820a16481'), false],
+    result:
+      '0x1e484994c5f573e814f103e95cc08efbdbbb556f2fa5c8ec90756abaa24770eb',
+  },
+  {
+    types: ['bytes', 'bool[]', 'string', 'bool', 'int216'],
+    values: [
+      hexToBytes(
+        '0xdcd54b996ff8ed2cc60ab1d9bd6828145665bd9e8cdaeb0262467b8a6202256e8a2e595961',
+      ),
+      [false, true],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mol',
+      false,
+      BigInt('0xc89e8f'),
+    ],
+    result:
+      '0xb1e2958c66e0411bdb1994b60986827b6179a111d89555676558608bb0fe39a8',
+  },
+  {
+    types: ['string', 'bool', 'int168[]', 'uint168', 'uint208'],
+    values: [
+      'Lorem ipsum dolor sit ',
+      true,
+      [
+        BigInt('0x253e0421ddabc34a'),
+        BigInt('0x36'),
+        BigInt('0x4977005a2e7ab62f8dd083'),
+      ],
+      BigInt('0xb18e4afd871ebd9996ba8d3d4f6234'),
+      BigInt('0xf6bcd80d51a607843cd0ea3cd7'),
+    ],
+    result:
+      '0xdd1b70e3e4e3b5a737fa0a3193ddd75208b69eb062286da8e0410111fc15713c',
+  },
+  {
+    types: ['bytes3', 'bytes10', 'bytes21'],
+    values: [
+      hexToBytes('0x825aa7'),
+      hexToBytes('0x2a11736163bc654a8894'),
+      hexToBytes('0x1464e3094d054f462f2c49a68978b44c48f31a8d21'),
+    ],
+    result:
+      '0xa6739a0c6730d7c7a690ccfe04dec3338118da4b4ba6c3a549728b933ba8d09a',
+  },
+  {
+    types: ['address', 'uint232', 'bool'],
+    values: [
+      '0x5af8433a83e83fa6114e35fb9dc9b24f27117a45',
+      BigInt('0x5f59fc1ab28662bb6bb2b411948e34e0a3'),
+      false,
+    ],
+    result:
+      '0xecb1ebcc83db2a50daa6730995228d6f0aced1b6d5b5eb08a5776f140f3c1dd2',
+  },
+  {
+    types: ['bytes11'],
+    values: [hexToBytes('0x9858d884987127a5008c56')],
+    result:
+      '0xef55cc322f7678c7fa699813b40ec34afef28a5da9c2c2e3c2fc3a2a5e681ced',
+  },
+  {
+    types: ['bytes', 'bool', 'uint168', 'address', 'bool', 'string'],
+    values: [
+      hexToBytes('0x2ae89d3446faf5c0aa4af6843bb5388fb37579c0b112a2'),
+      false,
+      BigInt('0x4a2fc1728c3839e9bd2d'),
+      '0x7566656e18b5491f6eae149a542118535a6ea7a5',
+      false,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt',
+    ],
+    result:
+      '0x3eaed2b3dbbc6f94434d9fa1755462b3911679a25992d069bc66a5e7d0b45eae',
+  },
+  {
+    types: ['address', 'bytes7', 'uint120', 'int8'],
+    values: [
+      '0xe4f6ef9320a05dfc486606b5f8d08fa131a3594d',
+      hexToBytes('0x779c071f038937'),
+      BigInt('0x5335747ce10a11311e9df26026'),
+      BigInt('-15'),
+    ],
+    result:
+      '0x1c58c73892aae4cf05e694e73653ca257e257eccbf48515894313d8829ceac36',
+  },
+  {
+    types: ['string', 'string', 'bool', 'bool', 'bytes31'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia de',
+      true,
+      false,
+      hexToBytes(
+        '0x22c963a94aa1573c72b6dc9d3a275a7c36dfdf23fcdd5fb5e1c0c280770637',
+      ),
+    ],
+    result:
+      '0x7653f45e4a81e787829205606c9842058571a940f42501ab6b098a361ab0ecf3',
+  },
+  {
+    types: ['string', 'address', 'string', 'address', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipisc',
+      '0xf850b7404d9ca923b40781ee0f9f84a614503be0',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint',
+      '0x69995f6bbe9a286b1ddc1a79113cbc9403b7ed35',
+      false,
+    ],
+    result:
+      '0x03674f1f1e910c875fc2ca83222a66e0792dbc49be491ed6ef855cd0a900e82c',
+  },
+  {
+    types: ['bool', 'int184'],
+    values: [true, BigInt('0x60ec79baa2')],
+    result:
+      '0x4748213704bf82e41694f3bb2a10f51d606ef9a83751eec90bc8ca19b6b2507c',
+  },
+  {
+    types: ['bytes', 'address', 'string', 'bool', 'uint80'],
+    values: [
+      hexToBytes(
+        '0xd488d665c9c51a18d71d6c544d73c0e19d0fc1649bec3c6df533ef09bf9e847b17cf4d82',
+      ),
+      '0x1489f346e93ff9f0feb1915b119a97bf6c5e6ee3',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in repr',
+      false,
+      BigInt('0xcce0f4e9ac7d'),
+    ],
+    result:
+      '0x8421591cf679de9810c791f0136e4c1e0a77767083face953ef7a53754535a7c',
+  },
+  {
+    types: ['bool'],
+    values: [false],
+    result:
+      '0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a',
+  },
+  {
+    types: ['bytes29', 'bytes'],
+    values: [
+      hexToBytes(
+        '0x6490827826321c720b48551a788b61c7b4411527f6aa952606879a9b11',
+      ),
+      hexToBytes(
+        '0xb54049ae5afd5946ba3031df94255579f390fa6ebd862fdd18298c654c6de819',
+      ),
+    ],
+    result:
+      '0x363e8f2907c41e4a37a99f2f2c509d789a56ad350836df79a4e81016189f339f',
+  },
+  {
+    types: ['string', 'address', 'uint32', 'int88', 'uint56'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+      '0xfccfc8a626c884980e07d4ace6aba1d80e42d8dd',
+      BigInt('0x4866f1'),
+      BigInt('0x8b55d19bc7abde608e15'),
+      BigInt('0xc0e8f81e'),
+    ],
+    result:
+      '0x8681adb81164bc396986e46c1fd36ce445d72ee49b8076c0c84511dc73df4f12',
+  },
+  {
+    types: ['bool', 'address', 'string', 'bool', 'bool'],
+    values: [
+      true,
+      '0x3f283e7f0a2f8f48302e3ba4775b2a004f4f13fe',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni',
+      false,
+      false,
+    ],
+    result:
+      '0x90ca6770711810c783ccdca6183f469263e8e28395e28bd1cef261c0e7c765bb',
+  },
+  {
+    types: ['address'],
+    values: ['0x32dd3b31d7c8590bf9c885d696c4e231bc048b68'],
+    result:
+      '0xb3bc26cefc53efeba2ef65bb238838243431ac95ba7f0b98140aec28bbc913ab',
+  },
+  {
+    types: ['address', 'bool', 'bytes30', 'bytes', 'int232', 'bool'],
+    values: [
+      '0x4193d3fff2b91c46e468205e52b62cc5741b31c7',
+      false,
+      hexToBytes(
+        '0x4d3aa6045dfd54b3df2506cda3f553ffc6205c7f4759c1af67957a4527c1',
+      ),
+      hexToBytes(
+        '0xdb98d3cfb81201676d94c16e224cb749595fb7880e21c4110984ffc1fe87f8aa65bb7c2aa6d146afd38f93c33cfa2b29',
+      ),
+      BigInt('0x10cc9ff5a572b3b23d904b5aabc0afa27cf6'),
+      true,
+    ],
+    result:
+      '0xaefaff7ad3f639e9d6b351b27f1149a472b1daf8b3227f4f8a1b4836685b3799',
+  },
+  {
+    types: ['bytes13', 'address', 'bytes6', 'string'],
+    values: [
+      hexToBytes('0x68c80ef46d1fdc982951be1ade'),
+      '0x754be4e264c662c6be184f3b83daef09b86ae052',
+      hexToBytes('0x98b9ddd0579c'),
+      'L',
+    ],
+    result:
+      '0x29be717a950160e54ebbad5c70c704db2498367f97297d8ab987bda79aec0b02',
+  },
+  {
+    types: ['uint144', 'int216', 'address', 'bytes', 'address', 'bytes1'],
+    values: [
+      BigInt('0xe99689d3'),
+      BigInt('0x7c56f4'),
+      '0x0485bee9efd3e8a68741f86a3f47fc7b1882a6d9',
+      hexToBytes(
+        '0x908f89d1dbd7d7b4e9c3550ee55eb435c7be160f6de6c6bea3c75c4aa1b289240564a80a0ae9',
+      ),
+      '0xb1667d27ae48b82694caa7f1eac5b7c04d6fea03',
+      hexToBytes('0x71'),
+    ],
+    result:
+      '0xf0e9da97e081bd0f6a2741470b3d0f381783c059cf5d964d13b8a6707cb2eeb3',
+  },
+  {
+    types: ['address', 'bytes', 'uint160', 'bool', 'address', 'string'],
+    values: [
+      '0x98f1c4a4ab246aecfa4a3f9a940fd6d824770b2e',
+      hexToBytes(
+        '0xac457813fe258c90d4b8324e9656965a8ece36adefaa7ab0f9f0a7313714c3b958438dc40f',
+      ),
+      BigInt('0x6ae5f114d04cd6ea29a170ad022819b597a3'),
+      false,
+      '0x2589c47a8658d1fa9ee5639de36e2b90cd7b5cd3',
+      'Lorem ipsum dolor ',
+    ],
+    result:
+      '0x481b1aeb8a47009d201da436093af37ef7fcf9281d0abc5f59ba9e9e21483431',
+  },
+  {
+    types: ['bool', 'bool', 'uint240', 'bool'],
+    values: [false, false, BigInt('0x931ab20195aed8842525042c'), true],
+    result:
+      '0xf16bb2a092af8624c3a728afbdd046c91a7ccfd40945e7fcd0443ca49724f56c',
+  },
+  {
+    types: ['bool[]'],
+    values: [[false, false, true]],
+    result:
+      '0xcbfe4baa920060fc34aa65135b74b83fa81df36f6e21d90c8301c8810d2c89d9',
+  },
+  {
+    types: ['bytes29'],
+    values: [
+      hexToBytes(
+        '0x0749e04936b3d619a5c7f593440e760fbedcdfcef6f6a3754dea36c341',
+      ),
+    ],
+    result:
+      '0x48a8044542b2b3cefeb0b4b4f752ddbd5b39eca8be6729ce3df0c8722b92b824',
+  },
+  {
+    types: ['bytes13'],
+    values: [hexToBytes('0x2c86793cf9fb758e0d69c6819a')],
+    result:
+      '0xe15083275d16eeea41328b3348b161af2b93cc02e9ac2aeb32a30dd6a2513844',
+  },
+  {
+    types: ['uint80', 'bytes32', 'bool'],
+    values: [
+      BigInt('0xa3f3b15b9e0e0d4ac5'),
+      hexToBytes(
+        '0x23bad22bf7e4d966a781f49626fc2cf564b6ee78e005975b3a34af1509df9eeb',
+      ),
+      true,
+    ],
+    result:
+      '0xdb271e59a06c519536e6fc73cdc99ebd9fd51451c1c14161f389e92a1101c5cf',
+  },
+  {
+    types: ['bytes18', 'address', 'bytes25', 'bytes31[]', 'address', 'bytes13'],
+    values: [
+      hexToBytes('0x070cb887a655ac1c0766f8d0edb76a4b2001'),
+      '0x465ee6ed8bbfdc984757a51bd4c47ea3da22c034',
+      hexToBytes('0xc878329c701a1ff5fb4f8b55618edaec9d3eddde60af669a95'),
+      [
+        hexToBytes(
+          '0x426ac505db4263fde7162c11d22d578e197946d7233e0fa0f6398825fd8172',
+        ),
+        hexToBytes(
+          '0x10949930002f7eb087c3a50e4b4dc72c059aa5a2247fdee15ff497ea96da69',
+        ),
+        hexToBytes(
+          '0x175466b9b221b7590b126d45d48c1d65077c6627e5532b6d394e251c22c46f',
+        ),
+      ],
+      '0xa4dec508010fc9e9ac5186a9e570edf7f705cee9',
+      hexToBytes('0x3487f82744fbfadcdf7146f01f'),
+    ],
+    result:
+      '0x128c0b6541b0e9bf5d67effec6f6830cfcde717b430b351f41bca7b3f4b6de9a',
+  },
+  {
+    types: ['address', 'uint168', 'address'],
+    values: [
+      '0xc26814fa8df382b39bceedd550c629da6bbc66e7',
+      BigInt('0xc37526e'),
+      '0x37f525d2a6387254fa0174e59d3a6eb7524262cb',
+    ],
+    result:
+      '0x3838e52f0cdec7985aa86856f6dc27e4f18a05d2b0ec6f1d5c809ecbe77c3fa0',
+  },
+  {
+    types: ['bool', 'string', 'string'],
+    values: [
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius',
+    ],
+    result:
+      '0x31214b1b6138226792fc1cb8a5f26a7ab141facf0a897605fc3432eac16851ee',
+  },
+  {
+    types: ['bool', 'bytes'],
+    values: [
+      true,
+      hexToBytes(
+        '0xbd3402bf6664dced85d25d9b02d978edcefb440faaf2f8ab3633b49f0e794c3b6400bba7952d8053805548ca8646921b',
+      ),
+    ],
+    result:
+      '0x16aaa2415aaf14e75df05f5c1ea18a6dcbfb0f5b264465ce153b75c135912b9d',
+  },
+  {
+    types: ['bool', 'bytes', 'bool', 'uint176'],
+    values: [
+      false,
+      hexToBytes(
+        '0x71807cffd9f7cf5f02187fa068feca4bfd853a33e795a17fb1275fbaa3a803defb687e1e3a59f253fc288127091de6b5a734',
+      ),
+      false,
+      BigInt('0x31cd4d43b2f517ee54e6149f00ae84022e15'),
+    ],
+    result:
+      '0xb252571f50a881298618b82257c8795814af6cd6ff0dc94c01d7d61d3c9bf8ee',
+  },
+  {
+    types: ['address[3]'],
+    values: [
+      [
+        '0x7301d752ac7066e97e565cedc4620b812cc60190',
+        '0x41ffa867a94869ebe620b7df6d7b313431c50592',
+        '0xeff9cd2cf5e68a50396cb35242932a1b633f6a21',
+      ],
+    ],
+    result:
+      '0x8f00cc7c5587fcd4d0554b12623086790ae4d376089c9b685fec55b085e4501c',
+  },
+  {
+    types: ['bytes', 'address', 'uint120', 'bytes28', 'string'],
+    values: [
+      hexToBytes(
+        '0x4d0181de1b5686dd475a16438a5e0f8079c247e2224cf09b5cf198f14ebe30a293a08566daa177',
+      ),
+      '0x60c3153765b3a223877d0df4c93873ffd72a7186',
+      BigInt('0xe039913f5d8cc15c3fd8ee26b8'),
+      hexToBytes('0xe343ac59193388c76d455e6aa8391b5f7298c1622a588380dacc24bd'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident',
+    ],
+    result:
+      '0xe3cda5b7344d189abc8c268c53084cb88921c87d2b82d40a99a64105de6b52d6',
+  },
+  {
+    types: [
+      'address',
+      'int240',
+      'address',
+      'uint64[2]',
+      'uint256[3]',
+      'address',
+    ],
+    values: [
+      '0x305699eff834fb23062f764f4a2895b84f74fc93',
+      BigInt('0xdd03c9241e6229947644629ffbd6672420573f2026a1c7'),
+      '0x019b2347dde57fa0c8d392bccb8c2ac0e8150da4',
+      [BigInt('0xb7b4a79f525ce8'), BigInt('0x4aee')],
+      [
+        BigInt('0xbb2ce977540a2d61d320a74175f272725e'),
+        BigInt('0x8f971753a11d280350da1ba7b7cb'),
+        BigInt('0xd9df0883'),
+      ],
+      '0x4e3ebb5015ff855deb693b56d703856056459135',
+    ],
+    result:
+      '0x3ffa6d6d3a42a6fc9efd98b6da76e5564e248211dbd2346783cbe70ba69a8991',
+  },
+  {
+    types: ['address[2]', 'bytes', 'address', 'bool'],
+    values: [
+      [
+        '0xa132643708e87552976a341c28c1d88f93c2395c',
+        '0x0d405d87ab47664c15e29102cc49585c7bfe554e',
+      ],
+      hexToBytes(
+        '0xe8fed868bda552204541cdc7d5ca30c73428188deebe360920abef81fb3ed94d95996f68c5a1e4d8bf0da1b68aa9fdd7902a',
+      ),
+      '0x5cff30afda91cd30304fab09fe988f13f7e87713',
+      false,
+    ],
+    result:
+      '0x2f0ab666c3f388f7b5f9ac74ae00c261595c51fcf4314ae50d8591ef7a0d396a',
+  },
+  {
+    types: ['bytes19', 'bool', 'uint200[]'],
+    values: [
+      hexToBytes('0xcc4380872f37f5baeb36fbf0ad9b6cce8f1dbb'),
+      false,
+      [BigInt('0x7253cb47b27c05'), BigInt('0xd96a41d2b4')],
+    ],
+    result:
+      '0xe6fb5c238dbd1a5175a4781103276f491b635d21ac06e7c6f8c4823e0c229016',
+  },
+  {
+    types: ['uint176', 'string', 'string', 'bytes24', 'uint248'],
+    values: [
+      BigInt('0x1d2b0363'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qu',
+      hexToBytes('0xafc95848776fc728d47d447cc4be12cce30b5a474c85f351'),
+      BigInt('0xd927e82664787da3aae5777c1b89c49d465410b0cddd824b44ed0c14'),
+    ],
+    result:
+      '0x1e7cd169744fd5d705042a44bf3d6fc32e3fb7db5b537ae41bb240a86db5ed75',
+  },
+  {
+    types: ['address', 'bool[]', 'uint48', 'bool', 'bytes7[]'],
+    values: [
+      '0xef0a4144fdeac8aa6127dea55a82a91dd6dd3f65',
+      [true, true],
+      BigInt('0x6726'),
+      true,
+      [hexToBytes('0x27bbd63c9334ad')],
+    ],
+    result:
+      '0x70d076533dc1403a15283f2dbd92e76b9c946c0d99243a88928f42d28cec0f48',
+  },
+  {
+    types: ['uint16', 'address', 'bytes', 'uint168', 'int232'],
+    values: [
+      BigInt('0x9e'),
+      '0x54cdb3ae6d5f69d6aaf67cb579eb814b4812065e',
+      hexToBytes(
+        '0x00402aba795ba5b1ef0888203a05575a88b3bb42e36d70fc309cf50a97aaa285fe0ebd77208ca1c53c6c2cfd1b642ea715dac847db2673c0',
+      ),
+      BigInt('0x82180c25'),
+      BigInt('0x750c3aa21137c408fa91c230a1a14b7f00'),
+    ],
+    result:
+      '0x4b05c9032d1dca3cdba4cd01847d9593ae19a2510ad5b8f8027ffc5974600617',
+  },
+  {
+    types: ['int64', 'bytes', 'uint224', 'bool', 'bool', 'bool'],
+    values: [
+      BigInt('0x87be5b'),
+      hexToBytes('0xb7b5ba'),
+      BigInt('0xc1183d21c065f7d2bd3cc2059c'),
+      false,
+      false,
+      false,
+    ],
+    result:
+      '0x7672e8b3b46eeccf49a201a9a965aed9c1714ca53f45e311249e9124eb2b00ec',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['address', 'int256', 'string'],
+    values: [
+      '0x45499252b60ef66a2b8c1c07415fc76b9364b5f6',
+      BigInt('0xd34a19bb37468e7d56ddd953677f278b1b786ef3a74b8ed24455'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id e',
+    ],
+    result:
+      '0x9f72c2c7d126e5722aa739b4fb9c0767534284648f00bab3d6db0de399099ac2',
+  },
+  {
+    types: ['bool', 'bytes'],
+    values: [
+      false,
+      hexToBytes('0xc7a55d374417a24c8c4a860f2c79af6ce607f57ed80feab0cf11ed5a'),
+    ],
+    result:
+      '0x5883c2f5e21996e33906872ded2d6092cf99205fa97f3c2b9947236fc27eb09e',
+  },
+  {
+    types: ['bytes', 'bool'],
+    values: [
+      hexToBytes(
+        '0x670b41a248f2f712be5065f8e06f76b418b241236284ee41fe50573685d46cdb',
+      ),
+      false,
+    ],
+    result:
+      '0x782365aa9b3fa1db607408182a4b03f31affdd46dddde805f95dcd4dd12021f5',
+  },
+  {
+    types: ['uint136'],
+    values: [BigInt('0xcf0736')],
+    result:
+      '0xfad543224510d6ab1f288a7546841422d2a5becd668c55691ab76d67f8f2aeec',
+  },
+  {
+    types: ['string', 'string', 'string', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui off',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis au',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ',
+    ],
+    result:
+      '0x55625c7aaed5987c17edeae1f347442296d55c378b6e628749fde9688b7917ef',
+  },
+  {
+    types: ['bytes', 'bytes', 'bytes10', 'int192'],
+    values: [
+      hexToBytes(
+        '0x619bc8eed42323ccebce04bd5bb1b025d545ef6cc43f39d8caa5029f7db964a85b9c67daf91a36',
+      ),
+      hexToBytes(
+        '0x526c870470412f82d8715c7eb944072b80f8c64d9af9a8f37b013517610ed023764db8ad4006ad7e31',
+      ),
+      hexToBytes('0xbee7854a7094365ad741'),
+      BigInt('0xb084349fd2da513400a6f2ac816b56e6cdd4af'),
+    ],
+    result:
+      '0x4782c55023316777efcf271757108d6b83c419bb732bd1c7cb66fcd620b4a2be',
+  },
+  {
+    types: ['bool', 'string'],
+    values: [
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, s',
+    ],
+    result:
+      '0x1dd353d2594f2fbbb0bc234ba9092c9f0cf1e9f955888849985da7099c7942bd',
+  },
+  {
+    types: ['int32', 'uint248'],
+    values: [BigInt('0xf317'), BigInt('0x8aedaf')],
+    result:
+      '0x7a002baad50c1f26d7f9f222121192a6a00ff280d418ec211f17d9b02e8283a9',
+  },
+  {
+    types: ['bool', 'bytes', 'bytes16'],
+    values: [
+      true,
+      hexToBytes('0xa27ed89298ed3a8c019b1f19'),
+      hexToBytes('0x1c86a2fa0200c3ade69a56ad4b603355'),
+    ],
+    result:
+      '0xd47dde6ad74109fc8ffdec06536639d5211c9891c70089e1245c393dd1a08c14',
+  },
+  {
+    types: ['bytes', 'bool', 'bytes', 'address', 'bytes3'],
+    values: [
+      hexToBytes('0x5799971ec40c'),
+      true,
+      hexToBytes('0x58181dc1bdb1431bb85826dc230252868d'),
+      '0x3c2ad143070de7d06b263c1a89b86ccb16d2e124',
+      hexToBytes('0x70b075'),
+    ],
+    result:
+      '0x1c4fc225168a708adafdb30bb0471cbac15b46e2713ddb292bba30ee3c415fb1',
+  },
+  {
+    types: ['int168', 'bytes', 'bytes'],
+    values: [
+      BigInt('0x8577b76aabbfde1bd0600fb3'),
+      hexToBytes(
+        '0xa0d6e0b2a5110403f7ded0a9f835c7f01222f6fc824c2bc5afd738f92993dc49ca6060a6',
+      ),
+      hexToBytes(
+        '0x4db23a3956c4d49f528fedf807b4f5ba0d696587a304208df0add2500a079426da8bbeeea498ca66',
+      ),
+    ],
+    result:
+      '0xdd35f2a8a4c2c7ccb5669ad0951de82589b39508220911d9af5724e0552e7afe',
+  },
+  {
+    types: ['bytes', 'string'],
+    values: [
+      hexToBytes(
+        '0x6963ac6afbb4e16c1a1a040e5bfc695e75525599a8dba1400c3295823a113b2e',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad',
+    ],
+    result:
+      '0x61e15b19ab3f407f46b38e6005e59c01317635d02f99077bc022c45d4032a12f',
+  },
+  {
+    types: ['bytes', 'bytes', 'string'],
+    values: [
+      hexToBytes(
+        '0xb46db5f72e58143915b88ef0612b50c5c1b9d4d600506bc4095e46a0c472d75ddbc2ea6075329304c780',
+      ),
+      hexToBytes(
+        '0x4a4c02fb9242e3281f850b734c14a2a9e0d82b26a84b44860dc82105b780efc1ff040bf335e5455d29a590344d38c94e01f8552228a97d15e1',
+      ),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad m',
+    ],
+    result:
+      '0x33d579ba3f323c7e086b9df0786e330f81d15893082cdeaf268127959aee8d93',
+  },
+  {
+    types: ['bytes'],
+    values: [hexToBytes('0x59a60e14411c')],
+    result:
+      '0xb060c08400eb7a1a3af4ca42be10bb869b559144776578654b0a1834633c5859',
+  },
+  {
+    types: ['bytes'],
+    values: [hexToBytes('0x267c1a2fdb2adc514309647b')],
+    result:
+      '0x70be838d00e63f57f5e54ebc72c4213241ff66beaa0f9b914808c9716f6f17a0',
+  },
+  {
+    types: ['bool[2]', 'bool', 'address[]', 'uint240', 'address', 'bytes19'],
+    values: [
+      [true, true],
+      true,
+      ['0x6665a8a30a7642d8d6f3a8e3a8a8d9bb47bcfd8a'],
+      BigInt('0xa92fc838a1ad274a2abf129859e6b73ad0b1e412'),
+      '0xb5d4bd0ed7d119fd736fc7dafec7033491d69f7e',
+      hexToBytes('0x8b34a55cee9acc7b7df948b14a32ff880d0449'),
+    ],
+    result:
+      '0xf3f6a5f14670484f0eaa9d6368add8c71ab97b59c283f14771d84484b85bc959',
+  },
+  {
+    types: ['address', 'string'],
+    values: [
+      '0x5d72af1222fad4ffea8448c77d1d51431a08cf82',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum d',
+    ],
+    result:
+      '0x5d134812e4e80e14b3d9598b2ecb6d9ace86c8690fe2c2c78a40c0ba6b621da9',
+  },
+  {
+    types: ['bytes', 'int56', 'address'],
+    values: [
+      hexToBytes('0xf92b99a314a6112f8694f6c9e4787e9e'),
+      BigInt('0xfcd0'),
+      '0x43c688370329bc36dcf147dde00bb22664ba7694',
+    ],
+    result:
+      '0xcd46d06a4ad85a69f529563cfca8e9424922f4ba437904fc32a30173a50bb1c7',
+  },
+  {
+    types: ['bytes25', 'bool'],
+    values: [
+      hexToBytes('0x44924fb66b228eba87fd3bbced6d6f758222d31340afa42e61'),
+      false,
+    ],
+    result:
+      '0x85e485eca165abf4508a2f7a86b45635c7b34c2f593eb7cfb1ab80c0efba9295',
+  },
+  {
+    types: ['string', 'string'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sin',
+    ],
+    result:
+      '0x0bdb90f669d14b0c080c7c30003fe0deac5867b9469816faff2260ad9e8513d2',
+  },
+  {
+    types: ['bytes', 'bytes', 'address', 'bytes19', 'address', 'bool'],
+    values: [
+      hexToBytes(
+        '0x60e1d3c845b2e278375c640c7037494e62c9d2c9a1183bc9b1efee5acfc404ac8c25265f6952d24080d5b93c883be05625221bee456d277071d6b97d',
+      ),
+      hexToBytes('0x8df54317c0a5fe3b4728e8'),
+      '0x3e1a6341ca7453ba5249d9f7c989507934fed2a0',
+      hexToBytes('0x112d0770ca29328877cda43d97e6b43d2ba4c0'),
+      '0x170dc9a8e80b7117dba78e853dac872e0e5b4b6f',
+      true,
+    ],
+    result:
+      '0x5af537ac5a6d17920686f9e81f34807b625b7d6a26590f7ae2b35c929359dae1',
+  },
+  {
+    types: ['int8', 'bytes21', 'bytes'],
+    values: [
+      BigInt('-33'),
+      hexToBytes('0x40bd0c51d629017b7384af565874ac0d086c8bbe88'),
+      hexToBytes(
+        '0x16b04b1d889a214926e7725eb2bef19d3808e8e307120bf6a1faefd5d38cc49a2f150872d1dd5038',
+      ),
+    ],
+    result:
+      '0x68aab8f7ac445af6cd6b936755372efce4d8ec426e23ba5e54df5ed0f20d9336',
+  },
+  {
+    types: ['int80', 'bytes19', 'uint136'],
+    values: [
+      BigInt('0xbf293faa'),
+      hexToBytes('0xa488e401476f9ed6a11f91e6fd81de3eedd6a0'),
+      BigInt('0x51563f3a725e4040de00b44dd1459fb7'),
+    ],
+    result:
+      '0xccab878644cc0c73b00875efbafaf1f835b1d8425269d9482a3bc677bdc433f8',
+  },
+  {
+    types: ['bytes31[2]', 'bool', 'int248'],
+    values: [
+      [
+        hexToBytes(
+          '0x087678cd911662b73de54b31a0dc7d6f14480491739e70a7db53ab1f4a7f83',
+        ),
+        hexToBytes(
+          '0x413a29b7b692ce35d97d5909e93c75fbaefb1e8f6abdb9e77e9415da2591ff',
+        ),
+      ],
+      false,
+      BigInt('0xa775682b3ce51b7bd7ca'),
+    ],
+    result:
+      '0x3bd2344a0befc5fada29d045f44a1a6d7ed758f6f8787f1faed2c80750e51245',
+  },
+  {
+    types: ['bool', 'string'],
+    values: [
+      true,
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure',
+    ],
+    result:
+      '0x131c0a7e93d753887d64b153b4b61ad2318bbbfbe606a172b54bc31569169251',
+  },
+  {
+    types: ['bytes', 'bool[]', 'string', 'bool', 'address'],
+    values: [
+      hexToBytes('0xd79055d7e0fecee37f7a06b8722c'),
+      [false, false, true],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+      false,
+      '0xc6bd8737bc92d2e0d1021cc181c6559070ce4c40',
+    ],
+    result:
+      '0x1507a3066f6d113e7b3da0d725d58e9e253b858c4547f884ed6bfc2bc8061255',
+  },
+  {
+    types: ['bytes27', 'bool', 'address'],
+    values: [
+      hexToBytes('0x44e33b9bffb5b0bf1cbd5822c3334c734cdeef0818c73f01234620'),
+      false,
+      '0x50630d657c1b253cfbc8935c101573cfbe1b0bbf',
+    ],
+    result:
+      '0xba758724526271d567549dcef64f68953248e84cb048ab5d08fdd7d61ca93ec3',
+  },
+  {
+    types: ['bool'],
+    values: [true],
+    result:
+      '0x5fe7f977e71dba2ea1a68e21057beebb9be2ac30c6410aa38d4f3fbe41dcffd2',
+  },
+  {
+    types: ['bytes8', 'uint48', 'bytes8', 'string', 'bool'],
+    values: [
+      hexToBytes('0xbd1aee2f04eb5f4e'),
+      BigInt('0xac857803'),
+      hexToBytes('0xa60784f3258078e3'),
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t',
+      true,
+    ],
+    result:
+      '0xdad15fea9d1497b4a69d63e6506682aa96579afbe4698f8a2c02b3f2eb761f39',
+  },
+  {
+    types: ['string', 'bytes22', 'bool', 'int176', 'uint200', 'bool'],
+    values: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ',
+      hexToBytes('0xc6d21e56f3e788579de5db9660a6c91e3307f36aed5f'),
+      false,
+      BigInt('0x6449'),
+      BigInt('0xf0e57a18f66c2396'),
+      false,
+    ],
+    result:
+      '0xb1764ef5279644d59be3f3a88b99aa6788a8e407ffbd9741c6c1c55cffb17f81',
+  },
+  {
+    types: ['bool'],
+    values: [false],
+    result:
+      '0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a',
+  },
+  {
+    types: ['uint160', 'bytes6'],
+    values: [BigInt('0x8c1d1367'), hexToBytes('0x723ca6e6168b')],
+    result:
+      '0xa3512ad0e9317075ce729f7666142603eb9bfdad2970014e82f967e10b25c723',
+  },
+  {
+    types: ['address', 'bytes27', 'uint104[]', 'uint112', 'bytes'],
+    values: [
+      '0x1b186208a597f7b39498b693e30b4fb0d0ceba93',
+      hexToBytes('0xfda07d1e538837b839c80c003dbb5238ef12369cca5298d0ebb5fd'),
+      [
+        BigInt('0x9e653194d7fe3ea368526932'),
+        BigInt('0x10fc0c6decd07066f1'),
+        BigInt('0x4f7a37bf6b3e28d5436756'),
+      ],
+      BigInt('0x1a41ec6d'),
+      hexToBytes('0xa243'),
+    ],
+    result:
+      '0x818ee04340d2386d2728112033226f6208749bb166dd623bba9f544cbeaec672',
+  },
+  {
+    types: ['int184', 'int176', 'address', 'int64', 'bool', 'bool'],
+    values: [
+      BigInt('0xcdffcb5242e6'),
+      BigInt('0xc1e101b60ebe4688'),
+      '0x5819f0ef5537796e43bdcd48309f717d6f7ccffa',
+      BigInt('0xec3f3f9f'),
+      false,
+      true,
+    ],
+    result:
+      '0x7d98f1144a0cd689f720aa2f11f0a73bd52a2da1117175bc4bacd93c130966a1',
+  },
+];

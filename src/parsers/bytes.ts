@@ -39,10 +39,16 @@ export const bytes: Parser<BytesLike, Uint8Array> = {
    * @param args - The encoding arguments.
    * @param args.buffer - The byte array to add to.
    * @param args.value - The bytes value to encode.
+   * @param args.packed - Whether to use packed encoding.
    * @returns The bytes with the encoded bytes value added to it.
    */
-  encode({ buffer, value }): Uint8Array {
+  encode({ buffer, value, packed }): Uint8Array {
     const bufferValue = createBytes(value);
+
+    if (packed) {
+      return concatBytes([buffer, bufferValue]);
+    }
+
     const paddedSize = Math.ceil(bufferValue.byteLength / 32) * 32;
 
     // Bytes of length `k` are encoded as `k pad_right(bytes)`.

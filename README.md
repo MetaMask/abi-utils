@@ -46,6 +46,23 @@ console.log(bytesToHex(encoded));
 // 0x000000000000000000000000000000000000000000000000000000000000002a
 ```
 
+### Encoding packed values
+
+Encoding packed values, using the non-standard packed mode, is also supported.
+This behaves the same as `abi.encodePacked` in Solidity.
+
+```typescript
+import { encodePacked } from '@metamask/abi-utils';
+
+const encoded = encodePacked(['uint256', 'string'], [42, 'Hello, world!']);
+
+// `abi-utils` returns a `Uint8Array`, so you can convert it to a hex string
+// using `bytesToHex`.
+console.log(bytesToHex(encoded));
+
+// 0x000000000000000000000000000000000000000000000000000000000000002a48656c6c6f2c20776f726c6421
+```
+
 ### Decoding values
 
 You can decode multiple values using `decode`.

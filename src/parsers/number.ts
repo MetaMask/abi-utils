@@ -145,17 +145,31 @@ export const number: Parser<NumberLike, bigint> = {
    * @param args.type - The type of the value.
    * @param args.buffer - The byte array to add to.
    * @param args.value - The value to encode.
+   * @param args.packed - Whether to use packed encoding.
    * @returns The bytes with the encoded value added to it.
    */
-  encode({ type, buffer, value }): Uint8Array {
+  encode({ type, buffer, value, packed }): Uint8Array {
     const bigIntValue = getBigInt(value);
 
     assertNumberLength(bigIntValue, type);
 
     if (isSigned(type)) {
+      if (packed) {
+        const length = getLength(type) / 8;
+        return concatBytes([buffer, signedBigIntToBytes(bigIntValue, length)]);
+      }
+
       return concatBytes([
         buffer,
         padStart(signedBigIntToBytes(bigIntValue, 32)),
+      ]);
+    }
+
+    if (packed) {
+      const length = getLength(type) / 8;
+      return concatBytes([
+        buffer,
+        padStart(bigIntToBytes(bigIntValue), length),
       ]);
     }
 

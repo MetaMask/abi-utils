@@ -32,7 +32,12 @@ describe('boolean', () => {
     it('encodes a boolean', () => {
       expect(
         bytesToHex(
-          bool.encode({ type: 'bool', value: true, buffer: new Uint8Array() }),
+          bool.encode({
+            type: 'bool',
+            value: true,
+            buffer: new Uint8Array(),
+            packed: false,
+          }),
         ),
       ).toBe(
         '0x0000000000000000000000000000000000000000000000000000000000000001',
@@ -44,6 +49,7 @@ describe('boolean', () => {
             type: 'bool',
             value: 'true',
             buffer: new Uint8Array(),
+            packed: false,
           }),
         ),
       ).toBe(
@@ -52,7 +58,12 @@ describe('boolean', () => {
 
       expect(
         bytesToHex(
-          bool.encode({ type: 'bool', value: false, buffer: new Uint8Array() }),
+          bool.encode({
+            type: 'bool',
+            value: false,
+            buffer: new Uint8Array(),
+            packed: false,
+          }),
         ),
       ).toBe(
         '0x0000000000000000000000000000000000000000000000000000000000000000',
@@ -64,6 +75,7 @@ describe('boolean', () => {
             type: 'bool',
             value: 'false',
             buffer: new Uint8Array(),
+            packed: false,
           }),
         ),
       ).toBe(

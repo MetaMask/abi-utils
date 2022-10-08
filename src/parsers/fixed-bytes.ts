@@ -59,9 +59,10 @@ export const fixedBytes: Parser<BytesLike, Uint8Array> = {
    * @param args.type - The type of the value.
    * @param args.buffer - The byte array to add to.
    * @param args.value - The value to encode.
+   * @param args.packed - Whether to use packed encoding.
    * @returns The bytes with the encoded value added to it.
    */
-  encode({ type, buffer, value }): Uint8Array {
+  encode({ type, buffer, value, packed }): Uint8Array {
     const length = getByteLength(type);
     const bufferValue = createBytes(value);
 
@@ -71,6 +72,10 @@ export const fixedBytes: Parser<BytesLike, Uint8Array> = {
         `Expected a value of length ${length}, but received a value of length ${bufferValue.length}.`,
       ),
     );
+
+    if (packed) {
+      return concatBytes([buffer, bufferValue]);
+    }
 
     return concatBytes([buffer, padEnd(bufferValue)]);
   },

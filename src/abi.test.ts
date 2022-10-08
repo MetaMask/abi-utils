@@ -1,6 +1,13 @@
 import { add0x, bytesToHex, hexToBytes } from '@metamask/utils';
-import { decode, decodeSingle, encode, encodeSingle } from './abi';
-import { ABI_TEST_VECTORS } from './__fixtures__';
+import { keccak_256 as keccak256 } from '@noble/hashes/sha3';
+import {
+  decode,
+  decodeSingle,
+  encode,
+  encodePacked,
+  encodeSingle,
+} from './abi';
+import { ABI_TEST_VECTORS, PACKED_ABI_TEST_VECTORS } from './__fixtures__';
 import { ParserError } from './errors';
 import * as packer from './packer';
 
@@ -37,6 +44,16 @@ describe('encodeSingle', () => {
       '0x000000000000000000000000000000000000000000000000000000000000002a',
     );
   });
+});
+
+describe('encodePacked', () => {
+  it.each(PACKED_ABI_TEST_VECTORS)(
+    'encodes values in packed mode',
+    ({ types, values, result }) => {
+      const bytes = encodePacked(types, values);
+      expect(bytesToHex(keccak256(bytes))).toStrictEqual(result);
+    },
+  );
 });
 
 describe('decode', () => {

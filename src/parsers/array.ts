@@ -106,10 +106,17 @@ export const array: Parser<unknown[]> = {
    * @param args.type - The type of the array.
    * @param args.buffer - The byte array to add to.
    * @param args.value - The array to encode.
+   * @param args.packed - Whether to use non-standard packed encoding.
    * @returns The bytes with the encoded array added to it.
    */
-  encode({ type, buffer, value }): Uint8Array {
+  encode({ type, buffer, value, packed }): Uint8Array {
     const [arrayType, fixedLength] = getArrayType(type);
+
+    // Packed encoding does not support nested arrays.
+    assert(
+      !packed || !isArrayType(arrayType),
+      new ParserError(`Cannot pack nested arrays.`),
+    );
 
     if (fixedLength) {
       assert(
@@ -124,6 +131,18 @@ export const array: Parser<unknown[]> = {
         type: getTupleType(arrayType, fixedLength),
         buffer,
         value,
+        packed: false,
+      });
+    }
+
+    if (packed) {
+      // For packed encoding, we don't need to encode the length of the array,
+      // so we can just encode the values.
+      return pack({
+        types: new Array(value.length).fill(arrayType),
+        values: value,
+        byteArray: buffer,
+        packed: false,
       });
     }
 
@@ -131,11 +150,12 @@ export const array: Parser<unknown[]> = {
     // means that we just need to encode the length of the array, and then the
     // array itself. The pointer is encoded by the {@link pack} function.
     const arrayLength = padStart(numberToBytes(value.length));
-    return pack(
-      new Array(value.length).fill(arrayType),
-      value,
-      concatBytes([buffer, arrayLength]),
-    );
+    return pack({
+      types: new Array(value.length).fill(arrayType),
+      values: value,
+      byteArray: concatBytes([buffer, arrayLength]),
+      packed,
+    });
   },
 
   /**
