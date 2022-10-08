@@ -1,5 +1,11 @@
 import { bytesToHex, hexToBytes } from '@metamask/utils';
-import { getBigInt, isSigned, number } from './number';
+import { getBigInt, getLength, isSigned, number } from './number';
+import {
+  DECODE_OUT_OF_RANGE_NUMBER_VECTORS,
+  INVALID_NUMBER_TYPE_VECTORS,
+  NUMBER_VECTORS,
+  OUT_OF_RANGE_NUMBER_VECTORS,
+} from './__fixtures__';
 
 describe('isSigned', () => {
   it('checks if a number type is signed', () => {
@@ -11,6 +17,60 @@ describe('isSigned', () => {
     expect(isSigned('uint256')).toBe(false);
     expect(isSigned('uint123')).toBe(false);
   });
+});
+
+describe('getLength', () => {
+  it('gets the bit length of the specified type', () => {
+    expect(getLength('int')).toBe(256);
+    expect(getLength('int256')).toBe(256);
+    expect(getLength('int128')).toBe(128);
+
+    expect(getLength('uint')).toBe(256);
+    expect(getLength('uint256')).toBe(256);
+    expect(getLength('uint128')).toBe(128);
+  });
+
+  it.each(['int0', 'int257', 'uint0', 'uint257'])(
+    'throws if the length is out of range',
+    (type) => {
+      expect(() => getLength(type)).toThrow(
+        /Invalid number length\. Expected a number between 8 and 256, but received ".*"\./u,
+      );
+    },
+  );
+
+  it.each(['int9', 'int123', 'uint9', 'uint123'])(
+    'throws if the length is not a multiple of 8',
+    (type) => {
+      expect(() => getLength(type)).toThrow(
+        /Invalid number length\. Expected a multiple of 8, but received ".*"\./u,
+      );
+    },
+  );
+
+  it.each(INVALID_NUMBER_TYPE_VECTORS)(
+    'throws if the type is invalid',
+    (type) => {
+      expect(() => getLength(type)).toThrow(
+        /Invalid number type\. Expected a number type, but received ".*"\./u,
+      );
+    },
+  );
+});
+
+describe('assertNumberLength', () => {
+  it.each(OUT_OF_RANGE_NUMBER_VECTORS)(
+    'throws if the value is out of range',
+    ({ type, value }) => {
+      expect(() =>
+        number.encode({
+          type,
+          value,
+          buffer: new Uint8Array(),
+        }),
+      ).toThrow(/Number ".*" is out of range for type ".*"\./u);
+    },
+  );
 });
 
 describe('getBigInt', () => {
@@ -52,125 +112,50 @@ describe('number', () => {
   });
 
   describe('encode', () => {
-    it('encodes a unsigned number', () => {
-      expect(
-        bytesToHex(
-          number.encode({
-            type: 'uint256',
-            value: BigInt(314159),
-            buffer: new Uint8Array(),
-          }),
-        ),
-      ).toBe(
-        '0x000000000000000000000000000000000000000000000000000000000004cb2f',
-      );
+    it.each(NUMBER_VECTORS)(
+      'encodes a $type number',
+      ({ type, value, hex }) => {
+        expect(
+          bytesToHex(number.encode({ type, value, buffer: new Uint8Array() })),
+        ).toBe(hex);
+      },
+    );
 
-      expect(
-        bytesToHex(
+    it.each(OUT_OF_RANGE_NUMBER_VECTORS)(
+      'throws if the value is out of range',
+      ({ type, value }) => {
+        expect(() =>
           number.encode({
-            type: 'uint256',
-            value: 314159,
+            type,
+            value,
             buffer: new Uint8Array(),
           }),
-        ),
-      ).toBe(
-        '0x000000000000000000000000000000000000000000000000000000000004cb2f',
-      );
-
-      expect(
-        bytesToHex(
-          number.encode({
-            type: 'uint256',
-            value: '314159',
-            buffer: new Uint8Array(),
-          }),
-        ),
-      ).toBe(
-        '0x000000000000000000000000000000000000000000000000000000000004cb2f',
-      );
-
-      expect(
-        bytesToHex(
-          number.encode({
-            type: 'uint256',
-            value: '0x314159',
-            buffer: new Uint8Array(),
-          }),
-        ),
-      ).toBe(
-        '0x0000000000000000000000000000000000000000000000000000000000314159',
-      );
-    });
-
-    it('encodes a signed number', () => {
-      expect(
-        bytesToHex(
-          number.encode({
-            type: 'int256',
-            value: BigInt(-314159),
-            buffer: new Uint8Array(),
-          }),
-        ),
-      ).toBe(
-        '0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb34d1',
-      );
-
-      expect(
-        bytesToHex(
-          number.encode({
-            type: 'int256',
-            value: -314159,
-            buffer: new Uint8Array(),
-          }),
-        ),
-      ).toBe(
-        '0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb34d1',
-      );
-
-      expect(
-        bytesToHex(
-          number.encode({
-            type: 'int256',
-            value: '-314159',
-            buffer: new Uint8Array(),
-          }),
-        ),
-      ).toBe(
-        '0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb34d1',
-      );
-    });
+        ).toThrow(/Number ".*" is out of range for type ".*"\./u);
+      },
+    );
   });
 
   describe('decode', () => {
-    it('decodes an encoded unsigned number', () => {
-      const value = hexToBytes(
-        '000000000000000000000000000000000000000000000000000000000004cb2f',
-      );
+    it.each(NUMBER_VECTORS)(
+      'decodes a $type number',
+      ({ type, value, hex }) => {
+        expect(
+          number.decode({ type, value: hexToBytes(hex), skip: jest.fn() }),
+        ).toBe(value);
+      },
+    );
 
-      expect(number.decode({ type: 'uint256', value, skip: jest.fn() })).toBe(
-        BigInt(314159),
-      );
-    });
-
-    it('decodes an encoded signed number', () => {
-      const value = hexToBytes(
-        '000000000000000000000000000000000000000000000000000000000004cb2f',
-      );
-      expect(number.decode({ type: 'int256', value, skip: jest.fn() })).toBe(
-        BigInt(314159),
-      );
-
-      const negativeValue = hexToBytes(
-        'fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb34d1',
-      );
-
-      expect(
-        number.decode({
-          type: 'int256',
-          value: negativeValue,
-          skip: jest.fn(),
-        }),
-      ).toBe(BigInt(-314159));
-    });
+    it.each(DECODE_OUT_OF_RANGE_NUMBER_VECTORS)(
+      'throws if the $type value is out of range',
+      ({ type, hex }) => {
+        expect(() =>
+          number.decode({
+            type,
+            value: hexToBytes(hex),
+            skip: jest.fn(),
+          }),
+        ).toThrow(/Number ".*" is out of range for type ".*"\./u);
+      },
+    );
   });
 });
