@@ -66,7 +66,7 @@ export const fixedBytes: Parser<BytesLike, Uint8Array> = {
     const bufferValue = createBytes(value);
 
     assert(
-      bufferValue.length === length,
+      bufferValue.length <= length,
       new ParserError(
         `Expected a value of length ${length}, but received a value of length ${bufferValue.length}.`,
       ),
