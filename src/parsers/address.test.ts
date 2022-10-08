@@ -22,6 +22,20 @@ describe('address', () => {
         '0x0000000000000000000000004bbeeb066ed09b7aed07bf39eee0460dfa261520',
       );
     });
+
+    it('encodes a short address', () => {
+      expect(
+        bytesToHex(
+          address.encode({
+            type: 'address',
+            buffer: new Uint8Array(),
+            value: '0x4bbeeb',
+          }),
+        ),
+      ).toBe(
+        '0x0000000000000000000000004bbeeb0000000000000000000000000000000000',
+      );
+    });
   });
 
   describe('decode', () => {

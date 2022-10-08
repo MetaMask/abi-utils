@@ -6,7 +6,7 @@ import {
   concatBytes,
   createBytes,
 } from '@metamask/utils';
-import { padStart } from '../utils';
+import { padEnd, padStart } from '../utils';
 import { ParserError } from '../errors';
 import { Parser } from './parser';
 
@@ -24,13 +24,13 @@ import { Parser } from './parser';
 export const getAddress = (value: BytesLike): Uint8Array => {
   const bytesValue = createBytes(value);
   assert(
-    bytesValue.length === 20,
+    bytesValue.length <= 20,
     new ParserError(
       `Invalid address value. Expected address to be 20 bytes long, but received ${bytesValue.length} bytes.`,
     ),
   );
 
-  return bytesValue;
+  return padEnd(bytesValue, 20);
 };
 
 export const address: Parser<BytesLike, string> = {
