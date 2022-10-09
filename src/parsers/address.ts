@@ -6,7 +6,7 @@ import {
   concatBytes,
   createBytes,
 } from '@metamask/utils';
-import { padEnd, padStart } from '../utils';
+import { padStart } from '../utils';
 import { ParserError } from '../errors';
 import { Parser } from './parser';
 
@@ -30,7 +30,7 @@ export const getAddress = (value: BytesLike): Uint8Array => {
     ),
   );
 
-  return padEnd(bytesValue, 20);
+  return padStart(bytesValue, 20);
 };
 
 export const address: Parser<BytesLike, string> = {
