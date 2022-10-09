@@ -74,7 +74,7 @@ export const fixedBytes: Parser<BytesLike, Uint8Array> = {
     );
 
     if (packed) {
-      return concatBytes([buffer, bufferValue]);
+      return concatBytes([buffer, padEnd(bufferValue, length)]);
     }
 
     return concatBytes([buffer, padEnd(bufferValue)]);
