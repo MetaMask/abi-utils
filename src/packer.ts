@@ -100,6 +100,12 @@ export type PackArgs<Type extends readonly string[]> = {
   packed?: boolean | undefined;
 
   /**
+   * Whether to use the non-standard packed mode in "array" mode. This is
+   * normally only used by the `array` parser.
+   */
+  arrayPacked?: boolean | undefined;
+
+  /**
    * The byte array to encode the values into.
    */
   byteArray?: Uint8Array;
@@ -115,6 +121,8 @@ export type PackArgs<Type extends readonly string[]> = {
  * @param args.values - The values to pack.
  * @param args.packed - Whether to use the non-standard packed mode. Defaults to
  * `false`.
+ * @param args.arrayPacked - Whether to use the non-standard packed mode for
+ * arrays. Defaults to `false`.
  * @param args.byteArray - The byte array to encode the values into. Defaults to
  * an empty array.
  * @returns The resulting encoded buffer.
@@ -123,6 +131,7 @@ export const pack = <Type extends readonly string[]>({
   types,
   values,
   packed = false,
+  arrayPacked = false,
   byteArray = new Uint8Array(),
 }: PackArgs<Type>): Uint8Array => {
   assert(
@@ -140,7 +149,7 @@ export const pack = <Type extends readonly string[]>({
 
       // If packed mode is enabled, we can skip the dynamic check, as all
       // values are encoded in the static buffer.
-      if (packed || !isDynamicParser(parser, type)) {
+      if (packed || arrayPacked || !isDynamicParser(parser, type)) {
         return {
           staticBuffer: parser.encode({
             buffer: staticBuffer,
@@ -179,7 +188,7 @@ export const pack = <Type extends readonly string[]>({
 
   // If packed mode is enabled, there shouldn't be any dynamic values.
   assert(
-    !packed || dynamicBuffer.length === 0,
+    (!packed && !arrayPacked) || dynamicBuffer.length === 0,
     new ParserError('Invalid pack state.'),
   );
 
