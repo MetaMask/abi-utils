@@ -24,13 +24,13 @@ import { Parser } from './parser';
 export const getAddress = (value: BytesLike): Uint8Array => {
   const bytesValue = createBytes(value);
   assert(
-    bytesValue.length === 20,
+    bytesValue.length <= 20,
     new ParserError(
       `Invalid address value. Expected address to be 20 bytes long, but received ${bytesValue.length} bytes.`,
     ),
   );
 
-  return bytesValue;
+  return padStart(bytesValue, 20);
 };
 
 export const address: Parser<BytesLike, string> = {
