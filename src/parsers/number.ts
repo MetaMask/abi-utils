@@ -1,4 +1,5 @@
 import {
+  assert,
   bigIntToBytes,
   bytesToBigInt,
   bytesToSignedBigInt,
@@ -11,7 +12,7 @@ import { padStart } from '../utils';
 import { ParserError } from '../errors';
 import { DecodeArgs, Parser } from './parser';
 
-const NUMBER_REGEX = /^u?int([0-9]*)?$/u;
+const NUMBER_REGEX = /^u?int(?<length>[0-9]*)?$/u;
 
 /**
  * Check if a number type is signed.
@@ -21,6 +22,76 @@ const NUMBER_REGEX = /^u?int([0-9]*)?$/u;
  */
 export const isSigned = (type: string): boolean => {
   return !type.startsWith('u');
+};
+
+/**
+ * Get the length of the specified type. If a length is not specified, if the
+ * length is out of range (8 <= n <= 256), or if the length is not a multiple of
+ * 8, this will throw an error.
+ *
+ * @param type - The type to get the length for.
+ * @returns The bit length of the type.
+ */
+export const getLength = (type: string): number => {
+  if (type === 'int' || type === 'uint') {
+    return 256;
+  }
+
+  const match = type.match(NUMBER_REGEX);
+  assert(
+    match?.groups?.length,
+    new ParserError(
+      `Invalid number type. Expected a number type, but received "${type}".`,
+    ),
+  );
+
+  const length = parseInt(match.groups.length, 10);
+  assert(
+    length >= 8 && length <= 256,
+    new ParserError(
+      `Invalid number length. Expected a number between 8 and 256, but received "${type}".`,
+    ),
+  );
+
+  assert(
+    length % 8 === 0,
+    new ParserError(
+      `Invalid number length. Expected a multiple of 8, but received "${type}".`,
+    ),
+  );
+
+  return length;
+};
+
+/**
+ * Assert that the byte length of the given value is in range for the given
+ * number type.
+ *
+ * @param value - The value to check.
+ * @param type - The type of the value.
+ * @throws If the value is out of range for the type.
+ */
+export const assertNumberLength = (value: bigint, type: string) => {
+  const length = getLength(type);
+  const maxValue =
+    BigInt(2) ** BigInt(length - (isSigned(type) ? 1 : 0)) - BigInt(1);
+
+  if (isSigned(type)) {
+    // Signed types must be in the range of `-(2^(length - 1))` to
+    // `2^(length - 1) - 1`.
+    assert(
+      value >= -(maxValue + BigInt(1)) && value <= maxValue,
+      new ParserError(`Number "${value}" is out of range for type "${type}".`),
+    );
+
+    return;
+  }
+
+  // Unsigned types must be in the range of `0` to `2^length - 1`.
+  assert(
+    value <= maxValue,
+    new ParserError(`Number "${value}" is out of range for type "${type}".`),
+  );
 };
 
 /**
@@ -78,6 +149,9 @@ export const number: Parser<NumberLike, bigint> = {
    */
   encode({ type, buffer, value }): Uint8Array {
     const bigIntValue = getBigInt(value);
+
+    assertNumberLength(bigIntValue, type);
+
     if (isSigned(type)) {
       return concatBytes([
         buffer,
@@ -97,11 +171,15 @@ export const number: Parser<NumberLike, bigint> = {
    * @returns The decoded value.
    */
   decode({ type, value }: DecodeArgs): bigint {
-    const buffer = value.slice(0, 32);
+    const buffer = value.subarray(0, 32);
     if (isSigned(type)) {
-      return bytesToSignedBigInt(buffer);
+      const numberValue = bytesToSignedBigInt(buffer);
+      assertNumberLength(numberValue, type);
+      return numberValue;
     }
 
-    return bytesToBigInt(buffer);
+    const numberValue = bytesToBigInt(buffer);
+    assertNumberLength(numberValue, type);
+    return numberValue;
   },
 };
