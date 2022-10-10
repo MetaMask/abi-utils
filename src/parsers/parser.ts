@@ -20,6 +20,11 @@ export type EncodeArgs<Value> = {
    * Whether to use the non-standard packed mode.
    */
   packed: boolean;
+
+  /**
+   * Whether to use tight packing mode. Only applicable when `packed` is true.
+   */
+  tight: boolean;
 };
 
 export type DecodeArgs = {

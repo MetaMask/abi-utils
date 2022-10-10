@@ -107,9 +107,10 @@ export const array: Parser<unknown[]> = {
    * @param args.buffer - The byte array to add to.
    * @param args.value - The array to encode.
    * @param args.packed - Whether to use non-standard packed encoding.
+   * @param args.tight - Whether to use non-standard tight encoding.
    * @returns The bytes with the encoded array added to it.
    */
-  encode({ type, buffer, value, packed }): Uint8Array {
+  encode({ type, buffer, value, packed, tight }): Uint8Array {
     const [arrayType, fixedLength] = getArrayType(type);
 
     // Packed encoding does not support nested arrays.
@@ -143,7 +144,8 @@ export const array: Parser<unknown[]> = {
         type: getTupleType(arrayType, fixedLength),
         buffer,
         value,
-        packed: false,
+        packed: tight,
+        tight,
       });
     }
 
@@ -154,7 +156,7 @@ export const array: Parser<unknown[]> = {
         types: new Array(value.length).fill(arrayType),
         values: value,
         byteArray: buffer,
-        packed: false,
+        packed: tight,
         arrayPacked: true,
       });
     }
@@ -168,6 +170,7 @@ export const array: Parser<unknown[]> = {
       values: value,
       byteArray: concatBytes([buffer, arrayLength]),
       packed,
+      tight,
     });
   },
 

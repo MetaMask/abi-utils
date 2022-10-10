@@ -60,6 +60,7 @@ describe('tuple', () => {
             value: [BigInt(12), BigInt(34)],
             buffer: new Uint8Array(),
             packed: false,
+            tight: false,
           }),
         ),
       ).toBe(
@@ -75,6 +76,7 @@ describe('tuple', () => {
             value: [BigInt(12), '0xab'],
             buffer: new Uint8Array(),
             packed: false,
+            tight: false,
           }),
         ),
       ).toBe(

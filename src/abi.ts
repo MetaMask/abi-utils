@@ -69,15 +69,19 @@ import { getErrorMessage, ParserError } from './errors';
  * the types array.
  * @param packed - Whether to use the non-standard packed mode. Defaults to
  * `false`.
+ * @param tight - Whether to pack the values tightly. When enabled, the values
+ * will be packed without any padding. This matches the behaviour of
+ * `ethereumjs-abi`. Defaults to `false`.
  * @returns The ABI encoded bytes.
  */
 export const encode = <Type extends readonly string[]>(
   types: Type,
   values: TypeMap<Type, 'input'>,
   packed?: boolean,
+  tight?: boolean,
 ): Uint8Array => {
   try {
-    return pack({ types, values, packed });
+    return pack({ types, values, packed, tight });
   } catch (error) {
     if (error instanceof ParserError) {
       throw new ParserError(`Unable to encode value: ${error.message}`, error);
@@ -139,13 +143,17 @@ export const encodeSingle = <Type extends string>(
  * @see https://docs.soliditylang.org/en/v0.8.17/abi-spec.html#non-standard-packed-mode
  * @param types - The types to encode.
  * @param values - The values to encode.
+ * @param tight - Whether to pack the values tightly. When enabled, the values
+ * will be packed without any padding. This matches the behaviour of
+ * `ethereumjs-abi`. Defaults to `false`.
  * @returns The ABI encoded bytes.
  */
 export const encodePacked = <Type extends readonly string[]>(
   types: Type,
   values: TypeMap<Type, 'input'>,
+  tight?: boolean,
 ): Uint8Array => {
-  return encode(types, values, true);
+  return encode(types, values, true, tight);
 };
 
 /**

@@ -100,8 +100,15 @@ export type PackArgs<Type extends readonly string[]> = {
   packed?: boolean | undefined;
 
   /**
+   * Whether to use tight packing mode. Only applicable when `packed` is true.
+   * When true, the packed mode will not add any padding bytes. This matches
+   * the packing behaviour of `ethereumjs-abi`, but is not standard.
+   */
+  tight?: boolean | undefined;
+
+  /**
    * Whether to use the non-standard packed mode in "array" mode. This is
-   * normally only used by the `array` parser.
+   * normally only used by the {@link array} parser.
    */
   arrayPacked?: boolean | undefined;
 
@@ -125,12 +132,16 @@ export type PackArgs<Type extends readonly string[]> = {
  * arrays. Defaults to `false`.
  * @param args.byteArray - The byte array to encode the values into. Defaults to
  * an empty array.
+ * @param args.tight - Whether to use tight packing mode. Only applicable when
+ * `packed` is true. When true, the packed mode will not add any padding bytes.
+ * This matches the packing behaviour of `ethereumjs-abi`, but is not standard.
  * @returns The resulting encoded buffer.
  */
 export const pack = <Type extends readonly string[]>({
   types,
   values,
   packed = false,
+  tight = false,
   arrayPacked = false,
   byteArray = new Uint8Array(),
 }: PackArgs<Type>): Uint8Array => {
@@ -156,6 +167,7 @@ export const pack = <Type extends readonly string[]>({
             value,
             type,
             packed,
+            tight,
           }),
           dynamicBuffer,
           pointers,
@@ -168,6 +180,7 @@ export const pack = <Type extends readonly string[]>({
         value,
         type,
         packed,
+        tight,
       });
 
       return {

@@ -72,9 +72,10 @@ export const bool: Parser<BooleanLike, boolean> = {
    * @param args.buffer - The byte array to add to.
    * @param args.value - The boolean to encode.
    * @param args.packed - Whether the value is packed.
+   * @param args.tight - Whether to use non-standard tight encoding.
    * @returns The bytes with the encoded boolean added to it.
    */
-  encode({ buffer, value, packed }): Uint8Array {
+  encode({ buffer, value, packed, tight }): Uint8Array {
     const booleanValue = getBooleanValue(value);
 
     if (packed) {
@@ -88,6 +89,7 @@ export const bool: Parser<BooleanLike, boolean> = {
       buffer,
       value: booleanValue,
       packed,
+      tight,
     });
   },
 

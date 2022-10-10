@@ -59,6 +59,7 @@ describe('array', () => {
             value: [BigInt(12), BigInt(34), BigInt(56), BigInt(78)],
             buffer: new Uint8Array(),
             packed: false,
+            tight: false,
           }),
         ),
       ).toBe(
@@ -77,6 +78,7 @@ describe('array', () => {
             ],
             buffer: new Uint8Array(),
             packed: false,
+            tight: false,
           }),
         ),
       ).toBe(
@@ -92,6 +94,7 @@ describe('array', () => {
             value: ['foo', 'bar', 'baz', 'qux'],
             buffer: new Uint8Array(),
             packed: true,
+            tight: false,
           }),
         ),
       ).toBe('0x666f6f62617262617a717578');
@@ -105,11 +108,42 @@ describe('array', () => {
             value: [BigInt(12), BigInt(34), BigInt(56), BigInt(78)],
             buffer: new Uint8Array(),
             packed: true,
+            tight: false,
           }),
         ),
       ).toBe(
         '0x000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000220000000000000000000000000000000000000000000000000000000000000038000000000000000000000000000000000000000000000000000000000000004e',
       );
+    });
+
+    it('encodes a packed bytes1 array', () => {
+      expect(
+        bytesToHex(
+          array.encode({
+            type: 'bytes1[]',
+            value: ['0x12', '0x34', '0x56', '0x78'],
+            buffer: new Uint8Array(),
+            packed: true,
+            tight: false,
+          }),
+        ),
+      ).toBe(
+        '0x1200000000000000000000000000000000000000000000000000000000000000340000000000000000000000000000000000000000000000000000000000000056000000000000000000000000000000000000000000000000000000000000007800000000000000000000000000000000000000000000000000000000000000',
+      );
+    });
+
+    it('tightly encodes a packed bytes1 array', () => {
+      expect(
+        bytesToHex(
+          array.encode({
+            type: 'bytes1[]',
+            value: ['0x12', '0x34', '0x56', '0x78'],
+            buffer: new Uint8Array(),
+            packed: true,
+            tight: true,
+          }),
+        ),
+      ).toBe('0x12345678');
     });
   });
 

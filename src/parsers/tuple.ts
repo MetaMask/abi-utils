@@ -103,11 +103,18 @@ export const tuple: Parser<unknown[]> = {
    * @param args.buffer - The byte array to add to.
    * @param args.value - The value to encode.
    * @param args.packed - Whether to use non-standard packed encoding.
+   * @param args.tight - Whether to use non-standard tight encoding.
    * @returns The bytes with the encoded value added to it.
    */
-  encode({ type, buffer, value, packed }): Uint8Array {
+  encode({ type, buffer, value, packed, tight }): Uint8Array {
     const elements = getTupleElements(type);
-    return pack({ types: elements, values: value, byteArray: buffer, packed });
+    return pack({
+      types: elements,
+      values: value,
+      byteArray: buffer,
+      packed,
+      tight,
+    });
   },
 
   /**

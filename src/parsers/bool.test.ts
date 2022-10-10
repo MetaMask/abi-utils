@@ -37,6 +37,7 @@ describe('boolean', () => {
             value: true,
             buffer: new Uint8Array(),
             packed: false,
+            tight: false,
           }),
         ),
       ).toBe(
@@ -50,6 +51,7 @@ describe('boolean', () => {
             value: 'true',
             buffer: new Uint8Array(),
             packed: false,
+            tight: false,
           }),
         ),
       ).toBe(
@@ -63,6 +65,7 @@ describe('boolean', () => {
             value: false,
             buffer: new Uint8Array(),
             packed: false,
+            tight: false,
           }),
         ),
       ).toBe(
@@ -76,6 +79,7 @@ describe('boolean', () => {
             value: 'false',
             buffer: new Uint8Array(),
             packed: false,
+            tight: false,
           }),
         ),
       ).toBe(

@@ -34,9 +34,10 @@ export const string: Parser<string> = {
    * @param args.buffer - The byte array to add to.
    * @param args.value - The string value to encode.
    * @param args.packed - Whether to use packed encoding.
+   * @param args.tight - Whether to use non-standard tight encoding.
    * @returns The bytes with the encoded string value added to it.
    */
-  encode({ buffer, value, packed }): Uint8Array {
+  encode({ buffer, value, packed, tight }): Uint8Array {
     // Strings are encoded as UTF-8 bytes, so we use the bytes parser to encode
     // the string as bytes.
     return bytes.encode({
@@ -44,6 +45,7 @@ export const string: Parser<string> = {
       buffer,
       value: stringToBytes(value),
       packed,
+      tight,
     });
   },
 

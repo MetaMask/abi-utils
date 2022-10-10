@@ -17,6 +17,7 @@ describe('string', () => {
             value: 'foo bar baz qux',
             buffer: new Uint8Array(),
             packed: false,
+            tight: false,
           }),
         ),
       ).toBe(
