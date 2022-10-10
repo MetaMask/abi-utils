@@ -116,6 +116,22 @@ describe('array', () => {
       );
     });
 
+    it('tightly encodes a packed number array', () => {
+      expect(
+        bytesToHex(
+          array.encode({
+            type: 'uint256[]',
+            value: [BigInt(12), BigInt(34), BigInt(56), BigInt(78)],
+            buffer: new Uint8Array(),
+            packed: true,
+            tight: true,
+          }),
+        ),
+      ).toBe(
+        '0x000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000220000000000000000000000000000000000000000000000000000000000000038000000000000000000000000000000000000000000000000000000000000004e',
+      );
+    });
+
     it('encodes a packed bytes1 array', () => {
       expect(
         bytesToHex(

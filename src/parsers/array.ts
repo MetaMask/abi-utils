@@ -9,6 +9,7 @@ import { padStart } from '../utils';
 import { ParserError } from '../errors';
 import { Parser } from './parser';
 import { tuple } from './tuple';
+import { fixedBytes } from './fixed-bytes';
 
 const ARRAY_REGEX = /^(?<type>.*)\[(?<length>\d*?)\]$/u;
 
@@ -144,7 +145,7 @@ export const array: Parser<unknown[]> = {
         type: getTupleType(arrayType, fixedLength),
         buffer,
         value,
-        packed: tight,
+        packed: fixedBytes.isType(arrayType) && tight,
         tight,
       });
     }
@@ -156,7 +157,7 @@ export const array: Parser<unknown[]> = {
         types: new Array(value.length).fill(arrayType),
         values: value,
         byteArray: buffer,
-        packed: tight,
+        packed: fixedBytes.isType(arrayType) && tight,
         arrayPacked: true,
       });
     }
