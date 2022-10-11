@@ -146,6 +146,9 @@ export const array: Parser<unknown[]> = {
         type: getTupleType(arrayType, fixedLength),
         buffer,
         value,
+        // In "tight" mode, we don't pad the values to 32 bytes if the value is
+        // of type `bytesN`. This is an edge case in `ethereumjs-abi` that we
+        // support to provide compatibility with it.
         packed: fixedBytes.isType(arrayType) && tight,
         tight,
       });
