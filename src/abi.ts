@@ -146,7 +146,7 @@ export const encodeSingle = <Type extends string>(
  * ```typescript
  * import { encodePacked } from '@metamask/abi-utils';
  *
- * const encoded = encodePacked(['uint256'], [42]);
+ * const encoded = encodePacked(['uint8'], [42]);
  *
  * console.log(encoded); // `Uint8Array [ 42 ]`
  * ```
