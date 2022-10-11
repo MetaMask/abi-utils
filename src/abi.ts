@@ -154,9 +154,9 @@ export const encodeSingle = <Type extends string>(
  * @see https://docs.soliditylang.org/en/v0.8.17/abi-spec.html#non-standard-packed-mode
  * @param types - The types to encode.
  * @param values - The values to encode.
- * @param tight - Whether to pack the values tightly. When enabled, the values
- * will be packed without any padding. This matches the behaviour of
- * `ethereumjs-abi`. Defaults to `false`.
+ * @param tight - Whether to pack the values tightly. When enabled, `byteN`
+ * values in arrays will be packed without any padding. This matches the
+ * behaviour of `ethereumjs-abi`. Defaults to `false`.
  * @returns The ABI encoded bytes.
  */
 export const encodePacked = <Type extends readonly string[]>(
