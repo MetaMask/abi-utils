@@ -129,6 +129,7 @@ export const array: Parser<unknown[]> = {
         byteArray: buffer,
         packed,
         arrayPacked: true,
+        tight,
       });
     }
 
@@ -159,6 +160,7 @@ export const array: Parser<unknown[]> = {
         byteArray: buffer,
         packed: fixedBytes.isType(arrayType) && tight,
         arrayPacked: true,
+        tight,
       });
     }
 
