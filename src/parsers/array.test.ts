@@ -161,6 +161,18 @@ describe('array', () => {
         ),
       ).toBe('0x12345678');
     });
+
+    it('throws an error when trying to encode a nested packed array', () => {
+      expect(() =>
+        array.encode({
+          type: 'uint256[][]',
+          value: [],
+          buffer: new Uint8Array(),
+          packed: true,
+          tight: false,
+        }),
+      ).toThrow('Cannot pack nested arrays.');
+    });
   });
 
   describe('decode', () => {
