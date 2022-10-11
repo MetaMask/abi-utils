@@ -51,6 +51,8 @@ describe('fixedBytes', () => {
             value:
               '0xabcdef1234567890000000000000000000000000000000000000000000000000',
             buffer: new Uint8Array(),
+            packed: false,
+            tight: false,
           }),
         ),
       ).toBe(
@@ -65,6 +67,8 @@ describe('fixedBytes', () => {
             type: 'bytes32',
             value: '0xabcdef1234567890',
             buffer: new Uint8Array(),
+            packed: false,
+            tight: false,
           }),
         ),
       ).toBe(
@@ -78,6 +82,8 @@ describe('fixedBytes', () => {
           type: 'bytes1',
           value: '0xabcdef123456789',
           buffer: new Uint8Array(),
+          packed: false,
+          tight: false,
         }),
       ).toThrow(
         'Expected a value of length 1, but received a value of length 8.',

@@ -1,4 +1,5 @@
 import { coerce, create, literal, union, boolean } from 'superstruct';
+import { bigIntToBytes, concatBytes } from '@metamask/utils';
 import { ParserError } from '../errors';
 import { Parser } from './parser';
 import { number } from './number';
@@ -70,14 +71,28 @@ export const bool: Parser<BooleanLike, boolean> = {
    * @param args - The encoding arguments.
    * @param args.buffer - The byte array to add to.
    * @param args.value - The boolean to encode.
+   * @param args.packed - Whether the value is packed.
+   * @param args.tight - Whether to use non-standard tight encoding.
    * @returns The bytes with the encoded boolean added to it.
    */
-  encode({ buffer, value }): Uint8Array {
+  encode({ buffer, value, packed, tight }): Uint8Array {
     const booleanValue = getBooleanValue(value);
+
+    // For packed encoding, we add a single byte (`0x00` or `0x01`) to the byte
+    // array.
+    if (packed) {
+      return concatBytes([buffer, bigIntToBytes(booleanValue)]);
+    }
 
     // Booleans are encoded as 32-byte integers, so we use the number parser
     // to encode the boolean value.
-    return number.encode({ type: 'uint256', buffer, value: booleanValue });
+    return number.encode({
+      type: 'uint256',
+      buffer,
+      value: booleanValue,
+      packed,
+      tight,
+    });
   },
 
   /**

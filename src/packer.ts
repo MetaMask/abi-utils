@@ -83,21 +83,68 @@ type PackState = {
   pointers: Pointer[];
 };
 
+export type PackArgs<Type extends readonly string[]> = {
+  /**
+   * The types of the values to pack.
+   */
+  types: Type;
+
+  /**
+   * The values to pack.
+   */
+  values: TypeMap<Type, 'input'>;
+
+  /**
+   * Whether to use the non-standard packed mode.
+   */
+  packed?: boolean | undefined;
+
+  /**
+   * Whether to use tight packing mode. Only applicable when `packed` is true.
+   * When true, the packed mode will not add any padding bytes. This matches
+   * the packing behaviour of `ethereumjs-abi`, but is not standard.
+   */
+  tight?: boolean | undefined;
+
+  /**
+   * Whether to use the non-standard packed mode in "array" mode. This is
+   * normally only used by the {@link array} parser.
+   */
+  arrayPacked?: boolean | undefined;
+
+  /**
+   * The byte array to encode the values into.
+   */
+  byteArray?: Uint8Array;
+};
+
 /**
  * Pack the provided values in a buffer, encoded with the specified types. If a
  * buffer is specified, the resulting value will be concatenated with the
  * buffer.
  *
- * @param types - The types to use for encoding.
- * @param values - The values to encode.
- * @param buffer - The buffer to concatenate with.
+ * @param args - The arguments object.
+ * @param args.types - The types of the values to pack.
+ * @param args.values - The values to pack.
+ * @param args.packed - Whether to use the non-standard packed mode. Defaults to
+ * `false`.
+ * @param args.arrayPacked - Whether to use the non-standard packed mode for
+ * arrays. Defaults to `false`.
+ * @param args.byteArray - The byte array to encode the values into. Defaults to
+ * an empty array.
+ * @param args.tight - Whether to use tight packing mode. Only applicable when
+ * `packed` is true. When true, the packed mode will not add any padding bytes.
+ * This matches the packing behaviour of `ethereumjs-abi`, but is not standard.
  * @returns The resulting encoded buffer.
  */
-export const pack = <Type extends readonly string[]>(
-  types: Type,
-  values: TypeMap<Type, 'input'>,
-  buffer: Uint8Array = new Uint8Array(),
-): Uint8Array => {
+export const pack = <Type extends readonly string[]>({
+  types,
+  values,
+  packed = false,
+  tight = false,
+  arrayPacked = false,
+  byteArray = new Uint8Array(),
+}: PackArgs<Type>): Uint8Array => {
   assert(
     types.length === values.length,
     new ParserError(
@@ -111,9 +158,17 @@ export const pack = <Type extends readonly string[]>(
       const parser = getParser(type);
       const value = values[index];
 
-      if (!isDynamicParser(parser, type)) {
+      // If packed mode is enabled, we can skip the dynamic check, as all
+      // values are encoded in the static buffer.
+      if (packed || arrayPacked || !isDynamicParser(parser, type)) {
         return {
-          staticBuffer: parser.encode({ buffer: staticBuffer, value, type }),
+          staticBuffer: parser.encode({
+            buffer: staticBuffer,
+            value,
+            type,
+            packed,
+            tight,
+          }),
           dynamicBuffer,
           pointers,
         };
@@ -124,6 +179,8 @@ export const pack = <Type extends readonly string[]>(
         buffer: dynamicBuffer,
         value,
         type,
+        packed,
+        tight,
       });
 
       return {
@@ -142,13 +199,19 @@ export const pack = <Type extends readonly string[]>(
     },
   );
 
+  // If packed mode is enabled, there shouldn't be any dynamic values.
+  assert(
+    (!packed && !arrayPacked) || dynamicBuffer.length === 0,
+    new ParserError('Invalid pack state.'),
+  );
+
   const dynamicStart = staticBuffer.length;
   const updatedBuffer = pointers.reduce((target, { pointer, position }) => {
     const offset = padStart(numberToBytes(dynamicStart + pointer));
     return set(target, offset, position);
   }, staticBuffer);
 
-  return concatBytes([buffer, updatedBuffer, dynamicBuffer]);
+  return concatBytes([byteArray, updatedBuffer, dynamicBuffer]);
 };
 
 export const unpack = <

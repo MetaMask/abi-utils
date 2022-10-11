@@ -108,14 +108,22 @@ export const fn: Parser<FunctionLike, SolidityFunction> = {
    * @param args - The encoding arguments.
    * @param args.buffer - The byte array to add to.
    * @param args.value - The function to encode.
+   * @param args.packed - Whether to use packed encoding.
+   * @param args.tight - Whether to use non-standard tight encoding.
    * @returns The bytes with the encoded function added to it.
    */
-  encode({ buffer, value }): Uint8Array {
+  encode({ buffer, value, packed, tight }): Uint8Array {
     const fnValue = getFunction(value);
 
     // Functions are encoded as `bytes24`, so we use the fixedBytes parser to
     // encode the function.
-    return fixedBytes.encode({ type: 'bytes24', buffer, value: fnValue });
+    return fixedBytes.encode({
+      type: 'bytes24',
+      buffer,
+      value: fnValue,
+      packed,
+      tight,
+    });
   },
 
   /**

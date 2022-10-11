@@ -58,6 +58,8 @@ describe('array', () => {
             type: 'uint256[]',
             value: [BigInt(12), BigInt(34), BigInt(56), BigInt(78)],
             buffer: new Uint8Array(),
+            packed: false,
+            tight: false,
           }),
         ),
       ).toBe(
@@ -75,11 +77,101 @@ describe('array', () => {
               [BigInt(56), BigInt(78)],
             ],
             buffer: new Uint8Array(),
+            packed: false,
+            tight: false,
           }),
         ),
       ).toBe(
         '0x0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000c000000000000000000000000000000000000000000000000000000000000002200000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000038000000000000000000000000000000000000000000000000000000000000004e',
       );
+    });
+
+    it('encodes a packed string array', () => {
+      expect(
+        bytesToHex(
+          array.encode({
+            type: 'string[]',
+            value: ['foo', 'bar', 'baz', 'qux'],
+            buffer: new Uint8Array(),
+            packed: true,
+            tight: false,
+          }),
+        ),
+      ).toBe('0x666f6f62617262617a717578');
+    });
+
+    it('encodes a packed number array', () => {
+      expect(
+        bytesToHex(
+          array.encode({
+            type: 'uint256[]',
+            value: [BigInt(12), BigInt(34), BigInt(56), BigInt(78)],
+            buffer: new Uint8Array(),
+            packed: true,
+            tight: false,
+          }),
+        ),
+      ).toBe(
+        '0x000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000220000000000000000000000000000000000000000000000000000000000000038000000000000000000000000000000000000000000000000000000000000004e',
+      );
+    });
+
+    it('tightly encodes a packed number array', () => {
+      expect(
+        bytesToHex(
+          array.encode({
+            type: 'uint256[]',
+            value: [BigInt(12), BigInt(34), BigInt(56), BigInt(78)],
+            buffer: new Uint8Array(),
+            packed: true,
+            tight: true,
+          }),
+        ),
+      ).toBe(
+        '0x000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000220000000000000000000000000000000000000000000000000000000000000038000000000000000000000000000000000000000000000000000000000000004e',
+      );
+    });
+
+    it('encodes a packed bytes1 array', () => {
+      expect(
+        bytesToHex(
+          array.encode({
+            type: 'bytes1[]',
+            value: ['0x12', '0x34', '0x56', '0x78'],
+            buffer: new Uint8Array(),
+            packed: true,
+            tight: false,
+          }),
+        ),
+      ).toBe(
+        '0x1200000000000000000000000000000000000000000000000000000000000000340000000000000000000000000000000000000000000000000000000000000056000000000000000000000000000000000000000000000000000000000000007800000000000000000000000000000000000000000000000000000000000000',
+      );
+    });
+
+    it('tightly encodes a packed bytes1 array', () => {
+      expect(
+        bytesToHex(
+          array.encode({
+            type: 'bytes1[]',
+            value: ['0x12', '0x34', '0x56', '0x78'],
+            buffer: new Uint8Array(),
+            packed: true,
+            tight: true,
+          }),
+        ),
+      ).toBe('0x12345678');
+    });
+
+    it('throws an error when trying to encode a nested packed array', () => {
+      expect(() =>
+        array.encode({
+          type: 'uint256[][]',
+          value: [],
+          buffer: new Uint8Array(),
+          packed: true,
+          tight: false,
+        }),
+      ).toThrow('Cannot pack nested arrays.');
     });
   });
 

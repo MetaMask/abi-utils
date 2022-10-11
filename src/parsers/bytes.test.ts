@@ -26,6 +26,8 @@ describe('bytes', () => {
             type: 'bytes',
             value: '0xab',
             buffer: new Uint8Array(),
+            packed: false,
+            tight: false,
           }),
         ),
       ).toBe(

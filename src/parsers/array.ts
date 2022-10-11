@@ -9,6 +9,7 @@ import { padStart } from '../utils';
 import { ParserError } from '../errors';
 import { Parser } from './parser';
 import { tuple } from './tuple';
+import { fixedBytes } from './fixed-bytes';
 
 const ARRAY_REGEX = /^(?<type>.*)\[(?<length>\d*?)\]$/u;
 
@@ -106,10 +107,31 @@ export const array: Parser<unknown[]> = {
    * @param args.type - The type of the array.
    * @param args.buffer - The byte array to add to.
    * @param args.value - The array to encode.
+   * @param args.packed - Whether to use non-standard packed encoding.
+   * @param args.tight - Whether to use non-standard tight encoding.
    * @returns The bytes with the encoded array added to it.
    */
-  encode({ type, buffer, value }): Uint8Array {
+  encode({ type, buffer, value, packed, tight }): Uint8Array {
     const [arrayType, fixedLength] = getArrayType(type);
+
+    // Packed encoding does not support nested arrays.
+    assert(
+      !packed || !isArrayType(arrayType),
+      new ParserError(`Cannot pack nested arrays.`),
+    );
+
+    // Tightly pack `T[]` where `T` is a dynamic type. This is not supported in
+    // Solidity, but is commonly used in the Ethereum ecosystem.
+    if (packed && isDynamicParser(getParser(arrayType), arrayType)) {
+      return pack({
+        types: new Array(value.length).fill(arrayType),
+        values: value,
+        byteArray: buffer,
+        packed,
+        arrayPacked: true,
+        tight,
+      });
+    }
 
     if (fixedLength) {
       assert(
@@ -124,6 +146,27 @@ export const array: Parser<unknown[]> = {
         type: getTupleType(arrayType, fixedLength),
         buffer,
         value,
+        // In "tight" mode, we don't pad the values to 32 bytes if the value is
+        // of type `bytesN`. This is an edge case in `ethereumjs-abi` that we
+        // support to provide compatibility with it.
+        packed: fixedBytes.isType(arrayType) && tight,
+        tight,
+      });
+    }
+
+    // For packed encoding, we don't need to encode the length of the array,
+    // so we can just encode the values.
+    if (packed) {
+      return pack({
+        types: new Array(value.length).fill(arrayType),
+        values: value,
+        byteArray: buffer,
+        // In "tight" mode, we don't pad the values to 32 bytes if the value is
+        // of type `bytesN`. This is an edge case in `ethereumjs-abi` that we
+        // support to provide compatibility with it.
+        packed: fixedBytes.isType(arrayType) && tight,
+        arrayPacked: true,
+        tight,
       });
     }
 
@@ -131,11 +174,13 @@ export const array: Parser<unknown[]> = {
     // means that we just need to encode the length of the array, and then the
     // array itself. The pointer is encoded by the {@link pack} function.
     const arrayLength = padStart(numberToBytes(value.length));
-    return pack(
-      new Array(value.length).fill(arrayType),
-      value,
-      concatBytes([buffer, arrayLength]),
-    );
+    return pack({
+      types: new Array(value.length).fill(arrayType),
+      values: value,
+      byteArray: concatBytes([buffer, arrayLength]),
+      packed,
+      tight,
+    });
   },
 
   /**

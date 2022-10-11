@@ -67,14 +67,21 @@ import { getErrorMessage, ParserError } from './errors';
  * @param types - The types to encode.
  * @param values - The values to encode. This array must have the same length as
  * the types array.
+ * @param packed - Whether to use the non-standard packed mode. Defaults to
+ * `false`.
+ * @param tight - Whether to pack the values tightly. When enabled, the values
+ * will be packed without any padding. This matches the behaviour of
+ * `ethereumjs-abi`. Defaults to `false`.
  * @returns The ABI encoded bytes.
  */
 export const encode = <Type extends readonly string[]>(
   types: Type,
   values: TypeMap<Type, 'input'>,
+  packed?: boolean,
+  tight?: boolean,
 ): Uint8Array => {
   try {
-    return pack(types, values);
+    return pack({ types, values, packed, tight });
   } catch (error) {
     if (error instanceof ParserError) {
       throw new ParserError(`Unable to encode value: ${error.message}`, error);
@@ -112,6 +119,52 @@ export const encodeSingle = <Type extends string>(
   value: TypeMap<[Type], 'input'>[0],
 ): Uint8Array => {
   return encode([type], [value]);
+};
+
+/**
+ * Encode the data with the provided types. The types must be valid Solidity
+ * ABI types. This is similar to {@link encode}, but the values are encoded in
+ * the non-standard packed mode. This differs from the standard encoding in the
+ * following ways:
+ *
+ * - Most values are packed tightly, without alignment padding.
+ *   - The exception is array values, which are padded to 32 bytes.
+ * - Values are still padded to their full size, i.e., `uint16` values are still
+ *  padded to 2 bytes, regardless of the length of the value.
+ * - The encoding of dynamic types (`bytes`, `string`) is different. The length
+ * of the dynamic type is not included in the encoding, and the dynamic type is
+ * not padded to a multiple of 32 bytes.
+ * - All values are encoded in-place, without any offsets.
+ *
+ * The encoding of this is ambiguous as soon as there is more than one dynamic
+ * type. That means that these values cannot be decoded with {@link decode} or
+ * Solidity's `abi.decode` function.
+ *
+ * See {@link encode} for more information on how values are parsed.
+ *
+ * @example
+ * ```typescript
+ * import { encodePacked } from '@metamask/abi-utils';
+ *
+ * const encoded = encodePacked(['uint8'], [42]);
+ *
+ * console.log(encoded); // `Uint8Array [ 42 ]`
+ * ```
+ * @see https://docs.soliditylang.org/en/v0.8.17/abi-spec.html#types
+ * @see https://docs.soliditylang.org/en/v0.8.17/abi-spec.html#non-standard-packed-mode
+ * @param types - The types to encode.
+ * @param values - The values to encode.
+ * @param tight - Whether to pack the values tightly. When enabled, `bytesN`
+ * values in arrays will be packed without any padding. This matches the
+ * behaviour of `ethereumjs-abi`. Defaults to `false`.
+ * @returns The ABI encoded bytes.
+ */
+export const encodePacked = <Type extends readonly string[]>(
+  types: Type,
+  values: TypeMap<Type, 'input'>,
+  tight?: boolean,
+): Uint8Array => {
+  return encode(types, values, true, tight);
 };
 
 /**
