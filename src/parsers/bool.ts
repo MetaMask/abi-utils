@@ -78,6 +78,8 @@ export const bool: Parser<BooleanLike, boolean> = {
   encode({ buffer, value, packed, tight }): Uint8Array {
     const booleanValue = getBooleanValue(value);
 
+    // For packed encoding, we add a single byte (`0x00` or `0x01`) to the byte
+    // array.
     if (packed) {
       return concatBytes([buffer, bigIntToBytes(booleanValue)]);
     }

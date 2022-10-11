@@ -154,6 +154,8 @@ export const number: Parser<NumberLike, bigint> = {
     assertNumberLength(bigIntValue, type);
 
     if (isSigned(type)) {
+      // For packed encoding, the value is padded to the length of the type, and
+      // then added to the byte array.
       if (packed) {
         const length = getLength(type) / 8;
         return concatBytes([buffer, signedBigIntToBytes(bigIntValue, length)]);
@@ -165,6 +167,8 @@ export const number: Parser<NumberLike, bigint> = {
       ]);
     }
 
+    // For packed encoding, the value is padded to the length of the type, and
+    // then added to the byte array.
     if (packed) {
       const length = getLength(type) / 8;
       return concatBytes([

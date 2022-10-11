@@ -123,11 +123,22 @@ export const encodeSingle = <Type extends string>(
 
 /**
  * Encode the data with the provided types. The types must be valid Solidity
- * ABI types. This is the same as {@link encode}, except that the values are
- * encoded in the non-standard packed mode.
+ * ABI types. This is similar to {@link encode}, but the values are encoded in
+ * the non-standard packed mode. This differs from the standard encoding in the
+ * following ways:
  *
- * Note that these values cannot be decoded with {@link decode} or Solidity's
- * `abi.decode` function.
+ * - Most values are packed tightly, without alignment padding.
+ *   - The exception is array values, which are padded to 32 bytes.
+ * - Values are still padded to their full size, i.e., `uint16` values are still
+ *  padded to 2 bytes, regardless of the length of the value.
+ * - The encoding of dynamic types (`bytes`, `string`) is different. The length
+ * of the dynamic type is not included in the encoding, and the dynamic type is
+ * not padded to a multiple of 32 bytes.
+ * - All values are encoded in-place, without any offsets.
+ *
+ * The encoding of this is ambiguous as soon as there is more than one dynamic
+ * type. That means that these values cannot be decoded with {@link decode} or
+ * Solidity's `abi.decode` function.
  *
  * See {@link encode} for more information on how values are parsed.
  *

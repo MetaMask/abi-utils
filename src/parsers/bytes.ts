@@ -45,6 +45,8 @@ export const bytes: Parser<BytesLike, Uint8Array> = {
   encode({ buffer, value, packed }): Uint8Array {
     const bufferValue = createBytes(value);
 
+    // For packed encoding, we can just add the bytes value to the byte array,
+    // without adding any padding or alignment.
     if (packed) {
       return concatBytes([buffer, bufferValue]);
     }

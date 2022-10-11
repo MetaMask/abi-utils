@@ -69,6 +69,9 @@ export const address: Parser<BytesLike, string> = {
    */
   encode({ buffer, value, packed }): Uint8Array {
     const addressValue = getAddress(value);
+
+    // If we're using packed encoding, we can just add the address bytes to the
+    // byte array, without adding any padding.
     if (packed) {
       return concatBytes([buffer, addressValue]);
     }

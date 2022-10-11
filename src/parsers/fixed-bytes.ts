@@ -73,6 +73,8 @@ export const fixedBytes: Parser<BytesLike, Uint8Array> = {
       ),
     );
 
+    // For packed encoding, the value is padded to the length of the type, and
+    // then added to the byte array.
     if (packed) {
       return concatBytes([buffer, padEnd(bufferValue, length)]);
     }

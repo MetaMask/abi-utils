@@ -151,9 +151,9 @@ export const array: Parser<unknown[]> = {
       });
     }
 
+    // For packed encoding, we don't need to encode the length of the array,
+    // so we can just encode the values.
     if (packed) {
-      // For packed encoding, we don't need to encode the length of the array,
-      // so we can just encode the values.
       return pack({
         types: new Array(value.length).fill(arrayType),
         values: value,
