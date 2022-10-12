@@ -7,15 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [1.1.0]
-### Uncategorized
-- Fix broken publish workflow ([#22](https://github.com/MetaMask/abi-utils/pull/22))
-- Revert "1.1.0 (#20)" ([#20](https://github.com/MetaMask/abi-utils/pull/20))
-- 1.1.0 ([#20](https://github.com/MetaMask/abi-utils/pull/20))
+### Added
 - Add non-standard packed mode ([#15](https://github.com/MetaMask/abi-utils/pull/15))
-- Fix deployment of versioned release docs ([#17](https://github.com/MetaMask/abi-utils/pull/17))
-- Exclude fixtures from dist ([#16](https://github.com/MetaMask/abi-utils/pull/16))
+  - This adds a new function `encodePacked`, which matches the behaviour of `abi.encodePacked` in Solidity
+
+### Changed
 - Allow byte values shorter than specified size ([#12](https://github.com/MetaMask/abi-utils/pull/12))
 - Add better validation of number type and value ([#13](https://github.com/MetaMask/abi-utils/pull/13))
+  - Number values are now checked if they are within the bounds of the type
 
 ## [1.0.0]
 ### Added
