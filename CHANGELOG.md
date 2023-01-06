@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1]
+### Uncategorized
+- Bump `superstruct` and `@metamask/utils` ([#25](https://github.com/MetaMask/abi-utils/pull/25))
+
 ## [1.1.0]
 ### Added
 - Add non-standard packed mode ([#15](https://github.com/MetaMask/abi-utils/pull/15))
@@ -20,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release
 
-[Unreleased]: https://github.com/MetaMask/abi-utils/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/MetaMask/abi-utils/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/MetaMask/abi-utils/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/MetaMask/abi-utils/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/MetaMask/abi-utils/releases/tag/v1.0.0
