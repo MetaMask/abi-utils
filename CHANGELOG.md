@@ -7,9 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [1.2.0]
-### Uncategorized
-- Support Node v14 ([#30](https://github.com/MetaMask/abi-utils/pull/30))
-- Bump peaceiris/actions-gh-pages to more recent version ([#27](https://github.com/MetaMask/abi-utils/pull/27))
+### Changed
+- Decrease minimum supported Node.js version to v14 ([#30](https://github.com/MetaMask/abi-utils/pull/30))
 
 ## [1.1.1]
 ### Fixed
