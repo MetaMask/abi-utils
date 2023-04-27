@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>encode | @metamask/abi-utils</title><meta name="description" content="Documentation for @metamask/abi-utils"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script async src="../assets/search.js" id="search-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>getErrorStack | @metamask/abi-utils</title><meta name="description" content="Documentation for @metamask/abi-utils"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script async src="../assets/search.js" id="search-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
 <div class="tsd-toolbar-contents container">
 <div class="table-cell" id="tsd-search" data-base="..">
 <div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M15.7824 13.833L12.6666 10.7177C12.5259 10.5771 12.3353 10.499 12.1353 10.499H11.6259C12.4884 9.39596 13.001 8.00859 13.001 6.49937C13.001 2.90909 10.0914 0 6.50048 0C2.90959 0 0 2.90909 0 6.49937C0 10.0896 2.90959 12.9987 6.50048 12.9987C8.00996 12.9987 9.39756 12.4863 10.5008 11.6239V12.1332C10.5008 12.3332 10.5789 12.5238 10.7195 12.6644L13.8354 15.7797C14.1292 16.0734 14.6042 16.0734 14.8948 15.7797L15.7793 14.8954C16.0731 14.6017 16.0731 14.1267 15.7824 13.833ZM6.50048 10.499C4.29094 10.499 2.50018 8.71165 2.50018 6.49937C2.50018 4.29021 4.28781 2.49976 6.50048 2.49976C8.71001 2.49976 10.5008 4.28708 10.5008 6.49937C10.5008 8.70852 8.71314 10.499 6.50048 10.499Z" fill="var(--color-text)"></path></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
@@ -11,109 +11,27 @@
 <div class="tsd-page-title">
 <ul class="tsd-breadcrumb">
 <li><a href="../modules.html">@metamask/abi-utils</a></li>
-<li><a href="encode.html">encode</a></li></ul>
-<h1>Function encode</h1></div>
+<li><a href="getErrorStack.html">getErrorStack</a></li></ul>
+<h1>Function getErrorStack</h1></div>
 <section class="tsd-panel">
 <ul class="tsd-signatures tsd-kind-function">
-<li class="tsd-signature tsd-anchor-link" id="encode">encode<span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">Type</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span>types<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">Type</span>, values<span class="tsd-signature-symbol">: </span><a href="../types/TypeMap.html" class="tsd-signature-type" data-tsd-kind="Type alias">TypeMap</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">Type</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;input&quot;</span><span class="tsd-signature-symbol">&gt;</span>, packed<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, tight<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span><a href="#encode" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" id="icon-anchor-a"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" id="icon-anchor-b"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" id="icon-anchor-c"></path></svg></a></li>
-<li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Encode the data with the provided types. The types must be valid Solidity
-ABI types.</p>
-<p>This will attempt to parse the values into the correct types. For example,
-if you pass in a hex string for a <code>uint256</code>, it will be parsed into a
-<code>bigint</code>. Regular strings are interpreted as UTF-8 strings. If you want to
-pass in a hex string, you must pass it in as a <code>Uint8Array</code>, or use the
-&quot;0x&quot;-prefix.</p>
-<p>It will also attempt to infer the types of the values. For example, if you
-pass in a string for a <code>uint256</code>, it will result in a TypeScript compile-time
-error. This does not work for all types, however. For example, if you use
-nested arrays or tuples, the type will be inferred as <code>unknown</code>.</p>
-<p>The following types are supported:</p>
-<ul>
-<li><code>address</code>: A 20-byte Ethereum address.<ul>
-<li>As a 40-character-long hexadecimal string, starting with &quot;0x&quot;.</li>
-<li>As a 20-byte-long byte array, i.e., <code>Uint8Array</code>.</li>
-</ul>
-</li>
-<li><code>bool</code>: A boolean value.<ul>
-<li>As a boolean literal, i.e., <code>true</code> or <code>false</code>.</li>
-<li>As the strings &quot;true&quot; or &quot;false&quot;.</li>
-</ul>
-</li>
-<li><code>bytes(n)</code>: A dynamic byte array.<ul>
-<li>As a hexadecimal string, starting with &quot;0x&quot;.</li>
-<li>As a byte array, i.e., <code>Uint8Array</code>.</li>
-<li>As a regular string, which will be interpreted as UTF-8.</li>
-</ul>
-</li>
-<li><code>function</code>: A Solidity function.<ul>
-<li>As a 48-character-long hexadecimal string, starting with &quot;0x&quot;.</li>
-<li>As a 24-byte-long byte array, i.e., <code>Uint8Array</code>.</li>
-<li>As a <a href="../types/SolidityFunction.html">SolidityFunction</a> object.</li>
-</ul>
-</li>
-<li><code>int(n)</code>: A signed integer.<ul>
-<li>As a number.</li>
-<li>As a <code>bigint</code>.</li>
-<li>As a hexadecimal string, starting with &quot;0x&quot;.</li>
-</ul>
-</li>
-<li><code>string</code>: A dynamic UTF-8 string.<ul>
-<li>As a regular string.</li>
-<li>As a hexadecimal string, starting with &quot;0x&quot;.</li>
-<li>As a byte array, i.e., <code>Uint8Array</code>.</li>
-</ul>
-</li>
-<li><code>tuple</code>: A tuple of values.<ul>
-<li>As an array of values.</li>
-</ul>
-</li>
-<li><code>uint(n)</code>: An unsigned integer.<ul>
-<li>As a number.</li>
-<li>As a <code>bigint</code>.</li>
-<li>As a hexadecimal string, starting with &quot;0x&quot;.</li>
-</ul>
-</li>
-</ul>
+<li class="tsd-signature tsd-anchor-link" id="getErrorStack">get<wbr/>Error<wbr/>Stack<span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><a href="#getErrorStack" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" id="icon-anchor-a"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" id="icon-anchor-b"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" id="icon-anchor-c"></path></svg></a></li>
+<li class="tsd-description"><code class="tsd-tag ts-flagInternal">Internal</code> 
+<div class="tsd-comment tsd-typography"><p>Get the error stack from a value. If the value is an error, the error&#39;s stack
+is returned. Otherwise, it returns <code>undefined</code>.</p>
 
-<h3>Example</h3><pre><code class="language-typescript"><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-2">encode</span><span class="hl-1">, </span><span class="hl-2">decode</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@metamask/abi-utils&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">types</span><span class="hl-1"> = [</span><span class="hl-3">&#39;uint256&#39;</span><span class="hl-1">, </span><span class="hl-3">&#39;string&#39;</span><span class="hl-1">];</span><br/><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">encoded</span><span class="hl-1"> = </span><span class="hl-6">encode</span><span class="hl-1">(</span><span class="hl-2">types</span><span class="hl-1">, [</span><span class="hl-7">42</span><span class="hl-1">, </span><span class="hl-3">&#39;Hello, world!&#39;</span><span class="hl-1">]);</span><br/><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-5">decoded</span><span class="hl-1"> = </span><span class="hl-6">decode</span><span class="hl-1">(</span><span class="hl-2">types</span><span class="hl-1">, </span><span class="hl-2">encoded</span><span class="hl-1">);</span><br/><br/><span class="hl-2">console</span><span class="hl-1">.</span><span class="hl-6">log</span><span class="hl-1">(</span><span class="hl-2">decoded</span><span class="hl-1">); </span><span class="hl-8">// [42n, &#39;Hello, world!&#39;]</span>
-</code></pre>
-
-<h3>See</h3><p><a href="https://docs.soliditylang.org/en/v0.8.17/abi-spec.html">https://docs.soliditylang.org/en/v0.8.17/abi-spec.html</a></p>
-
-<h3>Returns</h3><p>The ABI encoded bytes.</p>
+<h3>Returns</h3><p>The error stack, or <code>undefined</code> if the value is not an error.</p>
 </div>
-<section class="tsd-panel tsd-type-parameters">
-<h4>Type Parameters</h4>
-<ul class="tsd-type-parameters">
-<li>
-<h4>Type<span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4></li></ul></section>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>types: <span class="tsd-signature-type" data-tsd-kind="Type parameter">Type</span></h5>
-<div class="tsd-comment tsd-typography"><p>The types to encode.</p>
-</div></li>
-<li>
-<h5>values: <a href="../types/TypeMap.html" class="tsd-signature-type" data-tsd-kind="Type alias">TypeMap</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">Type</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;input&quot;</span><span class="tsd-signature-symbol">&gt;</span></h5>
-<div class="tsd-comment tsd-typography"><p>The values to encode. This array must have the same length as
-the types array.</p>
-</div></li>
-<li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> packed: <span class="tsd-signature-type">boolean</span></h5>
-<div class="tsd-comment tsd-typography"><p>Whether to use the non-standard packed mode. Defaults to
-<code>false</code>.</p>
-</div></li>
-<li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> tight: <span class="tsd-signature-type">boolean</span></h5>
-<div class="tsd-comment tsd-typography"><p>Whether to pack the values tightly. When enabled, the values
-will be packed without any padding. This matches the behaviour of
-<code>ethereumjs-abi</code>. Defaults to <code>false</code>.</p>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> error: <span class="tsd-signature-type">unknown</span></h5>
+<div class="tsd-comment tsd-typography"><p>The value to get an error stack from.</p>
 </div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Uint8Array</span></h4><aside class="tsd-sources">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/MetaMask/abi-utils/blob/6301c8e/src/abi.ts#L78">src/abi.ts:78</a></li></ul></aside></li></ul></section></div>
+<li>Defined in <a href="https://github.com/MetaMask/abi-utils/blob/6301c8e/src/errors.ts#L44">src/errors.ts:44</a></li></ul></aside></li></ul></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
@@ -146,9 +64,9 @@ will be packed without any padding. This matches the behaviour of
 <li class="tsd-kind-type-alias"><a href="../types/TypeMap.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-4194304-path"></use><use href="#icon-4194304-text"></use></svg>Type<wbr/>Map</a></li>
 <li class="tsd-kind-function"><a href="decode.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-function)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-64-path"></rect><path d="M9.39 16V7.24H14.55V8.224H10.446V11.128H14.238V12.112H10.47V16H9.39Z" fill="var(--color-text)" id="icon-64-text"></path></svg>decode</a></li>
 <li class="tsd-kind-function"><a href="decodeSingle.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>decode<wbr/>Single</a></li>
-<li class="current tsd-kind-function"><a href="encode.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>encode</a></li>
+<li class="tsd-kind-function"><a href="encode.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>encode</a></li>
 <li class="tsd-kind-function"><a href="encodePacked.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>encode<wbr/>Packed</a></li>
 <li class="tsd-kind-function"><a href="encodeSingle.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>encode<wbr/>Single</a></li>
 <li class="tsd-kind-function"><a href="getErrorMessage.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>get<wbr/>Error<wbr/>Message</a></li>
-<li class="tsd-kind-function"><a href="getErrorStack.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>get<wbr/>Error<wbr/>Stack</a></li></ul></nav></div></div>
+<li class="current tsd-kind-function"><a href="getErrorStack.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>get<wbr/>Error<wbr/>Stack</a></li></ul></nav></div></div>
 <div class="overlay"></div><script src="../assets/main.js"></script></body></html>
