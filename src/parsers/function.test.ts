@@ -1,4 +1,5 @@
 import { bytesToHex, hexToBytes } from '@metamask/utils';
+
 import { fn, getFunction } from './function';
 
 describe('getFunction', () => {

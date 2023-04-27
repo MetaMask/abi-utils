@@ -6,8 +6,9 @@ import {
   concatBytes,
   createBytes,
 } from '@metamask/utils';
-import { padStart } from '../utils';
+
 import { ParserError } from '../errors';
+import { padStart } from '../utils';
 import { Parser } from './parser';
 
 /**

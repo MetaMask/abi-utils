@@ -1,4 +1,5 @@
 import { bytesToHex, hexToBytes } from '@metamask/utils';
+
 import { getParser, isDynamicParser, pack, unpack } from './packer';
 import { array, number, string, tuple } from './parsers';
 

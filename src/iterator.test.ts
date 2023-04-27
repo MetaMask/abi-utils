@@ -1,4 +1,5 @@
 import { bytesToHex, hexToBytes } from '@metamask/utils';
+
 import { iterate } from './iterator';
 
 describe('iterate', () => {

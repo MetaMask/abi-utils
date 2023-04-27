@@ -1,4 +1,5 @@
 import { bytesToHex, hexToBytes } from '@metamask/utils';
+
 import { fixedBytes, getByteLength } from './fixed-bytes';
 
 describe('getByteLength', () => {

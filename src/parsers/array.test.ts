@@ -1,4 +1,5 @@
 import { bytesToHex, hexToBytes } from '@metamask/utils';
+
 import { array, getArrayType } from './array';
 
 describe('getArrayType', () => {

@@ -7,9 +7,10 @@ import {
   StrictHexStruct,
 } from '@metamask/utils';
 import { coerce, create, instance, object, union } from 'superstruct';
+
 import { ParserError } from '../errors';
-import { Parser } from './parser';
 import { fixedBytes } from './fixed-bytes';
+import { Parser } from './parser';
 
 /**
  * A Solidity function-like value. This can be a hex string, a byte array, or a

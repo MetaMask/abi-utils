@@ -1,11 +1,12 @@
 import { bytesToHex, hexToBytes } from '@metamask/utils';
-import { getBigInt, getLength, isSigned, number } from './number';
+
 import {
   DECODE_OUT_OF_RANGE_NUMBER_VECTORS,
   INVALID_NUMBER_TYPE_VECTORS,
   NUMBER_VECTORS,
   OUT_OF_RANGE_NUMBER_VECTORS,
 } from './__fixtures__';
+import { getBigInt, getLength, isSigned, number } from './number';
 
 describe('isSigned', () => {
   it('checks if a number type is signed', () => {

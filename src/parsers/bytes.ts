@@ -5,6 +5,7 @@ import {
   createBytes,
   numberToBytes,
 } from '@metamask/utils';
+
 import { padEnd, padStart } from '../utils';
 import { Parser } from './parser';
 

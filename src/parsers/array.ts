@@ -4,12 +4,13 @@ import {
   concatBytes,
   numberToBytes,
 } from '@metamask/utils';
+
+import { ParserError } from '../errors';
 import { getParser, isDynamicParser, pack, unpack } from '../packer';
 import { padStart } from '../utils';
-import { ParserError } from '../errors';
+import { fixedBytes } from './fixed-bytes';
 import { Parser } from './parser';
 import { tuple } from './tuple';
-import { fixedBytes } from './fixed-bytes';
 
 const ARRAY_REGEX = /^(?<type>.*)\[(?<length>\d*?)\]$/u;
 

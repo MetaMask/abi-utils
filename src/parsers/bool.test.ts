@@ -1,4 +1,5 @@
 import { bytesToHex, hexToBytes } from '@metamask/utils';
+
 import { bool, getBooleanValue } from './bool';
 
 describe('getBooleanValue', () => {

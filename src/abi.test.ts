@@ -1,5 +1,7 @@
 import { add0x, bytesToHex, hexToBytes } from '@metamask/utils';
 import { keccak_256 as keccak256 } from '@noble/hashes/sha3';
+
+import { ABI_TEST_VECTORS, PACKED_ABI_TEST_VECTORS } from './__fixtures__';
 import {
   decode,
   decodeSingle,
@@ -7,7 +9,6 @@ import {
   encodePacked,
   encodeSingle,
 } from './abi';
-import { ABI_TEST_VECTORS, PACKED_ABI_TEST_VECTORS } from './__fixtures__';
 import { ParserError } from './errors';
 import * as packer from './packer';
 

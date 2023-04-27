@@ -1,6 +1,7 @@
 import { bytesToString, stringToBytes } from '@metamask/utils';
-import { Parser } from './parser';
+
 import { bytes } from './bytes';
+import { Parser } from './parser';
 
 export const string: Parser<string> = {
   isDynamic: true,
