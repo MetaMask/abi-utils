@@ -7,9 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [2.0.0]
-### Uncategorized
-- BREAKING: Standardise repo per module template as of April 2023 ([#32](https://github.com/MetaMask/abi-utils/pull/32))
-- Bump `@metamask/utils` to version `5.0.2` ([#33](https://github.com/MetaMask/abi-utils/pull/33))
+### Changed
+- **BREAKING**: The minimum Node.js version is now 16 ([#32](https://github.com/MetaMask/abi-utils/pull/32))
 
 ## [1.2.0]
 ### Changed
