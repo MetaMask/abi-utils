@@ -16,7 +16,9 @@ describe('getBooleanValue', () => {
     (value) => {
       // @ts-expect-error Invalid type.
       expect(() => getBooleanValue(value)).toThrow(
-        `Invalid boolean value. Expected a boolean literal, or the string "true" or "false", but received "${value}".`,
+        `Invalid boolean value. Expected a boolean literal, or the string "true" or "false", but received "${String(
+          value,
+        )}".`,
       );
     },
   );

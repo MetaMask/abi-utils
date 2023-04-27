@@ -1,7 +1,7 @@
 {
   "name": "@metamask/abi-utils",
   "version": "1.2.0",
-  "description": "Lightweight utilities for encoding and decoding Solidity ABI.",
+  "description": "Lightweight utilities for encoding and decoding Solidity ABI",
   "keywords": [
     "ethereum",
     "abi",
@@ -11,7 +11,7 @@
     "encoder",
     "decoder"
   ],
-  "homepage": "https://github.com/MetaMask/abi-utils",
+  "homepage": "https://github.com/MetaMask/abi-utils#readme",
   "bugs": {
     "url": "https://github.com/MetaMask/abi-utils/issues"
   },
@@ -22,8 +22,8 @@
   "license": "(Apache-2.0 AND MIT)",
   "author": "Maarten Zuidhoorn <maarten@zuidhoorn.com>",
   "sideEffects": false,
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist/"
   ],
@@ -33,15 +33,15 @@
     "build:docs": "typedoc",
     "docs:publish": "typedoc --cleanOutputDir false --gitRevision \"v$(jq -r .version < ./package.json)\"",
     "lint": "yarn lint:eslint && yarn lint:misc --check && yarn lint:dependencies --check && yarn lint:changelog && yarn lint:constraints",
+    "lint:changelog": "auto-changelog validate",
+    "lint:constraints": "yarn constraints",
+    "lint:dependencies": "depcheck && yarn dedupe",
     "lint:eslint": "eslint . --cache --ext js,ts",
     "lint:fix": "yarn lint:eslint --fix && yarn lint:misc --write && yarn lint:dependencies && yarn lint:changelog && yarn lint:constraints --fix",
     "lint:misc": "prettier '**/*.json' '**/*.md' '!CHANGELOG.md' '**/*.yml' '!.yarnrc.yml' --ignore-path .gitignore --no-error-on-unmatched-pattern",
     "prepack": "./scripts/prepack.sh",
     "test": "jest && jest-it-up",
-    "test:watch": "jest --watch",
-    "lint:changelog": "auto-changelog validate",
-    "lint:constraints": "yarn constraints",
-    "lint:dependencies": "depcheck && yarn dedupe"
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@metamask/utils": "^5.0.2",
@@ -80,10 +80,11 @@
   },
   "packageManager": "yarn@3.2.3",
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=16.0.0"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "lavamoat": {
     "allowScripts": {
