@@ -3,9 +3,10 @@
 /* eslint-disable jsdoc/check-indentation, jsdoc/match-description */
 
 import { assert, BytesLike, createBytes } from '@metamask/utils';
+
+import { getErrorMessage, ParserError } from './errors';
 import { pack, unpack } from './packer';
 import { TypeMap } from './types';
-import { getErrorMessage, ParserError } from './errors';
 
 /**
  * Encode the data with the provided types. The types must be valid Solidity

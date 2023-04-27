@@ -4,6 +4,8 @@ import {
   concatBytes,
   numberToBytes,
 } from '@metamask/utils';
+
+import { ParserError } from './errors';
 import { iterate } from './iterator';
 import {
   address,
@@ -17,9 +19,8 @@ import {
   string,
   tuple,
 } from './parsers';
-import { padStart, set } from './utils';
 import { TypeMap } from './types';
-import { ParserError } from './errors';
+import { padStart, set } from './utils';
 
 /**
  * Get the parser for the specified type.

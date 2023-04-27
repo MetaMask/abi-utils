@@ -1,6 +1,7 @@
 import { assert } from '@metamask/utils';
-import { getParser, isDynamicParser, pack, unpack } from '../packer';
+
 import { ParserError } from '../errors';
+import { getParser, isDynamicParser, pack, unpack } from '../packer';
 import { Parser } from './parser';
 
 const TUPLE_REGEX = /^\((.+)\)$/u;
@@ -15,7 +16,7 @@ const isTupleType = (type: string): boolean => TUPLE_REGEX.test(type);
  */
 export const getTupleElements = (type: string): string[] => {
   assert(
-    type[0] === '(' && type[type.length - 1] === ')',
+    type.startsWith('(') && type.endsWith(')'),
     new ParserError(
       `Invalid tuple type. Expected tuple type, but received "${type}".`,
     ),

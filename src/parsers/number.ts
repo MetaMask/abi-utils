@@ -8,8 +8,9 @@ import {
   NumberLike,
   signedBigIntToBytes,
 } from '@metamask/utils';
-import { padStart } from '../utils';
+
 import { ParserError } from '../errors';
+import { padStart } from '../utils';
 import { DecodeArgs, Parser } from './parser';
 
 const NUMBER_REGEX = /^u?int(?<length>[0-9]*)?$/u;

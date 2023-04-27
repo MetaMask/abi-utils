@@ -1,4 +1,5 @@
 import { bytesToHex, hexToBytes } from '@metamask/utils';
+
 import { DynamicFunction } from './parser';
 import { getTupleElements, tuple } from './tuple';
 

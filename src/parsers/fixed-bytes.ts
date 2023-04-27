@@ -1,6 +1,7 @@
 import { assert, BytesLike, concatBytes, createBytes } from '@metamask/utils';
-import { padEnd } from '../utils';
+
 import { ParserError } from '../errors';
+import { padEnd } from '../utils';
 import { Parser } from './parser';
 
 const BYTES_REGEX = /^bytes([0-9]{1,2})$/u;

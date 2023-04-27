@@ -1,11 +1,12 @@
 import { bytesToHex, hexToBytes } from '@metamask/utils';
-import { getBigInt, getLength, isSigned, number } from './number';
+
 import {
   DECODE_OUT_OF_RANGE_NUMBER_VECTORS,
   INVALID_NUMBER_TYPE_VECTORS,
   NUMBER_VECTORS,
   OUT_OF_RANGE_NUMBER_VECTORS,
 } from './__fixtures__';
+import { getBigInt, getLength, isSigned, number } from './number';
 
 describe('isSigned', () => {
   it('checks if a number type is signed', () => {
@@ -116,7 +117,7 @@ describe('number', () => {
   describe('encode', () => {
     it.each(NUMBER_VECTORS)(
       'encodes a $type number',
-      ({ type, value, hex }) => {
+      ({ type, value, hexadecimal }) => {
         expect(
           bytesToHex(
             number.encode({
@@ -127,7 +128,7 @@ describe('number', () => {
               tight: false,
             }),
           ),
-        ).toBe(hex);
+        ).toBe(hexadecimal);
       },
     );
 
@@ -150,20 +151,24 @@ describe('number', () => {
   describe('decode', () => {
     it.each(NUMBER_VECTORS)(
       'decodes a $type number',
-      ({ type, value, hex }) => {
+      ({ type, value, hexadecimal }) => {
         expect(
-          number.decode({ type, value: hexToBytes(hex), skip: jest.fn() }),
+          number.decode({
+            type,
+            value: hexToBytes(hexadecimal),
+            skip: jest.fn(),
+          }),
         ).toBe(value);
       },
     );
 
     it.each(DECODE_OUT_OF_RANGE_NUMBER_VECTORS)(
       'throws if the $type value is out of range',
-      ({ type, hex }) => {
+      ({ type, hexadecimal }) => {
         expect(() =>
           number.decode({
             type,
-            value: hexToBytes(hex),
+            value: hexToBytes(hexadecimal),
             skip: jest.fn(),
           }),
         ).toThrow(/Number ".*" is out of range for type ".*"\./u);

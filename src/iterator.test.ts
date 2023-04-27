@@ -1,4 +1,5 @@
 import { bytesToHex, hexToBytes } from '@metamask/utils';
+
 import { iterate } from './iterator';
 
 describe('iterate', () => {
@@ -21,6 +22,7 @@ describe('iterate', () => {
     const buffer = hexToBytes('1234567890');
     const iterator = iterate(buffer, 1);
 
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     const { value, skip } = iterator.next().value;
     expect(bytesToHex(value)).toBe('0x1234567890');
 
@@ -33,6 +35,7 @@ describe('iterate', () => {
     const buffer = hexToBytes('1234567890');
     const iterator = iterate(buffer, 3);
 
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     const { skip } = iterator.next().value;
     expect(() => skip(1)).toThrow('Length must be a multiple of the size.');
   });

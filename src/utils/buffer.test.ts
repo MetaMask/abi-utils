@@ -1,4 +1,5 @@
 import { bytesToHex, hexToBytes } from '@metamask/utils';
+
 import { padEnd, padStart, set } from './buffer';
 
 describe('set', () => {
