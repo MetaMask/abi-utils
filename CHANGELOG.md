@@ -7,9 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [2.0.1]
-### Uncategorized
-- deps: @metamask/utils@^5.0.2->^6.1.0 ([#35](https://github.com/MetaMask/abi-utils/pull/35))
-- Bump semver from 6.3.0 to 6.3.1 ([#39](https://github.com/MetaMask/abi-utils/pull/39))
+### Changed
+- Bump @metamask/utils from ^5.0.2 to ^6.1.0 ([#35](https://github.com/MetaMask/abi-utils/pull/35))
 
 ## [2.0.0]
 ### Changed
