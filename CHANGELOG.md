@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.1]
+### Changed
+- Bump @metamask/utils from ^5.0.2 to ^6.1.0 ([#35](https://github.com/MetaMask/abi-utils/pull/35))
+
 ## [2.0.0]
 ### Changed
 - **BREAKING**: The minimum Node.js version is now 16 ([#32](https://github.com/MetaMask/abi-utils/pull/32))
@@ -32,7 +36,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release
 
-[Unreleased]: https://github.com/MetaMask/abi-utils/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/MetaMask/abi-utils/compare/v2.0.1...HEAD
+[2.0.1]: https://github.com/MetaMask/abi-utils/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/MetaMask/abi-utils/compare/v1.2.0...v2.0.0
 [1.2.0]: https://github.com/MetaMask/abi-utils/compare/v1.1.1...v1.2.0
 [1.1.1]: https://github.com/MetaMask/abi-utils/compare/v1.1.0...v1.1.1
