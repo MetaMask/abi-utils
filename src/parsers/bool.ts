@@ -1,9 +1,9 @@
 import { bigIntToBytes, concatBytes } from '@metamask/utils';
 import { coerce, create, literal, union, boolean } from 'superstruct';
 
-import { ParserError } from '../errors';
 import { number } from './number';
 import { Parser } from './parser';
+import { ParserError } from '../errors';
 
 /**
  * A boolean-like value. This can be a boolean literal, or "true" or "false".

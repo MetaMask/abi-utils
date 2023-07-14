@@ -1,8 +1,8 @@
 import { assert } from '@metamask/utils';
 
+import { Parser } from './parser';
 import { ParserError } from '../errors';
 import { getParser, isDynamicParser, pack, unpack } from '../packer';
-import { Parser } from './parser';
 
 const TUPLE_REGEX = /^\((.+)\)$/u;
 

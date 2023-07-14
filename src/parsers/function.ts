@@ -8,9 +8,9 @@ import {
 } from '@metamask/utils';
 import { coerce, create, instance, object, union } from 'superstruct';
 
-import { ParserError } from '../errors';
 import { fixedBytes } from './fixed-bytes';
 import { Parser } from './parser';
+import { ParserError } from '../errors';
 
 /**
  * A Solidity function-like value. This can be a hex string, a byte array, or a
