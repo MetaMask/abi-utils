@@ -1040,7 +1040,7 @@ __metadata:
     rimraf: ^3.0.2
     superstruct: ^1.0.3
     ts-jest: ^29.1.1
-    ts-node: ^10.7.0
+    ts-node: ^10.9.1
     typedoc: ^0.23.15
     typescript: ~4.8.4
   languageName: unknown
@@ -6387,7 +6387,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^10.7.0":
+"ts-node@npm:^10.9.1":
   version: 10.9.1
   resolution: "ts-node@npm:10.9.1"
   dependencies:
