@@ -7,6 +7,10 @@ module.exports = {
     {
       files: ['*.ts'],
       extends: ['@metamask/eslint-config-typescript'],
+      rules: {
+        '@typescript-eslint/consistent-type-imports': 'off',
+        '@typescript-eslint/naming-convention': 'off',
+      },
     },
 
     {
