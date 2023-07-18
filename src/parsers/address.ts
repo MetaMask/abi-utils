@@ -7,9 +7,9 @@ import {
   createBytes,
 } from '@metamask/utils';
 
-import { Parser } from './parser';
 import { ParserError } from '../errors';
 import { padStart } from '../utils';
+import { Parser } from './parser';
 
 /**
  * Normalize an address value. This accepts the address as:

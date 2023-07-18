@@ -5,12 +5,12 @@ import {
   numberToBytes,
 } from '@metamask/utils';
 
-import { fixedBytes } from './fixed-bytes';
-import { Parser } from './parser';
-import { tuple } from './tuple';
 import { ParserError } from '../errors';
 import { getParser, isDynamicParser, pack, unpack } from '../packer';
 import { padStart } from '../utils';
+import { fixedBytes } from './fixed-bytes';
+import { Parser } from './parser';
+import { tuple } from './tuple';
 
 const ARRAY_REGEX = /^(?<type>.*)\[(?<length>\d*?)\]$/u;
 

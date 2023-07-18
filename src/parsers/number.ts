@@ -9,9 +9,9 @@ import {
   signedBigIntToBytes,
 } from '@metamask/utils';
 
-import { DecodeArgs, Parser } from './parser';
 import { ParserError } from '../errors';
 import { padStart } from '../utils';
+import { DecodeArgs, Parser } from './parser';
 
 const NUMBER_REGEX = /^u?int(?<length>[0-9]*)?$/u;
 

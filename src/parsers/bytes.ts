@@ -6,8 +6,8 @@ import {
   numberToBytes,
 } from '@metamask/utils';
 
-import { Parser } from './parser';
 import { padEnd, padStart } from '../utils';
+import { Parser } from './parser';
 
 export const bytes: Parser<BytesLike, Uint8Array> = {
   isDynamic: true,
