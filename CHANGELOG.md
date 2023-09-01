@@ -7,14 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [2.0.2]
-### Uncategorized
-- Bump word-wrap from 1.2.3 to 1.2.5 ([#52](https://github.com/MetaMask/abi-utils/pull/52))
-- Bump @metamask/utils from 8.0.0 to 8.1.0 ([#51](https://github.com/MetaMask/abi-utils/pull/51))
-- deps: @metamask/utils@^6.1.0->^8.0.0 ([#50](https://github.com/MetaMask/abi-utils/pull/50))
-- devDeps: bump devDependencies ([#38](https://github.com/MetaMask/abi-utils/pull/38))
-- Bump @metamask/auto-changelog from 3.1.0 to 3.2.0 ([#45](https://github.com/MetaMask/abi-utils/pull/45))
-- Bump @metamask/eslint-config-jest from 11.1.0 to 12.1.0 ([#47](https://github.com/MetaMask/abi-utils/pull/47))
-- Bump @metamask/utils from 6.1.0 to 6.2.0 ([#41](https://github.com/MetaMask/abi-utils/pull/41))
+### Changed
+- Bump @metamask/utils from ^6.1.0 to ^8.1.0 ([#41](https://github.com/MetaMask/abi-utils/pull/41)) ([#50](https://github.com/MetaMask/abi-utils/pull/50)) ([#51](https://github.com/MetaMask/abi-utils/pull/51))
 
 ## [2.0.1]
 ### Changed
