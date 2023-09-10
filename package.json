@@ -25,8 +25,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist/",
-    "!dist/__fixtures__/"
+    "dist/"
   ],
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
