@@ -6,7 +6,7 @@ import {
   hexToBytes,
   StrictHexStruct,
 } from '@metamask/utils';
-import { coerce, create, instance, object, union } from 'superstruct';
+import { coerce, create, instance, object, union } from '@metamask/superstruct';
 
 import { ParserError } from '../errors';
 import { fixedBytes } from './fixed-bytes';
