@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- Bump `@metamask/utils` from `^8.4.0` to `^8.5.0` ([#73](https://github.com/MetaMask/abi-utils/pull/73))
+
+### Fixed
+- Replace dependency `superstruct` with `@metamask/superstruct` `^3.0.0` ([#73](https://github.com/MetaMask/abi-utils/pull/73))
+  - This fixes the issue of this package being unusable by any TypeScript project that uses `Node16` or `NodeNext` as its `moduleResolution` option.
 
 ## [2.0.2]
 ### Changed
