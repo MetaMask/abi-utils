@@ -1,3 +1,4 @@
+import { coerce, create, instance, object, union } from '@metamask/superstruct';
 import {
   assert,
   bytesToHex,
@@ -6,7 +7,6 @@ import {
   hexToBytes,
   StrictHexStruct,
 } from '@metamask/utils';
-import { coerce, create, instance, object, union } from '@metamask/superstruct';
 
 import { ParserError } from '../errors';
 import { fixedBytes } from './fixed-bytes';
