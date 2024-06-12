@@ -1,5 +1,5 @@
+import { coerce, create, literal, union, boolean } from '@metamask/superstruct';
 import { bigIntToBytes, concatBytes } from '@metamask/utils';
-import { coerce, create, literal, union, boolean } from 'superstruct';
 
 import { ParserError } from '../errors';
 import { number } from './number';
