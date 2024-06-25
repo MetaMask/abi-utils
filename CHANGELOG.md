@@ -7,7 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [2.0.3]
-
 ### Changed
 - Bump `@metamask/utils` from `^8.4.0` to `^8.5.0` ([#73](https://github.com/MetaMask/abi-utils/pull/73))
 
