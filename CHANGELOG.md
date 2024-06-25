@@ -5,6 +5,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [2.0.3]
+### Uncategorized
+- Bump the npm_and_yarn group across 1 directory with 2 updates ([#76](https://github.com/MetaMask/abi-utils/pull/76))
+- Bump tar in the npm_and_yarn group across 1 directory ([#74](https://github.com/MetaMask/abi-utils/pull/74))
+- Update CODEOWNERS ([#71](https://github.com/MetaMask/abi-utils/pull/71))
+- Enabling MetaMask security code scanner ([#68](https://github.com/MetaMask/abi-utils/pull/68))
+- Add Shared Libraries team in codeowners file ([#66](https://github.com/MetaMask/abi-utils/pull/66))
+- Bump @metamask/utils from 8.2.1 to 8.3.0 ([#67](https://github.com/MetaMask/abi-utils/pull/67))
+- Bump @metamask/auto-changelog from 3.4.3 to 3.4.4 ([#65](https://github.com/MetaMask/abi-utils/pull/65))
+- Bump @metamask/utils from 8.2.0 to 8.2.1 ([#64](https://github.com/MetaMask/abi-utils/pull/64))
+- Bump @metamask/auto-changelog from 3.4.2 to 3.4.3 ([#63](https://github.com/MetaMask/abi-utils/pull/63))
+- Bump @metamask/auto-changelog from 3.4.1 to 3.4.2 ([#62](https://github.com/MetaMask/abi-utils/pull/62))
+- Bump @metamask/auto-changelog from 3.4.0 to 3.4.1 ([#61](https://github.com/MetaMask/abi-utils/pull/61))
+- Bump postcss from 8.4.23 to 8.4.31 ([#60](https://github.com/MetaMask/abi-utils/pull/60))
+- Bump @babel/traverse from 7.22.8 to 7.23.2 ([#59](https://github.com/MetaMask/abi-utils/pull/59))
+- Bump @metamask/auto-changelog from 3.2.0 to 3.4.0 ([#57](https://github.com/MetaMask/abi-utils/pull/57))
+- Bump @metamask/utils from 8.1.0 to 8.2.0 ([#58](https://github.com/MetaMask/abi-utils/pull/58))
+- Bump @metamask/eslint-config from 12.1.0 to 12.2.0 ([#55](https://github.com/MetaMask/abi-utils/pull/55))
+
 ### Changed
 - Bump `@metamask/utils` from `^8.4.0` to `^8.5.0` ([#73](https://github.com/MetaMask/abi-utils/pull/73))
 
@@ -46,7 +66,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release
 
-[Unreleased]: https://github.com/MetaMask/abi-utils/compare/v2.0.2...HEAD
+[Unreleased]: https://github.com/MetaMask/abi-utils/compare/v2.0.3...HEAD
+[2.0.3]: https://github.com/MetaMask/abi-utils/compare/v2.0.2...v2.0.3
 [2.0.2]: https://github.com/MetaMask/abi-utils/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/MetaMask/abi-utils/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/MetaMask/abi-utils/compare/v1.2.0...v2.0.0
