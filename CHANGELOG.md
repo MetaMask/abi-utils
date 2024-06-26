@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.3]
 ### Changed
-- Bump @metamask/utils from `^8.1.0` to `^8.5.0` ([#73](https://github.com/MetaMask/abi-utils/pull/73), [#67](https://github.com/MetaMask/abi-utils/pull/67), [#64](https://github.com/MetaMask/abi-utils/pull/64), [#58](https://github.com/MetaMask/abi-utils/pull/58))
+- Bump `@metamask/utils` from `^8.1.0` to `^8.5.0` ([#73](https://github.com/MetaMask/abi-utils/pull/73), [#67](https://github.com/MetaMask/abi-utils/pull/67), [#64](https://github.com/MetaMask/abi-utils/pull/64), [#58](https://github.com/MetaMask/abi-utils/pull/58))
 
 ### Fixed
 - Replace dependency `superstruct` with `@metamask/superstruct` `^3.0.0` ([#73](https://github.com/MetaMask/abi-utils/pull/73))
