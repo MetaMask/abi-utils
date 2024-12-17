@@ -7,11 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [3.0.0]
-### Uncategorized
+### Changed
+- **BREAKING:** Drop support for Node.js 16 ([#89](https://github.com/MetaMask/abi-utils/pull/89))
 - Bump `@metamask/utils` from `^9.0.0` to `^11.0.1` ([#91](https://github.com/MetaMask/abi-utils/pull/91))
-- Bump the npm_and_yarn group with 2 updates ([#90](https://github.com/MetaMask/abi-utils/pull/90))
-- BREAKING: Drop support for Node.js 16 ([#89](https://github.com/MetaMask/abi-utils/pull/89))
-- Bump micromatch from 4.0.5 to 4.0.8 in the npm_and_yarn group ([#87](https://github.com/MetaMask/abi-utils/pull/87))
 
 ## [2.0.4]
 ### Changed
