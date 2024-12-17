@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.0]
+### Changed
+- **BREAKING:** Drop support for Node.js 16 ([#89](https://github.com/MetaMask/abi-utils/pull/89))
+- Bump `@metamask/utils` from `^9.0.0` to `^11.0.1` ([#91](https://github.com/MetaMask/abi-utils/pull/91))
+
 ## [2.0.4]
 ### Changed
 - Bump `@metamask/superstruct` from `^3.0.0` to `^3.1.0` ([#79](https://github.com/MetaMask/abi-utils/pull/79), [#80](https://github.com/MetaMask/abi-utils/pull/80))
@@ -53,7 +58,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release
 
-[Unreleased]: https://github.com/MetaMask/abi-utils/compare/v2.0.4...HEAD
+[Unreleased]: https://github.com/MetaMask/abi-utils/compare/v3.0.0...HEAD
+[3.0.0]: https://github.com/MetaMask/abi-utils/compare/v2.0.4...v3.0.0
 [2.0.4]: https://github.com/MetaMask/abi-utils/compare/v2.0.3...v2.0.4
 [2.0.3]: https://github.com/MetaMask/abi-utils/compare/v2.0.2...v2.0.3
 [2.0.2]: https://github.com/MetaMask/abi-utils/compare/v2.0.1...v2.0.2
