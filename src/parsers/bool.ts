@@ -104,7 +104,16 @@ export const bool: Parser<BooleanLike, boolean> = {
    */
   decode(args): boolean {
     // Booleans are encoded as 32-byte integers, so we use the number parser
-    // to decode the boolean value.
-    return number.decode({ ...args, type: 'uint256' }) === BigInt(1);
+    // to decode the boolean value. Only 0 and 1 are valid.
+    const decoded = number.decode({ ...args, type: 'uint256' });
+    if (decoded === BigInt(0)) {
+      return false;
+    }
+    if (decoded === BigInt(1)) {
+      return true;
+    }
+    throw new ParserError(
+      `Invalid boolean value. Expected 0 or 1, but received "${decoded.toString()}".`,
+    );
   },
 };

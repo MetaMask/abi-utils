@@ -107,5 +107,14 @@ describe('boolean', () => {
         bool.decode({ type: 'bool', value: falseValue, skip: jest.fn() }),
       ).toBe(false);
     });
+
+    it('rejects a boolean that is not 0 or 1', () => {
+      const twoValue = hexToBytes(
+        '0000000000000000000000000000000000000000000000000000000000000002',
+      );
+      expect(() =>
+        bool.decode({ type: 'bool', value: twoValue, skip: jest.fn() }),
+      ).toThrow('Invalid boolean value. Expected 0 or 1, but received "2".');
+    });
   });
 });
