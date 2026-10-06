@@ -90,7 +90,7 @@ export const assertNumberLength = (value: bigint, type: string) => {
 
   // Unsigned types must be in the range of `0` to `2^length - 1`.
   assert(
-    value <= maxValue,
+    value >= BigInt(0) && value <= maxValue,
     new ParserError(`Number "${value}" is out of range for type "${type}".`),
   );
 };

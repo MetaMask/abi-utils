@@ -16,6 +16,21 @@ import * as packer from './packer';
 jest.mock('./packer', () => jest.requireActual('./packer'));
 
 describe('encode', () => {
+  it.each([false, true])(
+    'reports negative unsigned values as out of range with packed=%s',
+    (packed) => {
+      for (const type of ['uint', 'uint8', 'uint128', 'uint256']) {
+        for (const value of [-1, '-1', BigInt(-1)]) {
+          expect(() => encode([type], [value], packed)).toThrow(
+            new ParserError(
+              `Unable to encode value: Number "-1" is out of range for type "${type}".`,
+            ),
+          );
+        }
+      }
+    },
+  );
+
   it.each(ABI_TEST_VECTORS)('encodes values', ({ types, values, result }) => {
     expect(bytesToHex(encode(types, values))).toStrictEqual(add0x(result));
   });

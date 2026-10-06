@@ -1,12 +1,19 @@
 import { bytesToHex, hexToBytes } from '@metamask/utils';
 
+import { ParserError } from '../errors';
 import {
   DECODE_OUT_OF_RANGE_NUMBER_VECTORS,
   INVALID_NUMBER_TYPE_VECTORS,
   NUMBER_VECTORS,
   OUT_OF_RANGE_NUMBER_VECTORS,
 } from './__fixtures__';
-import { getBigInt, getLength, isSigned, number } from './number';
+import {
+  assertNumberLength,
+  getBigInt,
+  getLength,
+  isSigned,
+  number,
+} from './number';
 
 describe('isSigned', () => {
   it('checks if a number type is signed', () => {
@@ -60,6 +67,21 @@ describe('getLength', () => {
 });
 
 describe('assertNumberLength', () => {
+  it.each([
+    'uint',
+    ...Array.from({ length: 32 }, (_, i) => `uint${(i + 1) * 8}`),
+  ])('validates both bounds for %s', (type) => {
+    const max = BigInt(2) ** BigInt(getLength(type)) - BigInt(1);
+    expect(() => assertNumberLength(BigInt(0), type)).not.toThrow();
+    expect(() => assertNumberLength(max, type)).not.toThrow();
+    expect(() => assertNumberLength(BigInt(-1), type)).toThrow(
+      new ParserError(`Number "-1" is out of range for type "${type}".`),
+    );
+    expect(() => assertNumberLength(max + BigInt(1), type)).toThrow(
+      ParserError,
+    );
+  });
+
   it.each(OUT_OF_RANGE_NUMBER_VECTORS)(
     'throws if the value is out of range',
     ({ type, value }) => {
