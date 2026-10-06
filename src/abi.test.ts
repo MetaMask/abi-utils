@@ -48,6 +48,25 @@ describe('encodeSingle', () => {
 });
 
 describe('encodePacked', () => {
+  it.each([false, true])(
+    'validates fixed arrays with dynamic elements with tight=%s',
+    (tight) => {
+      expect(() => encodePacked(['string[2]'], [['foo']], tight)).toThrow(
+        'Unable to encode value: Array length does not match type length. Expected a length of 2, but received 1.',
+      );
+      expect(() => encodePacked(['bytes[2]'], [['0x12']], tight)).toThrow(
+        'Unable to encode value: Array length does not match type length. Expected a length of 2, but received 1.',
+      );
+
+      expect(
+        bytesToHex(encodePacked(['string[2]'], [['foo', 'bar']], tight)),
+      ).toBe('0x666f6f626172');
+      expect(
+        bytesToHex(encodePacked(['bytes[2]'], [['0x12', '0x34']], tight)),
+      ).toBe('0x1234');
+    },
+  );
+
   it.each(PACKED_ABI_TEST_VECTORS)(
     'encodes values in packed mode',
     ({ types, values, result }) => {

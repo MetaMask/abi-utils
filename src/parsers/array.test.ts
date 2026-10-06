@@ -52,6 +52,32 @@ describe('array', () => {
   });
 
   describe('encode', () => {
+    describe.each([false, true])(
+      'packed fixed arrays with tight=%s',
+      (tight) => {
+        it.each([
+          ['string[2]', []],
+          ['string[2]', ['foo']],
+          ['string[2]', ['foo', 'bar', 'baz']],
+          ['bytes[2]', []],
+          ['bytes[2]', ['0x12']],
+          ['bytes[2]', ['0x12', '0x34', '0x56']],
+        ])('rejects a mismatched length for %s with %j', (type, value) => {
+          expect(() =>
+            array.encode({
+              type,
+              value,
+              buffer: new Uint8Array(),
+              packed: true,
+              tight,
+            }),
+          ).toThrow(
+            `Array length does not match type length. Expected a length of 2, but received ${value.length}.`,
+          );
+        });
+      },
+    );
+
     it('encodes an array', () => {
       expect(
         bytesToHex(

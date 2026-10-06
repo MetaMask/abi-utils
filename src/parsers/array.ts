@@ -121,6 +121,15 @@ export const array: Parser<unknown[]> = {
       new ParserError(`Cannot pack nested arrays.`),
     );
 
+    if (fixedLength !== undefined) {
+      assert(
+        fixedLength === value.length,
+        new ParserError(
+          `Array length does not match type length. Expected a length of ${fixedLength}, but received ${value.length}.`,
+        ),
+      );
+    }
+
     // Tightly pack `T[]` where `T` is a dynamic type. This is not supported in
     // Solidity, but is commonly used in the Ethereum ecosystem.
     if (packed && isDynamicParser(getParser(arrayType), arrayType)) {
@@ -135,13 +144,6 @@ export const array: Parser<unknown[]> = {
     }
 
     if (fixedLength) {
-      assert(
-        fixedLength === value.length,
-        new ParserError(
-          `Array length does not match type length. Expected a length of ${fixedLength}, but received ${value.length}.`,
-        ),
-      );
-
       // `T[k]` for any `T` and `k` is encoded as `(T[0], ..., T[k - 1])`.
       return tuple.encode({
         type: getTupleType(arrayType, fixedLength),
