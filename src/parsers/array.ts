@@ -213,6 +213,18 @@ export const array: Parser<unknown[]> = {
     }
 
     const arrayLength = bytesToNumber(value.subarray(0, 32));
+
+    // Each element takes at least one 32-byte word, so check the length against
+    // the remaining bytes before allocating an array of that length.
+    assert(
+      arrayLength * 32 <= value.length - 32,
+      new ParserError(
+        `Array length of ${arrayLength} exceeds the remaining ${
+          value.length - 32
+        } bytes.`,
+      ),
+    );
+
     return unpack(new Array(arrayLength).fill(arrayType), value.subarray(32));
   },
 };

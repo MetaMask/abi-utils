@@ -199,5 +199,35 @@ describe('array', () => {
         [BigInt(56), BigInt(78)],
       ]);
     });
+
+    it('decodes an empty array', () => {
+      const value = hexToBytes(
+        '0000000000000000000000000000000000000000000000000000000000000000',
+      );
+
+      expect(
+        array.decode({ type: 'uint256[]', value, skip: jest.fn() }),
+      ).toStrictEqual([]);
+    });
+
+    it('throws if the array length exceeds the remaining bytes', () => {
+      const value = hexToBytes(
+        '0000000000000000000000000000000000000000000000000000000080000000',
+      );
+
+      expect(() =>
+        array.decode({ type: 'uint8[]', value, skip: jest.fn() }),
+      ).toThrow('Array length of 2147483648 exceeds the remaining 0 bytes.');
+    });
+
+    it('throws if the array length is one more than the elements present', () => {
+      const value = hexToBytes(
+        '0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000c',
+      );
+
+      expect(() =>
+        array.decode({ type: 'uint256[]', value, skip: jest.fn() }),
+      ).toThrow('Array length of 2 exceeds the remaining 32 bytes.');
+    });
   });
 });
